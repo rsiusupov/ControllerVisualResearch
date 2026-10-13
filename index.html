@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Игровые контроллеры — хронология</title>
+  <link rel="stylesheet" href="timeline.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <p class="kicker" id="kicker">Хронология устройств ввода</p>
+      <h1>Игровые контроллеры</h1>
+      <p class="hint">Колесо листает время · перетаскивание сдвигает полотно · Ctrl + колесо меняет масштаб</p>
+    </div>
+    <p class="now" id="now-year" aria-live="polite">1958</p>
+    <div class="zoom" role="group" aria-label="Масштаб">
+      <button type="button" id="zoom-out" aria-label="Уменьшить">−</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Увеличить">+</button>
+    </div>
+  </header>
+
+  <div id="stage">
+    <canvas id="plot" aria-hidden="true"></canvas>
+    <div id="scroller">
+      <div id="sizer">
+        <div id="world"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dialog" class="dialog" hidden>
+    <div class="dialog-backdrop" data-close></div>
+    <article class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"></article>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="timeline.js"></script>
+</body>
+</html>
