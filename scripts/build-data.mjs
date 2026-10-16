@@ -8,6 +8,9 @@
  *
  * Image discovery happens here, at data-build time. UI code must import
  * `data/controllers.ts` and must not read the image folders itself.
+ * There is no image manifest. A missing or empty controller folder is valid
+ * and yields images: []. Names follow {slug}-{yearToken}-{NN}.{ext}; the
+ * extension may be any alphanumeric string.
  *
  * Slug algorithm
  * --------------
@@ -1110,14 +1113,16 @@ function escapeReg(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function controllerImagePattern(slug, token) {
+  return new RegExp(`^${escapeReg(slug)}-${escapeReg(token)}-(\\d{2,})\\.([A-Za-z0-9]+)$`, "i");
+}
+
 function discoverControllerImages(record) {
   const dir = path.join(ROOT, "public/images", record.categorySlug, record.slug);
+  // Missing and empty folders are the same result: this controller has no local images yet.
   if (!fs.existsSync(dir)) return { urls: [], ignored: [], over: [] };
   const token = yearToken(record.yearNumber);
-  const pattern = new RegExp(
-    `^${escapeReg(record.slug)}-${escapeReg(token)}-(\\d{2,})\\.([A-Za-z0-9]+)$`,
-    "i",
-  );
+  const pattern = controllerImagePattern(record.slug, token);
   const matched = [];
   const ignored = [];
   for (const name of fs.readdirSync(dir)) {
@@ -1285,12 +1290,16 @@ function rewriteDataJs(plans) {
     if (count === 0) {
       const already = text.split(to).length - 1;
       if (already >= 1) continue;
+      // Already removed from data.js along with the file.
+      if (plan.absent) continue;
       throw new Error(`Expected one data.js path for ${plan.src}, found 0`);
     }
     if (count !== 1) throw new Error(`Expected one data.js path for ${plan.src}, found ${count}`);
     text = text.split(from).join(to);
     replaced += 1;
   }
+  const prunedImages = pruneMissingDataJsImages(text);
+  text = prunedImages.text;
   fs.writeFileSync(filePath, text);
   const parsed = parseDataJs(filePath);
   const missing = [];
@@ -1302,7 +1311,21 @@ function rewriteDataJs(plans) {
   if (missing.length) {
     throw new Error(`data.js image paths missing on disk:\n${missing.slice(0, 8).join("\n")}`);
   }
-  return { replaced, controllers: parsed.length };
+  return { replaced, pruned: prunedImages.pruned, controllers: parsed.length };
+}
+
+function pruneMissingDataJsImages(text) {
+  let pruned = 0;
+  const next = text.replace(/"images": \[([\s\S]*?)\]/g, (full, body) => {
+    const paths = [...body.matchAll(/"((?:\\.|[^"\\])*)"/g)].map((match) => JSON.parse(`"${match[1]}"`));
+    const kept = paths.filter((item) => fs.existsSync(path.join(ROOT, item)));
+    if (kept.length === paths.length) return full;
+    pruned += paths.length - kept.length;
+    if (!kept.length) return '"images": []';
+    const inner = kept.map((item) => `      ${JSON.stringify(item)}`).join(",\n");
+    return `"images": [\n${inner}\n    ]`;
+  });
+  return { text: next, pruned };
 }
 
 function compareGameWorkbook(oldRecords) {
@@ -1419,6 +1442,19 @@ function selfCheck() {
   assert.equal(signalSlug("цифровой (радио)"), "digital");
   assert.equal(countrySlug("Israel (PrimeSense)"), "israel");
   assert.equal(ACTION.get(lookupKey("предметное")), "instrumental");
+  const imagePattern = controllerImagePattern("dualsense", "2020");
+  for (const ext of ["webp", "jpg", "jpeg", "png", "gif", "avif", "WEBP"]) {
+    assert.equal(imagePattern.test(`dualsense-2020-01.${ext}`), true, ext);
+    assert.equal(imagePattern.test(`dualsense-2020-12.${ext}`), true, ext);
+  }
+  assert.equal(imagePattern.test("dualsense-2020-1.jpg"), false);
+  assert.equal(imagePattern.test("other-2020-01.webp"), false);
+  const emptyImages = discoverControllerImages({
+    categorySlug: "games",
+    slug: "no-such-controller-photo-set",
+    yearNumber: 1958,
+  });
+  assert.deepEqual(emptyImages, { urls: [], ignored: [], over: [] });
 }
 
 function buildCatalog(records) {
@@ -1542,7 +1578,12 @@ function main() {
       fs.writeFileSync(snapshotPath, `${JSON.stringify(oldRecords, null, 2)}\n`);
     }
     for (const plan of plans) {
-      if (plan.absent) throw new Error(`Listed image is neither at ${plan.src} nor at ${plan.dest}`);
+      // The previous photo set can be removed. Discovery then leaves images empty
+      // instead of failing, and a later file of any extension still matches the pattern.
+      if (plan.absent) {
+        moveResults.push({ ...plan, status: "absent", bytes: 0 });
+        continue;
+      }
       const result = moveFile(plan.src, plan.dest);
       moveResults.push({ ...plan, ...result });
       if (result.status === "missing") {
@@ -1706,15 +1747,15 @@ function main() {
       pattern: IMAGE_PATTERN,
       publicUrl: IMAGE_PUBLIC_URL,
       plannedMoves: plans.length,
-      // Stable across rebuilds: every legacy file has a destination, whether this
-      // run performed git mv or found the file already there.
+      // Legacy files still on disk, either moved this run or already at the destination.
       relocatedFromPreviousImageFolders: plans.filter((item) => !item.absent).length,
+      absentListedImages: plans.filter((item) => item.absent).length,
       stagedGitRenames: stagedRenameCount(),
       movedByGitMvThisRun: moveResults.filter((item) => item.status === "moved").length,
       copiedUntracked: moveResults.filter((item) => item.status === "copied").length,
       alreadyInPlace: moveResults.filter((item) => item.status === "already" || item.status === "dest-exists").length,
       bytesVerified: !DRY,
-      note: "The first data:build git-mv's images/{year}_{name}/ into public/images/{category}/{slug}/. A later run finds those files already at the destination, checks sizes, and does not move them again.",
+      note: "Listed photos move once from images/{year}_{name}/ to public/images/{category}/{slug}/{slug}-{yearToken}-{NN}.{ext}. A later run leaves files that are already there and checks sizes. If neither path exists, the photo is absent: discovery records images: [] and does not fail. A file added later is picked up from that same pattern with any extension. There is no image manifest.",
       extensions,
       controllersWithLocalImages: records.filter((record) => record.images.length > 0).length,
       controllersWithoutLocalImages: records.filter((record) => record.images.length === 0).length,
@@ -1742,7 +1783,7 @@ function main() {
       "controllers_all.xlsx",
       "game_controllers.xlsx",
       "Controller.legacy on matched rows",
-      "data.js image paths (they now point at public/images so the existing timeline still resolves files)",
+      "data.js image paths (local images arrays only list files that exist; imageSources stay)",
     ],
   };
 
