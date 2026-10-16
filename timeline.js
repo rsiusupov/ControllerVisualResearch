@@ -173,8 +173,8 @@ function stepPhysics(dtMs) {
   let moving = false;
   for (const body of bodies) {
     if (body.grabbed) continue;
-    body.vx *= Math.pow(0.72, frame);
-    body.vy *= Math.pow(0.72, frame);
+    body.vx *= Math.pow(0.52, frame);
+    body.vy *= Math.pow(0.52, frame);
     if (Math.hypot(body.vx, body.vy) < 0.12) {
       body.vx = 0;
       body.vy = 0;
@@ -304,7 +304,6 @@ function renderCards() {
   const fragment = document.createDocumentFragment();
   let maxY = AXIS_Y;
   for (const item of items) {
-    const dir = item.above ? -1 : 1;
     const labelX = item.dotX - LABEL_W / 2;
     const labelY = item.above ? AXIS_Y - 72 - LABEL_H : AXIS_Y + 72;
     const label = document.createElement("article");
@@ -336,12 +335,11 @@ function renderCards() {
     item.labelBody = labelBody;
     maxY = Math.max(maxY, labelY + LABEL_H);
 
-    const photos = [];
     item.images.forEach((src, index) => {
       const guess = 0.62 + Math.random() * 1.15;
       const size = photoSize(guess);
-      const spreadX = (Math.random() - 0.5) * 210;
-      const spreadY = 28 + Math.random() * 150;
+      const spreadX = (Math.random() - 0.5) * 96;
+      const spreadY = 14 + Math.random() * 52;
       let x = item.dotX + spreadX - size.w / 2;
       let y = item.above ? labelY - spreadY - size.h : labelY + LABEL_H + spreadY;
       x = Math.max(12, x);
@@ -383,14 +381,9 @@ function renderCards() {
         body.element.style.height = next.h + "px";
         placeBody(body);
       });
-      photos.push(body);
       maxY = Math.max(maxY, y + size.h);
       connect(labelBody, body);
     });
-    for (let i = 0; i < photos.length; i += 1) {
-      for (let j = i + 1; j < photos.length; j += 1) connect(photos[i], photos[j]);
-    }
-    void dir;
   }
   world.appendChild(fragment);
   layout.worldH = Math.max(maxY + 48, AXIS_Y + 280);
@@ -872,9 +865,9 @@ function endDrag(event) {
       openController(drag.body.itemId, drag.body.imageIndex);
     } else {
       const speed = Math.hypot(drag.body.vx, drag.body.vy);
-      if (speed > 16) {
-        drag.body.vx = (drag.body.vx / speed) * 16;
-        drag.body.vy = (drag.body.vy / speed) * 16;
+      if (speed > 7) {
+        drag.body.vx = (drag.body.vx / speed) * 7;
+        drag.body.vy = (drag.body.vy / speed) * 7;
       }
     }
   } else if (drag.moved) {
@@ -918,14 +911,14 @@ function kickPhotosFromScroll() {
   seenScrollLeft = scroller.scrollLeft;
   seenScrollTop = scroller.scrollTop;
   if ((!dx && !dy) || state.drag?.mode === "body") return;
-  const kickX = (dx / state.zoom) * 0.16;
-  const kickY = (dy / state.zoom) * 0.16;
+  const kickX = (dx / state.zoom) * 0.05;
+  const kickY = (dy / state.zoom) * 0.05;
   for (const body of bodies) {
     if (body.kind !== "photo" || body.grabbed) continue;
     body.x += kickX;
     body.y += kickY;
-    body.vx += kickX * 0.12;
-    body.vy += kickY * 0.12;
+    body.vx += kickX * 0.04;
+    body.vy += kickY * 0.04;
   }
 }
 
