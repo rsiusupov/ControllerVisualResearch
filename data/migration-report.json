@@ -3308,19 +3308,22 @@
     "pattern": "public/images/{categorySlug}/{controllerSlug}/{controllerSlug}-{yearToken}-{NN}.{ext}",
     "publicUrl": "/images/{categorySlug}/{controllerSlug}/{controllerSlug}-{yearToken}-{NN}.{ext}",
     "plannedMoves": 607,
-    "relocatedFromPreviousImageFolders": 0,
-    "absentListedImages": 607,
+    "relocatedFromPreviousImageFolders": 607,
+    "absentListedImages": 0,
     "stagedGitRenames": 0,
     "movedByGitMvThisRun": 0,
     "copiedUntracked": 0,
-    "alreadyInPlace": 0,
+    "alreadyInPlace": 607,
     "bytesVerified": true,
     "note": "Listed photos move once from images/{year}_{name}/ to public/images/{category}/{slug}/{slug}-{yearToken}-{NN}.{ext}. A later run leaves files that are already there and checks sizes. If neither path exists, the photo is absent: discovery records images: [] and does not fail. A file added later is picked up from that same pattern with any extension. There is no image manifest.",
-    "extensions": {},
-    "controllersWithLocalImages": 0,
-    "controllersWithoutLocalImages": 1427,
+    "extensions": {
+      "jpg": 544,
+      "png": 63
+    },
+    "controllersWithLocalImages": 175,
+    "controllersWithoutLocalImages": 1252,
     "missingLocalImageCounts": {
-      "games": 308,
+      "games": 133,
       "music-sound": 233,
       "design-digital-art": 215,
       "photo-film-video": 219,
@@ -3330,20 +3333,8 @@
     "missingLocalImages": {
       "games": [
         {
-          "id": "games/tennis-for-two-controller",
-          "name": "Tennis for Two controller",
-          "year": "1958",
-          "yearNumber": 1958
-        },
-        {
           "id": "games/sensorama",
           "name": "Sensorama",
-          "year": "1962",
-          "yearNumber": 1962
-        },
-        {
-          "id": "games/spacewar-control-boxes",
-          "name": "Spacewar! control boxes",
           "year": "1962",
           "yearNumber": 1962
         },
@@ -3366,28 +3357,10 @@
           "yearNumber": 1968
         },
         {
-          "id": "games/brown-box-prototype-controllers",
-          "name": "Brown Box prototype controllers",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
-          "id": "games/computer-space-control-panel",
-          "name": "Computer Space control panel",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
           "id": "games/galaxy-game-panel-upravleniya",
           "name": "Galaxy Game — панель управления",
           "year": "1971",
           "yearNumber": 1971
-        },
-        {
-          "id": "games/magnavox-odyssey-controller",
-          "name": "Magnavox Odyssey Controller",
-          "year": "1972",
-          "yearNumber": 1972
         },
         {
           "id": "games/magnavox-odyssey-shooting-gallery-rifle",
@@ -3396,28 +3369,10 @@
           "yearNumber": 1972
         },
         {
-          "id": "games/pong-arcade-knob-controllers",
-          "name": "Pong arcade knob controllers",
-          "year": "1972",
-          "yearNumber": 1972
-        },
-        {
           "id": "games/laser-clay-shooting-system",
           "name": "Laser Clay Shooting System",
           "year": "1973",
           "yearNumber": 1973
-        },
-        {
-          "id": "games/gran-trak-10-steering-wheel",
-          "name": "Gran Trak 10 steering wheel",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
-          "id": "games/tank-twin-stick-controls",
-          "name": "Tank twin-stick controls",
-          "year": "1974",
-          "yearNumber": 1974
         },
         {
           "id": "games/zanussi-ping-o-tronic",
@@ -3432,52 +3387,10 @@
           "yearNumber": 1975
         },
         {
-          "id": "games/coleco-telstar-dials",
-          "name": "Coleco Telstar dials",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
-          "id": "games/fairchild-channel-f-controller",
-          "name": "Fairchild Channel F controller",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
           "id": "games/night-driver-rul-i-pedal",
           "name": "Night Driver — руль и педаль",
           "year": "1976",
           "yearNumber": 1976
-        },
-        {
-          "id": "games/sega-moto-cross-fonz-handlebars",
-          "name": "Sega Moto-Cross (Fonz) handlebars",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
-          "id": "games/atari-cx40-joystick",
-          "name": "Atari CX40 joystick",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "games/atari-driving-controller-cx20",
-          "name": "Atari Driving Controller (CX20)",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "games/atari-paddle-controllers-cx30",
-          "name": "Atari paddle controllers (CX30)",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "games/bally-astrocade-controller",
-          "name": "Bally Astrocade controller",
-          "year": "1977",
-          "yearNumber": 1977
         },
         {
           "id": "games/atari-football-trackball",
@@ -3486,34 +3399,10 @@
           "yearNumber": 1978
         },
         {
-          "id": "games/magnavox-odyssey2-controller",
-          "name": "Magnavox Odyssey² controller",
-          "year": "1978",
-          "yearNumber": 1978
-        },
-        {
           "id": "games/space-invaders-panel-s-rychagom",
           "name": "Space Invaders — панель с рычагом",
           "year": "1978",
           "yearNumber": 1978
-        },
-        {
-          "id": "games/intellivision-controller",
-          "name": "Intellivision controller",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "games/microvision",
-          "name": "Microvision",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "games/battlezone-periscope-and-twin-sticks",
-          "name": "Battlezone periscope & twin sticks",
-          "year": "1980",
-          "yearNumber": 1980
         },
         {
           "id": "games/missile-command-trekbol-s-tremya-knopkami",
@@ -3540,26 +3429,8 @@
           "yearNumber": 1981
         },
         {
-          "id": "games/atari-5200-controller",
-          "name": "Atari 5200 controller",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "games/colecovision-controller",
-          "name": "ColecoVision controller",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
           "id": "games/emerson-arcadia-2001-kontroller",
           "name": "Emerson Arcadia 2001 — контроллер",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "games/game-and-watch-d-pad-donkey-kong",
-          "name": "Game & Watch D-pad (Donkey Kong)",
           "year": "1982",
           "yearNumber": 1982
         },
@@ -3576,26 +3447,8 @@
           "yearNumber": 1982
         },
         {
-          "id": "games/vectrex-controller",
-          "name": "Vectrex controller",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "games/amiga-joyboard",
-          "name": "Amiga Joyboard",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
           "id": "games/atari-cx-42-remote-control-joystick",
           "name": "Atari CX-42 Remote Control Joystick",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/colecovision-expansion-module-2-driving",
-          "name": "ColecoVision Expansion Module #2 (driving)",
           "year": "1983",
           "yearNumber": 1983
         },
@@ -3606,20 +3459,8 @@
           "yearNumber": 1983
         },
         {
-          "id": "games/famicom-controller-with-microphone",
-          "name": "Famicom controller (with microphone)",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
           "id": "games/kempston-interface-dzhoystik-interfeys",
           "name": "Kempston Interface — джойстик-интерфейс",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/koalapad",
-          "name": "KoalaPad",
           "year": "1983",
           "yearNumber": 1983
         },
@@ -3628,18 +3469,6 @@
           "name": "Sega SG-1000 — джойстик SJ-200",
           "year": "1983",
           "yearNumber": 1983
-        },
-        {
-          "id": "games/star-wars-arcade-flight-yoke",
-          "name": "Star Wars arcade flight yoke",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/atari-mindlink",
-          "name": "Atari Mindlink",
-          "year": "1984",
-          "yearNumber": 1984
         },
         {
           "id": "games/marble-madness-dvoynoy-trekbol",
@@ -3654,12 +3483,6 @@
           "yearNumber": 1984
         },
         {
-          "id": "games/vectrex-3d-imager",
-          "name": "Vectrex 3D Imager",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
           "id": "games/elektronika-im-02-nu-pogodi",
           "name": "Электроника ИМ-02 «Ну, погоди!»",
           "year": "1984",
@@ -3670,48 +3493,6 @@
           "name": "Konami Hyper Shot",
           "year": "1985",
           "yearNumber": 1985
-        },
-        {
-          "id": "games/nes-zapper",
-          "name": "NES Zapper",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "games/nes-controller",
-          "name": "NES controller",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "games/nintendo-r-o-b",
-          "name": "Nintendo R.O.B.",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "games/sega-hang-on-ride-on-motorcycle",
-          "name": "Sega Hang-On ride-on motorcycle",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "games/sega-space-harrier-moving-cabinet",
-          "name": "Sega Space Harrier moving cabinet",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "games/arkanoid-vaus-controller",
-          "name": "Arkanoid Vaus controller",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "games/atari-7800-proline-joystick",
-          "name": "Atari 7800 ProLine joystick",
-          "year": "1986",
-          "yearNumber": 1986
         },
         {
           "id": "games/bandai-family-fun-fitness-mat",
@@ -3732,56 +3513,14 @@
           "yearNumber": 1986
         },
         {
-          "id": "games/power-pad-family-trainer",
-          "name": "Power Pad (Family Trainer)",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "games/sega-master-system-control-pad",
-          "name": "Sega Master System control pad",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
           "id": "games/after-burner-kabina-kokpit",
           "name": "After Burner — кабина-кокпит",
           "year": "1987",
           "yearNumber": 1987
         },
         {
-          "id": "games/famicom-3d-system",
-          "name": "Famicom 3D System",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "games/nes-advantage",
-          "name": "NES Advantage",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "games/sega-light-phaser",
-          "name": "Sega Light Phaser",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "games/segascope-3-d-glasses",
-          "name": "SegaScope 3-D Glasses",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
           "id": "games/street-fighter-pnevmaticheskie-knopki",
           "name": "Street Fighter — пневматические кнопки",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "games/turbografx-16-pc-engine-controller",
-          "name": "TurboGrafx-16 / PC Engine controller",
           "year": "1987",
           "yearNumber": 1987
         },
@@ -3798,74 +3537,14 @@
           "yearNumber": 1987
         },
         {
-          "id": "games/sega-mega-drive-genesis-3-button-controller",
-          "name": "Sega Mega Drive / Genesis 3-button controller",
-          "year": "1988",
-          "yearNumber": 1988
-        },
-        {
-          "id": "games/atari-lynx",
-          "name": "Atari Lynx",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
           "id": "games/nes-hands-free-controller",
           "name": "NES Hands Free Controller",
           "year": "1989",
           "yearNumber": 1989
         },
         {
-          "id": "games/nintendo-game-boy",
-          "name": "Nintendo Game Boy",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "games/power-glove",
-          "name": "Power Glove",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "games/u-force",
-          "name": "U-Force",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "games/konami-laserscope",
-          "name": "Konami LaserScope",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "games/neo-geo-aes-joystick",
-          "name": "Neo Geo AES joystick",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
           "id": "games/sega-game-gear",
           "name": "Sega Game Gear",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "games/sega-r360",
-          "name": "Sega R360",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "games/sega-rad-mobile-cabinet",
-          "name": "Sega Rad Mobile cabinet",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "games/super-famicom-snes-controller",
-          "name": "Super Famicom / SNES controller",
           "year": "1990",
           "yearNumber": 1990
         },
@@ -3876,20 +3555,8 @@
           "yearNumber": 1991
         },
         {
-          "id": "games/philips-cd-i-remote-and-controllers",
-          "name": "Philips CD-i remote and controllers",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
           "id": "games/street-fighter-ii-6-knopochnaya-panel",
           "name": "Street Fighter II — 6-кнопочная панель",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "games/virtuality-1000cs-pod",
-          "name": "Virtuality 1000CS pod",
           "year": "1991",
           "yearNumber": 1991
         },
@@ -3900,56 +3567,8 @@
           "yearNumber": 1992
         },
         {
-          "id": "games/sega-menacer",
-          "name": "Sega Menacer",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "games/super-nes-mouse",
-          "name": "Super NES Mouse",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "games/super-scope",
-          "name": "Super Scope",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "games/3do-controller",
-          "name": "3DO controller",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "games/atari-jaguar-controller",
-          "name": "Atari Jaguar controller",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "games/konami-justifier",
-          "name": "Konami Justifier",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
           "id": "games/sega-activator",
           "name": "Sega Activator",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "games/sega-mega-drive-genesis-6-button-controller",
-          "name": "Sega Mega Drive / Genesis 6-button controller",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "games/sega-pico",
-          "name": "Sega Pico",
           "year": "1993",
           "yearNumber": 1993
         },
@@ -3984,20 +3603,8 @@
           "yearNumber": 1994
         },
         {
-          "id": "games/playstation-controller",
-          "name": "PlayStation controller",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
           "id": "games/point-blank-pistolety",
           "name": "Point Blank — пистолеты",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "games/sega-saturn-control-pad",
-          "name": "Sega Saturn control pad",
           "year": "1994",
           "yearNumber": 1994
         },
@@ -4032,12 +3639,6 @@
           "yearNumber": 1995
         },
         {
-          "id": "games/namco-negcon",
-          "name": "Namco neGcon",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
           "id": "games/sega-arcade-racer-rul-saturn",
           "name": "Sega Arcade Racer (руль Saturn)",
           "year": "1995",
@@ -4056,38 +3657,8 @@
           "yearNumber": 1995
         },
         {
-          "id": "games/time-crisis-foot-pedal",
-          "name": "Time Crisis foot pedal",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/virtual-boy-controller",
-          "name": "Virtual Boy controller",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/virtual-on-twin-stick",
-          "name": "Virtual-On Twin Stick",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
           "id": "games/apple-bandai-pippin-applejack",
           "name": "Apple Bandai Pippin — AppleJack",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "games/nintendo-64-controller",
-          "name": "Nintendo 64 controller",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "games/playstation-analog-joystick",
-          "name": "PlayStation Analog Joystick",
           "year": "1996",
           "yearNumber": 1996
         },
@@ -4104,124 +3675,16 @@
           "yearNumber": 1996
         },
         {
-          "id": "games/sega-saturn-3d-control-pad",
-          "name": "Sega Saturn 3D Control Pad",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "games/tamagotchi",
-          "name": "Tamagotchi",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
           "id": "games/the-house-of-the-dead-svetovoy-pistolet",
           "name": "The House of the Dead — световой пистолет",
           "year": "1996",
           "yearNumber": 1996
         },
         {
-          "id": "games/beatmania-turntable-controller",
-          "name": "Beatmania turntable controller",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "games/densha-de-go-master-controller",
-          "name": "Densha de Go! master controller",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "games/dual-analog-controller",
-          "name": "Dual Analog Controller",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "games/dualshock",
-          "name": "DualShock",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "games/microsoft-sidewinder-force-feedback-pro",
-          "name": "Microsoft SideWinder Force Feedback Pro",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "games/namco-guncon",
-          "name": "Namco GunCon",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "games/rumble-pak",
-          "name": "Rumble Pak",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
           "id": "games/tiger-game-com-sensornyy-ekran",
           "name": "Tiger Game.com — сенсорный экран",
           "year": "1997",
           "yearNumber": 1997
-        },
-        {
-          "id": "games/dance-dance-revolution-dance-pad",
-          "name": "Dance Dance Revolution dance pad",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/dreamcast-controller",
-          "name": "Dreamcast controller",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/game-boy-camera",
-          "name": "Game Boy Camera",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/guitarfreaks-guitar-controller",
-          "name": "GuitarFreaks guitar controller",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/hey-you-pikachu-voice-recognition-unit",
-          "name": "Hey You, Pikachu! Voice Recognition Unit",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/microsoft-sidewinder-freestyle-pro",
-          "name": "Microsoft SideWinder Freestyle Pro",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/pokemon-pikachu",
-          "name": "Pokémon Pikachu",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/pop-n-music-controller",
-          "name": "Pop'n Music controller",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "games/vmu-visual-memory-unit",
-          "name": "VMU (Visual Memory Unit)",
-          "year": "1998",
-          "yearNumber": 1998
         },
         {
           "id": "games/bandai-wonderswan",
@@ -4232,12 +3695,6 @@
         {
           "id": "games/crazy-taxi-kabina",
           "name": "Crazy Taxi — кабина",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/dreamcast-fishing-controller",
-          "name": "Dreamcast Fishing Controller",
           "year": "1999",
           "yearNumber": 1999
         },
@@ -4254,12 +3711,6 @@
           "yearNumber": 1999
         },
         {
-          "id": "games/pocketstation",
-          "name": "PocketStation",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
           "id": "games/pump-it-up-pyatipanelnaya-platforma",
           "name": "Pump It Up — пятипанельная платформа",
           "year": "1999",
@@ -4272,38 +3723,8 @@
           "yearNumber": 1999
         },
         {
-          "id": "games/samba-de-amigo-maracas",
-          "name": "Samba de Amigo maracas",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/seaman-microphone",
-          "name": "Seaman microphone",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/silent-scope-sniper-rifle",
-          "name": "Silent Scope sniper rifle",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
           "id": "games/dreameye",
           "name": "Dreameye",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "games/dualshock-2",
-          "name": "DualShock 2",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "games/keyboardmania-keyboard-controller",
-          "name": "Keyboardmania keyboard controller",
           "year": "2000",
           "yearNumber": 2000
         },
@@ -4326,32 +3747,8 @@
           "yearNumber": 2000
         },
         {
-          "id": "games/para-para-paradise-motion-sensors",
-          "name": "Para Para Paradise motion sensors",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
           "id": "games/game-boy-advance",
           "name": "Game Boy Advance",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "games/gamecube-controller",
-          "name": "GameCube controller",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "games/pokemon-mini",
-          "name": "Pokémon Mini",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "games/xbox-controller-duke",
-          "name": "Xbox controller 'Duke'",
           "year": "2001",
           "yearNumber": 2001
         },
@@ -4368,44 +3765,8 @@
           "yearNumber": 2002
         },
         {
-          "id": "games/steel-battalion-controller",
-          "name": "Steel Battalion controller",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "games/taiko-no-tatsujin-tatacon-drum",
-          "name": "Taiko no Tatsujin Tatacon drum",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "games/wavebird-wireless-controller",
-          "name": "WaveBird Wireless Controller",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "games/xbox-controller-s",
-          "name": "Xbox Controller S",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
           "id": "games/boktai-solar-sensor-cartridge",
           "name": "Boktai solar sensor cartridge",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "games/dk-bongos",
-          "name": "DK Bongos",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "games/eyetoy",
-          "name": "EyeToy",
           "year": "2003",
           "yearNumber": 2003
         },
@@ -4428,12 +3789,6 @@
           "yearNumber": 2004
         },
         {
-          "id": "games/nintendo-ds",
-          "name": "Nintendo DS",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
           "id": "games/playstation-portable-nub",
           "name": "PlayStation Portable — «нуб»",
           "year": "2004",
@@ -4452,62 +3807,14 @@
           "yearNumber": 2004
         },
         {
-          "id": "games/warioware-twisted-gyro-cartridge",
-          "name": "WarioWare: Twisted! gyro cartridge",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "games/buzz-buzzers",
-          "name": "Buzz! buzzers",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "games/guitar-hero-controller-gibson-sg",
-          "name": "Guitar Hero controller (Gibson SG)",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
           "id": "games/logitech-g15-igrovaya-klaviatura",
           "name": "Logitech G15 — игровая клавиатура",
           "year": "2005",
           "yearNumber": 2005
         },
         {
-          "id": "games/xbox-360-controller",
-          "name": "Xbox 360 controller",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "games/logitech-g25-racing-wheel",
-          "name": "Logitech G25 racing wheel",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "games/sixaxis",
-          "name": "Sixaxis",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
           "id": "games/wii-classic-controller",
           "name": "Wii Classic Controller",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "games/wii-nunchuk",
-          "name": "Wii Nunchuk",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "games/wii-remote",
-          "name": "Wii Remote",
           "year": "2006",
           "yearNumber": 2006
         },
@@ -4518,38 +3825,8 @@
           "yearNumber": 2007
         },
         {
-          "id": "games/novint-falcon",
-          "name": "Novint Falcon",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "games/playstation-eye",
-          "name": "PlayStation Eye",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "games/rock-band-drum-kit",
-          "name": "Rock Band drum kit",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "games/wii-balance-board",
-          "name": "Wii Balance Board",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
           "id": "games/wii-fit",
           "name": "Wii Fit",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "games/wii-zapper",
-          "name": "Wii Zapper",
           "year": "2007",
           "yearNumber": 2007
         },
@@ -4566,56 +3843,14 @@
           "yearNumber": 2008
         },
         {
-          "id": "games/wii-wheel",
-          "name": "Wii Wheel",
-          "year": "2008",
-          "yearNumber": 2008
-        },
-        {
-          "id": "games/dj-hero-turntable",
-          "name": "DJ Hero turntable",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "games/emotiv-epoc",
-          "name": "Emotiv EPOC",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
           "id": "games/mindflex",
           "name": "Mindflex",
           "year": "2009",
           "yearNumber": 2009
         },
         {
-          "id": "games/pokewalker",
-          "name": "Pokéwalker",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
           "id": "games/star-wars-force-trainer",
           "name": "Star Wars Force Trainer",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "games/tony-hawk-ride-skateboard",
-          "name": "Tony Hawk: Ride skateboard",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "games/wii-motionplus",
-          "name": "Wii MotionPlus",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "games/wii-vitality-sensor",
-          "name": "Wii Vitality Sensor",
           "year": "2009",
           "yearNumber": 2009
         },
@@ -4632,40 +3867,10 @@
           "yearNumber": 2009
         },
         {
-          "id": "games/kinect",
-          "name": "Kinect",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "games/playstation-move",
-          "name": "PlayStation Move",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
           "id": "games/thrustmaster-hotas-warthog",
           "name": "Thrustmaster HOTAS Warthog",
           "year": "2010",
           "yearNumber": 2010
-        },
-        {
-          "id": "games/udraw-gametablet",
-          "name": "uDraw GameTablet",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "games/neurosky-mindwave",
-          "name": "NeuroSky MindWave",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "games/nintendo-3ds",
-          "name": "Nintendo 3DS",
-          "year": "2011",
-          "yearNumber": 2011
         },
         {
           "id": "games/playstation-move-sharp-shooter",
@@ -4674,20 +3879,8 @@
           "yearNumber": 2011
         },
         {
-          "id": "games/playstation-vita",
-          "name": "PlayStation Vita",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
           "id": "games/razer-hydra",
           "name": "Razer Hydra",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "games/rock-band-3-fender-mustang-pro-guitar",
-          "name": "Rock Band 3 Fender Mustang Pro guitar",
           "year": "2011",
           "yearNumber": 2011
         },
@@ -4700,12 +3893,6 @@
         {
           "id": "games/sega-toylet",
           "name": "Sega Toylet",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "games/skylanders-portal-of-power",
-          "name": "Skylanders Portal of Power",
           "year": "2011",
           "yearNumber": 2011
         },
@@ -4752,32 +3939,8 @@
           "yearNumber": 2012
         },
         {
-          "id": "games/wii-u-gamepad",
-          "name": "Wii U GamePad",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
           "id": "games/disney-infinity-base",
           "name": "Disney Infinity Base",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/dualshock-4",
-          "name": "DualShock 4",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/kinect-for-xbox-one",
-          "name": "Kinect for Xbox One",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/leap-motion-controller",
-          "name": "Leap Motion Controller",
           "year": "2013",
           "yearNumber": 2013
         },
@@ -4788,50 +3951,14 @@
           "yearNumber": 2013
         },
         {
-          "id": "games/oculus-rift-dk1",
-          "name": "Oculus Rift DK1",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/ouya-controller",
-          "name": "Ouya controller",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/playstation-camera",
-          "name": "PlayStation Camera",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
           "id": "games/valve-steam-controller-prototip-s-tach-ekranom",
           "name": "Valve Steam Controller (прототип с тач-экраном)",
           "year": "2013",
           "yearNumber": 2013
         },
         {
-          "id": "games/xbox-one-controller",
-          "name": "Xbox One controller",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/amiibo",
-          "name": "Amiibo",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
           "id": "games/quadstick-sip-and-puff",
           "name": "QuadStick (sip-and-puff)",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "games/tobii-eyex-controller",
-          "name": "Tobii EyeX Controller",
           "year": "2014",
           "yearNumber": 2014
         },
@@ -4890,44 +4017,8 @@
           "yearNumber": 2015
         },
         {
-          "id": "games/steam-controller-1st-generation",
-          "name": "Steam Controller (1st generation)",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "games/xbox-elite-wireless-controller",
-          "name": "Xbox Elite Wireless Controller",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
           "id": "games/google-daydream-controller",
           "name": "Google Daydream controller",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "games/htc-vive-controllers",
-          "name": "HTC Vive controllers",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "games/oculus-touch",
-          "name": "Oculus Touch",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "games/playstation-vr",
-          "name": "PlayStation VR",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "games/pokemon-go-plus",
-          "name": "Pokémon Go Plus",
           "year": "2016",
           "yearNumber": 2016
         },
@@ -4936,30 +4027,6 @@
           "name": "Pokémon Go — AR и GPS",
           "year": "2016",
           "yearNumber": 2016
-        },
-        {
-          "id": "games/joy-con",
-          "name": "Joy-Con",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "games/nintendo-switch-pro-controller",
-          "name": "Nintendo Switch Pro Controller",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "games/playstation-vr-aim-controller",
-          "name": "PlayStation VR Aim Controller",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "games/virtuix-omni",
-          "name": "Virtuix Omni",
-          "year": "2017",
-          "yearNumber": 2017
         },
         {
           "id": "games/windows-mixed-reality-motion-controllers",
@@ -4974,20 +4041,8 @@
           "yearNumber": 2017
         },
         {
-          "id": "games/nintendo-labo-toy-con",
-          "name": "Nintendo Labo Toy-Con",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
           "id": "games/nintendo-labo-variety-kit-pianino",
           "name": "Nintendo Labo Variety Kit — пианино",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "games/poke-ball-plus",
-          "name": "Poké Ball Plus",
           "year": "2018",
           "yearNumber": 2018
         },
@@ -5004,12 +4059,6 @@
           "yearNumber": 2018
         },
         {
-          "id": "games/xbox-adaptive-controller",
-          "name": "Xbox Adaptive Controller",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
           "id": "games/fanatec-direct-drive-podium-dd",
           "name": "Fanatec — direct drive (Podium DD)",
           "year": "2019",
@@ -5022,38 +4071,8 @@
           "yearNumber": 2019
         },
         {
-          "id": "games/oculus-quest-hand-tracking",
-          "name": "Oculus Quest (hand tracking)",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "games/ring-con",
-          "name": "Ring-Con",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "games/stadia-controller",
-          "name": "Stadia Controller",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "games/valve-index-controllers-knuckles",
-          "name": "Valve Index Controllers ('Knuckles')",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
           "id": "games/backbone-one",
           "name": "Backbone One",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "games/dualsense",
-          "name": "DualSense",
           "year": "2020",
           "yearNumber": 2020
         },
@@ -5064,20 +4083,8 @@
           "yearNumber": 2020
         },
         {
-          "id": "games/mario-kart-live-home-circuit-kart",
-          "name": "Mario Kart Live: Home Circuit kart",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
           "id": "games/razer-kishi",
           "name": "Razer Kishi",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "games/xbox-wireless-controller-series-x-s",
-          "name": "Xbox Wireless Controller (Series X|S)",
           "year": "2020",
           "yearNumber": 2020
         },
@@ -5088,24 +4095,6 @@
           "yearNumber": 2021
         },
         {
-          "id": "games/playdate",
-          "name": "Playdate",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "games/steam-deck",
-          "name": "Steam Deck",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "games/dualsense-edge",
-          "name": "DualSense Edge",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
           "id": "games/meta-quest-touch-plus",
           "name": "Meta Quest Touch Plus",
           "year": "2023",
@@ -5114,18 +4103,6 @@
         {
           "id": "games/nex-playground",
           "name": "Nex Playground",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "games/playstation-access-controller",
-          "name": "PlayStation Access controller",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "games/playstation-vr2-sense-controller",
-          "name": "PlayStation VR2 Sense controller",
           "year": "2023",
           "yearNumber": 2023
         },
@@ -5142,20 +4119,8 @@
           "yearNumber": 2023
         },
         {
-          "id": "games/apple-vision-pro-eye-hand-input",
-          "name": "Apple Vision Pro (eye + hand input)",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
           "id": "games/flex-controller-hori-litsenziya-nintendo",
           "name": "Flex Controller (Hori, лицензия Nintendo)",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "games/neuralink-n1-implant-telepathy",
-          "name": "Neuralink N1 implant (Telepathy)",
           "year": "2024",
           "yearNumber": 2024
         },
@@ -5164,18 +4129,6 @@
           "name": "Xbox Adaptive Joystick",
           "year": "2024",
           "yearNumber": 2024
-        },
-        {
-          "id": "games/joy-con-2",
-          "name": "Joy-Con 2",
-          "year": "2025",
-          "yearNumber": 2025
-        },
-        {
-          "id": "games/steam-controller-2026",
-          "name": "Steam Controller (2026)",
-          "year": "2026",
-          "yearNumber": 2026
         }
       ],
       "music-sound": [
@@ -11907,9 +10860,8 @@
     "unrecognizedFiles": [],
     "unmatchedOldImages": [],
     "dataJs": {
-      "replaced": 0,
-      "pruned": 0,
-      "controllers": 187
+      "skipped": true,
+      "reason": "data.js is not in the project root. Old rows are read from data/legacy-controllers.json."
     }
   },
   "doNotOverwrite": [
@@ -11921,9 +10873,9 @@
     "data/migration-report.json",
     "data/tsconfig.json",
     "public/images/**",
-    "controllers_all.xlsx",
-    "game_controllers.xlsx",
+    "data/source/controllers_all.xlsx",
+    "data/source/game_controllers.xlsx",
     "Controller.legacy on matched rows",
-    "data.js image paths (local images arrays only list files that exist; imageSources stay)"
+    "data/legacy-controllers.json is the old-table snapshot. A root data.js copy is not required."
   ]
 }

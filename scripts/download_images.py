@@ -16,8 +16,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, unquote
 from urllib.request import Request, urlopen
 
-ROOT = Path(__file__).resolve().parent
-XLSX = ROOT / "game_controllers.xlsx"
+ROOT = Path(__file__).resolve().parent.parent
+XLSX = ROOT / "data" / "source" / "game_controllers.xlsx"
 OUT = ROOT / "images"
 LOG = OUT / "_download_log.json"
 THUMB_WIDTH = 1280

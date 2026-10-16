@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Build the controller catalog from controllers_all.xlsx + the previous
+ * Build the controller catalog from data/source/controllers_all.xlsx + the previous
  * game-controller table, and attach local images by scanning public/images.
  *
  *   node scripts/build-data.mjs          regenerate JSON, report, and image moves
@@ -42,6 +42,7 @@ import { fileURLToPath } from "node:url";
 import zlib from "node:zlib";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const SOURCE_DIR = path.join(ROOT, "data/source");
 const DRY = process.argv.includes("--dry");
 
 const CATEGORIES = [
@@ -1277,6 +1278,13 @@ function removeEmptyDirs(dir) {
 
 function rewriteDataJs(plans) {
   const filePath = path.join(ROOT, "data.js");
+  // The old HTML page read this file. The legacy snapshot is the copy the catalog uses.
+  if (!fs.existsSync(filePath)) {
+    return {
+      skipped: true,
+      reason: "data.js is not in the project root. Old rows are read from data/legacy-controllers.json.",
+    };
+  }
   let text = fs.readFileSync(filePath, "utf8");
   const replacements = plans
     .filter((plan) => plan.listed)
@@ -1329,7 +1337,7 @@ function pruneMissingDataJsImages(text) {
 }
 
 function compareGameWorkbook(oldRecords) {
-  const filePath = path.join(ROOT, "game_controllers.xlsx");
+  const filePath = path.join(SOURCE_DIR, "game_controllers.xlsx");
   if (!fs.existsSync(filePath)) return [{ issue: "game_controllers.xlsx missing" }];
   const sheets = loadWorkbook(filePath);
   const sheet = sheets.find((item) => item.name === "Controllers");
@@ -1517,7 +1525,7 @@ function stripInternal(record) {
 
 function main() {
   selfCheck();
-  const workbook = loadWorkbook(path.join(ROOT, "controllers_all.xlsx"));
+  const workbook = loadWorkbook(path.join(SOURCE_DIR, "controllers_all.xlsx"));
   const sheetNames = workbook.map((sheet) => `${sheet.name}:${sheet.rows.length}`);
   const combined = combinedSheetCheck(workbook);
   const gamesCategory = CATEGORIES[0];
@@ -1780,10 +1788,10 @@ function main() {
       "data/migration-report.json",
       "data/tsconfig.json",
       "public/images/**",
-      "controllers_all.xlsx",
-      "game_controllers.xlsx",
+      "data/source/controllers_all.xlsx",
+      "data/source/game_controllers.xlsx",
       "Controller.legacy on matched rows",
-      "data.js image paths (local images arrays only list files that exist; imageSources stay)",
+      "data/legacy-controllers.json is the old-table snapshot. A root data.js copy is not required.",
     ],
   };
 

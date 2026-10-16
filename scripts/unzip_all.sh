@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 
 shopt -s nullglob
 zips=(*.zip)
