@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "data:build": "node scripts/build-data.mjs",
+    "data:check": "tsc -p data/tsconfig.json --noEmit"
+  }
+}

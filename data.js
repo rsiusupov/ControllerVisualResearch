@@ -36,10 +36,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Tennis_for_Two_Machine_at_CAX_2010.jpg"
     ],
     "images": [
-      "images/1958_Tennis_for_Two_controller/Tennis_for_Two_-_Modern_recreation.jpg",
-      "images/1958_Tennis_for_Two_controller/Tennis_For_Two_re-created_in_1997.png",
-      "images/1958_Tennis_for_Two_controller/Tennis_For_Two_in_1959.jpg",
-      "images/1958_Tennis_for_Two_controller/Tennis_for_Two_Machine_at_CAX_2010.jpg"
+      "public/images/games/tennis-for-two-controller/tennis-for-two-controller-1958-01.jpg",
+      "public/images/games/tennis-for-two-controller/tennis-for-two-controller-1958-02.png",
+      "public/images/games/tennis-for-two-controller/tennis-for-two-controller-1958-03.jpg",
+      "public/images/games/tennis-for-two-controller/tennis-for-two-controller-1958-04.jpg"
     ]
   },
   {
@@ -79,10 +79,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Spacewar!_is_alive!_(8420887916).jpg"
     ],
     "images": [
-      "images/1962_Spacewar_control_boxes/Spacewar!-PDP-1-20070512.jpg",
-      "images/1962_Spacewar_control_boxes/Spacewar_controller_showing_size.jpg",
-      "images/1962_Spacewar_control_boxes/Steve_Russell-PDP-1-20070512.jpg",
-      "images/1962_Spacewar_control_boxes/Spacewar!_is_alive!_(8420887916).jpg"
+      "public/images/games/spacewar-control-boxes/spacewar-control-boxes-1962-01.jpg",
+      "public/images/games/spacewar-control-boxes/spacewar-control-boxes-1962-02.jpg",
+      "public/images/games/spacewar-control-boxes/spacewar-control-boxes-1962-03.jpg",
+      "public/images/games/spacewar-control-boxes/spacewar-control-boxes-1962-04.jpg"
     ]
   },
   {
@@ -123,10 +123,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Baer_Brown_Box_(27763503541)_box.jpg"
     ],
     "images": [
-      "images/1969_Brown_Box_prototype_controllers/Ralph_H._Baer_-_\"Brown_Box\"_prototype.png",
-      "images/1969_Brown_Box_prototype_controllers/Ralph_H._Baer_\"Brown_Box\"_replica.jpg",
-      "images/1969_Brown_Box_prototype_controllers/Baer_Brown_Box_(27763503541).jpg",
-      "images/1969_Brown_Box_prototype_controllers/Baer_Brown_Box_(27763503541)_box.jpg"
+      "public/images/games/brown-box-prototype-controllers/brown-box-prototype-controllers-1969-01.png",
+      "public/images/games/brown-box-prototype-controllers/brown-box-prototype-controllers-1969-02.jpg",
+      "public/images/games/brown-box-prototype-controllers/brown-box-prototype-controllers-1969-03.jpg",
+      "public/images/games/brown-box-prototype-controllers/brown-box-prototype-controllers-1969-04.jpg"
     ]
   },
   {
@@ -166,10 +166,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Computer_Space.jpg"
     ],
     "images": [
-      "images/1971_Computer_Space_control_panel/Computer_Space_Game_on-Science_museum_Crop.jpg",
-      "images/1971_Computer_Space_control_panel/Computer_Space_monitor_close-up,_game_powered_on_-_at_Billy's_Midway_Arcade_-_January_2025.jpg",
-      "images/1971_Computer_Space_control_panel/Computer_Space_-_Vintage_Computer_Fair_2006.jpg",
-      "images/1971_Computer_Space_control_panel/Computer_Space.jpg"
+      "public/images/games/computer-space-control-panel/computer-space-control-panel-1971-01.jpg",
+      "public/images/games/computer-space-control-panel/computer-space-control-panel-1971-02.jpg",
+      "public/images/games/computer-space-control-panel/computer-space-control-panel-1971-03.jpg",
+      "public/images/games/computer-space-control-panel/computer-space-control-panel-1971-04.jpg"
     ]
   },
   {
@@ -209,10 +209,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Magnavox-Odyssey-Controller-FR.jpg"
     ],
     "images": [
-      "images/1972_Magnavox_Odyssey_Controller/Magnavox-Odyssey-Controller-FL.jpg",
-      "images/1972_Magnavox_Odyssey_Controller/Magnavox-Odyssey-Controller-BL.jpg",
-      "images/1972_Magnavox_Odyssey_Controller/Magnavox-Odyssey-Controller-BR.jpg",
-      "images/1972_Magnavox_Odyssey_Controller/Magnavox-Odyssey-Controller-FR.jpg"
+      "public/images/games/magnavox-odyssey-controller/magnavox-odyssey-controller-1972-01.jpg",
+      "public/images/games/magnavox-odyssey-controller/magnavox-odyssey-controller-1972-02.jpg",
+      "public/images/games/magnavox-odyssey-controller/magnavox-odyssey-controller-1972-03.jpg",
+      "public/images/games/magnavox-odyssey-controller/magnavox-odyssey-controller-1972-04.jpg"
     ]
   },
   {
@@ -285,10 +285,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Pong_paddle_-_320738380_-_axeldeviaje.jpg"
     ],
     "images": [
-      "images/1972_Pong_arcade_knob_controllers/Signed_Pong_Cabinet.jpg",
-      "images/1972_Pong_arcade_knob_controllers/Pong_prototype.jpg",
-      "images/1972_Pong_arcade_knob_controllers/Atari_Super_Pong_IV_(1976)_2.jpg",
-      "images/1972_Pong_arcade_knob_controllers/Pong_paddle_-_320738380_-_axeldeviaje.jpg"
+      "public/images/games/pong-arcade-knob-controllers/pong-arcade-knob-controllers-1972-01.jpg",
+      "public/images/games/pong-arcade-knob-controllers/pong-arcade-knob-controllers-1972-02.jpg",
+      "public/images/games/pong-arcade-knob-controllers/pong-arcade-knob-controllers-1972-03.jpg",
+      "public/images/games/pong-arcade-knob-controllers/pong-arcade-knob-controllers-1972-04.jpg"
     ]
   },
   {
@@ -325,7 +325,7 @@ const CONTROLLERS = [
       "https://en.wikipedia.org/wiki/File:Gran_Trak_10_photo.jpg"
     ],
     "images": [
-      "images/1974_Gran_Trak_10_steering_wheel/Gran_Trak_10_photo.jpg"
+      "public/images/games/gran-trak-10-steering-wheel/gran-trak-10-steering-wheel-1974-01.jpg"
     ]
   },
   {
@@ -362,7 +362,7 @@ const CONTROLLERS = [
       "https://en.wikipedia.org/wiki/File:Tank_(arcade_game).jpg"
     ],
     "images": [
-      "images/1974_Tank_twin_stick_controls/Tank_(arcade_game).jpg"
+      "public/images/games/tank-twin-stick-controls/tank-twin-stick-controls-1974-01.jpg"
     ]
   },
   {
@@ -402,10 +402,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:1977_Coleco_Telstar_Ranger_Front.jpg"
     ],
     "images": [
-      "images/1976_Coleco_Telstar_dials/Coleco_Telstar_Alpha.jpg",
-      "images/1976_Coleco_Telstar_dials/Coleco-Telstar-Colortron.jpg",
-      "images/1976_Coleco_Telstar_dials/Coleco_Telstar_Regent.jpg",
-      "images/1976_Coleco_Telstar_dials/1977_Coleco_Telstar_Ranger_Front.jpg"
+      "public/images/games/coleco-telstar-dials/coleco-telstar-dials-1976-01.jpg",
+      "public/images/games/coleco-telstar-dials/coleco-telstar-dials-1976-02.jpg",
+      "public/images/games/coleco-telstar-dials/coleco-telstar-dials-1976-03.jpg",
+      "public/images/games/coleco-telstar-dials/coleco-telstar-dials-1976-04.jpg"
     ]
   },
   {
@@ -443,8 +443,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:ControllerSabaVideoplay.jpg"
     ],
     "images": [
-      "images/1976_Fairchild_Channel_F_controller/Fairchild_(7973361770).jpg",
-      "images/1976_Fairchild_Channel_F_controller/ControllerSabaVideoplay.jpg"
+      "public/images/games/fairchild-channel-f-controller/fairchild-channel-f-controller-1976-01.jpg",
+      "public/images/games/fairchild-channel-f-controller/fairchild-channel-f-controller-1976-02.jpg"
     ]
   },
   {
@@ -484,10 +484,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Isern_at_Salo_de_la_Infancia_i_la_Joventut_MX_prop_Montjuic_davant_palau_Montjuic.jpg"
     ],
     "images": [
-      "images/1976_Sega_Moto_Cross_Fonz_handlebars/Rupesh_Chondhe_Freestyle_Motocross_Stunt_Rider.jpg",
-      "images/1976_Sega_Moto_Cross_Fonz_handlebars/Two_Isern_motocross_riders_in_the_80s.jpg",
-      "images/1976_Sega_Moto_Cross_Fonz_handlebars/FoxHeadStore.jpg",
-      "images/1976_Sega_Moto_Cross_Fonz_handlebars/Isern_at_Salo_de_la_Infancia_i_la_Joventut_MX_prop_Montjuic_davant_palau_Montjuic.jpg"
+      "public/images/games/sega-moto-cross-fonz-handlebars/sega-moto-cross-fonz-handlebars-1976-01.jpg",
+      "public/images/games/sega-moto-cross-fonz-handlebars/sega-moto-cross-fonz-handlebars-1976-02.jpg",
+      "public/images/games/sega-moto-cross-fonz-handlebars/sega-moto-cross-fonz-handlebars-1976-03.jpg",
+      "public/images/games/sega-moto-cross-fonz-handlebars/sega-moto-cross-fonz-handlebars-1976-04.jpg"
     ]
   },
   {
@@ -527,10 +527,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Atari_joystick_(17335934306).jpg"
     ],
     "images": [
-      "images/1977_Atari_CX40_joystick/Atari_CX40_Joystick.jpg",
-      "images/1977_Atari_CX40_joystick/Atari-2600-Joystick.jpg",
-      "images/1977_Atari_CX40_joystick/Atari_XE_joystick_(colour_restored).jpg",
-      "images/1977_Atari_CX40_joystick/Atari_joystick_(17335934306).jpg"
+      "public/images/games/atari-cx40-joystick/atari-cx40-joystick-1977-01.jpg",
+      "public/images/games/atari-cx40-joystick/atari-cx40-joystick-1977-02.jpg",
+      "public/images/games/atari-cx40-joystick/atari-cx40-joystick-1977-03.jpg",
+      "public/images/games/atari-cx40-joystick/atari-cx40-joystick-1977-04.jpg"
     ]
   },
   {
@@ -570,10 +570,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Georgia_National_Fair_2016,_Midway_33.jpg"
     ],
     "images": [
-      "images/1977_Atari_Driving_Controller_CX20/Atari-2600-Driving-Controller.jpg",
-      "images/1977_Atari_Driving_Controller_CX20/Georgia_National_Fair_2014,_Midway_40.JPG",
-      "images/1977_Atari_Driving_Controller_CX20/Georgia_National_Fair_2014,_Midway_43.JPG",
-      "images/1977_Atari_Driving_Controller_CX20/Georgia_National_Fair_2016,_Midway_33.jpg"
+      "public/images/games/atari-driving-controller-cx20/atari-driving-controller-cx20-1977-01.jpg",
+      "public/images/games/atari-driving-controller-cx20/atari-driving-controller-cx20-1977-02.jpg",
+      "public/images/games/atari-driving-controller-cx20/atari-driving-controller-cx20-1977-03.jpg",
+      "public/images/games/atari-driving-controller-cx20/atari-driving-controller-cx20-1977-04.jpg"
     ]
   },
   {
@@ -613,10 +613,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Atari-2600-Paddle-Controller-FR.jpg"
     ],
     "images": [
-      "images/1977_Atari_paddle_controllers_CX30/Atari_Paddle.JPG",
-      "images/1977_Atari_paddle_controllers_CX30/AtariPaddle2.JPG",
-      "images/1977_Atari_paddle_controllers_CX30/Pong_paddle_-_320738380_-_axeldeviaje.jpg",
-      "images/1977_Atari_paddle_controllers_CX30/Atari-2600-Paddle-Controller-FR.jpg"
+      "public/images/games/atari-paddle-controllers-cx30/atari-paddle-controllers-cx30-1977-01.jpg",
+      "public/images/games/atari-paddle-controllers-cx30/atari-paddle-controllers-cx30-1977-02.jpg",
+      "public/images/games/atari-paddle-controllers-cx30/atari-paddle-controllers-cx30-1977-03.jpg",
+      "public/images/games/atari-paddle-controllers-cx30/atari-paddle-controllers-cx30-1977-04.jpg"
     ]
   },
   {
@@ -653,7 +653,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Bally-Professional-Arcade-Controller.jpg"
     ],
     "images": [
-      "images/1977_Bally_Astrocade_controller/Bally-Professional-Arcade-Controller.jpg"
+      "public/images/games/bally-astrocade-controller/bally-astrocade-controller-1977-01.jpg"
     ]
   },
   {
@@ -724,8 +724,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Magnavox-Odyssey-2-Console-Set.png"
     ],
     "images": [
-      "images/1978_Magnavox_Odyssey2_controller/Magnavox-Odyssey-2-Console-Set.jpg",
-      "images/1978_Magnavox_Odyssey2_controller/Magnavox-Odyssey-2-Console-Set.png"
+      "public/images/games/magnavox-odyssey2-controller/magnavox-odyssey2-controller-1978-01.jpg",
+      "public/images/games/magnavox-odyssey2-controller/magnavox-odyssey2-controller-1978-02.png"
     ]
   },
   {
@@ -765,10 +765,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Intellivision-Console-Set.jpg"
     ],
     "images": [
-      "images/1979_Intellivision_controller/Intellivision-Controller.jpg",
-      "images/1979_Intellivision_controller/Intellivision-Console-Set.png",
-      "images/1979_Intellivision_controller/Intellivision-II-Console-Set.jpg",
-      "images/1979_Intellivision_controller/Intellivision-Console-Set.jpg"
+      "public/images/games/intellivision-controller/intellivision-controller-1979-01.jpg",
+      "public/images/games/intellivision-controller/intellivision-controller-1979-02.png",
+      "public/images/games/intellivision-controller/intellivision-controller-1979-03.jpg",
+      "public/images/games/intellivision-controller/intellivision-controller-1979-04.jpg"
     ]
   },
   {
@@ -808,10 +808,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:E3_2011_-_Video_Game_Museum_-_Microvision_(5822120415).jpg"
     ],
     "images": [
-      "images/1979_Microvision/Milton-Bradley-Microvision-Handheld-FL.jpg",
-      "images/1979_Microvision/Milton-Bradley-Microvision-Casing-Open-02.jpg",
-      "images/1979_Microvision/Microvision_Cartridge_Based_Electronic_Handheld_Game_By_Milton_Bradley_Electronics,_Model_4952,_Made_In_USA,_Copyright_1979.jpg",
-      "images/1979_Microvision/E3_2011_-_Video_Game_Museum_-_Microvision_(5822120415).jpg"
+      "public/images/games/microvision/microvision-1979-01.jpg",
+      "public/images/games/microvision/microvision-1979-02.jpg",
+      "public/images/games/microvision/microvision-1979-03.jpg",
+      "public/images/games/microvision/microvision-1979-04.jpg"
     ]
   },
   {
@@ -849,8 +849,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_M%C3%A9canique_205.JPG"
     ],
     "images": [
-      "images/1980_Battlezone_periscope_and_twin_sticks/Medallion-Hall_of_Fame_Battlezonergb_800.jpg",
-      "images/1980_Battlezone_periscope_and_twin_sticks/Musée_Mécanique_205.JPG"
+      "public/images/games/battlezone-periscope-and-twin-sticks/battlezone-periscope-and-twin-sticks-1980-01.jpg",
+      "public/images/games/battlezone-periscope-and-twin-sticks/battlezone-periscope-and-twin-sticks-1980-02.jpg"
     ]
   },
   {
@@ -890,10 +890,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Atari-5200-Trak-Ball-Controller.jpg"
     ],
     "images": [
-      "images/1982_Atari_5200_controller/Atari-5200-Console-Set.jpg",
-      "images/1982_Atari_5200_controller/Atari-5200-Controller.jpg",
-      "images/1982_Atari_5200_controller/Atari-5200-4-Port-wController-L.jpg",
-      "images/1982_Atari_5200_controller/Atari-5200-Trak-Ball-Controller.jpg"
+      "public/images/games/atari-5200-controller/atari-5200-controller-1982-01.jpg",
+      "public/images/games/atari-5200-controller/atari-5200-controller-1982-02.jpg",
+      "public/images/games/atari-5200-controller/atari-5200-controller-1982-03.jpg",
+      "public/images/games/atari-5200-controller/atari-5200-controller-1982-04.jpg"
     ]
   },
   {
@@ -933,10 +933,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:ColecoVision-Controller-BL.jpg"
     ],
     "images": [
-      "images/1982_ColecoVision_controller/ColecoVision-wController-L.jpg",
-      "images/1982_ColecoVision_controller/ColecoVision-Controller-FR.jpg",
-      "images/1982_ColecoVision_controller/ColecoVision-wController-R.jpg",
-      "images/1982_ColecoVision_controller/ColecoVision-Controller-BL.jpg"
+      "public/images/games/colecovision-controller/colecovision-controller-1982-01.jpg",
+      "public/images/games/colecovision-controller/colecovision-controller-1982-02.jpg",
+      "public/images/games/colecovision-controller/colecovision-controller-1982-03.jpg",
+      "public/images/games/colecovision-controller/colecovision-controller-1982-04.jpg"
     ]
   },
   {
@@ -976,10 +976,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_Donkey_Kong_II_Game_%26_Watch,_Model_No._JR-55,_Made_in_Japan,_Copyright_1983_(Handheld_Electronic_Game).jpg"
     ],
     "images": [
-      "images/1982_Game_and_Watch_D_pad_Donkey_Kong/Nintendo_Donkey_Kong_Game_and_Watch.png",
-      "images/1982_Game_and_Watch_D_pad_Donkey_Kong/Festival_du_Jeu_Vidéo_-_2010-09-11_-_Game_&_Watch_Donkey_Kong.jpg",
-      "images/1982_Game_and_Watch_D_pad_Donkey_Kong/Nintendo_Game_&_Watch_games_Fire,_Fire_attack,_Oil_panic_and_Donkey_Kong_Tietokonemuseo.JPG",
-      "images/1982_Game_and_Watch_D_pad_Donkey_Kong/Nintendo_Donkey_Kong_II_Game_&_Watch,_Model_No._JR-55,_Made_in_Japan,_Copyright_1983_(Handheld_Electronic_Game).jpg"
+      "public/images/games/game-and-watch-d-pad-donkey-kong/game-and-watch-d-pad-donkey-kong-1982-01.png",
+      "public/images/games/game-and-watch-d-pad-donkey-kong/game-and-watch-d-pad-donkey-kong-1982-02.jpg",
+      "public/images/games/game-and-watch-d-pad-donkey-kong/game-and-watch-d-pad-donkey-kong-1982-03.jpg",
+      "public/images/games/game-and-watch-d-pad-donkey-kong/game-and-watch-d-pad-donkey-kong-1982-04.jpg"
     ]
   },
   {
@@ -1019,10 +1019,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:GCE-Vectrex-Controller-FR.jpg"
     ],
     "images": [
-      "images/1982_Vectrex_controller/GCE-Vectrex-Controller-BL.jpg",
-      "images/1982_Vectrex_controller/GCE-Vectrex-Controller-BR.jpg",
-      "images/1982_Vectrex_controller/GCE-Vectrex-Controller-FL.jpg",
-      "images/1982_Vectrex_controller/GCE-Vectrex-Controller-FR.jpg"
+      "public/images/games/vectrex-controller/vectrex-controller-1982-01.jpg",
+      "public/images/games/vectrex-controller/vectrex-controller-1982-02.jpg",
+      "public/images/games/vectrex-controller/vectrex-controller-1982-03.jpg",
+      "public/images/games/vectrex-controller/vectrex-controller-1982-04.jpg"
     ]
   },
   {
@@ -1059,7 +1059,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Joyboard.JPG"
     ],
     "images": [
-      "images/1983_Amiga_Joyboard/Joyboard.JPG"
+      "public/images/games/amiga-joyboard/amiga-joyboard-1983-01.jpg"
     ]
   },
   {
@@ -1099,10 +1099,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:USS_Shubrick_(TB-31),_Stockton_(TB-32)_and_Thornton_(TB-33)-_Steering_Engine._-_NARA_-_120547102.jpg"
     ],
     "images": [
-      "images/1983_ColecoVision_Expansion_Module_2_driving/Colecovision_Steering_Wheel_(RetroMadrid_2018).jpg",
-      "images/1983_ColecoVision_Expansion_Module_2_driving/John_Oxley_steamship_steering_engine.jpg",
-      "images/1983_ColecoVision_Expansion_Module_2_driving/10_Pollux_steering_room_011018.jpg",
-      "images/1983_ColecoVision_Expansion_Module_2_driving/USS_Shubrick_(TB-31),_Stockton_(TB-32)_and_Thornton_(TB-33)-_Steering_Engine._-_NARA_-_120547102.jpg"
+      "public/images/games/colecovision-expansion-module-2-driving/colecovision-expansion-module-2-driving-1983-01.jpg",
+      "public/images/games/colecovision-expansion-module-2-driving/colecovision-expansion-module-2-driving-1983-02.jpg",
+      "public/images/games/colecovision-expansion-module-2-driving/colecovision-expansion-module-2-driving-1983-03.jpg",
+      "public/images/games/colecovision-expansion-module-2-driving/colecovision-expansion-module-2-driving-1983-04.jpg"
     ]
   },
   {
@@ -1142,10 +1142,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo-Famicom-Console-Set-FL.png"
     ],
     "images": [
-      "images/1983_Famicom_controller_with_microphone/Nintendo-Famicom-NES-Dogbone-Controller-FL.jpg",
-      "images/1983_Famicom_controller_with_microphone/Nintendo-Famicom-Controller-I-FL.jpg",
-      "images/1983_Famicom_controller_with_microphone/Nintendo-Famicom-Controller-II-FL.jpg",
-      "images/1983_Famicom_controller_with_microphone/Nintendo-Famicom-Console-Set-FL.png"
+      "public/images/games/famicom-controller-with-microphone/famicom-controller-with-microphone-1983-01.jpg",
+      "public/images/games/famicom-controller-with-microphone/famicom-controller-with-microphone-1983-02.jpg",
+      "public/images/games/famicom-controller-with-microphone/famicom-controller-with-microphone-1983-03.jpg",
+      "public/images/games/famicom-controller-with-microphone/famicom-controller-with-microphone-1983-04.png"
     ]
   },
   {
@@ -1182,7 +1182,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Koalapad_loz_CIMG1891.jpg"
     ],
     "images": [
-      "images/1983_KoalaPad/Koalapad_loz_CIMG1891.jpg"
+      "public/images/games/koalapad/koalapad-1983-01.jpg"
     ]
   },
   {
@@ -1222,10 +1222,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Star_Wars_-_1983_arcade_game_back.jpg"
     ],
     "images": [
-      "images/1983_Star_Wars_arcade_flight_yoke/Star_Wars_-_1983_arcade_game_-_right.jpg",
-      "images/1983_Star_Wars_arcade_flight_yoke/Star_Wars_-_1983_arcade_game_artwork_power_supply.jpg",
-      "images/1983_Star_Wars_arcade_flight_yoke/Star_Wars_-_1983_arcade_game_artwork_top.jpg",
-      "images/1983_Star_Wars_arcade_flight_yoke/Star_Wars_-_1983_arcade_game_back.jpg"
+      "public/images/games/star-wars-arcade-flight-yoke/star-wars-arcade-flight-yoke-1983-01.jpg",
+      "public/images/games/star-wars-arcade-flight-yoke/star-wars-arcade-flight-yoke-1983-02.jpg",
+      "public/images/games/star-wars-arcade-flight-yoke/star-wars-arcade-flight-yoke-1983-03.jpg",
+      "public/images/games/star-wars-arcade-flight-yoke/star-wars-arcade-flight-yoke-1983-04.jpg"
     ]
   },
   {
@@ -1262,7 +1262,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Atari_2600_exhibit_(Mindlink).jpeg"
     ],
     "images": [
-      "images/1984_Atari_Mindlink/Atari_2600_exhibit_(Mindlink).jpg"
+      "public/images/games/atari-mindlink/atari-mindlink-1984-01.jpg"
     ]
   },
   {
@@ -1299,7 +1299,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Vectrex_Brille.jpg"
     ],
     "images": [
-      "images/1984_Vectrex_3D_Imager/Vectrex_Brille.jpg"
+      "public/images/games/vectrex-3d-imager/vectrex-3d-imager-1984-01.jpg"
     ]
   },
   {
@@ -1339,10 +1339,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo-Entertainment-System-NES-Zapper-Gray-R.jpg"
     ],
     "images": [
-      "images/1985_NES_Zapper/Nintendo-Entertainment-System-NES-Zapper-Gray-L.jpg",
-      "images/1985_NES_Zapper/Nintendo-Entertainment-System-NES-Zapper-Orange-L.jpg",
-      "images/1985_NES_Zapper/Nes_zapper.jpg",
-      "images/1985_NES_Zapper/Nintendo-Entertainment-System-NES-Zapper-Gray-R.jpg"
+      "public/images/games/nes-zapper/nes-zapper-1985-01.jpg",
+      "public/images/games/nes-zapper/nes-zapper-1985-02.jpg",
+      "public/images/games/nes-zapper/nes-zapper-1985-03.jpg",
+      "public/images/games/nes-zapper/nes-zapper-1985-04.jpg"
     ]
   },
   {
@@ -1382,10 +1382,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:NES-101-Console-Set.jpg"
     ],
     "images": [
-      "images/1985_NES_controller/Nintendo-Entertainment-System-NES-Controller-FL.png",
-      "images/1985_NES_controller/Nintendo-Famicom-NES-Dogbone-Controller-FL.jpg",
-      "images/1985_NES_controller/NES-Console-Set.png",
-      "images/1985_NES_controller/NES-101-Console-Set.jpg"
+      "public/images/games/nes-controller/nes-controller-1985-01.png",
+      "public/images/games/nes-controller/nes-controller-1985-02.jpg",
+      "public/images/games/nes-controller/nes-controller-1985-03.png",
+      "public/images/games/nes-controller/nes-controller-1985-04.jpg"
     ]
   },
   {
@@ -1425,10 +1425,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:NES-ROB.png"
     ],
     "images": [
-      "images/1985_Nintendo_ROB/NES-ROB.jpg",
-      "images/1985_Nintendo_ROB/R.O.B._(8560768398).jpg",
-      "images/1985_Nintendo_ROB/R.O.B._on_display_at_the_'History_of_Video_Games'_experience_-_October_2021.jpg",
-      "images/1985_Nintendo_ROB/NES-ROB.png"
+      "public/images/games/nintendo-r-o-b/nintendo-r-o-b-1985-01.jpg",
+      "public/images/games/nintendo-r-o-b/nintendo-r-o-b-1985-02.jpg",
+      "public/images/games/nintendo-r-o-b/nintendo-r-o-b-1985-03.jpg",
+      "public/images/games/nintendo-r-o-b/nintendo-r-o-b-1985-04.png"
     ]
   },
   {
@@ -1465,7 +1465,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Hang_on_Arcade_Automat.jpg"
     ],
     "images": [
-      "images/1985_Sega_Hang_On_ride_on_motorcycle/Sega_Hang_on_Arcade_Automat.jpg"
+      "public/images/games/sega-hang-on-ride-on-motorcycle/sega-hang-on-ride-on-motorcycle-1985-01.jpg"
     ]
   },
   {
@@ -1504,9 +1504,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Spaceharrier.jpg"
     ],
     "images": [
-      "images/1985_Sega_Space_Harrier_moving_cabinet/Space_Harrier.JPG",
-      "images/1985_Sega_Space_Harrier_moving_cabinet/Space_Harrier_-_Artwork_blurred.png",
-      "images/1985_Sega_Space_Harrier_moving_cabinet/Spaceharrier.jpg"
+      "public/images/games/sega-space-harrier-moving-cabinet/sega-space-harrier-moving-cabinet-1985-01.jpg",
+      "public/images/games/sega-space-harrier-moving-cabinet/sega-space-harrier-moving-cabinet-1985-02.png",
+      "public/images/games/sega-space-harrier-moving-cabinet/sega-space-harrier-moving-cabinet-1985-03.jpg"
     ]
   },
   {
@@ -1543,7 +1543,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Famicom_vaus.jpg"
     ],
     "images": [
-      "images/1986_Arkanoid_Vaus_controller/Famicom_vaus.jpg"
+      "public/images/games/arkanoid-vaus-controller/arkanoid-vaus-controller-1986-01.jpg"
     ]
   },
   {
@@ -1583,10 +1583,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Atari_7800_with_cartridge_and_controller.jpg"
     ],
     "images": [
-      "images/1986_Atari_7800_ProLine_joystick/Atari-7800-Console-Set.jpg",
-      "images/1986_Atari_7800_ProLine_joystick/Atari-7800-wControl-Pad-L.jpg",
-      "images/1986_Atari_7800_ProLine_joystick/Atari-CX78-7800-Controller-FL-wThumbStick.jpg",
-      "images/1986_Atari_7800_ProLine_joystick/Atari_7800_with_cartridge_and_controller.jpg"
+      "public/images/games/atari-7800-proline-joystick/atari-7800-proline-joystick-1986-01.jpg",
+      "public/images/games/atari-7800-proline-joystick/atari-7800-proline-joystick-1986-02.jpg",
+      "public/images/games/atari-7800-proline-joystick/atari-7800-proline-joystick-1986-03.jpg",
+      "public/images/games/atari-7800-proline-joystick/atari-7800-proline-joystick-1986-04.jpg"
     ]
   },
   {
@@ -1626,10 +1626,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:HK_Wan_Chai_HKCEC_SME_Centre_PenPower_pad_PC_mouse_pin_recept_Dec_2016_Lnv5.jpg"
     ],
     "images": [
-      "images/1986_Power_Pad_Family_Trainer/Nintendo_Power_Pad.png",
-      "images/1986_Power_Pad_Family_Trainer/NES-power-pad.jpg",
-      "images/1986_Power_Pad_Family_Trainer/NES_Family_Fun_Fitness.JPG",
-      "images/1986_Power_Pad_Family_Trainer/HK_Wan_Chai_HKCEC_SME_Centre_PenPower_pad_PC_mouse_pin_recept_Dec_2016_Lnv5.jpg"
+      "public/images/games/power-pad-family-trainer/power-pad-family-trainer-1986-01.png",
+      "public/images/games/power-pad-family-trainer/power-pad-family-trainer-1986-02.jpg",
+      "public/images/games/power-pad-family-trainer/power-pad-family-trainer-1986-03.jpg",
+      "public/images/games/power-pad-family-trainer/power-pad-family-trainer-1986-04.jpg"
     ]
   },
   {
@@ -1669,10 +1669,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Master_System_controller_in_the_Science_Museum_2025-08-14.jpg"
     ],
     "images": [
-      "images/1986_Sega_Master_System_control_pad/Sega-Master-System-Controllers.jpg",
-      "images/1986_Sega_Master_System_control_pad/Sega-Master-System-MkII-wController.jpg",
-      "images/1986_Sega_Master_System_control_pad/Sega-Master-System-Control-Stick.jpg",
-      "images/1986_Sega_Master_System_control_pad/Sega_Master_System_controller_in_the_Science_Museum_2025-08-14.jpg"
+      "public/images/games/sega-master-system-control-pad/sega-master-system-control-pad-1986-01.jpg",
+      "public/images/games/sega-master-system-control-pad/sega-master-system-control-pad-1986-02.jpg",
+      "public/images/games/sega-master-system-control-pad/sega-master-system-control-pad-1986-03.jpg",
+      "public/images/games/sega-master-system-control-pad/sega-master-system-control-pad-1986-04.jpg"
     ]
   },
   {
@@ -1712,10 +1712,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_Family_Computer_Famicom_(1983)_1.jpg"
     ],
     "images": [
-      "images/1987_Famicom_3D_System/Famicom-3D-System.jpg",
-      "images/1987_Famicom_3D_System/Famicom_3d_system.jpg",
-      "images/1987_Famicom_3D_System/Famicom_Disk_System_and_Famicom_3D_system.jpg",
-      "images/1987_Famicom_3D_System/Nintendo_Family_Computer_Famicom_(1983)_1.jpg"
+      "public/images/games/famicom-3d-system/famicom-3d-system-1987-01.jpg",
+      "public/images/games/famicom-3d-system/famicom-3d-system-1987-02.jpg",
+      "public/images/games/famicom-3d-system/famicom-3d-system-1987-03.jpg",
+      "public/images/games/famicom-3d-system/famicom-3d-system-1987-04.jpg"
     ]
   },
   {
@@ -1755,10 +1755,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:ASCIIWARE_Super_Advantage_(7973431154).jpg"
     ],
     "images": [
-      "images/1987_NES_Advantage/Nintendo-NES-Advantage-Controller.jpg",
-      "images/1987_NES_Advantage/Nesadvantage.jpg",
-      "images/1987_NES_Advantage/ASCIIWARE_Super_Advantage_(7973431154).jpg",
-      "images/1987_NES_Advantage/The_British_Mars_-_containing_several_schemes_and_inventions,_to_be_practiced_by_land_or_sea_against_the_enemies_of_Great-Britain;_shewing_more_plainl.jpg"
+      "public/images/games/nes-advantage/nes-advantage-1987-01.jpg",
+      "public/images/games/nes-advantage/nes-advantage-1987-02.jpg",
+      "public/images/games/nes-advantage/nes-advantage-1987-03.jpg",
+      "public/images/games/nes-advantage/nes-advantage-1987-04.jpg"
     ]
   },
   {
@@ -1798,10 +1798,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Master_System_(1985)_2.jpg"
     ],
     "images": [
-      "images/1987_Sega_Light_Phaser/SMS-Light-Phaser.jpg",
-      "images/1987_Sega_Light_Phaser/Sega_Master_System_lightphaser.jpg",
-      "images/1987_Sega_Light_Phaser/Sega_Master_System_(1985)_1.jpg",
-      "images/1987_Sega_Light_Phaser/Sega_Master_System_(1985)_2.jpg"
+      "public/images/games/sega-light-phaser/sega-light-phaser-1987-01.jpg",
+      "public/images/games/sega-light-phaser/sega-light-phaser-1987-02.jpg",
+      "public/images/games/sega-light-phaser/sega-light-phaser-1987-03.jpg",
+      "public/images/games/sega-light-phaser/sega-light-phaser-1987-04.jpg"
     ]
   },
   {
@@ -1841,10 +1841,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Master_System_(1985)_1.jpg"
     ],
     "images": [
-      "images/1987_SegaScope_3_D_Glasses/Sega-Masters-Sys-3D-Glasses.jpg",
-      "images/1987_SegaScope_3_D_Glasses/Master_system_3d_glasses.jpg",
-      "images/1987_SegaScope_3_D_Glasses/2013_E3_-_VHM_ROB_&_Sega_Glasses_(9097087863).jpg",
-      "images/1987_SegaScope_3_D_Glasses/Sega_Master_System_(1985)_1.jpg"
+      "public/images/games/segascope-3-d-glasses/segascope-3-d-glasses-1987-01.jpg",
+      "public/images/games/segascope-3-d-glasses/segascope-3-d-glasses-1987-02.jpg",
+      "public/images/games/segascope-3-d-glasses/segascope-3-d-glasses-1987-03.jpg",
+      "public/images/games/segascope-3-d-glasses/segascope-3-d-glasses-1987-04.jpg"
     ]
   },
   {
@@ -1884,10 +1884,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PC-Engine-Console-Set.png"
     ],
     "images": [
-      "images/1987_TurboGrafx_16_PC_Engine_controller/PC-Engine-Console-Set.jpg",
-      "images/1987_TurboGrafx_16_PC_Engine_controller/TurboGrafx16-Console-Set.jpg",
-      "images/1987_TurboGrafx_16_PC_Engine_controller/NEC-TurboGrafx-16-Controller-FR.jpg",
-      "images/1987_TurboGrafx_16_PC_Engine_controller/PC-Engine-Console-Set.png"
+      "public/images/games/turbografx-16-pc-engine-controller/turbografx-16-pc-engine-controller-1987-01.jpg",
+      "public/images/games/turbografx-16-pc-engine-controller/turbografx-16-pc-engine-controller-1987-02.jpg",
+      "public/images/games/turbografx-16-pc-engine-controller/turbografx-16-pc-engine-controller-1987-03.jpg",
+      "public/images/games/turbografx-16-pc-engine-controller/turbografx-16-pc-engine-controller-1987-04.png"
     ]
   },
   {
@@ -1927,10 +1927,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega-Genesis-Mod1-Set.jpg"
     ],
     "images": [
-      "images/1988_Sega_Mega_Drive_Genesis_3_button_controller/Sega-Mega-Drive-EU-Mk1-wController-FL.jpg",
-      "images/1988_Sega_Mega_Drive_Genesis_3_button_controller/Sega-Mega-Drive-JP-Mk1-Console-Set.jpg",
-      "images/1988_Sega_Mega_Drive_Genesis_3_button_controller/Sega-Genesis-6But-Cont.jpg",
-      "images/1988_Sega_Mega_Drive_Genesis_3_button_controller/Sega-Genesis-Mod1-Set.jpg"
+      "public/images/games/sega-mega-drive-genesis-3-button-controller/sega-mega-drive-genesis-3-button-controller-1988-01.jpg",
+      "public/images/games/sega-mega-drive-genesis-3-button-controller/sega-mega-drive-genesis-3-button-controller-1988-02.jpg",
+      "public/images/games/sega-mega-drive-genesis-3-button-controller/sega-mega-drive-genesis-3-button-controller-1988-03.jpg",
+      "public/images/games/sega-mega-drive-genesis-3-button-controller/sega-mega-drive-genesis-3-button-controller-1988-04.jpg"
     ]
   },
   {
@@ -1970,10 +1970,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Atari-Lynx-I-Handheld.png"
     ],
     "images": [
-      "images/1989_Atari_Lynx/Atari-Lynx-I-Handheld.jpg",
-      "images/1989_Atari_Lynx/Atari-Lynx-II-Handheld-Angled.jpg",
-      "images/1989_Atari_Lynx/Atari-lynx-1-1000.jpg",
-      "images/1989_Atari_Lynx/Atari-Lynx-I-Handheld.png"
+      "public/images/games/atari-lynx/atari-lynx-1989-01.jpg",
+      "public/images/games/atari-lynx/atari-lynx-1989-02.jpg",
+      "public/images/games/atari-lynx/atari-lynx-1989-03.jpg",
+      "public/images/games/atari-lynx/atari-lynx-1989-04.png"
     ]
   },
   {
@@ -2013,10 +2013,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Game_Boy_Line.png"
     ],
     "images": [
-      "images/1989_Nintendo_Game_Boy/Game-Boy-FL.png",
-      "images/1989_Nintendo_Game_Boy/Game_Boy_originale.jpg",
-      "images/1989_Nintendo_Game_Boy/Game_Boy_Play_It_Loud!_Transparent_American_Edition.png",
-      "images/1989_Nintendo_Game_Boy/Game_Boy_Line.png"
+      "public/images/games/nintendo-game-boy/nintendo-game-boy-1989-01.png",
+      "public/images/games/nintendo-game-boy/nintendo-game-boy-1989-02.jpg",
+      "public/images/games/nintendo-game-boy/nintendo-game-boy-1989-03.png",
+      "public/images/games/nintendo-game-boy/nintendo-game-boy-1989-04.png"
     ]
   },
   {
@@ -2056,10 +2056,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:E3_2011_-_Video_Game_Museum_-_NES,_Nintendo_Robot_and_Power_Glove_(5822119923).jpg"
     ],
     "images": [
-      "images/1989_Power_Glove/NES-Power-Glove.jpg",
-      "images/1989_Power_Glove/Power_Glove_on_display_at_the_Video_Game_Museum,_Berlin.jpg",
-      "images/1989_Power_Glove/Power_Glove_US.jpg",
-      "images/1989_Power_Glove/E3_2011_-_Video_Game_Museum_-_NES,_Nintendo_Robot_and_Power_Glove_(5822119923).jpg"
+      "public/images/games/power-glove/power-glove-1989-01.jpg",
+      "public/images/games/power-glove/power-glove-1989-02.jpg",
+      "public/images/games/power-glove/power-glove-1989-03.jpg",
+      "public/images/games/power-glove/power-glove-1989-04.jpg"
     ]
   },
   {
@@ -2099,10 +2099,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:U-FORCE_(1989)_04.jpg"
     ],
     "images": [
-      "images/1989_U_Force/U-FORCE_(1989)_03.jpg",
-      "images/1989_U_Force/U-FORCE_(1989)_02.jpg",
-      "images/1989_U_Force/U-FORCE_(1989)_01.jpg",
-      "images/1989_U_Force/U-FORCE_(1989)_04.jpg"
+      "public/images/games/u-force/u-force-1989-01.jpg",
+      "public/images/games/u-force/u-force-1989-02.jpg",
+      "public/images/games/u-force/u-force-1989-03.jpg",
+      "public/images/games/u-force/u-force-1989-04.jpg"
     ]
   },
   {
@@ -2140,7 +2140,7 @@ const CONTROLLERS = [
       "https://en.wikipedia.org/wiki/File:LaserScope.jpg"
     ],
     "images": [
-      "images/1990_Konami_LaserScope/LaserScope.jpg"
+      "public/images/games/konami-laserscope/konami-laserscope-1990-01.jpg"
     ]
   },
   {
@@ -2180,10 +2180,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Neo-Geo-AES-Controller-BR.jpg"
     ],
     "images": [
-      "images/1990_Neo_Geo_AES_joystick/Neo-Geo-AES-Controller-FL.jpg",
-      "images/1990_Neo_Geo_AES_joystick/Neo-Geo-AES-Console-Set.png",
-      "images/1990_Neo_Geo_AES_joystick/Neo-Geo-Advanced-Controller.jpg",
-      "images/1990_Neo_Geo_AES_joystick/Neo-Geo-AES-Controller-BR.jpg"
+      "public/images/games/neo-geo-aes-joystick/neo-geo-aes-joystick-1990-01.jpg",
+      "public/images/games/neo-geo-aes-joystick/neo-geo-aes-joystick-1990-02.png",
+      "public/images/games/neo-geo-aes-joystick/neo-geo-aes-joystick-1990-03.jpg",
+      "public/images/games/neo-geo-aes-joystick/neo-geo-aes-joystick-1990-04.jpg"
     ]
   },
   {
@@ -2222,9 +2222,9 @@ const CONTROLLERS = [
       "https://en.wikipedia.org/wiki/File:Sega_R-360_machine.png"
     ],
     "images": [
-      "images/1990_Sega_R360/Sega_R360_Arcade_Machine.jpg",
-      "images/1990_Sega_R360/R360Z-TRANSFORMERS.jpg",
-      "images/1990_Sega_R360/Sega_R-360_machine.png"
+      "public/images/games/sega-r360/sega-r360-1990-01.jpg",
+      "public/images/games/sega-r360/sega-r360-1990-02.jpg",
+      "public/images/games/sega-r360/sega-r360-1990-03.png"
     ]
   },
   {
@@ -2261,7 +2261,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Afterburner.jpg"
     ],
     "images": [
-      "images/1990_Sega_Rad_Mobile_cabinet/Sega_Afterburner.jpg"
+      "public/images/games/sega-rad-mobile-cabinet/sega-rad-mobile-cabinet-1990-01.jpg"
     ]
   },
   {
@@ -2301,10 +2301,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:SNES_controller_simple_art.jpg"
     ],
     "images": [
-      "images/1990_Super_Famicom_SNES_controller/SNES_Controller_detailed.png",
-      "images/1990_Super_Famicom_SNES_controller/SNES-Controller-in-Hand.jpg",
-      "images/1990_Super_Famicom_SNES_controller/SNES-Controller-Flat.jpg",
-      "images/1990_Super_Famicom_SNES_controller/SNES_controller_simple_art.jpg"
+      "public/images/games/super-famicom-snes-controller/super-famicom-snes-controller-1990-01.png",
+      "public/images/games/super-famicom-snes-controller/super-famicom-snes-controller-1990-02.jpg",
+      "public/images/games/super-famicom-snes-controller/super-famicom-snes-controller-1990-03.jpg",
+      "public/images/games/super-famicom-snes-controller/super-famicom-snes-controller-1990-04.jpg"
     ]
   },
   {
@@ -2344,10 +2344,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Philips-CDi-Mouse-wPad.jpg"
     ],
     "images": [
-      "images/1991_Philips_CD_i_remote_and_controllers/Philips-CDi-220-wController-FL.jpg",
-      "images/1991_Philips_CD_i_remote_and_controllers/Philips-CDi-Roller-Controller.jpg",
-      "images/1991_Philips_CD_i_remote_and_controllers/Philips-CDi-Controller-Gamepad.jpg",
-      "images/1991_Philips_CD_i_remote_and_controllers/Philips-CDi-Mouse-wPad.jpg"
+      "public/images/games/philips-cd-i-remote-and-controllers/philips-cd-i-remote-and-controllers-1991-01.jpg",
+      "public/images/games/philips-cd-i-remote-and-controllers/philips-cd-i-remote-and-controllers-1991-02.jpg",
+      "public/images/games/philips-cd-i-remote-and-controllers/philips-cd-i-remote-and-controllers-1991-03.jpg",
+      "public/images/games/philips-cd-i-remote-and-controllers/philips-cd-i-remote-and-controllers-1991-04.jpg"
     ]
   },
   {
@@ -2387,10 +2387,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Virtuality-Expality-2000-VR-Controller-1000CS.jpg"
     ],
     "images": [
-      "images/1991_Virtuality_1000CS_pod/Virtuality-1000SD-VR-Arcade-System.jpg",
-      "images/1991_Virtuality_1000CS_pod/Virtuality_VR_Dactyl_Nightmare_Arcade_Game.jpg",
-      "images/1991_Virtuality_1000CS_pod/Virtuality-1000CS-VR-1991.jpg",
-      "images/1991_Virtuality_1000CS_pod/Virtuality-Expality-2000-VR-Controller-1000CS.jpg"
+      "public/images/games/virtuality-1000cs-pod/virtuality-1000cs-pod-1991-01.jpg",
+      "public/images/games/virtuality-1000cs-pod/virtuality-1000cs-pod-1991-02.jpg",
+      "public/images/games/virtuality-1000cs-pod/virtuality-1000cs-pod-1991-03.jpg",
+      "public/images/games/virtuality-1000cs-pod/virtuality-1000cs-pod-1991-04.jpg"
     ]
   },
   {
@@ -2430,10 +2430,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Menacer_left_side_(3269371641).jpg"
     ],
     "images": [
-      "images/1992_Sega_Menacer/Sega_Menacer_cropped.jpg",
-      "images/1992_Sega_Menacer/Menacer_-_Sega_plug_and_play_(8738243023).jpg",
-      "images/1992_Sega_Menacer/Sega_Menacer_(2321760719).jpg",
-      "images/1992_Sega_Menacer/Sega_Menacer_left_side_(3269371641).jpg"
+      "public/images/games/sega-menacer/sega-menacer-1992-01.jpg",
+      "public/images/games/sega-menacer/sega-menacer-1992-02.jpg",
+      "public/images/games/sega-menacer/sega-menacer-1992-03.jpg",
+      "public/images/games/sega-menacer/sega-menacer-1992-04.jpg"
     ]
   },
   {
@@ -2473,10 +2473,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Super_nes_mouse_02.jpg"
     ],
     "images": [
-      "images/1992_Super_NES_Mouse/SNES-Mouse-and-Pad.jpg",
-      "images/1992_Super_NES_Mouse/SNES_mouse.jpg",
-      "images/1992_Super_NES_Mouse/Super_nes_mouse_01.jpg",
-      "images/1992_Super_NES_Mouse/Super_nes_mouse_02.jpg"
+      "public/images/games/super-nes-mouse/super-nes-mouse-1992-01.jpg",
+      "public/images/games/super-nes-mouse/super-nes-mouse-1992-02.jpg",
+      "public/images/games/super-nes-mouse/super-nes-mouse-1992-03.jpg",
+      "public/images/games/super-nes-mouse/super-nes-mouse-1992-04.jpg"
     ]
   },
   {
@@ -2516,10 +2516,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo-SNES-Super-Scope-R.jpg"
     ],
     "images": [
-      "images/1992_Super_Scope/Nintendo-SNES-Super-Scope-Bisected.jpg",
-      "images/1992_Super_Scope/Nintendo-SNES-Super-Scope-Receiver.jpg",
-      "images/1992_Super_Scope/Nintendo-SNES-Super-Scope-L.jpg",
-      "images/1992_Super_Scope/Nintendo-SNES-Super-Scope-R.jpg"
+      "public/images/games/super-scope/super-scope-1992-01.jpg",
+      "public/images/games/super-scope/super-scope-1992-02.jpg",
+      "public/images/games/super-scope/super-scope-1992-03.jpg",
+      "public/images/games/super-scope/super-scope-1992-04.jpg"
     ]
   },
   {
@@ -2559,10 +2559,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Panasonic_300_Interactive_Multiplayer_(1993)_2.jpg"
     ],
     "images": [
-      "images/1993_3DO_controller/3DO-101M-Controller.jpg",
-      "images/1993_3DO_controller/Capcom-3DO-Fighting-Controller.jpg",
-      "images/1993_3DO_controller/Panasonic_300_Interactive_Multiplayer_(1993)_1.jpg",
-      "images/1993_3DO_controller/Panasonic_300_Interactive_Multiplayer_(1993)_2.jpg"
+      "public/images/games/3do-controller/3do-controller-1993-01.jpg",
+      "public/images/games/3do-controller/3do-controller-1993-02.jpg",
+      "public/images/games/3do-controller/3do-controller-1993-03.jpg",
+      "public/images/games/3do-controller/3do-controller-1993-04.jpg"
     ]
   },
   {
@@ -2602,10 +2602,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Jaguar_controller_and_pro.jpg"
     ],
     "images": [
-      "images/1993_Atari_Jaguar_controller/Atari-Jaguar-Pro-Controller.jpg",
-      "images/1993_Atari_Jaguar_controller/Atari-Jaguar-Controller.jpg",
-      "images/1993_Atari_Jaguar_controller/Atari-Jaguar-Controller-Original.png",
-      "images/1993_Atari_Jaguar_controller/Jaguar_controller_and_pro.jpg"
+      "public/images/games/atari-jaguar-controller/atari-jaguar-controller-1993-01.jpg",
+      "public/images/games/atari-jaguar-controller/atari-jaguar-controller-1993-02.jpg",
+      "public/images/games/atari-jaguar-controller/atari-jaguar-controller-1993-03.png",
+      "public/images/games/atari-jaguar-controller/atari-jaguar-controller-1993-04.jpg"
     ]
   },
   {
@@ -2645,10 +2645,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Konami_justifiers.jpg"
     ],
     "images": [
-      "images/1993_Konami_Justifier/Konami-Justifiers-Genesis-Set.jpg",
-      "images/1993_Konami_Justifier/Konami_Justifier_01.jpg",
-      "images/1993_Konami_Justifier/Konami-Justifiers-Genesis-Light-Gun.jpg",
-      "images/1993_Konami_Justifier/Konami_justifiers.jpg"
+      "public/images/games/konami-justifier/konami-justifier-1993-01.jpg",
+      "public/images/games/konami-justifier/konami-justifier-1993-02.jpg",
+      "public/images/games/konami-justifier/konami-justifier-1993-03.jpg",
+      "public/images/games/konami-justifier/konami-justifier-1993-04.jpg"
     ]
   },
   {
@@ -2720,9 +2720,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega-Genesis-Mk2-6button.png"
     ],
     "images": [
-      "images/1993_Sega_Mega_Drive_Genesis_6_button_controller/Sega-Genesis-Mk2-6button.jpg",
-      "images/1993_Sega_Mega_Drive_Genesis_6_button_controller/Sega_Genesis_CDX_with_Official_6_button_controller.jpg",
-      "images/1993_Sega_Mega_Drive_Genesis_6_button_controller/Sega-Genesis-Mk2-6button.png"
+      "public/images/games/sega-mega-drive-genesis-6-button-controller/sega-mega-drive-genesis-6-button-controller-1993-01.jpg",
+      "public/images/games/sega-mega-drive-genesis-6-button-controller/sega-mega-drive-genesis-6-button-controller-1993-02.jpg",
+      "public/images/games/sega-mega-drive-genesis-6-button-controller/sega-mega-drive-genesis-6-button-controller-1993-03.png"
     ]
   },
   {
@@ -2761,9 +2761,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Digital_Press,_Clifton,_NJ_3_26_16_(26125319685).jpg"
     ],
     "images": [
-      "images/1993_Sega_Pico/SEGA_Pico_folded.png",
-      "images/1993_Sega_Pico/Closed_Sega_Pico.jpg",
-      "images/1993_Sega_Pico/Digital_Press,_Clifton,_NJ_3_26_16_(26125319685).jpg"
+      "public/images/games/sega-pico/sega-pico-1993-01.png",
+      "public/images/games/sega-pico/sega-pico-1993-02.jpg",
+      "public/images/games/sega-pico/sega-pico-1993-03.jpg"
     ]
   },
   {
@@ -2836,10 +2836,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PlayStation_SCPH-1000_and_PlayStation_Controller_20070713.jpg"
     ],
     "images": [
-      "images/1994_PlayStation_controller/SCPH-5500_and_PlayStation_Controller_20060131_(2).jpg",
-      "images/1994_PlayStation_controller/PlayStation_Controller_transparent.png",
-      "images/1994_PlayStation_controller/PlayStation_Controller_detailed.png",
-      "images/1994_PlayStation_controller/PlayStation_SCPH-1000_and_PlayStation_Controller_20070713.jpg"
+      "public/images/games/playstation-controller/playstation-controller-1994-01.jpg",
+      "public/images/games/playstation-controller/playstation-controller-1994-02.png",
+      "public/images/games/playstation-controller/playstation-controller-1994-03.png",
+      "public/images/games/playstation-controller/playstation-controller-1994-04.jpg"
     ]
   },
   {
@@ -2879,10 +2879,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega_Saturn_Controller_-_Type_2.png"
     ],
     "images": [
-      "images/1994_Sega_Saturn_control_pad/Sega-Saturn-Controller-NA-Mk-II-FL.jpg",
-      "images/1994_Sega_Saturn_control_pad/Sega-Saturn-Controller-Mk-I-NA-FL.jpg",
-      "images/1994_Sega_Saturn_control_pad/Saturn_Controller.jpg",
-      "images/1994_Sega_Saturn_control_pad/Sega_Saturn_Controller_-_Type_2.png"
+      "public/images/games/sega-saturn-control-pad/sega-saturn-control-pad-1994-01.jpg",
+      "public/images/games/sega-saturn-control-pad/sega-saturn-control-pad-1994-02.jpg",
+      "public/images/games/sega-saturn-control-pad/sega-saturn-control-pad-1994-03.jpg",
+      "public/images/games/sega-saturn-control-pad/sega-saturn-control-pad-1994-04.png"
     ]
   },
   {
@@ -2922,10 +2922,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Namco_neGcon_controller.jpg"
     ],
     "images": [
-      "images/1995_Namco_neGcon/Namco_Negcon_centred.jpg",
-      "images/1995_Namco_neGcon/Namco_Negcon_twisted.jpg",
-      "images/1995_Namco_neGcon/NeGcon_Interior_Posterior.jpg",
-      "images/1995_Namco_neGcon/Namco_neGcon_controller.jpg"
+      "public/images/games/namco-negcon/namco-negcon-1995-01.jpg",
+      "public/images/games/namco-negcon/namco-negcon-1995-02.jpg",
+      "public/images/games/namco-negcon/namco-negcon-1995-03.jpg",
+      "public/images/games/namco-negcon/namco-negcon-1995-04.jpg"
     ]
   },
   {
@@ -2965,10 +2965,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Time_Crisis_II,_Spain,_2017_02.jpg"
     ],
     "images": [
-      "images/1995_Time_Crisis_foot_pedal/Time_Crisis_5_Arcade_Cabinet.JPG",
-      "images/1995_Time_Crisis_foot_pedal/Time_Crisis_5_Arcade_Cabinet_front_entrance.JPG",
-      "images/1995_Time_Crisis_foot_pedal/Time_Crisis_II,_Spain,_2017_01.jpg",
-      "images/1995_Time_Crisis_foot_pedal/Time_Crisis_II,_Spain,_2017_02.jpg"
+      "public/images/games/time-crisis-foot-pedal/time-crisis-foot-pedal-1995-01.jpg",
+      "public/images/games/time-crisis-foot-pedal/time-crisis-foot-pedal-1995-02.jpg",
+      "public/images/games/time-crisis-foot-pedal/time-crisis-foot-pedal-1995-03.jpg",
+      "public/images/games/time-crisis-foot-pedal/time-crisis-foot-pedal-1995-04.jpg"
     ]
   },
   {
@@ -3008,10 +3008,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Virtual_Boy_gamepad_in_Computerspielemuseum,_Berlin_(30457086650).jpg"
     ],
     "images": [
-      "images/1995_Virtual_Boy_controller/Virtual-Boy-Controller.jpg",
-      "images/1995_Virtual_Boy_controller/Virtual-Boy-wController.jpg",
-      "images/1995_Virtual_Boy_controller/Virtual-Boy-Controller-Back.jpg",
-      "images/1995_Virtual_Boy_controller/Virtual_Boy_gamepad_in_Computerspielemuseum,_Berlin_(30457086650).jpg"
+      "public/images/games/virtual-boy-controller/virtual-boy-controller-1995-01.jpg",
+      "public/images/games/virtual-boy-controller/virtual-boy-controller-1995-02.jpg",
+      "public/images/games/virtual-boy-controller/virtual-boy-controller-1995-03.jpg",
+      "public/images/games/virtual-boy-controller/virtual-boy-controller-1995-04.jpg"
     ]
   },
   {
@@ -3049,8 +3049,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Dreamcast_Twin_Stick_-_2007.jpg"
     ],
     "images": [
-      "images/1995_Virtual_On_Twin_Stick/Dreamcast_Twin_Stick.png",
-      "images/1995_Virtual_On_Twin_Stick/Dreamcast_Twin_Stick_-_2007.jpg"
+      "public/images/games/virtual-on-twin-stick/virtual-on-twin-stick-1995-01.png",
+      "public/images/games/virtual-on-twin-stick/virtual-on-twin-stick-1995-02.jpg"
     ]
   },
   {
@@ -3090,10 +3090,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:N64-Controller-in-Hand.jpg"
     ],
     "images": [
-      "images/1996_Nintendo_64_controller/Nintendo-64-Controller-Gray-Flat.jpg",
-      "images/1996_Nintendo_64_controller/LodgeNet-Nintendo-N64-Controller.jpg",
-      "images/1996_Nintendo_64_controller/N64-Controller-Gray-Back.jpg",
-      "images/1996_Nintendo_64_controller/N64-Controller-in-Hand.jpg"
+      "public/images/games/nintendo-64-controller/nintendo-64-controller-1996-01.jpg",
+      "public/images/games/nintendo-64-controller/nintendo-64-controller-1996-02.jpg",
+      "public/images/games/nintendo-64-controller/nintendo-64-controller-1996-03.jpg",
+      "public/images/games/nintendo-64-controller/nintendo-64-controller-1996-04.jpg"
     ]
   },
   {
@@ -3131,8 +3131,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Scph-1110.jpg"
     ],
     "images": [
-      "images/1996_PlayStation_Analog_Joystick/PlayStation-Analog-Joystick.jpg",
-      "images/1996_PlayStation_Analog_Joystick/Scph-1110.jpg"
+      "public/images/games/playstation-analog-joystick/playstation-analog-joystick-1996-01.jpg",
+      "public/images/games/playstation-analog-joystick/playstation-analog-joystick-1996-02.jpg"
     ]
   },
   {
@@ -3172,10 +3172,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:The_Analog_era_(7973390478).jpg"
     ],
     "images": [
-      "images/1996_Sega_Saturn_3D_Control_Pad/Sega-Saturn-3D-Controller.jpg",
-      "images/1996_Sega_Saturn_3D_Control_Pad/Sega-Saturn-JP-3D-Pad.jpg",
-      "images/1996_Sega_Saturn_3D_Control_Pad/Sega_Saturn_3D_(7973392600).jpg",
-      "images/1996_Sega_Saturn_3D_Control_Pad/The_Analog_era_(7973390478).jpg"
+      "public/images/games/sega-saturn-3d-control-pad/sega-saturn-3d-control-pad-1996-01.jpg",
+      "public/images/games/sega-saturn-3d-control-pad/sega-saturn-3d-control-pad-1996-02.jpg",
+      "public/images/games/sega-saturn-3d-control-pad/sega-saturn-3d-control-pad-1996-03.jpg",
+      "public/images/games/sega-saturn-3d-control-pad/sega-saturn-3d-control-pad-1996-04.jpg"
     ]
   },
   {
@@ -3215,10 +3215,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Histor%C3%ADa_del_Tamagotchi_(20238616931).jpg"
     ],
     "images": [
-      "images/1996_Tamagotchi/Gele_tamagotchi,_objectnr_78041.JPG",
-      "images/1996_Tamagotchi/Tamagotchi_Friends.png",
-      "images/1996_Tamagotchi/David's_Tamagotchi.jpg",
-      "images/1996_Tamagotchi/Historía_del_Tamagotchi_(20238616931).jpg"
+      "public/images/games/tamagotchi/tamagotchi-1996-01.jpg",
+      "public/images/games/tamagotchi/tamagotchi-1996-02.png",
+      "public/images/games/tamagotchi/tamagotchi-1996-03.jpg",
+      "public/images/games/tamagotchi/tamagotchi-1996-04.jpg"
     ]
   },
   {
@@ -3258,10 +3258,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Beatmania_5_buttons_controller.jpg"
     ],
     "images": [
-      "images/1997_Beatmania_turntable_controller/Beatmania_controls.jpg",
-      "images/1997_Beatmania_turntable_controller/ASCII_Beatmania_Controller_(1998).jpg",
-      "images/1997_Beatmania_turntable_controller/Beatmania_completeMIX_2.jpg",
-      "images/1997_Beatmania_turntable_controller/Beatmania_5_buttons_controller.jpg"
+      "public/images/games/beatmania-turntable-controller/beatmania-turntable-controller-1997-01.jpg",
+      "public/images/games/beatmania-turntable-controller/beatmania-turntable-controller-1997-02.jpg",
+      "public/images/games/beatmania-turntable-controller/beatmania-turntable-controller-1997-03.jpg",
+      "public/images/games/beatmania-turntable-controller/beatmania-turntable-controller-1997-04.jpg"
     ]
   },
   {
@@ -3301,10 +3301,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Kids_Rail_Densha_de_Go!_SR_Interior.jpg"
     ],
     "images": [
-      "images/1997_Densha_de_Go_master_controller/Denshadegocab1.jpg",
-      "images/1997_Densha_de_Go_master_controller/Denshadegocab2.jpg",
-      "images/1997_Densha_de_Go_master_controller/Kids_Rail_Densha_de_Go!_SR.jpg",
-      "images/1997_Densha_de_Go_master_controller/Kids_Rail_Densha_de_Go!_SR_Interior.jpg"
+      "public/images/games/densha-de-go-master-controller/densha-de-go-master-controller-1997-01.jpg",
+      "public/images/games/densha-de-go-master-controller/densha-de-go-master-controller-1997-02.jpg",
+      "public/images/games/densha-de-go-master-controller/densha-de-go-master-controller-1997-03.jpg",
+      "public/images/games/densha-de-go-master-controller/densha-de-go-master-controller-1997-04.jpg"
     ]
   },
   {
@@ -3342,8 +3342,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PS1All3ControllersTopButtons.jpg"
     ],
     "images": [
-      "images/1997_Dual_Analog_Controller/PS1ControllerProgression.jpg",
-      "images/1997_Dual_Analog_Controller/PS1All3ControllersTopButtons.jpg"
+      "public/images/games/dual-analog-controller/dual-analog-controller-1997-01.jpg",
+      "public/images/games/dual-analog-controller/dual-analog-controller-1997-02.jpg"
     ]
   },
   {
@@ -3383,10 +3383,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:DualShock_face_20100101.jpg"
     ],
     "images": [
-      "images/1997_DualShock/PlayStation-DualShock.jpg",
-      "images/1997_DualShock/PSX-DualShock-Controller.jpg",
-      "images/1997_DualShock/SCPH-1200_clear_20200913.jpg",
-      "images/1997_DualShock/DualShock_face_20100101.jpg"
+      "public/images/games/dualshock/dualshock-1997-01.jpg",
+      "public/images/games/dualshock/dualshock-1997-02.jpg",
+      "public/images/games/dualshock/dualshock-1997-03.jpg",
+      "public/images/games/dualshock/dualshock-1997-04.jpg"
     ]
   },
   {
@@ -3424,8 +3424,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Microsoft_game_controllers_2_Tietokonemuseo.JPG"
     ],
     "images": [
-      "images/1997_Microsoft_SideWinder_Force_Feedback_Pro/Joystick_-_Microsoft_Sidewinder_Force_Feedback_Pro.jpg",
-      "images/1997_Microsoft_SideWinder_Force_Feedback_Pro/Microsoft_game_controllers_2_Tietokonemuseo.JPG"
+      "public/images/games/microsoft-sidewinder-force-feedback-pro/microsoft-sidewinder-force-feedback-pro-1997-01.jpg",
+      "public/images/games/microsoft-sidewinder-force-feedback-pro/microsoft-sidewinder-force-feedback-pro-1997-02.jpg"
     ]
   },
   {
@@ -3465,10 +3465,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:GunCon_e_GunCon_2.jpg"
     ],
     "images": [
-      "images/1997_Namco_GunCon/Namco-GunCon-PS1.jpg",
-      "images/1997_Namco_GunCon/Guncon_2.jpg",
-      "images/1997_Namco_GunCon/Guncon-3.jpg",
-      "images/1997_Namco_GunCon/GunCon_e_GunCon_2.jpg"
+      "public/images/games/namco-guncon/namco-guncon-1997-01.jpg",
+      "public/images/games/namco-guncon/namco-guncon-1997-02.jpg",
+      "public/images/games/namco-guncon/namco-guncon-1997-03.jpg",
+      "public/images/games/namco-guncon/namco-guncon-1997-04.jpg"
     ]
   },
   {
@@ -3508,10 +3508,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Rumble_Pak.JPG"
     ],
     "images": [
-      "images/1997_Rumble_Pak/N64-Rumble-Pak.jpg",
-      "images/1997_Rumble_Pak/Nintendo-64-Rumble-Pak.jpg",
-      "images/1997_Rumble_Pak/Nintendo-64-Rumble-Pak_Front.jpg",
-      "images/1997_Rumble_Pak/Rumble_Pak.JPG"
+      "public/images/games/rumble-pak/rumble-pak-1997-01.jpg",
+      "public/images/games/rumble-pak/rumble-pak-1997-02.jpg",
+      "public/images/games/rumble-pak/rumble-pak-1997-03.jpg",
+      "public/images/games/rumble-pak/rumble-pak-1997-04.jpg"
     ]
   },
   {
@@ -3551,10 +3551,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Ddrdancepad.JPG"
     ],
     "images": [
-      "images/1998_Dance_Dance_Revolution_dance_pad/DDR_Controllers.jpg",
-      "images/1998_Dance_Dance_Revolution_dance_pad/Red_Octane_dance_pad_(5947304575).jpg",
-      "images/1998_Dance_Dance_Revolution_dance_pad/DDRMegaMix.jpg",
-      "images/1998_Dance_Dance_Revolution_dance_pad/Ddrdancepad.JPG"
+      "public/images/games/dance-dance-revolution-dance-pad/dance-dance-revolution-dance-pad-1998-01.jpg",
+      "public/images/games/dance-dance-revolution-dance-pad/dance-dance-revolution-dance-pad-1998-02.jpg",
+      "public/images/games/dance-dance-revolution-dance-pad/dance-dance-revolution-dance-pad-1998-03.jpg",
+      "public/images/games/dance-dance-revolution-dance-pad/dance-dance-revolution-dance-pad-1998-04.jpg"
     ]
   },
   {
@@ -3594,10 +3594,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Dreamcast_controller_(lit_from_left).jpg"
     ],
     "images": [
-      "images/1998_Dreamcast_controller/Dreamcast_Controller.jpg",
-      "images/1998_Dreamcast_controller/Dreamcast_Controller2.jpg",
-      "images/1998_Dreamcast_controller/Dreamcast_Controller3.jpg",
-      "images/1998_Dreamcast_controller/Dreamcast_controller_(lit_from_left).jpg"
+      "public/images/games/dreamcast-controller/dreamcast-controller-1998-01.jpg",
+      "public/images/games/dreamcast-controller/dreamcast-controller-1998-02.jpg",
+      "public/images/games/dreamcast-controller/dreamcast-controller-1998-03.jpg",
+      "public/images/games/dreamcast-controller/dreamcast-controller-1998-04.jpg"
     ]
   },
   {
@@ -3637,10 +3637,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Young_woman_portrait_taken_with_Game_Boy_Camera_on_GBC_screen.jpg"
     ],
     "images": [
-      "images/1998_Game_Boy_Camera/Game_Boy_Camera_7996.jpg",
-      "images/1998_Game_Boy_Camera/Game_Boy_Camera_7997.jpg",
-      "images/1998_Game_Boy_Camera/Game-Boy-Camera.jpg",
-      "images/1998_Game_Boy_Camera/Young_woman_portrait_taken_with_Game_Boy_Camera_on_GBC_screen.jpg"
+      "public/images/games/game-boy-camera/game-boy-camera-1998-01.jpg",
+      "public/images/games/game-boy-camera/game-boy-camera-1998-02.jpg",
+      "public/images/games/game-boy-camera/game-boy-camera-1998-03.jpg",
+      "public/images/games/game-boy-camera/game-boy-camera-1998-04.jpg"
     ]
   },
   {
@@ -3680,10 +3680,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:GuitarFreaks_XG_arcade_machine.jpg"
     ],
     "images": [
-      "images/1998_GuitarFreaks_guitar_controller/Guitarfreaks_v4.jpg",
-      "images/1998_GuitarFreaks_guitar_controller/GUITARFREAKS_versus_gameplay.jpg",
-      "images/1998_GuitarFreaks_guitar_controller/Small_housing_version_of_GITADORA_(GuitarFreaks).jpg",
-      "images/1998_GuitarFreaks_guitar_controller/GuitarFreaks_XG_arcade_machine.jpg"
+      "public/images/games/guitarfreaks-guitar-controller/guitarfreaks-guitar-controller-1998-01.jpg",
+      "public/images/games/guitarfreaks-guitar-controller/guitarfreaks-guitar-controller-1998-02.jpg",
+      "public/images/games/guitarfreaks-guitar-controller/guitarfreaks-guitar-controller-1998-03.jpg",
+      "public/images/games/guitarfreaks-guitar-controller/guitarfreaks-guitar-controller-1998-04.jpg"
     ]
   },
   {
@@ -3722,9 +3722,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:DenGO64%26NUS-020.JPG"
     ],
     "images": [
-      "images/1998_Hey_You_Pikachu_Voice_Recognition_Unit/N64_VRU.png",
-      "images/1998_Hey_You_Pikachu_Voice_Recognition_Unit/N64_VRU.jpg",
-      "images/1998_Hey_You_Pikachu_Voice_Recognition_Unit/DenGO64&NUS-020.JPG"
+      "public/images/games/hey-you-pikachu-voice-recognition-unit/hey-you-pikachu-voice-recognition-unit-1998-01.png",
+      "public/images/games/hey-you-pikachu-voice-recognition-unit/hey-you-pikachu-voice-recognition-unit-1998-02.jpg",
+      "public/images/games/hey-you-pikachu-voice-recognition-unit/hey-you-pikachu-voice-recognition-unit-1998-03.jpg"
     ]
   },
   {
@@ -3762,8 +3762,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Microsoft_game_controllers_1_Tietokonemuseo.JPG"
     ],
     "images": [
-      "images/1998_Microsoft_SideWinder_Freestyle_Pro/Microsoft-SideWinder-Freestyle-Pro-Gamepad.jpg",
-      "images/1998_Microsoft_SideWinder_Freestyle_Pro/Microsoft_game_controllers_1_Tietokonemuseo.JPG"
+      "public/images/games/microsoft-sidewinder-freestyle-pro/microsoft-sidewinder-freestyle-pro-1998-01.jpg",
+      "public/images/games/microsoft-sidewinder-freestyle-pro/microsoft-sidewinder-freestyle-pro-1998-02.jpg"
     ]
   },
   {
@@ -3803,10 +3803,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Pokemon_Pikachu_Color,_2006.jpg"
     ],
     "images": [
-      "images/1998_Pokemon_Pikachu/Pokemon_Pikachu_(front).jpg",
-      "images/1998_Pokemon_Pikachu/Pokémon_Pikachu_digital_pet.JPG",
-      "images/1998_Pokemon_Pikachu/Pokemon_Pikachu_(back).jpg",
-      "images/1998_Pokemon_Pikachu/Pokemon_Pikachu_Color,_2006.jpg"
+      "public/images/games/pokemon-pikachu/pokemon-pikachu-1998-01.jpg",
+      "public/images/games/pokemon-pikachu/pokemon-pikachu-1998-02.jpg",
+      "public/images/games/pokemon-pikachu/pokemon-pikachu-1998-03.jpg",
+      "public/images/games/pokemon-pikachu/pokemon-pikachu-1998-04.jpg"
     ]
   },
   {
@@ -3846,10 +3846,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Popn-Music-Controller.jpg"
     ],
     "images": [
-      "images/1998_Popn_Music_controller/Pop'n_Music.png",
-      "images/1998_Popn_Music_controller/Pop'n_music_-_Dream_of_a_rabbit_and_a_cat_and_the_boy.jpg",
-      "images/1998_Popn_Music_controller/Pop'n_Music_Pikapika_Pop-kun_Model.jpg",
-      "images/1998_Popn_Music_controller/Popn-Music-Controller.jpg"
+      "public/images/games/pop-n-music-controller/pop-n-music-controller-1998-01.png",
+      "public/images/games/pop-n-music-controller/pop-n-music-controller-1998-02.jpg",
+      "public/images/games/pop-n-music-controller/pop-n-music-controller-1998-03.jpg",
+      "public/images/games/pop-n-music-controller/pop-n-music-controller-1998-04.jpg"
     ]
   },
   {
@@ -3889,10 +3889,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sega-Dreamcast-Controller-wVMU-FL.jpg"
     ],
     "images": [
-      "images/1998_VMU_Visual_Memory_Unit/Sega-Dreamcast-Cont-n-VMU.jpg",
-      "images/1998_VMU_Visual_Memory_Unit/Sega-Dreamcast-VMU.jpg",
-      "images/1998_VMU_Visual_Memory_Unit/Dreamcast-VMUs-Hooked.jpg",
-      "images/1998_VMU_Visual_Memory_Unit/Sega-Dreamcast-Controller-wVMU-FL.jpg"
+      "public/images/games/vmu-visual-memory-unit/vmu-visual-memory-unit-1998-01.jpg",
+      "public/images/games/vmu-visual-memory-unit/vmu-visual-memory-unit-1998-02.jpg",
+      "public/images/games/vmu-visual-memory-unit/vmu-visual-memory-unit-1998-03.jpg",
+      "public/images/games/vmu-visual-memory-unit/vmu-visual-memory-unit-1998-04.jpg"
     ]
   },
   {
@@ -3930,8 +3930,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Dreamcast_fishing_controller_(7973429704).jpg"
     ],
     "images": [
-      "images/1999_Dreamcast_Fishing_Controller/Dreamcast_Mad_Catz_fishing_controller.jpg",
-      "images/1999_Dreamcast_Fishing_Controller/Dreamcast_fishing_controller_(7973429704).jpg"
+      "public/images/games/dreamcast-fishing-controller/dreamcast-fishing-controller-1999-01.jpg",
+      "public/images/games/dreamcast-fishing-controller/dreamcast-fishing-controller-1999-02.jpg"
     ]
   },
   {
@@ -3971,10 +3971,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:WonderSwan-WonderWave-PocketStation.jpg"
     ],
     "images": [
-      "images/1999_PocketStation/Sony-PocketStation.png",
-      "images/1999_PocketStation/PocketStation.jpg",
-      "images/1999_PocketStation/Sony-PocketStation.jpg",
-      "images/1999_PocketStation/WonderSwan-WonderWave-PocketStation.jpg"
+      "public/images/games/pocketstation/pocketstation-1999-01.png",
+      "public/images/games/pocketstation/pocketstation-1999-02.jpg",
+      "public/images/games/pocketstation/pocketstation-1999-03.jpg",
+      "public/images/games/pocketstation/pocketstation-1999-04.jpg"
     ]
   },
   {
@@ -4014,10 +4014,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Festival_du_jeu_video_20080926_008.jpg"
     ],
     "images": [
-      "images/1999_Samba_de_Amigo_maracas/Samba_de_Amigo_-_remote_control.jpg",
-      "images/1999_Samba_de_Amigo_maracas/Samba_de_Amigo_Maracas_(7973416172).jpg",
-      "images/1999_Samba_de_Amigo_maracas/Festival_du_jeu_video_20080926_007.jpg",
-      "images/1999_Samba_de_Amigo_maracas/Festival_du_jeu_video_20080926_008.jpg"
+      "public/images/games/samba-de-amigo-maracas/samba-de-amigo-maracas-1999-01.jpg",
+      "public/images/games/samba-de-amigo-maracas/samba-de-amigo-maracas-1999-02.jpg",
+      "public/images/games/samba-de-amigo-maracas/samba-de-amigo-maracas-1999-03.jpg",
+      "public/images/games/samba-de-amigo-maracas/samba-de-amigo-maracas-1999-04.jpg"
     ]
   },
   {
@@ -4054,7 +4054,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Dreamcast-Microphone.jpg"
     ],
     "images": [
-      "images/1999_Seaman_microphone/Dreamcast-Microphone.jpg"
+      "public/images/games/seaman-microphone/seaman-microphone-1999-01.jpg"
     ]
   },
   {
@@ -4092,8 +4092,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_M%C3%A9canique_187.JPG"
     ],
     "images": [
-      "images/1999_Silent_Scope_sniper_rifle/Musée_Mécanique_186.JPG",
-      "images/1999_Silent_Scope_sniper_rifle/Musée_Mécanique_187.JPG"
+      "public/images/games/silent-scope-sniper-rifle/silent-scope-sniper-rifle-1999-01.jpg",
+      "public/images/games/silent-scope-sniper-rifle/silent-scope-sniper-rifle-1999-02.jpg"
     ]
   },
   {
@@ -4166,10 +4166,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sony_Playstation_2_SCPH-5001_V9_-_Controle_Dualshock_2_Duakshock_2_controller_(19482334691).jpg"
     ],
     "images": [
-      "images/2000_DualShock_2/DualShock_2.jpg",
-      "images/2000_DualShock_2/Sony_Playstation_2_SCPH-5001_V9_-_Controle_Dualshock_2_Duakshock_2_controller_(18857414793).jpg",
-      "images/2000_DualShock_2/Sony_Playstation_2_SCPH-5001_V9_-_Controle_Dualshock_2_Duakshock_2_controller_(19290493618).jpg",
-      "images/2000_DualShock_2/Sony_Playstation_2_SCPH-5001_V9_-_Controle_Dualshock_2_Duakshock_2_controller_(19482334691).jpg"
+      "public/images/games/dualshock-2/dualshock-2-2000-01.jpg",
+      "public/images/games/dualshock-2/dualshock-2-2000-02.jpg",
+      "public/images/games/dualshock-2/dualshock-2-2000-03.jpg",
+      "public/images/games/dualshock-2/dualshock-2-2000-04.jpg"
     ]
   },
   {
@@ -4209,10 +4209,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Keyboardmania_Cabinet.jpg"
     ],
     "images": [
-      "images/2000_Keyboardmania_keyboard_controller/Keyboardmania_3rd_MIX.jpg",
-      "images/2000_Keyboardmania_keyboard_controller/Keyboardmania_piano_controller.jpg",
-      "images/2000_Keyboardmania_keyboard_controller/Keyboardmania_double_screen.jpg",
-      "images/2000_Keyboardmania_keyboard_controller/Keyboardmania_Cabinet.jpg"
+      "public/images/games/keyboardmania-keyboard-controller/keyboardmania-keyboard-controller-2000-01.jpg",
+      "public/images/games/keyboardmania-keyboard-controller/keyboardmania-keyboard-controller-2000-02.jpg",
+      "public/images/games/keyboardmania-keyboard-controller/keyboardmania-keyboard-controller-2000-03.jpg",
+      "public/images/games/keyboardmania-keyboard-controller/keyboardmania-keyboard-controller-2000-04.jpg"
     ]
   },
   {
@@ -4285,10 +4285,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:ParaParaParadise_2nd_Mix.JPG"
     ],
     "images": [
-      "images/2000_Para_Para_Paradise_motion_sensors/ParaParaParadise_2ndMIX.jpg",
-      "images/2000_Para_Para_Paradise_motion_sensors/ParaParaParadise_2nd_Mix_cabinet.jpg",
-      "images/2000_Para_Para_Paradise_motion_sensors/Paraparaparadise_2ndMIX_arcade_machine.jpg",
-      "images/2000_Para_Para_Paradise_motion_sensors/ParaParaParadise_2nd_Mix.JPG"
+      "public/images/games/para-para-paradise-motion-sensors/para-para-paradise-motion-sensors-2000-01.jpg",
+      "public/images/games/para-para-paradise-motion-sensors/para-para-paradise-motion-sensors-2000-02.jpg",
+      "public/images/games/para-para-paradise-motion-sensors/para-para-paradise-motion-sensors-2000-03.jpg",
+      "public/images/games/para-para-paradise-motion-sensors/para-para-paradise-motion-sensors-2000-04.jpg"
     ]
   },
   {
@@ -4328,10 +4328,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:GameCube_Controller_in_White_(Transparent).png"
     ],
     "images": [
-      "images/2001_GameCube_controller/Gamecube-controller.jpg",
-      "images/2001_GameCube_controller/GameCube_controller.png",
-      "images/2001_GameCube_controller/LodgeNet-Nintendo-GameCube-Controller.jpg",
-      "images/2001_GameCube_controller/GameCube_Controller_in_White_(Transparent).png"
+      "public/images/games/gamecube-controller/gamecube-controller-2001-01.jpg",
+      "public/images/games/gamecube-controller/gamecube-controller-2001-02.png",
+      "public/images/games/gamecube-controller/gamecube-controller-2001-03.jpg",
+      "public/images/games/gamecube-controller/gamecube-controller-2001-04.png"
     ]
   },
   {
@@ -4370,9 +4370,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PokemonMini.JPG"
     ],
     "images": [
-      "images/2001_Pokemon_Mini/Pokemon_mini.png",
-      "images/2001_Pokemon_Mini/Pokémon_mini_system.jpg",
-      "images/2001_Pokemon_Mini/PokemonMini.JPG"
+      "public/images/games/pokemon-mini/pokemon-mini-2001-01.png",
+      "public/images/games/pokemon-mini/pokemon-mini-2001-02.jpg",
+      "public/images/games/pokemon-mini/pokemon-mini-2001-03.jpg"
     ]
   },
   {
@@ -4412,10 +4412,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Xbox-Controller-Duke-BL.jpg"
     ],
     "images": [
-      "images/2001_Xbox_controller_Duke/Xbox-Controller-Duke-FL.jpg",
-      "images/2001_Xbox_controller_Duke/Xbox-Controller-Duke-FR.jpg",
-      "images/2001_Xbox_controller_Duke/Xbox-Controller-Duke-BR.jpg",
-      "images/2001_Xbox_controller_Duke/Xbox-Controller-Duke-BL.jpg"
+      "public/images/games/xbox-controller-duke/xbox-controller-duke-2001-01.jpg",
+      "public/images/games/xbox-controller-duke/xbox-controller-duke-2001-02.jpg",
+      "public/images/games/xbox-controller-duke/xbox-controller-duke-2001-03.jpg",
+      "public/images/games/xbox-controller-duke/xbox-controller-duke-2001-04.jpg"
     ]
   },
   {
@@ -4453,8 +4453,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:VIGAMUS_Steel_Battalion.jpg"
     ],
     "images": [
-      "images/2002_Steel_Battalion_controller/Steel_Battalion_controllers.jpg",
-      "images/2002_Steel_Battalion_controller/VIGAMUS_Steel_Battalion.jpg"
+      "public/images/games/steel-battalion-controller/steel-battalion-controller-2002-01.jpg",
+      "public/images/games/steel-battalion-controller/steel-battalion-controller-2002-02.jpg"
     ]
   },
   {
@@ -4494,10 +4494,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Taiko_Drummers.jpg"
     ],
     "images": [
-      "images/2002_Taiko_no_Tatsujin_Tatacon_drum/\"Taiko_no_Tatsujin_13\"_for_arcade_game_(Old_housing).jpg",
-      "images/2002_Taiko_no_Tatsujin_Tatacon_drum/\"Taiko_no_Tatsujin_12_increased_version\"_for_arcade_game_(Old_housing).jpg",
-      "images/2002_Taiko_no_Tatsujin_Tatacon_drum/Taiko_no_tatsujin【nijiiro_version】.jpg",
-      "images/2002_Taiko_no_Tatsujin_Tatacon_drum/Taiko_Drummers.jpg"
+      "public/images/games/taiko-no-tatsujin-tatacon-drum/taiko-no-tatsujin-tatacon-drum-2002-01.jpg",
+      "public/images/games/taiko-no-tatsujin-tatacon-drum/taiko-no-tatsujin-tatacon-drum-2002-02.jpg",
+      "public/images/games/taiko-no-tatsujin-tatacon-drum/taiko-no-tatsujin-tatacon-drum-2002-03.jpg",
+      "public/images/games/taiko-no-tatsujin-tatacon-drum/taiko-no-tatsujin-tatacon-drum-2002-04.jpg"
     ]
   },
   {
@@ -4537,10 +4537,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:WaveBird_and_receiver.png"
     ],
     "images": [
-      "images/2002_WaveBird_Wireless_Controller/Nintendo-GameCube-Wavebird-Silver.jpg",
-      "images/2002_WaveBird_Wireless_Controller/WaveBird.jpg",
-      "images/2002_WaveBird_Wireless_Controller/Platinum_WaveBird.jpg",
-      "images/2002_WaveBird_Wireless_Controller/WaveBird_and_receiver.png"
+      "public/images/games/wavebird-wireless-controller/wavebird-wireless-controller-2002-01.jpg",
+      "public/images/games/wavebird-wireless-controller/wavebird-wireless-controller-2002-02.jpg",
+      "public/images/games/wavebird-wireless-controller/wavebird-wireless-controller-2002-03.jpg",
+      "public/images/games/wavebird-wireless-controller/wavebird-wireless-controller-2002-04.png"
     ]
   },
   {
@@ -4580,10 +4580,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Xbox-Controller-S-BR.jpg"
     ],
     "images": [
-      "images/2002_Xbox_Controller_S/XBOX_Controller_S.JPG",
-      "images/2002_Xbox_Controller_S/Xbox_controller_s_1.jpg",
-      "images/2002_Xbox_Controller_S/Xbox-Controller-S-FR.jpg",
-      "images/2002_Xbox_Controller_S/Xbox-Controller-S-BR.jpg"
+      "public/images/games/xbox-controller-s/xbox-controller-s-2002-01.jpg",
+      "public/images/games/xbox-controller-s/xbox-controller-s-2002-02.jpg",
+      "public/images/games/xbox-controller-s/xbox-controller-s-2002-03.jpg",
+      "public/images/games/xbox-controller-s/xbox-controller-s-2002-04.jpg"
     ]
   },
   {
@@ -4656,10 +4656,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Donkey_Konga_Gamecube_bongos.jpg"
     ],
     "images": [
-      "images/2003_DK_Bongos/DK-Bongos.JPG",
-      "images/2003_DK_Bongos/DK_Bongos.JPG",
-      "images/2003_DK_Bongos/Donkey_Kong_bongos.jpg",
-      "images/2003_DK_Bongos/Donkey_Konga_Gamecube_bongos.jpg"
+      "public/images/games/dk-bongos/dk-bongos-2003-01.jpg",
+      "public/images/games/dk-bongos/dk-bongos-2003-02.jpg",
+      "public/images/games/dk-bongos/dk-bongos-2003-03.jpg",
+      "public/images/games/dk-bongos/dk-bongos-2003-04.jpg"
     ]
   },
   {
@@ -4699,10 +4699,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Eyetoy_Play_3_Recog_Cam_Kinetic.jpg"
     ],
     "images": [
-      "images/2003_EyeToy/PS2-Eyetoy.jpg",
-      "images/2003_EyeToy/EyeToy_camera_2.jpg",
-      "images/2003_EyeToy/EyeToy.png",
-      "images/2003_EyeToy/Eyetoy_Play_3_Recog_Cam_Kinetic.jpg"
+      "public/images/games/eyetoy/eyetoy-2003-01.jpg",
+      "public/images/games/eyetoy/eyetoy-2003-02.jpg",
+      "public/images/games/eyetoy/eyetoy-2003-03.png",
+      "public/images/games/eyetoy/eyetoy-2003-04.jpg"
     ]
   },
   {
@@ -4742,10 +4742,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_DS_Lite_(front).jpg"
     ],
     "images": [
-      "images/2004_Nintendo_DS/Nintendo_DS_Lite_(top_open_on).jpg",
-      "images/2004_Nintendo_DS/Nintendo_DS_Lite_(right_side).jpg",
-      "images/2004_Nintendo_DS/Nintendo-DS-Fat-Blue.jpg",
-      "images/2004_Nintendo_DS/Nintendo_DS_Lite_(front).jpg"
+      "public/images/games/nintendo-ds/nintendo-ds-2004-01.jpg",
+      "public/images/games/nintendo-ds/nintendo-ds-2004-02.jpg",
+      "public/images/games/nintendo-ds/nintendo-ds-2004-03.jpg",
+      "public/images/games/nintendo-ds/nintendo-ds-2004-04.jpg"
     ]
   },
   {
@@ -4782,7 +4782,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:WarioWareTwisted_Cartridge.jpg"
     ],
     "images": [
-      "images/2004_WarioWare_Twisted_gyro_cartridge/WarioWareTwisted_Cartridge.jpg"
+      "public/images/games/warioware-twisted-gyro-cartridge/warioware-twisted-gyro-cartridge-2004-01.jpg"
     ]
   },
   {
@@ -4820,8 +4820,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Playstation_2_3_Wireless_Buzzer.jpg"
     ],
     "images": [
-      "images/2005_Buzz_buzzers/Buzz_Buzzer.jpg",
-      "images/2005_Buzz_buzzers/Playstation_2_3_Wireless_Buzzer.jpg"
+      "public/images/games/buzz-buzzers/buzz-buzzers-2005-01.jpg",
+      "public/images/games/buzz-buzzers/buzz-buzzers-2005-02.jpg"
     ]
   },
   {
@@ -4861,10 +4861,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Guitar_Hero_World_Tour_Guitar_Controller_PS3.png"
     ],
     "images": [
-      "images/2005_Guitar_Hero_controller_Gibson_SG/Guitar_Hero_series_controllers.jpg",
-      "images/2005_Guitar_Hero_controller_Gibson_SG/Guitar_Hero_II_guitar_controllers.jpg",
-      "images/2005_Guitar_Hero_controller_Gibson_SG/Guitar-hero-controller-horiz.jpg",
-      "images/2005_Guitar_Hero_controller_Gibson_SG/Guitar_Hero_World_Tour_Guitar_Controller_PS3.png"
+      "public/images/games/guitar-hero-controller-gibson-sg/guitar-hero-controller-gibson-sg-2005-01.jpg",
+      "public/images/games/guitar-hero-controller-gibson-sg/guitar-hero-controller-gibson-sg-2005-02.jpg",
+      "public/images/games/guitar-hero-controller-gibson-sg/guitar-hero-controller-gibson-sg-2005-03.jpg",
+      "public/images/games/guitar-hero-controller-gibson-sg/guitar-hero-controller-gibson-sg-2005-04.png"
     ]
   },
   {
@@ -4904,10 +4904,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Xbox-360-Controller-Black.png"
     ],
     "images": [
-      "images/2005_Xbox_360_controller/Xbox-360-Controller-Black.jpg",
-      "images/2005_Xbox_360_controller/Halo_3_ODST_Xbox_360_controller.jpg",
-      "images/2005_Xbox_360_controller/Xbox-360-Wireless-Controller-White.jpg",
-      "images/2005_Xbox_360_controller/Xbox-360-Controller-Black.png"
+      "public/images/games/xbox-360-controller/xbox-360-controller-2005-01.jpg",
+      "public/images/games/xbox-360-controller/xbox-360-controller-2005-02.jpg",
+      "public/images/games/xbox-360-controller/xbox-360-controller-2005-03.jpg",
+      "public/images/games/xbox-360-controller/xbox-360-controller-2005-04.png"
     ]
   },
   {
@@ -4944,7 +4944,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Logitech_G25_Racing_set.jpg"
     ],
     "images": [
-      "images/2006_Logitech_G25_racing_wheel/Logitech_G25_Racing_set.jpg"
+      "public/images/games/logitech-g25-racing-wheel/logitech-g25-racing-wheel-2006-01.jpg"
     ]
   },
   {
@@ -4984,10 +4984,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sixaxis.jpg"
     ],
     "images": [
-      "images/2006_Sixaxis/PlayStation3-Sixaxis.jpg",
-      "images/2006_Sixaxis/PS3_SIXAXIS.jpg",
-      "images/2006_Sixaxis/Sixaxis_ps3_controller.jpg",
-      "images/2006_Sixaxis/Sixaxis.jpg"
+      "public/images/games/sixaxis/sixaxis-2006-01.jpg",
+      "public/images/games/sixaxis/sixaxis-2006-02.jpg",
+      "public/images/games/sixaxis/sixaxis-2006-03.jpg",
+      "public/images/games/sixaxis/sixaxis-2006-04.jpg"
     ]
   },
   {
@@ -5027,10 +5027,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Wii_nunchuk_controller_side.jpg"
     ],
     "images": [
-      "images/2006_Wii_Nunchuk/Nintendo-Wii-Remote-wNunchuk.jpg",
-      "images/2006_Wii_Nunchuk/Wii_Remote_&_Nunchuk.jpg",
-      "images/2006_Wii_Nunchuk/Wii_nunchuk_controller.jpg",
-      "images/2006_Wii_Nunchuk/Wii_nunchuk_controller_side.jpg"
+      "public/images/games/wii-nunchuk/wii-nunchuk-2006-01.jpg",
+      "public/images/games/wii-nunchuk/wii-nunchuk-2006-02.jpg",
+      "public/images/games/wii-nunchuk/wii-nunchuk-2006-03.jpg",
+      "public/images/games/wii-nunchuk/wii-nunchuk-2006-04.jpg"
     ]
   },
   {
@@ -5070,10 +5070,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Wii_Remote.jpg"
     ],
     "images": [
-      "images/2006_Wii_Remote/Wii_Remote_Image.jpg",
-      "images/2006_Wii_Remote/Wii_Remote_wrist_straps.jpg",
-      "images/2006_Wii_Remote/Nintendo-Wii-Remote-wNunchuk.jpg",
-      "images/2006_Wii_Remote/Wii_Remote.jpg"
+      "public/images/games/wii-remote/wii-remote-2006-01.jpg",
+      "public/images/games/wii-remote/wii-remote-2006-02.jpg",
+      "public/images/games/wii-remote/wii-remote-2006-03.jpg",
+      "public/images/games/wii-remote/wii-remote-2006-04.jpg"
     ]
   },
   {
@@ -5113,10 +5113,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Winner_of_the_Novint_Falcon.jpg"
     ],
     "images": [
-      "images/2007_Novint_Falcon/Pair_Black_Novint_Falcons_and_Grips.jpg",
-      "images/2007_Novint_Falcon/Novint_Falcon_(7973440152).jpg",
-      "images/2007_Novint_Falcon/Novint_Falcon_with_Portal_2_1.jpg",
-      "images/2007_Novint_Falcon/Winner_of_the_Novint_Falcon.jpg"
+      "public/images/games/novint-falcon/novint-falcon-2007-01.jpg",
+      "public/images/games/novint-falcon/novint-falcon-2007-02.jpg",
+      "public/images/games/novint-falcon/novint-falcon-2007-03.jpg",
+      "public/images/games/novint-falcon/novint-falcon-2007-04.jpg"
     ]
   },
   {
@@ -5156,10 +5156,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PS_Eye_lens_assembly.jpg"
     ],
     "images": [
-      "images/2007_PlayStation_Eye/PlayStation_Eye.jpg",
-      "images/2007_PlayStation_Eye/PlayStation_Eye_(back).jpg",
-      "images/2007_PlayStation_Eye/PS_Eye_lens_assembly.jpg",
-      "images/2007_PlayStation_Eye/Playstation_Eye_3.JPG"
+      "public/images/games/playstation-eye/playstation-eye-2007-01.jpg",
+      "public/images/games/playstation-eye/playstation-eye-2007-02.jpg",
+      "public/images/games/playstation-eye/playstation-eye-2007-03.jpg",
+      "public/images/games/playstation-eye/playstation-eye-2007-04.jpg"
     ]
   },
   {
@@ -5199,10 +5199,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:The_Beatles_Rock_Band_-_Drum_set_(front).jpg"
     ],
     "images": [
-      "images/2007_Rock_Band_drum_kit/Rockband-drumset.jpg",
-      "images/2007_Rock_Band_drum_kit/Rock_Band_drums.jpg",
-      "images/2007_Rock_Band_drum_kit/The_Beatles_Rock_Band_-_Drum_set.jpg",
-      "images/2007_Rock_Band_drum_kit/The_Beatles_Rock_Band_-_Drum_set_(front).jpg"
+      "public/images/games/rock-band-drum-kit/rock-band-drum-kit-2007-01.jpg",
+      "public/images/games/rock-band-drum-kit/rock-band-drum-kit-2007-02.jpg",
+      "public/images/games/rock-band-drum-kit/rock-band-drum-kit-2007-03.jpg",
+      "public/images/games/rock-band-drum-kit/rock-band-drum-kit-2007-04.jpg"
     ]
   },
   {
@@ -5242,10 +5242,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Wii_Balance_Board_black.JPG"
     ],
     "images": [
-      "images/2007_Wii_Balance_Board/Wii_Balance_Board.JPG",
-      "images/2007_Wii_Balance_Board/Wii_Balance_Board_2.JPG",
-      "images/2007_Wii_Balance_Board/Wii_Balance_Board_transparent.png",
-      "images/2007_Wii_Balance_Board/Wii_Balance_Board_black.JPG"
+      "public/images/games/wii-balance-board/wii-balance-board-2007-01.jpg",
+      "public/images/games/wii-balance-board/wii-balance-board-2007-02.jpg",
+      "public/images/games/wii-balance-board/wii-balance-board-2007-03.png",
+      "public/images/games/wii-balance-board/wii-balance-board-2007-04.jpg"
     ]
   },
   {
@@ -5285,10 +5285,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Wii_Zapper-2009-03-12.jpg"
     ],
     "images": [
-      "images/2007_Wii_Zapper/Wii_zapper.jpg",
-      "images/2007_Wii_Zapper/Wii_Zapper_sans_wiimote.JPG",
-      "images/2007_Wii_Zapper/Wii_Zapper-2009-03-12.jpg",
-      "images/2007_Wii_Zapper/Wii_Zapper_2.jpg"
+      "public/images/games/wii-zapper/wii-zapper-2007-01.jpg",
+      "public/images/games/wii-zapper/wii-zapper-2007-02.jpg",
+      "public/images/games/wii-zapper/wii-zapper-2007-03.jpg",
+      "public/images/games/wii-zapper/wii-zapper-2007-04.jpg"
     ]
   },
   {
@@ -5361,10 +5361,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Wii_U_Mario_Wheel_back.jpg"
     ],
     "images": [
-      "images/2008_Wii_Wheel/Wii-Wheel.jpg",
-      "images/2008_Wii_Wheel/Wii-Wheel.png",
-      "images/2008_Wii_Wheel/Wii_U_Mario_Wheel_back.jpg",
-      "images/2008_Wii_Wheel/Wii-wheel_3.jpg"
+      "public/images/games/wii-wheel/wii-wheel-2008-01.jpg",
+      "public/images/games/wii-wheel/wii-wheel-2008-02.png",
+      "public/images/games/wii-wheel/wii-wheel-2008-03.jpg",
+      "public/images/games/wii-wheel/wii-wheel-2008-04.jpg"
     ]
   },
   {
@@ -5404,10 +5404,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:DJ_Hero_Turntable_PS3.jpg"
     ],
     "images": [
-      "images/2009_DJ_Hero_turntable/DJ-Hero-PS3-Turntable.png",
-      "images/2009_DJ_Hero_turntable/DJ_Hero_spread_out.jpg",
-      "images/2009_DJ_Hero_turntable/Djhero_played.jpg",
-      "images/2009_DJ_Hero_turntable/DJ_Hero_Turntable_PS3.jpg"
+      "public/images/games/dj-hero-turntable/dj-hero-turntable-2009-01.png",
+      "public/images/games/dj-hero-turntable/dj-hero-turntable-2009-02.jpg",
+      "public/images/games/dj-hero-turntable/dj-hero-turntable-2009-03.jpg",
+      "public/images/games/dj-hero-turntable/dj-hero-turntable-2009-04.jpg"
     ]
   },
   {
@@ -5446,9 +5446,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Dispositivo_emotiv.jpg"
     ],
     "images": [
-      "images/2009_Emotiv_EPOC/Emotiv_EPOC_headset.jpg",
-      "images/2009_Emotiv_EPOC/Emotiv_epoc_2014.jpg",
-      "images/2009_Emotiv_EPOC/Dispositivo_emotiv.jpg"
+      "public/images/games/emotiv-epoc/emotiv-epoc-2009-01.jpg",
+      "public/images/games/emotiv-epoc/emotiv-epoc-2009-02.jpg",
+      "public/images/games/emotiv-epoc/emotiv-epoc-2009-03.jpg"
     ]
   },
   {
@@ -5520,9 +5520,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Poke-Walker.jpg"
     ],
     "images": [
-      "images/2009_Pokewalker/Pokewalker.jpg",
-      "images/2009_Pokewalker/Pokéwalker.jpg",
-      "images/2009_Pokewalker/Poke-Walker.jpg"
+      "public/images/games/pokewalker/pokewalker-2009-01.jpg",
+      "public/images/games/pokewalker/pokewalker-2009-02.jpg",
+      "public/images/games/pokewalker/pokewalker-2009-03.jpg"
     ]
   },
   {
@@ -5592,7 +5592,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Tony_Hawk_-_E3_2009_(3587912548).jpg"
     ],
     "images": [
-      "images/2009_Tony_Hawk_Ride_skateboard/Tony_Hawk_-_E3_2009_(3587912548).jpg"
+      "public/images/games/tony-hawk-ride-skateboard/tony-hawk-ride-skateboard-2009-01.jpg"
     ]
   },
   {
@@ -5632,10 +5632,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:WiiMote_with_MotionPlus.JPG"
     ],
     "images": [
-      "images/2009_Wii_MotionPlus/Wiimote-with-Motionplus-Attach.jpg",
-      "images/2009_Wii_MotionPlus/Wii_Remote_Motion_Plus_comparison.jpg",
-      "images/2009_Wii_MotionPlus/Wii_Remote_with_MotionPlus.jpg",
-      "images/2009_Wii_MotionPlus/WiiMote_with_MotionPlus.JPG"
+      "public/images/games/wii-motionplus/wii-motionplus-2009-01.jpg",
+      "public/images/games/wii-motionplus/wii-motionplus-2009-02.jpg",
+      "public/images/games/wii-motionplus/wii-motionplus-2009-03.jpg",
+      "public/images/games/wii-motionplus/wii-motionplus-2009-04.jpg"
     ]
   },
   {
@@ -5672,7 +5672,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Satoru_Iwata_en_el_E3_2009.jpg"
     ],
     "images": [
-      "images/2009_Wii_Vitality_Sensor/Satoru_Iwata_en_el_E3_2009.jpg"
+      "public/images/games/wii-vitality-sensor/wii-vitality-sensor-2009-01.jpg"
     ]
   },
   {
@@ -5712,10 +5712,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Kinect_Tilt(Black).JPG"
     ],
     "images": [
-      "images/2010_Kinect/Kinect_Sensor_at_E3_2010_(front).jpg",
-      "images/2010_Kinect/Kinect_and_Xbox_360_at_E3_2010.jpg",
-      "images/2010_Kinect/Kinect_Ready.jpg",
-      "images/2010_Kinect/Kinect_Tilt(Black).JPG"
+      "public/images/games/kinect/kinect-2010-01.jpg",
+      "public/images/games/kinect/kinect-2010-02.jpg",
+      "public/images/games/kinect/kinect-2010-03.jpg",
+      "public/images/games/kinect/kinect-2010-04.jpg"
     ]
   },
   {
@@ -5755,10 +5755,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PlayStation_Move_revisions_-_bottom_view.jpg"
     ],
     "images": [
-      "images/2010_PlayStation_Move/PlayStation-Move-in-Hand.jpg",
-      "images/2010_PlayStation_Move/Sony-PlayStation-Move-Navigator.jpg",
-      "images/2010_PlayStation_Move/Sony-PlayStation-Move-Controller.png",
-      "images/2010_PlayStation_Move/PlayStation_Move_revisions_-_bottom_view.jpg"
+      "public/images/games/playstation-move/playstation-move-2010-01.jpg",
+      "public/images/games/playstation-move/playstation-move-2010-02.jpg",
+      "public/images/games/playstation-move/playstation-move-2010-03.png",
+      "public/images/games/playstation-move/playstation-move-2010-04.jpg"
     ]
   },
   {
@@ -5798,10 +5798,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:UDraw_GameTablet.JPG"
     ],
     "images": [
-      "images/2010_uDraw_GameTablet/UDraw_tablet_for_Wii.jpg",
-      "images/2010_uDraw_GameTablet/UDrawTabletPS3.jpg",
-      "images/2010_uDraw_GameTablet/Udraw1.jpg",
-      "images/2010_uDraw_GameTablet/UDraw_GameTablet.JPG"
+      "public/images/games/udraw-gametablet/udraw-gametablet-2010-01.jpg",
+      "public/images/games/udraw-gametablet/udraw-gametablet-2010-02.jpg",
+      "public/images/games/udraw-gametablet/udraw-gametablet-2010-03.jpg",
+      "public/images/games/udraw-gametablet/udraw-gametablet-2010-04.jpg"
     ]
   },
   {
@@ -5841,10 +5841,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:NeuroSky_MindWave_(22520568691).jpg"
     ],
     "images": [
-      "images/2011_NeuroSky_MindWave/Neurosky_Mindplay_(7973437584).jpg",
-      "images/2011_NeuroSky_MindWave/NeuroSky_MindWave_Battery_Container_(22321507920).jpg",
-      "images/2011_NeuroSky_MindWave/NeuroSky_MindWave_Switch_(22322627489).jpg",
-      "images/2011_NeuroSky_MindWave/NeuroSky_MindWave_(22520568691).jpg"
+      "public/images/games/neurosky-mindwave/neurosky-mindwave-2011-01.jpg",
+      "public/images/games/neurosky-mindwave/neurosky-mindwave-2011-02.jpg",
+      "public/images/games/neurosky-mindwave/neurosky-mindwave-2011-03.jpg",
+      "public/images/games/neurosky-mindwave/neurosky-mindwave-2011-04.jpg"
     ]
   },
   {
@@ -5884,10 +5884,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_3DS_Target_Shooting_demo_at_E3_2010.jpg"
     ],
     "images": [
-      "images/2011_Nintendo_3DS/Nintendo-3DS-AquaOpen.png",
-      "images/2011_Nintendo_3DS/Nintendo-3DS-XL-angled.jpg",
-      "images/2011_Nintendo_3DS/Nintendo_3DS_display_case_at_E3_2010_(front_side_angle).jpg",
-      "images/2011_Nintendo_3DS/Nintendo_3DS_Target_Shooting_demo_at_E3_2010.jpg"
+      "public/images/games/nintendo-3ds/nintendo-3ds-2011-01.png",
+      "public/images/games/nintendo-3ds/nintendo-3ds-2011-02.jpg",
+      "public/images/games/nintendo-3ds/nintendo-3ds-2011-03.jpg",
+      "public/images/games/nintendo-3ds/nintendo-3ds-2011-04.jpg"
     ]
   },
   {
@@ -5927,10 +5927,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PlayStation_Vita_TV_Tokyo_Game_Show_2013_front.jpg"
     ],
     "images": [
-      "images/2011_PlayStation_Vita/PlayStation-Vita-2001-FL.jpg",
-      "images/2011_PlayStation_Vita/PlayStation-Vita-1101-FL.png",
-      "images/2011_PlayStation_Vita/Bildvergleich_PS_Vita.jpg",
-      "images/2011_PlayStation_Vita/PlayStation_Vita_TV_Tokyo_Game_Show_2013_front.jpg"
+      "public/images/games/playstation-vita/playstation-vita-2011-01.jpg",
+      "public/images/games/playstation-vita/playstation-vita-2011-02.png",
+      "public/images/games/playstation-vita/playstation-vita-2011-03.jpg",
+      "public/images/games/playstation-vita/playstation-vita-2011-04.jpg"
     ]
   },
   {
@@ -6003,10 +6003,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PS3_Rock_Band_3_MIDI_Pro-Adapter.jpg"
     ],
     "images": [
-      "images/2011_Rock_Band_3_Fender_Mustang_Pro_guitar/Fender_Mustang_Pro_Guitar_Controller_(body)_for_Rock_Band_3_@_E3_Expo_2010.jpg",
-      "images/2011_Rock_Band_3_Fender_Mustang_Pro_guitar/Squier_Stratocaster_Pro_Controller_(body)_for_Rock_Band_3_@_E3_Expo_2010.jpg",
-      "images/2011_Rock_Band_3_Fender_Mustang_Pro_guitar/Rock_Band_3_Wireless_Pro_Keyboard_PS3.jpg",
-      "images/2011_Rock_Band_3_Fender_Mustang_Pro_guitar/PS3_Rock_Band_3_MIDI_Pro-Adapter.jpg"
+      "public/images/games/rock-band-3-fender-mustang-pro-guitar/rock-band-3-fender-mustang-pro-guitar-2011-01.jpg",
+      "public/images/games/rock-band-3-fender-mustang-pro-guitar/rock-band-3-fender-mustang-pro-guitar-2011-02.jpg",
+      "public/images/games/rock-band-3-fender-mustang-pro-guitar/rock-band-3-fender-mustang-pro-guitar-2011-03.jpg",
+      "public/images/games/rock-band-3-fender-mustang-pro-guitar/rock-band-3-fender-mustang-pro-guitar-2011-04.jpg"
     ]
   },
   {
@@ -6079,10 +6079,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Activision_Skylanders_Portal_of_Power_0000502,_wired_USB_portal_-_side_view.jpg"
     ],
     "images": [
-      "images/2011_Skylanders_Portal_of_Power/Activision_Skylanders_Portal_of_Power,_wired_USB_portal,_model_0000547_-_top_view.jpg",
-      "images/2011_Skylanders_Portal_of_Power/Activision_Skylanders_Portal_of_Power,_wired_USB_portal,_model_0000547_-_bottom_view.jpg",
-      "images/2011_Skylanders_Portal_of_Power/Activision_Skylanders_Portal_of_Power_0000502,_wired_USB_portal_-_top_view.jpg",
-      "images/2011_Skylanders_Portal_of_Power/Activision_Skylanders_Portal_of_Power_0000502,_wired_USB_portal_-_side_view.jpg"
+      "public/images/games/skylanders-portal-of-power/skylanders-portal-of-power-2011-01.jpg",
+      "public/images/games/skylanders-portal-of-power/skylanders-portal-of-power-2011-02.jpg",
+      "public/images/games/skylanders-portal-of-power/skylanders-portal-of-power-2011-03.jpg",
+      "public/images/games/skylanders-portal-of-power/skylanders-portal-of-power-2011-04.jpg"
     ]
   },
   {
@@ -6122,10 +6122,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Wii_U_GamePad_-_front_3.jpg"
     ],
     "images": [
-      "images/2012_Wii_U_GamePad/Wii_U_Gamepad_schwarz_transparent.png",
-      "images/2012_Wii_U_GamePad/Wii_U_GamePad_d-pad_detail.jpg",
-      "images/2012_Wii_U_GamePad/Wii_U_GamePad_-_front_1.jpg",
-      "images/2012_Wii_U_GamePad/Wii_U_GamePad_-_front_3.jpg"
+      "public/images/games/wii-u-gamepad/wii-u-gamepad-2012-01.png",
+      "public/images/games/wii-u-gamepad/wii-u-gamepad-2012-02.jpg",
+      "public/images/games/wii-u-gamepad/wii-u-gamepad-2012-03.jpg",
+      "public/images/games/wii-u-gamepad/wii-u-gamepad-2012-04.jpg"
     ]
   },
   {
@@ -6165,10 +6165,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Sony-PlayStation-4-PS4-DualShock-4.png"
     ],
     "images": [
-      "images/2013_DualShock_4/DualShock_4.jpg",
-      "images/2013_DualShock_4/DualShock_4_2013-12-13_23-57.jpg",
-      "images/2013_DualShock_4/Sony-PlayStation-4-PS4-wDualShock-4.jpg",
-      "images/2013_DualShock_4/Sony-PlayStation-4-PS4-DualShock-4.png"
+      "public/images/games/dualshock-4/dualshock-4-2013-01.jpg",
+      "public/images/games/dualshock-4/dualshock-4-2013-02.jpg",
+      "public/images/games/dualshock-4/dualshock-4-2013-03.jpg",
+      "public/images/games/dualshock-4/dualshock-4-2013-04.png"
     ]
   },
   {
@@ -6208,10 +6208,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Microsoft-Xbox-One-Console-Set-wKinect.jpg"
     ],
     "images": [
-      "images/2013_Kinect_for_Xbox_One/Xbox-One-Kinect.jpg",
-      "images/2013_Kinect_for_Xbox_One/Xbox-360-Kinect-Standalone.png",
-      "images/2013_Kinect_for_Xbox_One/2013_E3_-_XBOX_ONE_Kinect_Demo_(9099166158).jpg",
-      "images/2013_Kinect_for_Xbox_One/Microsoft-Xbox-One-Console-Set-wKinect.jpg"
+      "public/images/games/kinect-for-xbox-one/kinect-for-xbox-one-2013-01.jpg",
+      "public/images/games/kinect-for-xbox-one/kinect-for-xbox-one-2013-02.png",
+      "public/images/games/kinect-for-xbox-one/kinect-for-xbox-one-2013-03.jpg",
+      "public/images/games/kinect-for-xbox-one/kinect-for-xbox-one-2013-04.jpg"
     ]
   },
   {
@@ -6251,10 +6251,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Leap_Motion_Orion_with_sticker_2.jpg"
     ],
     "images": [
-      "images/2013_Leap_Motion_Controller/Leap_Motion_Orion_Controller_Plugged.jpg",
-      "images/2013_Leap_Motion_Controller/Leap_Motion_Controller.JPG",
-      "images/2013_Leap_Motion_Controller/Leap_Motion_Orion_with_sticker.jpg",
-      "images/2013_Leap_Motion_Controller/Leap_Motion_Orion_with_sticker_2.jpg"
+      "public/images/games/leap-motion-controller/leap-motion-controller-2013-01.jpg",
+      "public/images/games/leap-motion-controller/leap-motion-controller-2013-02.jpg",
+      "public/images/games/leap-motion-controller/leap-motion-controller-2013-03.jpg",
+      "public/images/games/leap-motion-controller/leap-motion-controller-2013-04.jpg"
     ]
   },
   {
@@ -6294,10 +6294,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Woman_in_Oculus_Rift_2013.jpg"
     ],
     "images": [
-      "images/2013_Oculus_Rift_DK1/Oculus_Rift_-_Developer_Version_-_Front.jpg",
-      "images/2013_Oculus_Rift_DK1/Oculus_Rift_-_Developer_Version_-_Back_and_Control_Box.jpg",
-      "images/2013_Oculus_Rift_DK1/Oculus_Rift_development_kit_2.jpg",
-      "images/2013_Oculus_Rift_DK1/Woman_in_Oculus_Rift_2013.jpg"
+      "public/images/games/oculus-rift-dk1/oculus-rift-dk1-2013-01.jpg",
+      "public/images/games/oculus-rift-dk1/oculus-rift-dk1-2013-02.jpg",
+      "public/images/games/oculus-rift-dk1/oculus-rift-dk1-2013-03.jpg",
+      "public/images/games/oculus-rift-dk1/oculus-rift-dk1-2013-04.jpg"
     ]
   },
   {
@@ -6337,10 +6337,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Ouya-Controller-FL-Bare.jpg"
     ],
     "images": [
-      "images/2013_Ouya_controller/OuyaDeveloperConsole.png",
-      "images/2013_Ouya_controller/OUYA-Console-set-h.jpg",
-      "images/2013_Ouya_controller/Ouya-Controller-FL.jpg",
-      "images/2013_Ouya_controller/Ouya-Controller-FL-Bare.jpg"
+      "public/images/games/ouya-controller/ouya-controller-2013-01.png",
+      "public/images/games/ouya-controller/ouya-controller-2013-02.jpg",
+      "public/images/games/ouya-controller/ouya-controller-2013-03.jpg",
+      "public/images/games/ouya-controller/ouya-controller-2013-04.jpg"
     ]
   },
   {
@@ -6380,10 +6380,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Ps4_camera_version_2_(cropped).jpg"
     ],
     "images": [
-      "images/2013_PlayStation_Camera/Ps4_camera_version_2.jpg",
-      "images/2013_PlayStation_Camera/PlayStation_Camera_Mk2_on_TV.jpg",
-      "images/2013_PlayStation_Camera/PS4-Camera.JPG",
-      "images/2013_PlayStation_Camera/Ps4_camera_version_2_(cropped).jpg"
+      "public/images/games/playstation-camera/playstation-camera-2013-01.jpg",
+      "public/images/games/playstation-camera/playstation-camera-2013-02.jpg",
+      "public/images/games/playstation-camera/playstation-camera-2013-03.jpg",
+      "public/images/games/playstation-camera/playstation-camera-2013-04.jpg"
     ]
   },
   {
@@ -6423,10 +6423,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Xbox_One_Wireless_Controller_Model_1708_(35327620163).jpg"
     ],
     "images": [
-      "images/2013_Xbox_One_controller/Microsoft-Xbox-One-controller.jpg",
-      "images/2013_Xbox_One_controller/XBox_One_controller_model_1537_I_Made_This.jpg",
-      "images/2013_Xbox_One_controller/Xbox_One_controller_model_1708_(39160219920)_(cropped).jpg",
-      "images/2013_Xbox_One_controller/Xbox_One_Wireless_Controller_Model_1708_(35327620163).jpg"
+      "public/images/games/xbox-one-controller/xbox-one-controller-2013-01.jpg",
+      "public/images/games/xbox-one-controller/xbox-one-controller-2013-02.jpg",
+      "public/images/games/xbox-one-controller/xbox-one-controller-2013-03.jpg",
+      "public/images/games/xbox-one-controller/xbox-one-controller-2013-04.jpg"
     ]
   },
   {
@@ -6465,9 +6465,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Power_up_bands_at_Super_Nintendo_World_(Universal_Studios_Japan).png"
     ],
     "images": [
-      "images/2014_Amiibo/PAX_South_2016_-_Amiibo_for_sale_(24603425902).jpg",
-      "images/2014_Amiibo/Nintendo_3DS_NFC_Reader_Writer.jpg",
-      "images/2014_Amiibo/Power_up_bands_at_Super_Nintendo_World_(Universal_Studios_Japan).png"
+      "public/images/games/amiibo/amiibo-2014-01.jpg",
+      "public/images/games/amiibo/amiibo-2014-02.jpg",
+      "public/images/games/amiibo/amiibo-2014-03.png"
     ]
   },
   {
@@ -6508,10 +6508,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Ulrich_and_his_Tobii_communication_device.jpg"
     ],
     "images": [
-      "images/2014_Tobii_EyeX_Controller/Tobii-EyeTracker.jpg",
-      "images/2014_Tobii_EyeX_Controller/Tobii_X1_Light_Eye_Tracker_Laptop.jpg",
-      "images/2014_Tobii_EyeX_Controller/Tobii_EyeAsteroids_eye_control_arcade_game.png",
-      "images/2014_Tobii_EyeX_Controller/Ulrich_and_his_Tobii_communication_device.jpg"
+      "public/images/games/tobii-eyex-controller/tobii-eyex-controller-2014-01.jpg",
+      "public/images/games/tobii-eyex-controller/tobii-eyex-controller-2014-02.jpg",
+      "public/images/games/tobii-eyex-controller/tobii-eyex-controller-2014-03.png",
+      "public/images/games/tobii-eyex-controller/tobii-eyex-controller-2014-04.jpg"
     ]
   },
   {
@@ -6551,10 +6551,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Steam_Controller_(top)_(24525157630).jpg"
     ],
     "images": [
-      "images/2015_Steam_Controller_1st_generation/Gigabyte_Steam_Controller_(cropped).jpg",
-      "images/2015_Steam_Controller_1st_generation/Steam_Machine_from_Gigabyte_and_Steam_Controller.jpg",
-      "images/2015_Steam_Controller_1st_generation/Steam_Controller_with_screen.jpg",
-      "images/2015_Steam_Controller_1st_generation/Steam_Controller_(top)_(24525157630).jpg"
+      "public/images/games/steam-controller-1st-generation/steam-controller-1st-generation-2015-01.jpg",
+      "public/images/games/steam-controller-1st-generation/steam-controller-1st-generation-2015-02.jpg",
+      "public/images/games/steam-controller-1st-generation/steam-controller-1st-generation-2015-03.jpg",
+      "public/images/games/steam-controller-1st-generation/steam-controller-1st-generation-2015-04.jpg"
     ]
   },
   {
@@ -6594,10 +6594,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Microsoft_Elite_Controllers-_Series_2_(top),_original_(bottom).jpg"
     ],
     "images": [
-      "images/2015_Xbox_Elite_Wireless_Controller/Gamescom_2015_Cologne_2015_Xbox_Elite_Wireless_Controller_(20327497405).jpg",
-      "images/2015_Xbox_Elite_Wireless_Controller/Xbox_One_Elite_Controller_(front).jpg",
-      "images/2015_Xbox_Elite_Wireless_Controller/Xbox_One_Elite_Controller_(Model_1698)_-_underside.jpg",
-      "images/2015_Xbox_Elite_Wireless_Controller/Microsoft_Elite_Controllers-_Series_2_(top),_original_(bottom).jpg"
+      "public/images/games/xbox-elite-wireless-controller/xbox-elite-wireless-controller-2015-01.jpg",
+      "public/images/games/xbox-elite-wireless-controller/xbox-elite-wireless-controller-2015-02.jpg",
+      "public/images/games/xbox-elite-wireless-controller/xbox-elite-wireless-controller-2015-03.jpg",
+      "public/images/games/xbox-elite-wireless-controller/xbox-elite-wireless-controller-2015-04.jpg"
     ]
   },
   {
@@ -6637,10 +6637,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:HTC_VIVE_Controller_Rear.jpg"
     ],
     "images": [
-      "images/2016_HTC_Vive_controllers/HTC_Vive_(2).jpg",
-      "images/2016_HTC_Vive_controllers/HTC_VIVE_Controller_Button_Textured_Detail.jpg",
-      "images/2016_HTC_Vive_controllers/HTC_Vive_Controllers.jpg",
-      "images/2016_HTC_Vive_controllers/HTC_VIVE_Controller_Rear.jpg"
+      "public/images/games/htc-vive-controllers/htc-vive-controllers-2016-01.jpg",
+      "public/images/games/htc-vive-controllers/htc-vive-controllers-2016-02.jpg",
+      "public/images/games/htc-vive-controllers/htc-vive-controllers-2016-03.jpg",
+      "public/images/games/htc-vive-controllers/htc-vive-controllers-2016-04.jpg"
     ]
   },
   {
@@ -6680,10 +6680,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Palmer_Luckey_speaking_about_Oculus_Touch_at_Step_into_the_Rift.jpg"
     ],
     "images": [
-      "images/2016_Oculus_Touch/Oculus_Touch_Controllers.jpg",
-      "images/2016_Oculus_Touch/Oculus_2nd_Generation_Touch_Controllers.jpg",
-      "images/2016_Oculus_Touch/Palmer_Luckey_holding_up_Oculus_Touch_prototype_(June_11,_2015).jpg",
-      "images/2016_Oculus_Touch/Palmer_Luckey_speaking_about_Oculus_Touch_at_Step_into_the_Rift.jpg"
+      "public/images/games/oculus-touch/oculus-touch-2016-01.jpg",
+      "public/images/games/oculus-touch/oculus-touch-2016-02.jpg",
+      "public/images/games/oculus-touch/oculus-touch-2016-03.jpg",
+      "public/images/games/oculus-touch/oculus-touch-2016-04.jpg"
     ]
   },
   {
@@ -6723,10 +6723,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Madrid_Games_Week,_PlayStation_VR,_usuario,_Madrid,_Espa%C3%B1a,_2015.JPG"
     ],
     "images": [
-      "images/2016_PlayStation_VR/Sony-PlayStation-4-PSVR-Breakout-Box-Mk1-1.jpg",
-      "images/2016_PlayStation_VR/Sony-PlayStation-4-PSVR-Cables.jpg",
-      "images/2016_PlayStation_VR/Sony-PlayStation-4-PSVR-Headset-Mk1-FL.jpg",
-      "images/2016_PlayStation_VR/Madrid_Games_Week,_PlayStation_VR,_usuario,_Madrid,_España,_2015.JPG"
+      "public/images/games/playstation-vr/playstation-vr-2016-01.jpg",
+      "public/images/games/playstation-vr/playstation-vr-2016-02.jpg",
+      "public/images/games/playstation-vr/playstation-vr-2016-03.jpg",
+      "public/images/games/playstation-vr/playstation-vr-2016-04.jpg"
     ]
   },
   {
@@ -6765,9 +6765,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3GO_Plus_%E6%9D%A5%E3%81%9F%E3%82%88_(29739392751).jpg"
     ],
     "images": [
-      "images/2016_Pokemon_Go_Plus/Nintendo-Niantic-Pokemon-Go-Plus-wStrap.jpg",
-      "images/2016_Pokemon_Go_Plus/Pokémon_Go_Plus.jpg",
-      "images/2016_Pokemon_Go_Plus/ポケモンGO_Plus_来たよ_(29739392751).jpg"
+      "public/images/games/pokemon-go-plus/pokemon-go-plus-2016-01.jpg",
+      "public/images/games/pokemon-go-plus/pokemon-go-plus-2016-02.jpg",
+      "public/images/games/pokemon-go-plus/pokemon-go-plus-2016-03.jpg"
     ]
   },
   {
@@ -6807,10 +6807,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Joy-Con_white_and_black_model.jpg"
     ],
     "images": [
-      "images/2017_Joy_Con/Nintendo_Switch_Joy-Con_Controllers.png",
-      "images/2017_Joy_Con/SSBU_Joy-Con_controllers_05.jpg",
-      "images/2017_Joy_Con/Joy-Con_SWS_HD_20211117_HOF08187.png",
-      "images/2017_Joy_Con/Joy-Con_white_and_black_model.jpg"
+      "public/images/games/joy-con/joy-con-2017-01.png",
+      "public/images/games/joy-con/joy-con-2017-02.jpg",
+      "public/images/games/joy-con/joy-con-2017-03.png",
+      "public/images/games/joy-con/joy-con-2017-04.jpg"
     ]
   },
   {
@@ -6850,10 +6850,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_Switch_Pro_Controller_Zelda.jpg"
     ],
     "images": [
-      "images/2017_Nintendo_Switch_Pro_Controller/Nintendo-Switch-Pro-Controller-FL.jpg",
-      "images/2017_Nintendo_Switch_Pro_Controller/Switch_Pro_Controller_XB2_Edition_(28076139759).jpg",
-      "images/2017_Nintendo_Switch_Pro_Controller/Nintendo_Switch_Pro_Controller_Smash_Bros.jpg",
-      "images/2017_Nintendo_Switch_Pro_Controller/Nintendo_Switch_Pro_Controller_Zelda.jpg"
+      "public/images/games/nintendo-switch-pro-controller/nintendo-switch-pro-controller-2017-01.jpg",
+      "public/images/games/nintendo-switch-pro-controller/nintendo-switch-pro-controller-2017-02.jpg",
+      "public/images/games/nintendo-switch-pro-controller/nintendo-switch-pro-controller-2017-03.jpg",
+      "public/images/games/nintendo-switch-pro-controller/nintendo-switch-pro-controller-2017-04.jpg"
     ]
   },
   {
@@ -6893,10 +6893,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PlayStation_VR_Aim_Controller_-_zoom_in_action_buttons.jpg"
     ],
     "images": [
-      "images/2017_PlayStation_VR_Aim_Controller/PlayStation_VR_Aim_Controller_facing_left,_turned_on.jpg",
-      "images/2017_PlayStation_VR_Aim_Controller/PlayStation_VR_Aim_Controller_-_information_sticker.jpg",
-      "images/2017_PlayStation_VR_Aim_Controller/PlayStation_VR_Aim_Controller_-_L1_and_L2_buttons.jpg",
-      "images/2017_PlayStation_VR_Aim_Controller/PlayStation_VR_Aim_Controller_-_zoom_in_action_buttons.jpg"
+      "public/images/games/playstation-vr-aim-controller/playstation-vr-aim-controller-2017-01.jpg",
+      "public/images/games/playstation-vr-aim-controller/playstation-vr-aim-controller-2017-02.jpg",
+      "public/images/games/playstation-vr-aim-controller/playstation-vr-aim-controller-2017-03.jpg",
+      "public/images/games/playstation-vr-aim-controller/playstation-vr-aim-controller-2017-04.jpg"
     ]
   },
   {
@@ -6936,10 +6936,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Virtuix_Omni_in_situ.jpg"
     ],
     "images": [
-      "images/2017_Virtuix_Omni/Virtuix_Omni_product_view,_oblique.jpg",
-      "images/2017_Virtuix_Omni/Virtuix_Omni_in_use_with_player.JPG",
-      "images/2017_Virtuix_Omni/Virtuix_Omni_product_view,_profile.jpg",
-      "images/2017_Virtuix_Omni/Virtuix_Omni_in_situ.jpg"
+      "public/images/games/virtuix-omni/virtuix-omni-2017-01.jpg",
+      "public/images/games/virtuix-omni/virtuix-omni-2017-02.jpg",
+      "public/images/games/virtuix-omni/virtuix-omni-2017-03.jpg",
+      "public/images/games/virtuix-omni/virtuix-omni-2017-04.jpg"
     ]
   },
   {
@@ -6979,10 +6979,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_Lab_robot_kit.jpeg"
     ],
     "images": [
-      "images/2018_Nintendo_Labo_Toy_Con/Nintendo_labo_rc_car.jpg",
-      "images/2018_Nintendo_Labo_Toy_Con/Nintendo_Labo_fishing_rod.jpg",
-      "images/2018_Nintendo_Labo_Toy_Con/Nintendo_Labo_construction.jpg",
-      "images/2018_Nintendo_Labo_Toy_Con/Nintendo_Lab_robot_kit.jpg"
+      "public/images/games/nintendo-labo-toy-con/nintendo-labo-toy-con-2018-01.jpg",
+      "public/images/games/nintendo-labo-toy-con/nintendo-labo-toy-con-2018-02.jpg",
+      "public/images/games/nintendo-labo-toy-con/nintendo-labo-toy-con-2018-03.jpg",
+      "public/images/games/nintendo-labo-toy-con/nintendo-labo-toy-con-2018-04.jpg"
     ]
   },
   {
@@ -7019,7 +7019,7 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo-Pokemon-Lets-Go-Poke-Ball-Plus-Controller.jpg"
     ],
     "images": [
-      "images/2018_Poke_Ball_Plus/Nintendo-Pokemon-Lets-Go-Poke-Ball-Plus-Controller.jpg"
+      "public/images/games/poke-ball-plus/poke-ball-plus-2018-01.jpg"
     ]
   },
   {
@@ -7059,10 +7059,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:InclusiveGameLab_Xbox-Adaptive-Controller_4_CC-BY-SA_02.jpg"
     ],
     "images": [
-      "images/2018_Xbox_Adaptive_Controller/Xbox_Adaptive_Controller_V&A.JPG",
-      "images/2018_Xbox_Adaptive_Controller/Xbox-Adaptive_Controller_Buttons_Trigger_2.jpg",
-      "images/2018_Xbox_Adaptive_Controller/InclusiveGameLab_Xbox-Adaptive-Controller_4_CC-BY-SA_03.jpg",
-      "images/2018_Xbox_Adaptive_Controller/InclusiveGameLab_Xbox-Adaptive-Controller_4_CC-BY-SA_02.jpg"
+      "public/images/games/xbox-adaptive-controller/xbox-adaptive-controller-2018-01.jpg",
+      "public/images/games/xbox-adaptive-controller/xbox-adaptive-controller-2018-02.jpg",
+      "public/images/games/xbox-adaptive-controller/xbox-adaptive-controller-2018-03.jpg",
+      "public/images/games/xbox-adaptive-controller/xbox-adaptive-controller-2018-04.jpg"
     ]
   },
   {
@@ -7102,10 +7102,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Oculus_Touch_Hand_Controller.jpeg"
     ],
     "images": [
-      "images/2019_Oculus_Quest_hand_tracking/Oculus_Quest.jpg",
-      "images/2019_Oculus_Quest_hand_tracking/Oculus_Quest_II_(50844634326).jpg",
-      "images/2019_Oculus_Quest_hand_tracking/InclusiveGameLab_Oculus-Quest_1_CC-BY-SA.jpg",
-      "images/2019_Oculus_Quest_hand_tracking/Oculus_Touch_Hand_Controller.jpg"
+      "public/images/games/oculus-quest-hand-tracking/oculus-quest-hand-tracking-2019-01.jpg",
+      "public/images/games/oculus-quest-hand-tracking/oculus-quest-hand-tracking-2019-02.jpg",
+      "public/images/games/oculus-quest-hand-tracking/oculus-quest-hand-tracking-2019-03.jpg",
+      "public/images/games/oculus-quest-hand-tracking/oculus-quest-hand-tracking-2019-04.jpg"
     ]
   },
   {
@@ -7144,9 +7144,9 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:External_Face_-_Ring_Fit_Strap.jpg"
     ],
     "images": [
-      "images/2019_Ring_Con/Ring-Con_of_RingFit_Adventure.jpg",
-      "images/2019_Ring_Con/Internal_Face_-_Ring_Fit_Strap.jpg",
-      "images/2019_Ring_Con/External_Face_-_Ring_Fit_Strap.jpg"
+      "public/images/games/ring-con/ring-con-2019-01.jpg",
+      "public/images/games/ring-con/ring-con-2019-02.jpg",
+      "public/images/games/ring-con/ring-con-2019-03.jpg"
     ]
   },
   {
@@ -7186,10 +7186,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Google_Stadia_GDC_2019.jpg"
     ],
     "images": [
-      "images/2019_Stadia_Controller/Stadia-controller-and-Chromecast-Ultra-from-Premiere-Edition.jpg",
-      "images/2019_Stadia_Controller/Google_Stadia_Controller.jpg",
-      "images/2019_Stadia_Controller/Exploded-view-drawing_Google_Stadia_Controller_(transparent_bg).png",
-      "images/2019_Stadia_Controller/Google_Stadia_GDC_2019.jpg"
+      "public/images/games/stadia-controller/stadia-controller-2019-01.jpg",
+      "public/images/games/stadia-controller/stadia-controller-2019-02.jpg",
+      "public/images/games/stadia-controller/stadia-controller-2019-03.png",
+      "public/images/games/stadia-controller/stadia-controller-2019-04.jpg"
     ]
   },
   {
@@ -7229,10 +7229,10 @@ const CONTROLLERS = [
       "https://cdn.fastly.steamstatic.com/valvesoftware/images/index/CTRL_2.jpg"
     ],
     "images": [
-      "images/2019_Valve_Index_Controllers_Knuckles/Air_Force_officer_using_Valve_Index.jpg",
-      "images/2019_Valve_Index_Controllers_Knuckles/United_States_Space_Command_Senior_Leaders_Visit_Cape_Canaveral_Space_Force_Station_(6619857).jpg",
-      "images/2019_Valve_Index_Controllers_Knuckles/CTRL_1.jpg",
-      "images/2019_Valve_Index_Controllers_Knuckles/CTRL_2.jpg"
+      "public/images/games/valve-index-controllers-knuckles/valve-index-controllers-knuckles-2019-01.jpg",
+      "public/images/games/valve-index-controllers-knuckles/valve-index-controllers-knuckles-2019-02.jpg",
+      "public/images/games/valve-index-controllers-knuckles/valve-index-controllers-knuckles-2019-03.jpg",
+      "public/images/games/valve-index-controllers-knuckles/valve-index-controllers-knuckles-2019-04.jpg"
     ]
   },
   {
@@ -7272,10 +7272,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PlayStation_5_and_DualSense.jpg"
     ],
     "images": [
-      "images/2020_DualSense/Playstation_DualSense_Controller.png",
-      "images/2020_DualSense/Playstation_Dualsense_controller.jpg",
-      "images/2020_DualSense/PlayStation_5_and_DualSense_with_transparent_background.png",
-      "images/2020_DualSense/PlayStation_5_and_DualSense.jpg"
+      "public/images/games/dualsense/dualsense-2020-01.png",
+      "public/images/games/dualsense/dualsense-2020-02.jpg",
+      "public/images/games/dualsense/dualsense-2020-03.png",
+      "public/images/games/dualsense/dualsense-2020-04.jpg"
     ]
   },
   {
@@ -7312,7 +7312,7 @@ const CONTROLLERS = [
       "https://en.wikipedia.org/wiki/File:Mario_Kart_Live_Home_Circuit.jpeg"
     ],
     "images": [
-      "images/2020_Mario_Kart_Live_Home_Circuit_kart/Mario_Kart_Live_Home_Circuit.jpg"
+      "public/images/games/mario-kart-live-home-circuit-kart/mario-kart-live-home-circuit-kart-2020-01.jpg"
     ]
   },
   {
@@ -7352,10 +7352,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Xbox_Series_Controller_Gold_Shadow_Special_Edition_(in_box).jpg"
     ],
     "images": [
-      "images/2020_Xbox_Wireless_Controller_Series_X_S/Xbox_Series_Controller_Carbon_Black.jpg",
-      "images/2020_Xbox_Wireless_Controller_Series_X_S/Xbox_Series_Controller_Gold_Shadow_Special_Edition.jpg",
-      "images/2020_Xbox_Wireless_Controller_Series_X_S/Xbox_Series_Controller_Gold_Shadow_Special_Edition_(back).jpg",
-      "images/2020_Xbox_Wireless_Controller_Series_X_S/Xbox_Series_Controller_Gold_Shadow_Special_Edition_(in_box).jpg"
+      "public/images/games/xbox-wireless-controller-series-x-s/xbox-wireless-controller-series-x-s-2020-01.jpg",
+      "public/images/games/xbox-wireless-controller-series-x-s/xbox-wireless-controller-series-x-s-2020-02.jpg",
+      "public/images/games/xbox-wireless-controller-series-x-s/xbox-wireless-controller-series-x-s-2020-03.jpg",
+      "public/images/games/xbox-wireless-controller-series-x-s/xbox-wireless-controller-series-x-s-2020-04.jpg"
     ]
   },
   {
@@ -7395,10 +7395,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Playdate_with_crank.png"
     ],
     "images": [
-      "images/2022_Playdate/Playdate.png",
-      "images/2022_Playdate/Playdate_front-view.png",
-      "images/2022_Playdate/Playdate_Cover_(Aqua).png",
-      "images/2022_Playdate/Playdate_with_crank.png"
+      "public/images/games/playdate/playdate-2022-01.png",
+      "public/images/games/playdate/playdate-2022-02.png",
+      "public/images/games/playdate/playdate-2022-03.png",
+      "public/images/games/playdate/playdate-2022-04.png"
     ]
   },
   {
@@ -7438,10 +7438,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:4K_Linux_desktop_on_Steam_Deck_(cropped).jpg"
     ],
     "images": [
-      "images/2022_Steam_Deck/Steam_Deck_(front).png",
-      "images/2022_Steam_Deck/JOSM_on_the_Steam_Deck.jpg",
-      "images/2022_Steam_Deck/4K_Linux_desktop_on_Steam_Deck.jpg",
-      "images/2022_Steam_Deck/4K_Linux_desktop_on_Steam_Deck_(cropped).jpg"
+      "public/images/games/steam-deck/steam-deck-2022-01.png",
+      "public/images/games/steam-deck/steam-deck-2022-02.jpg",
+      "public/images/games/steam-deck/steam-deck-2022-03.jpg",
+      "public/images/games/steam-deck/steam-deck-2022-04.jpg"
     ]
   },
   {
@@ -7482,10 +7482,10 @@ const CONTROLLERS = [
       "https://blog.playstation.com/tachyon/2022/10/c5d3c182d80f37ef560dd744df617c5ab09103b3.jpeg"
     ],
     "images": [
-      "images/2023_DualSense_Edge/DualSense_Edge_Controller.jpg",
-      "images/2023_DualSense_Edge/b820fe8ab1b290a8f48f91562c4e02be565cdc18.jpg",
-      "images/2023_DualSense_Edge/c11392b827562bb1d6560838cad4288f208f13db.jpg",
-      "images/2023_DualSense_Edge/c5d3c182d80f37ef560dd744df617c5ab09103b3.jpg"
+      "public/images/games/dualsense-edge/dualsense-edge-2023-01.jpg",
+      "public/images/games/dualsense-edge/dualsense-edge-2023-02.jpg",
+      "public/images/games/dualsense-edge/dualsense-edge-2023-03.jpg",
+      "public/images/games/dualsense-edge/dualsense-edge-2023-04.jpg"
     ]
   },
   {
@@ -7526,10 +7526,10 @@ const CONTROLLERS = [
       "https://blog.playstation.com/tachyon/2023/12/557b18516ea0b9ed3aef31cc259a43e32a576cc5.jpeg"
     ],
     "images": [
-      "images/2023_PlayStation_Access_controller/Sony_Access_Controller_Buttons_Trigger_2.jpg",
-      "images/2023_PlayStation_Access_controller/3bbcae11385fd5ff57e15ec09ae8395c52d37dbe-scaled.jpg",
-      "images/2023_PlayStation_Access_controller/3d405bc13e5dff16f55ea83027c473945b0cba17.jpg",
-      "images/2023_PlayStation_Access_controller/557b18516ea0b9ed3aef31cc259a43e32a576cc5.jpg"
+      "public/images/games/playstation-access-controller/playstation-access-controller-2023-01.jpg",
+      "public/images/games/playstation-access-controller/playstation-access-controller-2023-02.jpg",
+      "public/images/games/playstation-access-controller/playstation-access-controller-2023-03.jpg",
+      "public/images/games/playstation-access-controller/playstation-access-controller-2023-04.jpg"
     ]
   },
   {
@@ -7569,10 +7569,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:PlayStation_VR2.jpg"
     ],
     "images": [
-      "images/2023_PlayStation_VR2_Sense_controller/PSVR2_(Non-Stereoscopic).png",
-      "images/2023_PlayStation_VR2_Sense_controller/PlayStation_VR2_Sense_Controllers.jpg",
-      "images/2023_PlayStation_VR2_Sense_controller/PSVR2.png",
-      "images/2023_PlayStation_VR2_Sense_controller/PlayStation_VR2.jpg"
+      "public/images/games/playstation-vr2-sense-controller/playstation-vr2-sense-controller-2023-01.png",
+      "public/images/games/playstation-vr2-sense-controller/playstation-vr2-sense-controller-2023-02.jpg",
+      "public/images/games/playstation-vr2-sense-controller/playstation-vr2-sense-controller-2023-03.png",
+      "public/images/games/playstation-vr2-sense-controller/playstation-vr2-sense-controller-2023-04.jpg"
     ]
   },
   {
@@ -7612,10 +7612,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Vision_Pro_-_Immersion_modes.jpg"
     ],
     "images": [
-      "images/2024_Apple_Vision_Pro_eye_hand_input/Vision_Pro_-_Facing_right.jpg",
-      "images/2024_Apple_Vision_Pro_eye_hand_input/Apple_Vision_Pro_on_display_in_Toronto,_Canada_-_Aug_2024.jpg",
-      "images/2024_Apple_Vision_Pro_eye_hand_input/Apple_Vision_Pro_with_Solo_Knit_Band.jpg",
-      "images/2024_Apple_Vision_Pro_eye_hand_input/Vision_Pro_-_Immersion_modes.jpg"
+      "public/images/games/apple-vision-pro-eye-hand-input/apple-vision-pro-eye-hand-input-2024-01.jpg",
+      "public/images/games/apple-vision-pro-eye-hand-input/apple-vision-pro-eye-hand-input-2024-02.jpg",
+      "public/images/games/apple-vision-pro-eye-hand-input/apple-vision-pro-eye-hand-input-2024-03.jpg",
+      "public/images/games/apple-vision-pro-eye-hand-input/apple-vision-pro-eye-hand-input-2024-04.jpg"
     ]
   },
   {
@@ -7653,8 +7653,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Neuralink_Robot.jpg"
     ],
     "images": [
-      "images/2024_Neuralink_N1_implant_Telepathy/Elon_Musk_and_the_Neuralink_Future.jpg",
-      "images/2024_Neuralink_N1_implant_Telepathy/Neuralink_Robot.jpg"
+      "public/images/games/neuralink-n1-implant-telepathy/neuralink-n1-implant-telepathy-2024-01.jpg",
+      "public/images/games/neuralink-n1-implant-telepathy/neuralink-n1-implant-telepathy-2024-02.jpg"
     ]
   },
   {
@@ -7694,10 +7694,10 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Nintendo_Switch_2_%2B_Joy-Con_2_L_20250607_HOF5735-HDR_RAW-Export.png"
     ],
     "images": [
-      "images/2025_Joy_Con_2/Nintendo_Switch_2_Joy-Con_2_Blue_and_Orange.jpg",
-      "images/2025_Joy_Con_2/Nintendo_Switch_2_–_rechter_Joy-Con_2.jpg",
-      "images/2025_Joy_Con_2/Nintendo_Switch_2_20250605_HOF4954_RAW-Export.png",
-      "images/2025_Joy_Con_2/Nintendo_Switch_2_+_Joy-Con_2_L_20250607_HOF5735-HDR_RAW-Export.png"
+      "public/images/games/joy-con-2/joy-con-2-2025-01.jpg",
+      "public/images/games/joy-con-2/joy-con-2-2025-02.jpg",
+      "public/images/games/joy-con-2/joy-con-2-2025-03.png",
+      "public/images/games/joy-con-2/joy-con-2-2025-04.png"
     ]
   },
   {
@@ -7735,8 +7735,8 @@ const CONTROLLERS = [
       "https://commons.wikimedia.org/wiki/File:Steam-controllers.jpg"
     ],
     "images": [
-      "images/2026_Steam_Controller_2026/Steam_Controller_with_Puck.jpg",
-      "images/2026_Steam_Controller_2026/Steam-controllers.jpg"
+      "public/images/games/steam-controller-2026/steam-controller-2026-2026-01.jpg",
+      "public/images/games/steam-controller-2026/steam-controller-2026-2026-02.jpg"
     ]
   }
 ];
