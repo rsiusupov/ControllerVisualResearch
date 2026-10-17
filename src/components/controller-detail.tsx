@@ -38,12 +38,43 @@ function sourceLinks(record: StudyRecord) {
   return list;
 }
 
+function isShortSource(urls: string[]) {
+  return urls.length > 0 && urls.length <= 2 && urls.every((url) => url.length <= 140);
+}
+
+function SourceFact({ urls }: { urls: string[] }) {
+  if (!urls.length) return null;
+  return (
+    <div className="record-field">
+      <dt className="block-title">Источник</dt>
+      <dd>
+        <ul className="record-links">
+          {urls.map((url) => (
+            <li key={url}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {url}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </dd>
+    </div>
+  );
+}
+
+function imageLayout(count: number) {
+  if (count <= 1) return "single";
+  if (count === 2) return "pair";
+  if (count === 3) return "mosaic";
+  return "grid";
+}
+
 function LocalImages({ images }: { images: string[] }) {
   const [failed, setFailed] = useState<ReadonlySet<string>>(new Set());
   const live = images.filter((src) => src && !failed.has(src));
   if (!live.length) return null;
   return (
-    <div className="record-images" data-n={live.length}>
+    <div className="record-images" data-layout={imageLayout(live.length)} data-n={live.length}>
       {live.map((src) => (
         <img
           key={src}
@@ -66,15 +97,26 @@ function LocalImages({ images }: { images: string[] }) {
 
 export function ControllerDetail({ record, titleId }: { record: StudyRecord; titleId: string }) {
   const sources = sourceLinks(record);
+  const sourceInSpecs = isShortSource(sources);
+  const manufacturer = record.manufacturer.trim();
+  const showNotes = Boolean(record.significance.trim() || record.description.trim() || (!sourceInSpecs && sources.length));
+
   return (
     <div className="record-detail" data-controller={record.id}>
-      <div className="record-field">
-        <p className="block-title">Название</p>
-        <h2 id={titleId}>{record.name}</h2>
-      </div>
       <LocalImages images={record.images} />
-      <dl className="record-fields">
-        <Fact label="Производитель/дизайнер" value={record.manufacturer} />
+      <header className="record-heading">
+        <div className="record-field">
+          <p className="block-title">Название</p>
+          <h2 id={titleId}>{record.name}</h2>
+        </div>
+        {manufacturer ? (
+          <div className="record-field">
+            <p className="block-title">Производитель/дизайнер</p>
+            <p className="record-value">{manufacturer}</p>
+          </div>
+        ) : null}
+      </header>
+      <dl className="record-specs">
         <Fact label="Год" value={record.year} accent />
         <Fact label="Категория" value={record.categoryLabel} />
         <Fact label="Подкатегория" value={record.subcategoryLabel} />
@@ -84,25 +126,15 @@ export function ControllerDetail({ record, titleId }: { record: StudyRecord; tit
         <Fact label="Соответствие действию" value={tags(record.actionCorrespondences)} />
         <Fact label="Часть тела" value={tags(record.bodyParts)} />
         <Fact label="Платформа/контекст" value={record.platform} />
-        <Fact label="Краткое описание" value={record.description} />
-        <Fact label="Значимость" value={record.significance} />
-        {sources.length ? (
-          <div className="record-field">
-            <dt className="block-title">Источник</dt>
-            <dd>
-              <ul className="record-links">
-                {sources.map((url) => (
-                  <li key={url}>
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      {url}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </dd>
-          </div>
-        ) : null}
+        {sourceInSpecs ? <SourceFact urls={sources} /> : null}
       </dl>
+      {showNotes ? (
+        <dl className="record-notes">
+          {sourceInSpecs ? null : <SourceFact urls={sources} />}
+          <Fact label="Значимость" value={record.significance} />
+          <Fact label="Краткое описание" value={record.description} />
+        </dl>
+      ) : null}
     </div>
   );
 }
