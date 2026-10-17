@@ -25,7 +25,7 @@ export function SiteHeader() {
       {home ? (
         <p className="kicker">BLABLALABS</p>
       ) : (
-        <TransitionLink href="/" className="wordmark" viewTransitionName="site-title">
+        <TransitionLink href="/" className="wordmark">
           BLA BLA LABS
         </TransitionLink>
       )}
