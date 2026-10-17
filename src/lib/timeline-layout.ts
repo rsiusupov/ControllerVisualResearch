@@ -5,6 +5,21 @@ export const NAME_W = 180;
 export const NAME_H = 92;
 export const IMG_W = 108;
 export const IMG_H = 80;
+export const IMG_LONG = 160;
+export const IMG_MIN = 64;
+
+/** Fit a photo to the card: keep its ratio, cap the long side, and lift tiny files to a grabbable size. */
+export function imageCardSize(naturalWidth: number, naturalHeight: number) {
+  if (!(naturalWidth > 0) || !(naturalHeight > 0)) return { w: IMG_W, h: IMG_H };
+  const long = Math.max(naturalWidth, naturalHeight);
+  let scale = 1;
+  if (long > IMG_LONG) scale = IMG_LONG / long;
+  else if (long < IMG_MIN) scale = IMG_MIN / long;
+  return {
+    w: Math.max(1, Math.round(naturalWidth * scale)),
+    h: Math.max(1, Math.round(naturalHeight * scale)),
+  };
+}
 
 const GAP = 14;
 const AXIS_Y = 84;

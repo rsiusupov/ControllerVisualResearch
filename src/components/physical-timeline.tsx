@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import type { StudyRecord } from "@/src/lib/study";
 import { createHash, stepBodies, type Body } from "@/src/lib/physics";
 import {
+  imageCardSize,
   layoutDated,
   layoutUndated,
   type SceneCard,
@@ -63,6 +64,8 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
   const wiresRef = useRef<SVGPathElement>(null);
   const nodesRef = useRef<(HTMLElement | null)[]>([]);
   const simRef = useRef<Runtime | null>(null);
+  const fittedRef = useRef<Map<string, { w: number; h: number }>>(new Map());
+  const adoptRef = useRef<(index: number, naturalWidth: number, naturalHeight: number) => void>(() => {});
   const crowdedStart = scene.years.some((year) => Math.abs(year.x - scene.axisStartX) < 56);
   const lastYear = scene.years[scene.years.length - 1];
   const showEnd =
@@ -75,16 +78,21 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
     const wires = wiresRef.current;
     if (!field || !wires) return;
 
-    const bodies: Body[] = scene.cards.map((card) => ({
-      x: card.x,
-      y: card.y,
-      w: card.w,
-      h: card.h,
-      vx: 0,
-      vy: 0,
-      invMass: 1 / (card.w * card.h),
-      awake: 1,
-    }));
+    const bodies: Body[] = scene.cards.map((card) => {
+      const fitted = card.kind === "image" ? fittedRef.current.get(card.id) : undefined;
+      const w = fitted?.w ?? card.w;
+      const h = fitted?.h ?? card.h;
+      return {
+        x: card.x,
+        y: card.y,
+        w,
+        h,
+        vx: 0,
+        vy: 0,
+        invMass: 1 / (w * h),
+        awake: 1,
+      };
+    });
     const hash = createHash(bodies.length, scene.width, scene.height);
     const runtime: Runtime = {
       bodies,
@@ -110,6 +118,8 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
         const body = bodies[index];
         const node = nodes[index];
         if (node) {
+          node.style.width = `${body.w}px`;
+          node.style.height = `${body.h}px`;
           node.style.transform = `translate3d(${body.x - body.w / 2}px, ${body.y - body.h / 2}px, 0)`;
         }
         const card = scene.cards[index];
@@ -230,12 +240,101 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
       kick();
     };
 
+    const growField = () => {
+      const pad = 40;
+      let width = runtime.width;
+      let height = runtime.height;
+      for (const body of bodies) {
+        width = Math.max(width, body.x + body.w / 2 + pad);
+        height = Math.max(height, body.y + body.h / 2 + pad);
+      }
+      runtime.width = width;
+      runtime.height = height;
+      field.style.width = `${width}px`;
+      field.style.height = `${height}px`;
+    };
+
+    const adoptImage = (index: number, naturalWidth: number, naturalHeight: number) => {
+      if (!(naturalWidth > 0) || !(naturalHeight > 0)) return false;
+      const card = runtime.cards[index];
+      const body = bodies[index];
+      if (!card || !body || card.kind !== "image") return false;
+      const next = imageCardSize(naturalWidth, naturalHeight);
+      fittedRef.current.set(card.id, next);
+      if (body.w === next.w && body.h === next.h) return false;
+      body.w = next.w;
+      body.h = next.h;
+      body.invMass = 1 / (next.w * next.h);
+      body.awake = 1;
+      return true;
+    };
+    const flushFits = () => {
+      runtime.warmup = Math.max(runtime.warmup, 10);
+      growField();
+      paint();
+      kick();
+    };
+    adoptRef.current = (index, naturalWidth, naturalHeight) => {
+      if (simRef.current !== runtime) return;
+      if (adoptImage(index, naturalWidth, naturalHeight)) flushFits();
+    };
+
+    const scanImages = () => {
+      if (simRef.current !== runtime) return false;
+      const nodes = nodesRef.current;
+      let pending = false;
+      let dirty = false;
+      for (let index = 0; index < nodes.length; index += 1) {
+        const img = nodes[index]?.querySelector("img");
+        if (!(img instanceof HTMLImageElement) || img.dataset.broken != null) continue;
+        if (!img.complete) {
+          pending = true;
+          continue;
+        }
+        if (adoptImage(index, img.naturalWidth, img.naturalHeight)) dirty = true;
+      }
+      if (dirty) flushFits();
+      return pending;
+    };
+
+    const onMedia = (event: Event) => {
+      const img = event.target;
+      if (!(img instanceof HTMLImageElement) || !field.contains(img)) return;
+      if (event.type === "error") {
+        img.dataset.broken = "";
+        return;
+      }
+      const slot = img.closest("[data-index]");
+      if (!(slot instanceof HTMLElement)) return;
+      const index = Number(slot.getAttribute("data-index"));
+      if (Number.isNaN(index)) return;
+      adoptRef.current(index, img.naturalWidth, img.naturalHeight);
+    };
+
+    let scanFrame = 0;
+    let scans = 0;
+    const scanAgain = () => {
+      scanFrame = 0;
+      if (simRef.current !== runtime) return;
+      const pending = scanImages();
+      scans += 1;
+      if (pending && scans < 12) scanFrame = window.requestAnimationFrame(scanAgain);
+    };
+
     field.addEventListener("pointerdown", onDown);
+    field.addEventListener("load", onMedia, true);
+    field.addEventListener("error", onMedia, true);
+    scanImages();
+    scanFrame = window.requestAnimationFrame(scanAgain);
+    growField();
     paint();
     kick();
 
     return () => {
       field.removeEventListener("pointerdown", onDown);
+      field.removeEventListener("load", onMedia, true);
+      field.removeEventListener("error", onMedia, true);
+      if (scanFrame) window.cancelAnimationFrame(scanFrame);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
       runtime.cancel?.();
@@ -246,12 +345,19 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
 
   useLayoutEffect(() => {
     const runtime = simRef.current;
+    const field = fieldRef.current;
     if (!runtime) return;
+    if (field) {
+      field.style.width = `${runtime.width}px`;
+      field.style.height = `${runtime.height}px`;
+    }
     const nodes = nodesRef.current;
     for (let index = 0; index < runtime.bodies.length; index += 1) {
       const body = runtime.bodies[index];
       const node = nodes[index];
       if (!node) continue;
+      node.style.width = `${body.w}px`;
+      node.style.height = `${body.h}px`;
       node.style.transform = `translate3d(${body.x - body.w / 2}px, ${body.y - body.h / 2}px, 0)`;
     }
   });
@@ -320,9 +426,18 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
             }}
             ref={(node) => {
               nodesRef.current[index] = node;
-              if (!node || node.dataset.placed === card.id) return;
+              if (!node) return;
+              const fitted = card.kind === "image" ? fittedRef.current.get(card.id) : undefined;
+              const body = simRef.current?.bodies[index];
+              const w = body?.w ?? fitted?.w ?? card.w;
+              const h = body?.h ?? fitted?.h ?? card.h;
+              node.style.width = `${w}px`;
+              node.style.height = `${h}px`;
+              if (node.dataset.placed === card.id) return;
               node.dataset.placed = card.id;
-              node.style.transform = `translate3d(${card.x - card.w / 2}px, ${card.y - card.h / 2}px, 0)`;
+              const x = body?.x ?? card.x;
+              const y = body?.y ?? card.y;
+              node.style.transform = `translate3d(${x - w / 2}px, ${y - h / 2}px, 0)`;
             }}
           >
             {card.kind === "name" ? (
@@ -332,8 +447,19 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
                 {card.meta ? <p className="quiet">{card.meta}</p> : null}
               </Panel>
             ) : (
-              <Panel className="image-face">
-                <img src={card.src} alt={card.name} draggable={false} />
+              <Panel className="image-face p-0 gap-0">
+                <img
+                  src={card.src}
+                  alt={card.name}
+                  draggable={false}
+                  onLoad={(event) => {
+                    const img = event.currentTarget;
+                    adoptRef.current(index, img.naturalWidth, img.naturalHeight);
+                  }}
+                  onError={(event) => {
+                    event.currentTarget.dataset.broken = "";
+                  }}
+                />
               </Panel>
             )}
           </article>
