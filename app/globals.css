@@ -200,6 +200,20 @@ h1 {
 
 .search-form .field-control { flex: 1; }
 
+.top.is-search-collapsed {
+  flex-direction: row;
+  align-items: center;
+}
+
+.top.is-search-collapsed .kicker {
+  margin-bottom: 0;
+}
+
+.search-toggle {
+  margin-inline-start: auto;
+  color: var(--quiet);
+}
+
 .home {
   flex: 1;
   display: grid;
