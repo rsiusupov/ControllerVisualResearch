@@ -26,7 +26,7 @@ export function SiteHeader() {
         <p className="kicker">BLABLALABS</p>
       ) : (
         <TransitionLink href="/" className="wordmark" viewTransitionName="site-title">
-          Игровые контроллеры
+          BLA BLA LABS
         </TransitionLink>
       )}
       <form
