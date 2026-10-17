@@ -312,8 +312,27 @@ h1 {
   overflow: auto;
 }
 
-.timeline-stack > .play-scroll {
+.timeline-stack > .play-scroll,
+.timeline-stack > .play-frame {
   flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-height: none;
+  margin-top: 0;
+  overflow: auto;
+  overflow-anchor: none;
+  overscroll-behavior: auto;
+}
+
+.timeline-stack > .play-frame {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.timeline-stack > .play-frame > .play-scroll {
+  flex: 1 1 auto;
   width: 100%;
   min-width: 0;
   min-height: 0;
@@ -339,6 +358,53 @@ h1 {
 
 .play-end-space {
   height: calc(9rem + var(--space-sm));
+}
+
+.play-frame {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.play-zoom {
+  position: relative;
+  overflow: hidden;
+}
+
+.play-zoom-controls {
+  position: absolute;
+  z-index: 6;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  display: flex;
+  gap: var(--space-3xs);
+}
+
+.play-zoom-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.play-zoom-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.play-zoom-btn:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 2px;
+}
+
+.play-zoom-btn i {
+  font-size: 20px;
 }
 
 .play-scroll {
@@ -397,6 +463,11 @@ h1 {
   transform: translateX(-50%);
   color: var(--mark);
   font-weight: 500;
+}
+
+.year-mark[data-side="above"] span {
+  bottom: auto;
+  top: 12px;
 }
 
 .decade-flag {

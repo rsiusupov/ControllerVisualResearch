@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { StudyRecord } from "@/src/lib/study";
 import { createHash, stepBodies, type Body } from "@/src/lib/physics";
 import {
@@ -20,6 +20,9 @@ import { Panel } from "@/src/ui/panel";
 
 const VELOCITY_CAP = 3200;
 const CLICK_SLOP = 6;
+const ZOOM_MIN = 0.5;
+const ZOOM_MAX = 2.5;
+const ZOOM_STEP = 1.25;
 
 type Runtime = {
   bodies: Body[];
@@ -93,23 +96,31 @@ function useUndatedScene(records: StudyRecord[]) {
 function Playfield({
   scene,
   axis,
+  onOpen,
   origin = null,
   empty = false,
   onOriginBox,
 }: {
   scene: TimelineScene;
   axis: boolean;
+  onOpen: (controllerId: string, opener: HTMLElement) => void;
   origin?: TimelineOrigin | null;
   empty?: boolean;
   onOriginBox?: (box: OriginReserve) => void;
-  onOpen: (controllerId: string, opener: HTMLElement) => void;
 }) {
   const onOpenRef = useRef(onOpen);
   onOpenRef.current = onOpen;
   const onOriginBoxRef = useRef(onOriginBox);
   onOriginBoxRef.current = onOriginBox;
+  const frameRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const zoomWrapRef = useRef<HTMLDivElement>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
   const originRef = useRef<HTMLElement>(null);
+  const [zoom, setZoom] = useState(1);
+  const zoomRef = useRef(1);
+  zoomRef.current = zoom;
+  const zoomToRef = useRef<(next: number, clientX: number, clientY: number) => void>(() => {});
   const wiresRef = useRef<SVGPathElement>(null);
   const nodesRef = useRef<(HTMLElement | null)[]>([]);
   const simRef = useRef<Runtime | null>(null);
@@ -213,7 +224,8 @@ function Playfield({
 
     const pointOf = (event: PointerEvent) => {
       const rect = field.getBoundingClientRect();
-      return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+      const scale = zoomRef.current || 1;
+      return { x: (event.clientX - rect.left) / scale, y: (event.clientY - rect.top) / scale };
     };
 
     const onMove = (event: PointerEvent) => {
@@ -314,7 +326,7 @@ function Playfield({
     };
 
     const growField = () => {
-      const pad = 40;
+      const pad = 72;
       let width = runtime.width;
       let height = runtime.height;
       for (const body of bodies) {
@@ -323,8 +335,16 @@ function Playfield({
       }
       runtime.width = width;
       runtime.height = height;
+      const scale = zoomRef.current || 1;
       field.style.width = `${width}px`;
       field.style.height = `${height}px`;
+      field.style.transform = `scale(${scale})`;
+      field.style.transformOrigin = "0 0";
+      const wrap = zoomWrapRef.current;
+      if (wrap) {
+        wrap.style.width = `${width * scale}px`;
+        wrap.style.height = `${height * scale}px`;
+      }
     };
 
     const adoptImage = (index: number, naturalWidth: number, naturalHeight: number) => {
@@ -338,14 +358,75 @@ function Playfield({
       body.w = next.w;
       body.h = next.h;
       body.invMass = 1 / (next.w * next.h);
+      const name = bodies[card.nameIndex];
+      if (name) {
+        const dx = body.x - name.x;
+        const dy = body.y - name.y;
+        const len = Math.hypot(dx, dy);
+        let ux = len > 0 ? dx / len : 0;
+        let uy = len > 0 ? dy / len : 0;
+        if (len < 1) {
+          const year = runtime.years[card.yearIndex];
+          ux = 0;
+          uy = year && body.y < year.y ? -1 : 1;
+        }
+        const need =
+          ((name.w + body.w) / 2) * Math.abs(ux) + ((name.h + body.h) / 2) * Math.abs(uy) + 10;
+        if (len < need) {
+          body.x = name.x + ux * need;
+          body.y = name.y + uy * need;
+        }
+      }
       body.awake = 1;
+      holdNames();
       return true;
     };
+    const holdNames = () => {
+      const dragged = runtime.dragged;
+      for (let index = 0; index < bodies.length; index += 1) {
+        if (runtime.cards[index]?.kind !== "name" || index === dragged) continue;
+        const body = bodies[index];
+        body.invMass = 0;
+        body.vx = 0;
+        body.vy = 0;
+        body.awake = 0;
+      }
+    };
+    let fitFrame = 0;
     const flushFits = () => {
-      runtime.warmup = Math.max(runtime.warmup, 10);
-      growField();
-      paint();
-      kick();
+      holdNames();
+      if (fitFrame) return;
+      fitFrame = window.requestAnimationFrame(() => {
+        fitFrame = 0;
+        if (simRef.current !== runtime) return;
+        const dragged = runtime.dragged;
+        for (let index = 0; index < bodies.length; index += 1) {
+          const body = bodies[index];
+          if (runtime.cards[index]?.kind !== "name" || index === dragged) {
+            body.awake = 1;
+            continue;
+          }
+          body.invMass = 0;
+          body.vx = 0;
+          body.vy = 0;
+          body.awake = 0;
+        }
+        growField();
+        for (let step = 0; step < 14; step += 1) {
+          stepBodies(bodies, hash, runtime.width, runtime.height, 1 / 60, dragged, false);
+        }
+        for (let index = 0; index < bodies.length; index += 1) {
+          const body = bodies[index];
+          if (runtime.cards[index]?.kind === "name") body.invMass = 1 / (body.w * body.h);
+          if (index === dragged) continue;
+          body.vx = 0;
+          body.vy = 0;
+          body.awake = 0;
+        }
+        runtime.warmup = 0;
+        growField();
+        paint();
+      });
     };
     adoptRef.current = (index, naturalWidth, naturalHeight) => {
       if (simRef.current !== runtime) return;
@@ -402,29 +483,40 @@ function Playfield({
     growField();
     paint();
     kick();
+    if (axis) {
+      const scroll = scrollRef.current;
+      if (scroll) {
+        const scale = zoomRef.current || 1;
+        scroll.scrollTop = Math.max(0, scene.axisY * scale - scroll.clientHeight * 0.38);
+      }
+    }
 
     return () => {
       field.removeEventListener("pointerdown", onDown);
       field.removeEventListener("load", onMedia, true);
       field.removeEventListener("error", onMedia, true);
       if (scanFrame) window.cancelAnimationFrame(scanFrame);
+      if (fitFrame) window.cancelAnimationFrame(fitFrame);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
       runtime.cancel?.();
       if (runtime.frame) cancelAnimationFrame(runtime.frame);
       simRef.current = null;
     };
-  }, [scene]);
+  }, [axis, scene]);
 
   useLayoutEffect(() => {
     const node = originRef.current;
     if (!node) return;
     const read = () => {
       const rect = node.getBoundingClientRect();
-      if (rect.width < 8 || rect.height < 8) return;
+      const scale = zoomRef.current || 1;
+      const width = rect.width / scale;
+      const height = rect.height / scale;
+      if (width < 8 || height < 8) return;
       onOriginBoxRef.current?.({
-        width: Math.round(rect.width),
-        height: Math.round(rect.height),
+        width: Math.round(width),
+        height: Math.round(height),
       });
     };
     read();
@@ -445,8 +537,16 @@ function Playfield({
     const field = fieldRef.current;
     if (!runtime) return;
     if (field) {
+      const scale = zoomRef.current || 1;
       field.style.width = `${runtime.width}px`;
       field.style.height = `${runtime.height}px`;
+      field.style.transform = `scale(${scale})`;
+      field.style.transformOrigin = "0 0";
+      const wrap = zoomWrapRef.current;
+      if (wrap) {
+        wrap.style.width = `${runtime.width * scale}px`;
+        wrap.style.height = `${runtime.height * scale}px`;
+      }
     }
     const nodes = nodesRef.current;
     for (let index = 0; index < runtime.bodies.length; index += 1) {
@@ -459,12 +559,75 @@ function Playfield({
     }
   });
 
+  zoomToRef.current = (next, clientX, clientY) => {
+    const scroll = scrollRef.current;
+    const field = fieldRef.current;
+    const wrap = zoomWrapRef.current;
+    if (!scroll || !field || !wrap) return;
+    const prev = zoomRef.current || 1;
+    const clamped = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, next));
+    if (Math.abs(clamped - prev) < 0.0005) return;
+    const rect = scroll.getBoundingClientRect();
+    const anchorX = clientX - rect.left;
+    const anchorY = clientY - rect.top;
+    const worldX = (scroll.scrollLeft + anchorX) / prev;
+    const worldY = (scroll.scrollTop + anchorY) / prev;
+    const runtime = simRef.current;
+    const width = runtime?.width ?? field.offsetWidth;
+    const height = runtime?.height ?? field.offsetHeight;
+    zoomRef.current = clamped;
+    wrap.style.width = `${width * clamped}px`;
+    wrap.style.height = `${height * clamped}px`;
+    field.style.transform = `scale(${clamped})`;
+    field.style.transformOrigin = "0 0";
+    scroll.scrollLeft = worldX * clamped - anchorX;
+    scroll.scrollTop = worldY * clamped - anchorY;
+    setZoom(clamped);
+  };
+
+  useEffect(() => {
+    const frame = frameRef.current;
+    const scroll = scrollRef.current;
+    if (!frame || !scroll) return;
+    const onWheel = (event: WheelEvent) => {
+      let dx = event.deltaX;
+      let dy = event.deltaY;
+      if (event.deltaMode === 1) {
+        dx *= 16;
+        dy *= 16;
+      } else if (event.deltaMode === 2) {
+        dx *= scroll.clientWidth;
+        dy *= scroll.clientHeight;
+      }
+      if (Math.abs(dy) < 0.01 || Math.abs(dx) > Math.abs(dy) * 1.2) return;
+      event.preventDefault();
+      const prev = zoomRef.current || 1;
+      const next = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, prev * Math.exp(-dy * 0.0022)));
+      zoomToRef.current(next, event.clientX, event.clientY);
+    };
+    frame.addEventListener("wheel", onWheel, { passive: false });
+    return () => frame.removeEventListener("wheel", onWheel);
+  }, []);
+
+  const zoomBy = (factor: number) => {
+    const scroll = scrollRef.current;
+    if (!scroll) return;
+    const rect = scroll.getBoundingClientRect();
+    zoomToRef.current(zoomRef.current * factor, rect.left + rect.width / 2, rect.top + rect.height / 2);
+  };
+
   return (
-    <div className="play-scroll">
+    <div className="play-frame" ref={frameRef}>
+    <div className="play-scroll" ref={scrollRef}>
+      <div
+        ref={zoomWrapRef}
+        className="play-zoom"
+        style={{ width: scene.width * zoom, height: scene.height * zoom }}
+      >
       <div
         ref={fieldRef}
         className="playfield"
-        style={{ width: scene.width, height: scene.height }}
+        style={{ width: scene.width, height: scene.height, transform: `scale(${zoom})`, transformOrigin: "0 0" }}
         data-axis-start={scene.axisStartYear ?? ""}
         data-axis-end={scene.axisEndYear ?? ""}
         data-decade={scene.decadeLabel}
@@ -499,7 +662,13 @@ function Playfield({
           </div>
         ) : null}
         {scene.years.map((year) => (
-          <div key={year.year} className="year-mark" data-year={year.year} style={{ left: year.x, top: year.y }}>
+          <div
+            key={year.year}
+            className="year-mark"
+            data-year={year.year}
+            data-side={year.side}
+            style={{ left: year.x, top: year.y }}
+          >
             <span>{formatYear(year.year)}</span>
           </div>
         ))}
@@ -585,7 +754,29 @@ function Playfield({
           </p>
         ) : null}
       </div>
+      </div>
       {axis ? <div className="play-end-space" aria-hidden="true" /> : null}
+    </div>
+    <div className="play-zoom-controls">
+      <button
+        type="button"
+        className="play-zoom-btn"
+        aria-label="Уменьшить"
+        disabled={zoom <= ZOOM_MIN + 0.001}
+        onClick={() => zoomBy(1 / ZOOM_STEP)}
+      >
+        <i className="iRemove" aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        className="play-zoom-btn"
+        aria-label="Увеличить"
+        disabled={zoom >= ZOOM_MAX - 0.001}
+        onClick={() => zoomBy(ZOOM_STEP)}
+      >
+        <i className="iAdd" aria-hidden="true" />
+      </button>
+    </div>
     </div>
   );
 }
@@ -638,10 +829,10 @@ export function PhysicalTimeline({
           <Playfield
             scene={datedScene}
             axis
+            onOpen={openRecord}
             origin={origin}
             empty={empty}
             onOriginBox={origin ? onOriginBox : undefined}
-            onOpen={openRecord}
           />
         ) : origin ? (
           <div className="play-scroll">
