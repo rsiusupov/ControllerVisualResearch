@@ -85,6 +85,14 @@ body {
 
 button, input, select { font: inherit; color: inherit; }
 
+/* Accent fills only. The reset above is unlayered, so it beats font-semibold
+   and text-brand-foreground. Ghost, outline, and quiet controls stay inherited. */
+[data-slot="button"].bg-brand {
+  --brand-foreground: #ffffff;
+  font-weight: 600;
+  color: var(--brand-foreground);
+}
+
 .copy .bloom-word {
   white-space: nowrap;
 }

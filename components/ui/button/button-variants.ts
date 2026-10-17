@@ -12,7 +12,7 @@ export const buttonVariants = tv({
   ],
   variants: {
     variant: {
-      primary: "bg-brand text-brand-foreground shadow-xs hover:bg-brand/90",
+      primary: "bg-brand text-brand-foreground font-semibold shadow-xs hover:bg-brand/90",
       secondary:
         "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
       neutral: "bg-foreground text-background shadow-xs hover:bg-foreground/85",
