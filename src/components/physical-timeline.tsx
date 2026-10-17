@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { StudyRecord } from "@/src/lib/study";
 import { createHash, stepBodies, type Body } from "@/src/lib/physics";
 import {
@@ -14,9 +14,12 @@ import {
 } from "@/src/lib/timeline-layout";
 import { formatYear } from "@/src/lib/years";
 import { BloomCopy } from "@/src/components/bloom-copy";
+import { ControllerDetail } from "@/src/components/controller-detail";
+import { Dialog } from "@/src/ui/dialog";
 import { Panel } from "@/src/ui/panel";
 
 const VELOCITY_CAP = 3200;
+const CLICK_SLOP = 6;
 
 type Runtime = {
   bodies: Body[];
@@ -32,7 +35,16 @@ type Runtime = {
   samples: { x: number; y: number; t: number }[];
   frame: number;
   cancel: (() => void) | null;
+  downX: number;
+  downY: number;
+  travel: number;
 };
+
+function controllerId(card: SceneCard) {
+  const marker = card.kind === "image" ? ":image:" : ":name";
+  const index = card.id.lastIndexOf(marker);
+  return index === -1 ? card.id : card.id.slice(0, index);
+}
 
 type TimelineOrigin = {
   slug: string;
@@ -90,7 +102,10 @@ function Playfield({
   origin?: TimelineOrigin | null;
   empty?: boolean;
   onOriginBox?: (box: OriginReserve) => void;
+  onOpen: (controllerId: string, opener: HTMLElement) => void;
 }) {
+  const onOpenRef = useRef(onOpen);
+  onOpenRef.current = onOpen;
   const onOriginBoxRef = useRef(onOriginBox);
   onOriginBoxRef.current = onOriginBox;
   const fieldRef = useRef<HTMLDivElement>(null);
@@ -143,6 +158,9 @@ function Playfield({
       samples: [],
       frame: 0,
       cancel: null,
+      downX: 0,
+      downY: 0,
+      travel: 0,
     };
     simRef.current = runtime;
 
@@ -200,6 +218,8 @@ function Playfield({
 
     const onMove = (event: PointerEvent) => {
       if (runtime.dragged < 0) return;
+      const travel = Math.hypot(event.clientX - runtime.downX, event.clientY - runtime.downY);
+      if (travel > runtime.travel) runtime.travel = travel;
       const body = bodies[runtime.dragged];
       const point = pointOf(event);
       const halfW = body.w / 2;
@@ -222,7 +242,7 @@ function Playfield({
       kick();
     };
 
-    const onUp = () => {
+    const onUp = (event: PointerEvent) => {
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
       const index = runtime.dragged;
@@ -231,6 +251,20 @@ function Playfield({
       node?.classList.remove("is-dragging");
       if (index < 0) return;
       const body = bodies[index];
+      const travel = Math.max(
+        runtime.travel,
+        Math.hypot(event.clientX - runtime.downX, event.clientY - runtime.downY),
+      );
+      if (travel <= CLICK_SLOP) {
+        body.vx = 0;
+        body.vy = 0;
+        body.awake = 1;
+        runtime.samples = [];
+        const card = runtime.cards[index];
+        if (node && card) onOpenRef.current(controllerId(card), node);
+        kick();
+        return;
+      }
       const last = runtime.samples[runtime.samples.length - 1];
       if (!last || performance.now() - last.t > 160) {
         body.vx = 0;
@@ -261,6 +295,9 @@ function Playfield({
       runtime.dragged = index;
       runtime.grabX = body.x - point.x;
       runtime.grabY = body.y - point.y;
+      runtime.downX = event.clientX;
+      runtime.downY = event.clientY;
+      runtime.travel = 0;
       runtime.samples = [{ x: body.x, y: body.y, t: performance.now() }];
       body.vx = 0;
       body.vy = 0;
@@ -477,7 +514,9 @@ function Playfield({
             data-card={card.id}
             data-kind={card.kind}
             data-year={card.year ?? ""}
+            data-controller={controllerId(card)}
             data-index={index}
+            tabIndex={-1}
             className="phys-card"
             style={{
               width: card.w,
@@ -574,6 +613,23 @@ export function PhysicalTimeline({
   }, []);
   const datedScene = useDatedScene(dated, axisStart, axisEnd, origin ? originBox : null);
   const undatedScene = useUndatedScene(undated);
+  const titleId = useId();
+  const [selection, setSelection] = useState<{ record: StudyRecord; opener: HTMLElement } | null>(null);
+  const byId = useMemo(() => {
+    const map = new Map<string, StudyRecord>();
+    for (const record of dated) map.set(record.id, record);
+    for (const record of undated) map.set(record.id, record);
+    return map;
+  }, [dated, undated]);
+  const openRecord = useCallback(
+    (id: string, opener: HTMLElement) => {
+      const record = byId.get(id);
+      if (!record) return;
+      setSelection({ record, opener });
+    },
+    [byId],
+  );
+  const closeRecord = useCallback(() => setSelection(null), []);
 
   return (
     <>
@@ -585,6 +641,7 @@ export function PhysicalTimeline({
             origin={origin}
             empty={empty}
             onOriginBox={origin ? onOriginBox : undefined}
+            onOpen={openRecord}
           />
         ) : origin ? (
           <div className="play-scroll">
@@ -606,10 +663,18 @@ export function PhysicalTimeline({
               <h2 className="decade">Без даты</h2>
               <p className="quiet">Год не указан, поэтому эти контроллеры стоят вне числовой шкалы.</p>
             </div>
-            <Playfield scene={undatedScene} axis={false} />
+            <Playfield scene={undatedScene} axis={false} onOpen={openRecord} />
           </section>
         ) : null}
       </div>
+      <Dialog
+        open={selection != null}
+        onClose={closeRecord}
+        labelledBy={titleId}
+        restoreFocus={selection?.opener ?? null}
+      >
+        {selection ? <ControllerDetail record={selection.record} titleId={titleId} /> : null}
+      </Dialog>
     </>
   );
 }

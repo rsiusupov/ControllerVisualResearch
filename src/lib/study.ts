@@ -22,9 +22,25 @@ export type StudyRecord = {
   description: string;
   significance: string;
   images: string[];
+  sourceUrls: string[];
+  imageUrls: string[];
 };
 
+function text(value: string | null | undefined, fallback?: string | null) {
+  if (typeof value === "string" && value.trim()) return value;
+  if (typeof fallback === "string" && fallback.trim()) return fallback;
+  return "";
+}
+
+function urls(primary: string[] | null | undefined, fallback?: string[] | null) {
+  const clean = (list: string[] | null | undefined) =>
+    (list ?? []).map((item) => item.trim()).filter(Boolean);
+  const main = clean(primary);
+  return main.length ? main : clean(fallback);
+}
+
 export function toStudy(record: Controller): StudyRecord {
+  const legacy = record.legacy;
   return {
     id: record.id,
     slug: record.slug,
@@ -32,9 +48,9 @@ export function toStudy(record: Controller): StudyRecord {
     categoryLabel: record.categoryLabel,
     subcategoryLabel: record.subcategory?.label ?? "",
     subcategorySlug: record.subcategory?.slug ?? "",
-    name: record.name,
-    manufacturer: record.manufacturer,
-    year: record.year,
+    name: text(record.name, legacy?.name),
+    manufacturer: text(record.manufacturer, legacy?.designer || legacy?.manufacturer),
+    year: text(record.year, legacy?.year != null ? String(legacy.year) : ""),
     yearNumber: record.yearNumber,
     yearEnd: record.yearEnd,
     decade: record.decade,
@@ -43,9 +59,11 @@ export function toStudy(record: Controller): StudyRecord {
     inputMethods: record.inputMethods ?? [],
     actionCorrespondences: record.actionCorrespondences ?? [],
     bodyParts: record.bodyParts ?? [],
-    platform: record.platform,
-    description: record.description,
-    significance: record.significance,
-    images: Array.isArray(record.images) ? record.images : [],
+    platform: text(record.platform, legacy?.platform),
+    description: text(record.description, legacy?.form),
+    significance: text(record.significance, legacy?.innovation),
+    images: Array.isArray(record.images) ? record.images.filter((src) => src.trim()) : [],
+    sourceUrls: urls(record.sourceUrls, legacy?.sources),
+    imageUrls: urls(record.imageUrls, legacy?.imageSources),
   };
 }
