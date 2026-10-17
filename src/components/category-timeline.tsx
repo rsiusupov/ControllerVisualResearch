@@ -31,17 +31,19 @@ export function CategoryTimeline({
 
   return (
     <main className="branch timeline-page">
-      <header className="branch-head" style={{ viewTransitionName: `category-${category.slug}` }}>
-        <p className="kicker">{category.count} контроллеров</p>
-        <h1>{category.label}</h1>
-        <p className="lede">{category.description}</p>
-      </header>
-      <p className="quiet">
-        {visible.length} в диапазоне
-        {undated.length ? ` · ${undated.length} без даты` : ""}
-      </p>
-      {visible.length ? null : <p className="timeline-empty">В этом диапазоне нет контроллеров.</p>}
-      <PhysicalTimeline dated={visible} undated={undated} axisStart={axisStart} axisEnd={high} />
+      <PhysicalTimeline
+        dated={visible}
+        undated={undated}
+        axisStart={axisStart}
+        axisEnd={high}
+        empty={visible.length === 0}
+        origin={{
+          slug: category.slug,
+          count: category.count,
+          label: category.label,
+          description: category.description,
+        }}
+      />
       {bounded ? <YearRange min={min} max={max} records={records} /> : null}
     </main>
   );

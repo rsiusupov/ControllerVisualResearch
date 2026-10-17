@@ -1,12 +1,13 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import type { StudyRecord } from "@/src/lib/study";
 import { createHash, stepBodies, type Body } from "@/src/lib/physics";
 import {
   imageCardSize,
   layoutDated,
   layoutUndated,
+  type OriginReserve,
   type SceneCard,
   type TimelineScene,
   type YearMark,
@@ -33,18 +34,36 @@ type Runtime = {
   cancel: (() => void) | null;
 };
 
-function sceneKey(records: StudyRecord[], axisStart: number | null, axisEnd: number | null) {
+type TimelineOrigin = {
+  slug: string;
+  count: number;
+  label: string;
+  description: string;
+};
+
+function sceneKey(
+  records: StudyRecord[],
+  axisStart: number | null,
+  axisEnd: number | null,
+  origin: OriginReserve | null,
+) {
   const ids = records.map((record) => record.id).sort();
-  return `${axisStart ?? "x"}:${axisEnd ?? "x"}:${ids.join("|")}`;
+  const box = origin ? `${Math.round(origin.width)}x${Math.round(origin.height)}` : "0";
+  return `${axisStart ?? "x"}:${axisEnd ?? "x"}:${box}:${ids.join("|")}`;
 }
 
-function useDatedScene(records: StudyRecord[], axisStart: number | null, axisEnd: number | null) {
+function useDatedScene(
+  records: StudyRecord[],
+  axisStart: number | null,
+  axisEnd: number | null,
+  origin: OriginReserve | null,
+) {
   const cache = useRef<{ key: string; scene: TimelineScene | null }>({ key: "", scene: null });
-  const key = sceneKey(records, axisStart, axisEnd);
+  const key = sceneKey(records, axisStart, axisEnd, origin);
   if (cache.current.key !== key) {
     cache.current = {
       key,
-      scene: axisStart == null || axisEnd == null ? null : layoutDated(records, axisStart, axisEnd),
+      scene: axisStart == null || axisEnd == null ? null : layoutDated(records, axisStart, axisEnd, origin),
     };
   }
   return cache.current.scene;
@@ -52,21 +71,37 @@ function useDatedScene(records: StudyRecord[], axisStart: number | null, axisEnd
 
 function useUndatedScene(records: StudyRecord[]) {
   const cache = useRef<{ key: string; scene: TimelineScene | null }>({ key: "", scene: null });
-  const key = sceneKey(records, null, null);
+  const key = sceneKey(records, null, null, null);
   if (cache.current.key !== key) {
     cache.current = { key, scene: layoutUndated(records) };
   }
   return cache.current.scene;
 }
 
-function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
+function Playfield({
+  scene,
+  axis,
+  origin = null,
+  empty = false,
+  onOriginBox,
+}: {
+  scene: TimelineScene;
+  axis: boolean;
+  origin?: TimelineOrigin | null;
+  empty?: boolean;
+  onOriginBox?: (box: OriginReserve) => void;
+}) {
+  const onOriginBoxRef = useRef(onOriginBox);
+  onOriginBoxRef.current = onOriginBox;
   const fieldRef = useRef<HTMLDivElement>(null);
+  const originRef = useRef<HTMLElement>(null);
   const wiresRef = useRef<SVGPathElement>(null);
   const nodesRef = useRef<(HTMLElement | null)[]>([]);
   const simRef = useRef<Runtime | null>(null);
   const fittedRef = useRef<Map<string, { w: number; h: number }>>(new Map());
   const adoptRef = useRef<(index: number, naturalWidth: number, naturalHeight: number) => void>(() => {});
   const crowdedStart = scene.years.some((year) => Math.abs(year.x - scene.axisStartX) < 56);
+  const axisX1 = scene.originW > 0 ? scene.originX + scene.originW : scene.axisStartX;
   const lastYear = scene.years[scene.years.length - 1];
   const showEnd =
     axis &&
@@ -215,6 +250,7 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
       if (event.button !== 0) return;
       const target = event.target;
       if (!(target instanceof Element)) return;
+      if (target.closest("[data-origin]")) return;
       const slot = target.closest("[data-index]");
       if (!slot || !field.contains(slot)) return;
       const index = Number(slot.getAttribute("data-index"));
@@ -344,6 +380,30 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
   }, [scene]);
 
   useLayoutEffect(() => {
+    const node = originRef.current;
+    if (!node) return;
+    const read = () => {
+      const rect = node.getBoundingClientRect();
+      if (rect.width < 8 || rect.height < 8) return;
+      onOriginBoxRef.current?.({
+        width: Math.round(rect.width),
+        height: Math.round(rect.height),
+      });
+    };
+    read();
+    const observer = new ResizeObserver(read);
+    observer.observe(node);
+    let cancelFonts = false;
+    document.fonts?.ready.then(() => {
+      if (!cancelFonts) read();
+    });
+    return () => {
+      cancelFonts = true;
+      observer.disconnect();
+    };
+  }, [origin?.slug]);
+
+  useLayoutEffect(() => {
     const runtime = simRef.current;
     const field = fieldRef.current;
     if (!runtime) return;
@@ -376,7 +436,7 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
           {axis ? (
             <line
               className="axis-stroke"
-              x1={scene.axisStartX}
+              x1={axisX1}
               y1={scene.axisY}
               x2={scene.axisEndX}
               y2={scene.axisY}
@@ -464,7 +524,29 @@ function Playfield({ scene, axis }: { scene: TimelineScene; axis: boolean }) {
             )}
           </article>
         ))}
+        {origin && scene.originW > 0 ? (
+          <header
+            ref={originRef}
+            className="branch-head origin-card"
+            data-origin=""
+            style={{
+              left: scene.originX,
+              top: scene.axisY,
+              viewTransitionName: `category-${origin.slug}`,
+            }}
+          >
+            <p className="kicker">{origin.count} контроллеров</p>
+            <h1>{origin.label}</h1>
+            <p className="lede">{origin.description}</p>
+          </header>
+        ) : null}
+        {empty ? (
+          <p className="timeline-empty is-in-field" style={{ left: scene.axisStartX + 20, top: scene.axisY + 24 }}>
+            В этом диапазоне нет контроллеров.
+          </p>
+        ) : null}
       </div>
+      {axis ? <div className="play-end-space" aria-hidden="true" /> : null}
     </div>
   );
 }
@@ -474,27 +556,60 @@ export function PhysicalTimeline({
   undated,
   axisStart,
   axisEnd,
+  origin = null,
+  empty = false,
 }: {
   dated: StudyRecord[];
   undated: StudyRecord[];
   axisStart: number | null;
   axisEnd: number | null;
+  origin?: TimelineOrigin | null;
+  empty?: boolean;
 }) {
-  const datedScene = useDatedScene(dated, axisStart, axisEnd);
+  const [originBox, setOriginBox] = useState<OriginReserve>({ width: 400, height: 148 });
+  const onOriginBox = useCallback((box: OriginReserve) => {
+    setOriginBox((prev) =>
+      Math.abs(prev.width - box.width) <= 1 && Math.abs(prev.height - box.height) <= 1 ? prev : box,
+    );
+  }, []);
+  const datedScene = useDatedScene(dated, axisStart, axisEnd, origin ? originBox : null);
   const undatedScene = useUndatedScene(undated);
 
   return (
     <>
-      {datedScene ? <Playfield scene={datedScene} axis /> : null}
-      {undatedScene ? (
-        <section className="undated" aria-label="Без даты">
-          <div className="undated-copy">
-            <h2 className="decade">Без даты</h2>
-            <p className="quiet">Год не указан, поэтому эти контроллеры стоят вне числовой шкалы.</p>
+      <div className="timeline-stack">
+        {datedScene ? (
+          <Playfield
+            scene={datedScene}
+            axis
+            origin={origin}
+            empty={empty}
+            onOriginBox={origin ? onOriginBox : undefined}
+          />
+        ) : origin ? (
+          <div className="play-scroll">
+            <header
+              className="branch-head origin-card is-static"
+              data-origin=""
+              style={{ viewTransitionName: `category-${origin.slug}` }}
+            >
+              <p className="kicker">{origin.count} контроллеров</p>
+              <h1>{origin.label}</h1>
+              <p className="lede">{origin.description}</p>
+            </header>
+            {empty ? <p className="timeline-empty">В этом диапазоне нет контроллеров.</p> : null}
           </div>
-          <Playfield scene={undatedScene} axis={false} />
-        </section>
-      ) : null}
+        ) : null}
+        {undatedScene ? (
+          <section className="undated" aria-label="Без даты">
+            <div className="undated-copy">
+              <h2 className="decade">Без даты</h2>
+              <p className="quiet">Год не указан, поэтому эти контроллеры стоят вне числовой шкалы.</p>
+            </div>
+            <Playfield scene={undatedScene} axis={false} />
+          </section>
+        ) : null}
+      </div>
     </>
   );
 }

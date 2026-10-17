@@ -156,6 +156,13 @@ i[class*=" i"] {
   gap: var(--space-md);
 }
 
+.shell:has(.timeline-page) {
+  height: 100dvh;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  gap: 0;
+}
+
 .top {
   display: flex;
   align-items: center;
@@ -287,18 +294,51 @@ h1 {
 }
 
 .branch.timeline-page {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
   width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+  gap: 0;
 }
 
-.timeline-page > .branch-head,
-.timeline-page > .quiet,
-.timeline-page > .timeline-empty {
-  width: min(1080px, calc(100% - 2 * var(--space-md)));
-  margin-inline: auto;
+.timeline-stack {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.timeline-stack > .play-scroll {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-height: none;
+  margin-top: 0;
+  overflow: auto;
+  overflow-anchor: none;
+  overscroll-behavior: auto;
 }
 
 .timeline-empty {
   color: var(--quiet);
+}
+
+.timeline-empty.is-in-field {
+  position: absolute;
+  z-index: 2;
+  width: auto;
+  max-width: 18rem;
+  margin: 0;
+  pointer-events: none;
+}
+
+.play-end-space {
+  height: calc(9rem + var(--space-sm));
 }
 
 .play-scroll {
@@ -475,6 +515,25 @@ h1 {
 }
 
 .branch-head h1 { font-size: var(--text-xl); }
+
+.origin-card {
+  position: absolute;
+  z-index: 4;
+  width: min(25rem, calc(100vw - 6.5rem));
+  max-width: none;
+  margin: 0;
+  transform: translateY(-50%);
+  cursor: default;
+  user-select: text;
+}
+
+.origin-card.is-static {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin: var(--space-md);
+}
 
 .lede {
   font-size: var(--text-md);

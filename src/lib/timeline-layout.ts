@@ -25,6 +25,8 @@ const GAP = 14;
 const AXIS_Y = 84;
 const PAD = 40;
 const YEAR_CLEARANCE = 46;
+const ORIGIN_LINK = 72;
+const AXIS_CLEAR = 28;
 
 export type SceneCard = {
   id: string;
@@ -46,6 +48,12 @@ export type YearMark = {
   year: number;
   x: number;
   y: number;
+  side: "above" | "below";
+};
+
+export type OriginReserve = {
+  width: number;
+  height: number;
 };
 
 export type TimelineScene = {
@@ -59,6 +67,9 @@ export type TimelineScene = {
   decadeLabel: string;
   years: YearMark[];
   cards: SceneCard[];
+  originX: number;
+  originW: number;
+  originH: number;
 };
 
 type Draft = {
@@ -109,36 +120,133 @@ function clusterSize(imageCount: number) {
   return { width, height };
 }
 
-function fanSlots(sizes: { width: number; height: number }[]) {
-  const rows: number[][] = [];
-  let cursor = 0;
-  let rowSize = 1;
-  while (cursor < sizes.length) {
-    const count = Math.min(rowSize, sizes.length - cursor);
-    const row: number[] = [];
-    for (let index = 0; index < count; index += 1) row.push(cursor + index);
-    rows.push(row);
-    cursor += count;
-    rowSize += 1;
-  }
+const FAN = Math.PI / 4;
+const STEM = 56;
+const AXIS_GAP = 48;
+const SCENE_SLACK = 100;
 
-  const slots = sizes.map(() => ({ x: 0, y: 0 }));
-  let top = YEAR_CLEARANCE;
-  for (const row of rows) {
-    const rowH = Math.max(...row.map((index) => sizes[index].height));
-    const rowW = row.reduce((sum, index) => sum + sizes[index].width, 0) + GAP * (row.length - 1);
-    let left = -rowW / 2;
-    for (const index of row) {
-      const size = sizes[index];
-      slots[index] = {
-        x: left + size.width / 2,
-        y: top + NAME_H / 2,
-      };
-      left += size.width + GAP;
-    }
-    top += rowH + GAP * 2;
+/** One controller leaves at 90°. Several fan from 45° left of the perpendicular to 45° right. */
+function fanAngles(count: number) {
+  if (count <= 1) return [0];
+  const angles: number[] = [];
+  for (let index = 0; index < count; index += 1) {
+    angles.push(-FAN + (FAN * 2 * index) / (count - 1));
   }
-  return slots;
+  return angles;
+}
+
+function outwardSpots(sizes: { w: number; h: number }[]) {
+  const cols = Math.min(3, sizes.length);
+  const spots: { x: number; y: number }[] = [];
+  let rowStart = NAME_H / 2 + GAP;
+  for (let start = 0; start < sizes.length; start += cols) {
+    const row = sizes.slice(start, start + cols);
+    const rowW = row.reduce((sum, size) => sum + size.w, 0) + GAP * (row.length - 1);
+    const rowH = Math.max(...row.map((size) => size.h));
+    let left = -rowW / 2;
+    for (const size of row) {
+      spots.push({ x: left + size.w / 2, y: rowStart + size.h / 2 });
+      left += size.w + GAP;
+    }
+    rowStart += rowH + GAP;
+  }
+  return spots;
+}
+
+function radiusFloor(count: number) {
+  let radius = STEM + NAME_H / 2;
+  for (const angle of fanAngles(count)) {
+    const sine = Math.abs(Math.sin(angle));
+    const cosine = Math.max(0.2, Math.abs(Math.cos(angle)));
+    const reach = (NAME_W / 2) * sine + (NAME_H / 2) * cosine;
+    radius = Math.max(radius, reach + STEM, (AXIS_GAP + NAME_H / 2) / cosine);
+  }
+  return radius;
+}
+
+function cardsOverlap(a: Draft, b: Draft, gap: number) {
+  return (
+    Math.abs(a.x - b.x) < (a.w + b.w) / 2 + gap && Math.abs(a.y - b.y) < (a.h + b.h) / 2 + gap
+  );
+}
+
+function hasOverlap(cards: Draft[], gap: number) {
+  for (let i = 0; i < cards.length; i += 1) {
+    for (let j = i + 1; j < cards.length; j += 1) {
+      if (cardsOverlap(cards[i], cards[j], gap)) return true;
+    }
+  }
+  return false;
+}
+
+function buildYear(
+  members: StudyRecord[],
+  side: "above" | "below",
+  yearIndex: number,
+  radius: number,
+) {
+  const outward = side === "below" ? 1 : -1;
+  const angles = fanAngles(members.length);
+  const drafts: Draft[] = [];
+  members.forEach((record, index) => {
+    const angle = angles[index] ?? 0;
+    const x = radius * Math.sin(angle);
+    const y = outward * radius * Math.cos(angle);
+    drafts.push({
+      id: `${record.id}:name`,
+      kind: "name",
+      year: record.yearNumber,
+      yearIndex,
+      recordId: record.id,
+      x,
+      y,
+      w: NAME_W,
+      h: NAME_H,
+      name: record.name,
+      yearLabel: record.year || (record.yearNumber == null ? "" : formatYear(record.yearNumber)),
+      meta: record.manufacturer,
+      src: "",
+    });
+    const sizes = record.images.map(() => ({ w: IMG_W, h: IMG_H }));
+    const spots = outwardSpots(sizes);
+    record.images.forEach((src, imageIndex) => {
+      const spot = spots[imageIndex] ?? { x: 0, y: NAME_H / 2 + GAP + IMG_H / 2 };
+      const size = sizes[imageIndex] ?? { w: IMG_W, h: IMG_H };
+      drafts.push({
+        id: `${record.id}:image:${imageIndex}`,
+        kind: "image",
+        year: record.yearNumber,
+        yearIndex,
+        recordId: record.id,
+        x: x + spot.x,
+        y: y + outward * spot.y,
+        w: size.w,
+        h: size.h,
+        name: record.name,
+        yearLabel: "",
+        meta: "",
+        src,
+      });
+    });
+  });
+  return drafts;
+}
+
+function placeYear(members: StudyRecord[], side: "above" | "below", yearIndex: number) {
+  const gap = 10;
+  let low = radiusFloor(members.length);
+  let high = low;
+  while (hasOverlap(buildYear(members, side, yearIndex, high), gap) && high < 6400) {
+    high = Math.max(high + 48, high * 1.45);
+  }
+  if (!hasOverlap(buildYear(members, side, yearIndex, high), gap)) {
+    for (let step = 0; step < 16; step += 1) {
+      const mid = (low + high) / 2;
+      if (hasOverlap(buildYear(members, side, yearIndex, mid), gap)) low = mid;
+      else high = mid;
+    }
+  }
+  return buildYear(members, side, yearIndex, high);
 }
 
 function separate(cards: Draft[]) {
@@ -197,32 +305,61 @@ function relax(cards: Draft[]) {
   keepImagesBeyond(cards);
 }
 
-function bounds(cards: Draft[]) {
-  let minX = 0;
-  let maxX = 0;
-  let maxY = 0;
+function extent(cards: Draft[]) {
+  let minX = Infinity;
+  let maxX = -Infinity;
+  let minY = Infinity;
+  let maxY = -Infinity;
   for (const card of cards) {
     minX = Math.min(minX, card.x - card.w / 2);
     maxX = Math.max(maxX, card.x + card.w / 2);
+    minY = Math.min(minY, card.y - card.h / 2);
     maxY = Math.max(maxY, card.y + card.h / 2);
   }
-  return { minX, maxX, maxY };
+  if (!cards.length) return { minX: 0, maxX: 0, minY: 0, maxY: 0 };
+  return { minX, maxX, minY, maxY };
 }
 
-function emptyScene(axisStart: number | null, axisEnd: number | null, decadeLabel: string): TimelineScene {
+function datedFrame(origin: OriginReserve | null) {
+  if (!origin || origin.width <= 0 || origin.height <= 0) {
+    return { axisY: AXIS_Y, axisStartX: PAD, originX: 0, originW: 0, originH: 0 };
+  }
+  const originH = origin.height;
+  const originW = origin.width;
+  const axisY = Math.round(AXIS_CLEAR + originH / 2);
+  const originX = PAD;
+  return {
+    axisY,
+    axisStartX: originX + originW + ORIGIN_LINK,
+    originX,
+    originW,
+    originH,
+  };
+}
+
+function emptyScene(
+  axisStart: number | null,
+  axisEnd: number | null,
+  decadeLabel: string,
+  origin: OriginReserve | null,
+): TimelineScene {
+  const frame = datedFrame(origin);
   const span = axisStart == null || axisEnd == null ? 0 : Math.max(0, axisEnd - axisStart);
-  const width = Math.max(320, PAD * 2 + span * pixelsPerYear(span));
+  const width = Math.max(320, frame.axisStartX + span * pixelsPerYear(span) + PAD);
   return {
     width,
-    height: 168,
-    axisY: AXIS_Y,
-    axisStartX: PAD,
+    height: Math.max(168, frame.axisY + frame.originH / 2 + PAD),
+    axisY: frame.axisY,
+    axisStartX: frame.axisStartX,
     axisEndX: width - PAD,
     axisStartYear: axisStart,
     axisEndYear: axisEnd,
     decadeLabel,
     years: [],
     cards: [],
+    originX: frame.originX,
+    originW: frame.originW,
+    originH: frame.originH,
   };
 }
 
@@ -251,7 +388,12 @@ function linkNames(cards: Draft[]): SceneCard[] {
   });
 }
 
-export function layoutDated(records: StudyRecord[], axisStart: number, axisEnd: number): TimelineScene {
+export function layoutDated(
+  records: StudyRecord[],
+  axisStart: number,
+  axisEnd: number,
+  originReserve: OriginReserve | null = null,
+): TimelineScene {
   const decadeLabel = formatDecade(axisStart);
   const groups = new Map<number, StudyRecord[]>();
   for (const record of records) {
@@ -261,92 +403,83 @@ export function layoutDated(records: StudyRecord[], axisStart: number, axisEnd: 
     else groups.set(record.yearNumber, [record]);
   }
   const yearNumbers = [...groups.keys()].sort((a, b) => a - b);
-  if (!yearNumbers.length) return emptyScene(axisStart, axisEnd, decadeLabel);
+  if (!yearNumbers.length) return emptyScene(axisStart, axisEnd, decadeLabel, originReserve);
 
   const span = Math.max(1, axisEnd - axisStart);
   const scale = pixelsPerYear(span);
-  const origin = PAD;
-  const placed: { year: number; x: number; cards: Draft[]; minX: number; maxX: number; maxY: number }[] = [];
-  let previousRight = origin;
+  const frame = datedFrame(originReserve);
+  const axisOrigin = frame.axisStartX;
+  const placed: {
+    year: number;
+    side: "above" | "below";
+    x: number;
+    cards: Draft[];
+    minX: number;
+    maxX: number;
+    minY: number;
+    maxY: number;
+  }[] = [];
 
   for (const year of yearNumbers) {
     const members = (groups.get(year) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name, "ru"));
-    const sizes = members.map((record) => clusterSize(record.images.length));
-    const slots = fanSlots(sizes);
-    const drafts: Draft[] = [];
-    members.forEach((record, index) => {
-      const slot = slots[index];
-      const nameId = `${record.id}:name`;
-      drafts.push({
-        id: nameId,
-        kind: "name",
-        year,
-        yearIndex: placed.length,
-        recordId: record.id,
-        x: slot.x,
-        y: slot.y,
-        w: NAME_W,
-        h: NAME_H,
-        name: record.name,
-        yearLabel: record.year || formatYear(year),
-        meta: record.manufacturer,
-        src: "",
-      });
-      const spots = imageLocals(record.images.length);
-      record.images.forEach((src, imageIndex) => {
-        const spot = spots[imageIndex];
-        drafts.push({
-          id: `${record.id}:image:${imageIndex}`,
-          kind: "image",
-          year,
-          yearIndex: placed.length,
-          recordId: record.id,
-          x: slot.x + spot.x,
-          y: slot.y + spot.y,
-          w: IMG_W,
-          h: IMG_H,
-          name: record.name,
-          yearLabel: "",
-          meta: "",
-          src,
-        });
-      });
-    });
-    relax(drafts);
-    const box = bounds(drafts);
-    const linear = origin + (year - axisStart) * scale;
-    const x = Math.max(linear, previousRight + GAP - box.minX, origin - box.minX);
-    previousRight = x + box.maxX;
-    placed.push({ year, x, cards: drafts, ...box });
+    const side: "above" | "below" = placed.length % 2 === 0 ? "below" : "above";
+    const drafts = placeYear(members, side, placed.length);
+    const box = extent(drafts);
+    let x = axisOrigin + (year - axisStart) * scale;
+    x = Math.max(x, axisOrigin + GAP - box.minX);
+    for (const prev of placed) {
+      const vertical = box.minY < prev.maxY + GAP && prev.minY < box.maxY + GAP;
+      if (!vertical) continue;
+      x = Math.max(x, prev.x + prev.maxX + GAP - box.minX);
+    }
+    const previous = placed[placed.length - 1];
+    if (previous) x = Math.max(x, previous.x + 32);
+    placed.push({ year, side, x, cards: drafts, ...box });
   }
 
   const last = placed[placed.length - 1];
   const tail = Math.max(0, axisEnd - last.year) * scale;
-  const axisEndX = Math.max(origin + (axisEnd - axisStart) * scale, last.x + tail);
-  const width = Math.max(axisEndX, last.x + last.maxX) + PAD;
-  let height = 168;
+  let axisEndX = Math.max(axisOrigin + (axisEnd - axisStart) * scale, last.x + tail);
+  let top = frame.originH > 0 ? -frame.originH / 2 : 0;
+  let bottom = frame.originH > 0 ? frame.originH / 2 : 0;
+  let left = frame.originW > 0 ? frame.originX : axisOrigin;
+  let right = axisEndX;
+  for (const group of placed) {
+    top = Math.min(top, group.minY);
+    bottom = Math.max(bottom, group.maxY);
+    left = Math.min(left, group.x + group.minX);
+    right = Math.max(right, group.x + group.maxX);
+  }
+  const shift = Math.max(0, (frame.originW > 0 ? frame.originX : PAD) - left);
+  const axisY = Math.max(frame.axisY, SCENE_SLACK - top);
+  const width = Math.max(320, right + shift + PAD);
+  const height = Math.max(168, axisY + bottom + SCENE_SLACK);
+  axisEndX += shift;
   const cards: Draft[] = [];
   const years: YearMark[] = placed.map((group) => {
+    group.x += shift;
     for (const card of group.cards) {
       card.x += group.x;
-      card.y += AXIS_Y;
-      height = Math.max(height, card.y + card.h / 2 + PAD);
+      card.y += axisY;
       cards.push(card);
     }
-    return { year: group.year, x: group.x, y: AXIS_Y };
+    return { year: group.year, x: group.x, y: axisY, side: group.side };
   });
 
   return {
     width,
     height,
-    axisY: AXIS_Y,
-    axisStartX: origin,
+    axisY,
+    axisStartX: axisOrigin + shift,
     axisEndX,
     axisStartYear: axisStart,
     axisEndYear: axisEnd,
     decadeLabel,
     years,
     cards: linkNames(cards),
+    originX: frame.originX + shift,
+    originW: frame.originW,
+    originH: frame.originH,
   };
 }
 
@@ -445,5 +578,8 @@ export function layoutUndated(records: StudyRecord[]): TimelineScene | null {
     decadeLabel: "",
     years: [],
     cards: linkNames(drafts),
+    originX: 0,
+    originW: 0,
+    originH: 0,
   };
 }
