@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Min Icon VF";
+  src: url("/fonts/min-icon/MinIcon-SquareSemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  font-family: "Min Icon VF", sans-serif !important;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  font-variation-settings: "rond" 0, "edpt" 0;
+  font-style: normal;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+}

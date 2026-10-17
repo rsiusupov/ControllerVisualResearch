@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { ThemeProvider } from "@/components/theme-provider";
 import { BloomRoot } from "@/src/components/bloom-root";
+import { SiteHeader } from "@/src/components/site-header";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,10 +12,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru">
+    <html lang="ru" className="light" suppressHydrationWarning>
       <body>
-        <BloomRoot />
-        {children}
+        <ThemeProvider forcedTheme="light">
+          <BloomRoot />
+          <div className="shell">
+            <Suspense fallback={<header className="top" />}>
+              <SiteHeader />
+            </Suspense>
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

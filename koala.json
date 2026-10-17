@@ -1,0 +1,153 @@
+{
+  "$comment": "Written by the koalaui CLI. Tracks installed items so `koalaui update` never overwrites your edits.",
+  "items": {
+    "animated-label": {
+      "hash": "c40c326c75de7c39",
+      "files": {
+        "components/ui/animated-label/animated-label.tsx": "4aba842cdd8bccd1",
+        "components/ui/animated-label/index.ts": "ba65c595fc1f1a6e"
+      }
+    },
+    "button": {
+      "hash": "907d2e18149190a2",
+      "files": {
+        "components/ui/button/button-variants.ts": "664dd5d742dffb51",
+        "components/ui/button/button.tsx": "0ed88f482951046b",
+        "components/ui/button/index.ts": "42feacdc3fc4f10c",
+        "components/ui/button/social-button.tsx": "ddc5097d8b4251e8",
+        "components/ui/button/social-logos.tsx": "a62ef7f7921f293a",
+        "components/ui/button/split-button.tsx": "0f03566539a15c3a"
+      }
+    },
+    "card": {
+      "hash": "f4b0fc55ae1346fa",
+      "files": {
+        "components/ui/card/card.tsx": "3d5e0b3731341e29",
+        "components/ui/card/index.ts": "eec38cd0d3aef424"
+      }
+    },
+    "create-context": {
+      "hash": "4ad0ca054bd30352",
+      "files": {
+        "lib/create-context.tsx": "141112a328cfaacc"
+      }
+    },
+    "density": {
+      "hash": "1aecb3136bbe2528",
+      "files": {
+        "lib/density.tsx": "8d9b67f16647f2cb"
+      }
+    },
+    "dropdown-menu": {
+      "hash": "9b4eb4ea54a3d5b6",
+      "files": {
+        "components/ui/dropdown-menu/dropdown-menu.tsx": "63c360b5285f9d60",
+        "components/ui/dropdown-menu/index.ts": "a75f46466b078b96"
+      }
+    },
+    "field-context": {
+      "hash": "509bd8e85a0cb3f1",
+      "files": {
+        "lib/field-context.tsx": "c34b909a84b6fe9a"
+      }
+    },
+    "field-group-context": {
+      "hash": "f020d8bfa7d40179",
+      "files": {
+        "lib/field-group-context.tsx": "4175492b134ea28a"
+      }
+    },
+    "hit-area": {
+      "hash": "482f98f12624815a",
+      "files": {
+        "lib/hit-area.ts": "fd451117856d9018"
+      }
+    },
+    "init": {
+      "hash": "61e511620a0c59a2",
+      "files": {
+        "components/theme-provider.tsx": "c021237985c5f2cc",
+        "app/koala.css": "2332677adf46d5f8"
+      }
+    },
+    "input": {
+      "hash": "f266ce7d62b8c07a",
+      "files": {
+        "components/ui/input/countries.ts": "7184e803a244561a",
+        "components/ui/input/country-select.tsx": "0655020feb9b809f",
+        "components/ui/input/index.ts": "023c01e104e771dc",
+        "components/ui/input/input.tsx": "2f9e74bc8a45849c",
+        "components/ui/input/number-input.tsx": "e1b5ebd559f3430d",
+        "components/ui/input/phone-input.tsx": "cb597625a0a27fc3"
+      }
+    },
+    "kbd": {
+      "hash": "ec173b6456a330b5",
+      "files": {
+        "components/ui/kbd/index.ts": "df64b9e555d06ad7",
+        "components/ui/kbd/kbd.tsx": "93db4fc977073574"
+      }
+    },
+    "label": {
+      "hash": "968907380713ecda",
+      "files": {
+        "components/ui/label/index.ts": "b7cbfd040f6fbd92",
+        "components/ui/label/label.tsx": "3258a05aab292fb7"
+      }
+    },
+    "motion": {
+      "hash": "1a35c2ac51e54da1",
+      "files": {
+        "lib/motion.ts": "d87a197186552c5d"
+      }
+    },
+    "native-select": {
+      "hash": "d9550b5f73e7d7b5",
+      "files": {
+        "components/ui/native-select/index.ts": "21ca0def99e7532d",
+        "components/ui/native-select/native-select.tsx": "cb6e29e429a39bfc"
+      }
+    },
+    "slider": {
+      "hash": "96f4bf13a3ff00c8",
+      "files": {
+        "components/ui/slider/index.ts": "2549eb2b296056b5",
+        "components/ui/slider/slider-input.tsx": "a1a908b3bf99b60e",
+        "components/ui/slider/slider.tsx": "9a735d28f8f74a2a"
+      }
+    },
+    "spinner": {
+      "hash": "0600b2258c1ed056",
+      "files": {
+        "components/ui/spinner/index.ts": "6ad895712cfdbfc9",
+        "components/ui/spinner/spinner.tsx": "abbd36226513197f"
+      }
+    },
+    "switch": {
+      "hash": "17239de532fcb3de",
+      "files": {
+        "components/ui/switch/index.ts": "58460a59edbf0b3e",
+        "components/ui/switch/switch.tsx": "c11d01c39662e16b"
+      }
+    },
+    "tooltip": {
+      "hash": "53eb95555ad3a75a",
+      "files": {
+        "components/ui/tooltip/index.ts": "057f4cf03cc9de08",
+        "components/ui/tooltip/tooltip.tsx": "f4897edc8682de49"
+      }
+    },
+    "tv": {
+      "hash": "9acf384bc03c3a7b",
+      "files": {
+        "lib/tv.ts": "340a34cd74b96663"
+      }
+    },
+    "utils": {
+      "hash": "3bd0981e033d6da7",
+      "files": {
+        "lib/utils.ts": "34acd20b6e3ba20d"
+      }
+    }
+  }
+}

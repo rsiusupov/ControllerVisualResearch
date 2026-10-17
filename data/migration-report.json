@@ -3317,18 +3317,19 @@
     "bytesVerified": true,
     "note": "Listed photos move once from images/{year}_{name}/ to public/images/{category}/{slug}/{slug}-{yearToken}-{NN}.{ext}. A later run leaves files that are already there and checks sizes. If neither path exists, the photo is absent: discovery records images: [] and does not fail. A file added later is picked up from that same pattern with any extension. There is no image manifest.",
     "extensions": {
-      "jpg": 544,
-      "png": 63
+      "jpg": 1034,
+      "png": 111,
+      "gif": 3
     },
-    "controllersWithLocalImages": 175,
-    "controllersWithoutLocalImages": 1252,
+    "controllersWithLocalImages": 479,
+    "controllersWithoutLocalImages": 948,
     "missingLocalImageCounts": {
-      "games": 133,
-      "music-sound": 233,
-      "design-digital-art": 215,
+      "games": 32,
+      "music-sound": 102,
+      "design-digital-art": 145,
       "photo-film-video": 219,
       "performance": 244,
-      "interactive-art": 208
+      "interactive-art": 206
     },
     "missingLocalImages": {
       "games": [
@@ -3345,24 +3346,6 @@
           "yearNumber": 1966
         },
         {
-          "id": "games/periscope-sega-periskop",
-          "name": "Periscope (Sega) — перископ",
-          "year": "1966",
-          "yearNumber": 1966
-        },
-        {
-          "id": "games/sword-of-damocles",
-          "name": "Sword of Damocles",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "games/galaxy-game-panel-upravleniya",
-          "name": "Galaxy Game — панель управления",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
           "id": "games/magnavox-odyssey-shooting-gallery-rifle",
           "name": "Magnavox Odyssey Shooting Gallery rifle",
           "year": "1972",
@@ -3375,142 +3358,10 @@
           "yearNumber": 1973
         },
         {
-          "id": "games/zanussi-ping-o-tronic",
-          "name": "Zanussi Ping-O-Tronic",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
-          "id": "games/gun-fight-stik-i-rukoyat-ruchka",
-          "name": "Gun Fight — стик и рукоять-ручка",
-          "year": "1975",
-          "yearNumber": 1975
-        },
-        {
-          "id": "games/night-driver-rul-i-pedal",
-          "name": "Night Driver — руль и педаль",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
           "id": "games/atari-football-trackball",
           "name": "Atari Football trackball",
           "year": "1978",
           "yearNumber": 1978
-        },
-        {
-          "id": "games/space-invaders-panel-s-rychagom",
-          "name": "Space Invaders — панель с рычагом",
-          "year": "1978",
-          "yearNumber": 1978
-        },
-        {
-          "id": "games/missile-command-trekbol-s-tremya-knopkami",
-          "name": "Missile Command — трекбол с тремя кнопками",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "games/defender-pyatiknopochnaya-panel",
-          "name": "Defender — пятикнопочная панель",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "games/epoch-cassette-vision",
-          "name": "Epoch Cassette Vision",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "games/tempest-spinner",
-          "name": "Tempest — спиннер",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "games/emerson-arcadia-2001-kontroller",
-          "name": "Emerson Arcadia 2001 — контроллер",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "games/pole-position-kabina-s-rulem",
-          "name": "Pole Position — кабина с рулём",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "games/robotron-2084-dvoynoy-stik",
-          "name": "Robotron: 2084 — двойной стик",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "games/atari-cx-42-remote-control-joystick",
-          "name": "Atari CX-42 Remote Control Joystick",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/competition-pro-dzhoystik",
-          "name": "Competition Pro — джойстик",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/kempston-interface-dzhoystik-interfeys",
-          "name": "Kempston Interface — джойстик-интерфейс",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/sega-sg-1000-dzhoystik-sj-200",
-          "name": "Sega SG-1000 — джойстик SJ-200",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "games/marble-madness-dvoynoy-trekbol",
-          "name": "Marble Madness — двойной трекбол",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "games/punch-out-panel",
-          "name": "Punch-Out!! — панель",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "games/elektronika-im-02-nu-pogodi",
-          "name": "Электроника ИМ-02 «Ну, погоди!»",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "games/konami-hyper-shot",
-          "name": "Konami Hyper Shot",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "games/bandai-family-fun-fitness-mat",
-          "name": "Bandai Family Fun Fitness mat",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "games/commodore-1351-mysh",
-          "name": "Commodore 1351 — мышь",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "games/out-run-kabina-deluxe",
-          "name": "Out Run — кабина «deluxe»",
-          "year": "1986",
-          "yearNumber": 1986
         },
         {
           "id": "games/after-burner-kabina-kokpit",
@@ -3519,52 +3370,10 @@
           "yearNumber": 1987
         },
         {
-          "id": "games/street-fighter-pnevmaticheskie-knopki",
-          "name": "Street Fighter — пневматические кнопки",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "games/vpl-dataglove",
-          "name": "VPL DataGlove",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "games/xe-light-gun",
-          "name": "XE Light Gun",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
           "id": "games/nes-hands-free-controller",
           "name": "NES Hands Free Controller",
           "year": "1989",
           "yearNumber": 1989
-        },
-        {
-          "id": "games/sega-game-gear",
-          "name": "Sega Game Gear",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "games/gravis-pc-gamepad",
-          "name": "Gravis PC GamePad",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "games/street-fighter-ii-6-knopochnaya-panel",
-          "name": "Street Fighter II — 6-кнопочная панель",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "games/dendy-geympad",
-          "name": "Dendy — геймпад",
-          "year": "1992",
-          "yearNumber": 1992
         },
         {
           "id": "games/sega-activator",
@@ -3579,80 +3388,8 @@
           "yearNumber": 1993
         },
         {
-          "id": "games/thrustmaster-f-16-flcs",
-          "name": "Thrustmaster F-16 FLCS",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "games/bandai-playdia",
-          "name": "Bandai Playdia",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "games/daytona-usa-kabina",
-          "name": "Daytona USA — кабина",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "games/nec-pc-fx-kontroller",
-          "name": "NEC PC-FX — контроллер",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "games/point-blank-pistolety",
-          "name": "Point Blank — пистолеты",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "games/alpine-racer-lyzhnyy-simulyator",
-          "name": "Alpine Racer — лыжный симулятор",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/casio-loopy-kontroller",
-          "name": "Casio Loopy — контроллер",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/forte-vfx1",
-          "name": "Forte VFX1",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
           "id": "games/life-fitness-exertainment-bike",
           "name": "Life Fitness Exertainment bike",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/microsoft-sidewinder-3d-pro",
-          "name": "Microsoft SideWinder (3D Pro)",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/sega-arcade-racer-rul-saturn",
-          "name": "Sega Arcade Racer (руль Saturn)",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/sega-nomad",
-          "name": "Sega Nomad",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "games/tiger-r-zone",
-          "name": "Tiger R-Zone",
           "year": "1995",
           "yearNumber": 1995
         },
@@ -3669,56 +3406,8 @@
           "yearNumber": 1996
         },
         {
-          "id": "games/sega-mission-stick",
-          "name": "Sega Mission Stick",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "games/the-house-of-the-dead-svetovoy-pistolet",
-          "name": "The House of the Dead — световой пистолет",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "games/tiger-game-com-sensornyy-ekran",
-          "name": "Tiger Game.com — сенсорный экран",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
           "id": "games/bandai-wonderswan",
           "name": "Bandai WonderSwan",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/crazy-taxi-kabina",
-          "name": "Crazy Taxi — кабина",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/drummania-elektronnaya-udarnaya-ustanovka",
-          "name": "Drummania — электронная ударная установка",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/neo-geo-pocket-color-mikrosvitch-stik",
-          "name": "Neo Geo Pocket Color — микросвитч-стик",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/pump-it-up-pyatipanelnaya-platforma",
-          "name": "Pump It Up — пятипанельная платформа",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "games/razer-boomslang",
-          "name": "Razer Boomslang",
           "year": "1999",
           "yearNumber": 1999
         },
@@ -3735,100 +3424,16 @@
           "yearNumber": 2000
         },
         {
-          "id": "games/konami-dance-maniax-ik-sensory",
-          "name": "Konami Dance Maniax — ИК-сенсоры",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
           "id": "games/nokia-3310-snake",
           "name": "Nokia 3310 — Snake",
           "year": "2000",
           "yearNumber": 2000
         },
         {
-          "id": "games/game-boy-advance",
-          "name": "Game Boy Advance",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "games/initial-d-arcade-stage-kabina",
-          "name": "Initial D Arcade Stage — кабина",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "games/nostromo-speedpad-n52",
-          "name": "Nostromo SpeedPad n52",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
           "id": "games/boktai-solar-sensor-cartridge",
           "name": "Boktai solar sensor cartridge",
           "year": "2003",
           "yearNumber": 2003
-        },
-        {
-          "id": "games/gamecube-game-boy-advance-link-cable",
-          "name": "GameCube – Game Boy Advance link cable",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "games/nokia-n-gage",
-          "name": "Nokia N-Gage",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "games/in-the-groove-platforma",
-          "name": "In the Groove — платформа",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "games/playstation-portable-nub",
-          "name": "PlayStation Portable — «нуб»",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "games/saitek-x52-hotas",
-          "name": "Saitek X52 HOTAS",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "games/singstar-mikrofony",
-          "name": "SingStar микрофоны",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "games/logitech-g15-igrovaya-klaviatura",
-          "name": "Logitech G15 — игровая клавиатура",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "games/wii-classic-controller",
-          "name": "Wii Classic Controller",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "games/logitech-driving-force-gt",
-          "name": "Logitech Driving Force GT",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "games/wii-fit",
-          "name": "Wii Fit",
-          "year": "2007",
-          "yearNumber": 2007
         },
         {
           "id": "games/iphone-multitach-ekran",
@@ -3855,38 +3460,8 @@
           "yearNumber": 2009
         },
         {
-          "id": "games/your-shape",
-          "name": "Your Shape",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "games/zeebo",
-          "name": "Zeebo",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "games/thrustmaster-hotas-warthog",
-          "name": "Thrustmaster HOTAS Warthog",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "games/playstation-move-sharp-shooter",
-          "name": "PlayStation Move Sharp Shooter",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
           "id": "games/razer-hydra",
           "name": "Razer Hydra",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "games/rocksmith-real-tone-cable",
-          "name": "Rocksmith Real Tone Cable",
           "year": "2011",
           "yearNumber": 2011
         },
@@ -3897,56 +3472,8 @@
           "yearNumber": 2011
         },
         {
-          "id": "games/sony-ericsson-xperia-play",
-          "name": "Sony Ericsson Xperia Play",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "games/maimai-kruglyy-tach-avtomat",
-          "name": "Maimai — круглый тач-автомат",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "games/microsoft-xbox-smartglass",
-          "name": "Microsoft Xbox SmartGlass",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "games/nintendo-wii-u-pro-controller",
-          "name": "Nintendo Wii U Pro Controller",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "games/sony-wonderbook",
-          "name": "Sony Wonderbook",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "games/sound-voltex-ruchki-i-knopki",
-          "name": "Sound Voltex — ручки и кнопки",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "games/thrustmaster-t500-rs",
-          "name": "Thrustmaster T500 RS",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
           "id": "games/disney-infinity-base",
           "name": "Disney Infinity Base",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "games/nvidia-shield-portable",
-          "name": "Nvidia Shield Portable",
           "year": "2013",
           "yearNumber": 2013
         },
@@ -3955,42 +3482,6 @@
           "name": "Valve Steam Controller (прототип с тач-экраном)",
           "year": "2013",
           "yearNumber": 2013
-        },
-        {
-          "id": "games/quadstick-sip-and-puff",
-          "name": "QuadStick (sip-and-puff)",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "games/zwift",
-          "name": "Zwift",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "games/apple-siri-remote-tvos",
-          "name": "Apple Siri Remote (tvOS)",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "games/chunithm-sensornaya-polosa-i-ik-sensory",
-          "name": "Chunithm — сенсорная полоса и ИК-сенсоры",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "games/cyberith-virtualizer",
-          "name": "Cyberith Virtualizer",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "games/guitar-hero-live-gitara-6-knopok",
-          "name": "Guitar Hero Live — гитара 6 кнопок",
-          "year": "2015",
-          "yearNumber": 2015
         },
         {
           "id": "games/icaros",
@@ -4003,24 +3494,6 @@
           "name": "Lego Dimensions Toy Pad",
           "year": "2015",
           "yearNumber": 2015
-        },
-        {
-          "id": "games/logitech-g29",
-          "name": "Logitech G29",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "games/samsung-gear-vr-tachpad",
-          "name": "Samsung Gear VR (тачпад)",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "games/google-daydream-controller",
-          "name": "Google Daydream controller",
-          "year": "2016",
-          "yearNumber": 2016
         },
         {
           "id": "games/pokemon-go-ar-i-gps",
@@ -4047,127 +3520,13 @@
           "yearNumber": 2018
         },
         {
-          "id": "games/sinden-lightgun",
-          "name": "Sinden Lightgun",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "games/starlink-battle-for-atlas-kreplenie",
-          "name": "Starlink: Battle for Atlas — крепление",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "games/fanatec-direct-drive-podium-dd",
-          "name": "Fanatec — direct drive (Podium DD)",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
           "id": "games/nintendo-labo-vr-kit",
           "name": "Nintendo Labo VR Kit",
           "year": "2019",
           "yearNumber": 2019
-        },
-        {
-          "id": "games/backbone-one",
-          "name": "Backbone One",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "games/logitech-adaptive-gaming-kit",
-          "name": "Logitech Adaptive Gaming Kit",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "games/razer-kishi",
-          "name": "Razer Kishi",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "games/atari-vcs-2021-modern-controller",
-          "name": "Atari VCS (2021) — Modern Controller",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "games/meta-quest-touch-plus",
-          "name": "Meta Quest Touch Plus",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "games/nex-playground",
-          "name": "Nex Playground",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "games/playstation-vr2-eye-tracking",
-          "name": "PlayStation VR2 — eye tracking",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "games/pokemon-go-plus-2023",
-          "name": "Pokémon GO Plus +",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "games/flex-controller-hori-litsenziya-nintendo",
-          "name": "Flex Controller (Hori, лицензия Nintendo)",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "games/xbox-adaptive-joystick",
-          "name": "Xbox Adaptive Joystick",
-          "year": "2024",
-          "yearNumber": 2024
         }
       ],
       "music-sound": [
-        {
-          "id": "music-sound/telharmonium",
-          "name": "Telharmonium",
-          "year": "1897",
-          "yearNumber": 1897
-        },
-        {
-          "id": "music-sound/termenvoks",
-          "name": "Терменвокс",
-          "year": "1920",
-          "yearNumber": 1920
-        },
-        {
-          "id": "music-sound/spharophon",
-          "name": "Sphärophon",
-          "year": "1921",
-          "yearNumber": 1921
-        },
-        {
-          "id": "music-sound/ondes-martenot",
-          "name": "Ondes Martenot",
-          "year": "1928",
-          "yearNumber": 1928
-        },
-        {
-          "id": "music-sound/trautonium",
-          "name": "Trautonium",
-          "year": "1930",
-          "yearNumber": 1930
-        },
-        {
-          "id": "music-sound/rhythmicon",
-          "name": "Rhythmicon",
-          "year": "1931",
-          "yearNumber": 1931
-        },
         {
           "id": "music-sound/terpsitone",
           "name": "Terpsitone",
@@ -4175,70 +3534,10 @@
           "yearNumber": 1932
         },
         {
-          "id": "music-sound/hammond-organ",
-          "name": "Hammond Organ",
-          "year": "1935",
-          "yearNumber": 1935
-        },
-        {
-          "id": "music-sound/novachord",
-          "name": "Novachord",
-          "year": "1939",
-          "yearNumber": 1939
-        },
-        {
-          "id": "music-sound/talk-box",
-          "name": "Talk box",
-          "year": "1939",
-          "yearNumber": 1939
-        },
-        {
-          "id": "music-sound/hammond-solovox",
-          "name": "Hammond Solovox",
-          "year": "1940",
-          "yearNumber": 1940
-        },
-        {
-          "id": "music-sound/ondioline",
-          "name": "Ondioline",
-          "year": "1941",
-          "yearNumber": 1941
-        },
-        {
-          "id": "music-sound/electronic-sackbut",
-          "name": "Electronic Sackbut",
-          "year": "1945",
-          "yearNumber": 1945
-        },
-        {
-          "id": "music-sound/clavioline",
-          "name": "Clavioline",
-          "year": "1947",
-          "yearNumber": 1947
-        },
-        {
           "id": "music-sound/chamberlin",
           "name": "Chamberlin",
           "year": "1949",
           "yearNumber": 1949
-        },
-        {
-          "id": "music-sound/mixtur-trautonium",
-          "name": "Mixtur-Trautonium",
-          "year": "1952",
-          "yearNumber": 1952
-        },
-        {
-          "id": "music-sound/rca-mark-ii-sound-synthesizer",
-          "name": "RCA Mark II Sound Synthesizer",
-          "year": "1957",
-          "yearNumber": 1957
-        },
-        {
-          "id": "music-sound/ans",
-          "name": "АНС",
-          "year": "1957",
-          "yearNumber": 1957
         },
         {
           "id": "music-sound/electro-theremin-tannerin",
@@ -4253,99 +3552,9 @@
           "yearNumber": 1959
         },
         {
-          "id": "music-sound/moog-ribbon-controller",
-          "name": "Moog ribbon controller",
-          "year": "1960-е",
-          "yearNumber": 1960
-        },
-        {
-          "id": "music-sound/cv-gate",
-          "name": "CV/Gate",
-          "year": "1960-е",
-          "yearNumber": 1960
-        },
-        {
-          "id": "music-sound/mellotron",
-          "name": "Mellotron",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
-          "id": "music-sound/buchla-100",
-          "name": "Buchla 100",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
-          "id": "music-sound/moog-modular",
-          "name": "Moog modular",
-          "year": "1964",
-          "yearNumber": 1964
-        },
-        {
-          "id": "music-sound/oramics",
-          "name": "Oramics",
-          "year": "1966",
-          "yearNumber": 1966
-        },
-        {
-          "id": "music-sound/wah-wah-pedal",
-          "name": "Wah-wah pedal",
-          "year": "1966",
-          "yearNumber": 1966
-        },
-        {
-          "id": "music-sound/circuit-bending",
-          "name": "Circuit bending",
-          "year": "1966",
-          "yearNumber": 1966
-        },
-        {
-          "id": "music-sound/stylophone",
-          "name": "Stylophone",
-          "year": "1967",
-          "yearNumber": 1967
-        },
-        {
-          "id": "music-sound/ace-tone-rhythm-ace-fr-1",
-          "name": "Ace Tone Rhythm Ace FR-1",
-          "year": "1967",
-          "yearNumber": 1967
-        },
-        {
-          "id": "music-sound/moog-960-sequential-controller",
-          "name": "Moog 960 Sequential Controller",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "music-sound/ems-vcs3",
-          "name": "EMS VCS3",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
           "id": "music-sound/arp-2500",
           "name": "ARP 2500",
           "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "music-sound/minimoog",
-          "name": "Minimoog",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "music-sound/buchla-200",
-          "name": "Buchla 200",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "music-sound/neve-8078-mixing-console",
-          "name": "Neve 8078 / mixing console",
-          "year": "1970-е",
           "yearNumber": 1970
         },
         {
@@ -4361,46 +3570,10 @@
           "yearNumber": 1970
         },
         {
-          "id": "music-sound/arp-2600",
-          "name": "ARP 2600",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
-          "id": "music-sound/eml-101",
-          "name": "EML 101",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
-          "id": "music-sound/ems-synthi-100-sequencer",
-          "name": "EMS Synthi 100 sequencer",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
           "id": "music-sound/bozak-cma-10-2dl",
           "name": "Bozak CMA-10-2DL",
           "year": "1971",
           "yearNumber": 1971
-        },
-        {
-          "id": "music-sound/ems-synthi-aks",
-          "name": "EMS Synthi AKS",
-          "year": "1972",
-          "yearNumber": 1972
-        },
-        {
-          "id": "music-sound/arp-odyssey",
-          "name": "ARP Odyssey",
-          "year": "1972",
-          "yearNumber": 1972
-        },
-        {
-          "id": "music-sound/technics-sl-1200",
-          "name": "Technics SL-1200",
-          "year": "1972",
-          "yearNumber": 1972
         },
         {
           "id": "music-sound/serge-modular",
@@ -4409,46 +3582,10 @@
           "yearNumber": 1974
         },
         {
-          "id": "music-sound/lyricon",
-          "name": "Lyricon",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
-          "id": "music-sound/chapman-stick",
-          "name": "Chapman Stick",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
-          "id": "music-sound/crackle-box",
-          "name": "Crackle box",
-          "year": "1975",
-          "yearNumber": 1975
-        },
-        {
-          "id": "music-sound/moog-taurus",
-          "name": "Moog Taurus",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
           "id": "music-sound/pollard-syndrum",
           "name": "Pollard Syndrum",
           "year": "1976",
           "yearNumber": 1976
-        },
-        {
-          "id": "music-sound/yamaha-cs-80",
-          "name": "Yamaha CS-80",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "music-sound/synclavier",
-          "name": "Synclavier",
-          "year": "1977",
-          "yearNumber": 1977
         },
         {
           "id": "music-sound/roland-mc-8",
@@ -4457,64 +3594,10 @@
           "yearNumber": 1977
         },
         {
-          "id": "music-sound/gli-pmx-7000-crossfader",
-          "name": "GLI PMX 7000 (crossfader)",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "music-sound/roland-gr-500",
-          "name": "Roland GR-500",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "music-sound/arp-avatar",
-          "name": "ARP Avatar",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "music-sound/upic",
-          "name": "UPIC",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "music-sound/sequential-prophet-5",
-          "name": "Sequential Prophet-5",
-          "year": "1978",
-          "yearNumber": 1978
-        },
-        {
-          "id": "music-sound/korg-ms-20",
-          "name": "Korg MS-20",
-          "year": "1978",
-          "yearNumber": 1978
-        },
-        {
           "id": "music-sound/roland-cr-78",
           "name": "Roland CR-78",
           "year": "1978",
           "yearNumber": 1978
-        },
-        {
-          "id": "music-sound/oberheim-ob-x",
-          "name": "Oberheim OB-X",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "music-sound/fairlight-cmi",
-          "name": "Fairlight CMI",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "music-sound/casio-vl-1",
-          "name": "Casio VL-1",
-          "year": "1979",
-          "yearNumber": 1979
         },
         {
           "id": "music-sound/ssl-4000-e",
@@ -4523,38 +3606,8 @@
           "yearNumber": 1979
         },
         {
-          "id": "music-sound/roland-axis-keytar",
-          "name": "Roland Axis / keytar",
-          "year": "1980-е",
-          "yearNumber": 1980
-        },
-        {
-          "id": "music-sound/moog-liberation",
-          "name": "Moog Liberation",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "music-sound/linn-lm-1",
-          "name": "Linn LM-1",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "music-sound/roland-tr-808",
-          "name": "Roland TR-808",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
           "id": "music-sound/roland-gr-300",
           "name": "Roland GR-300",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "music-sound/sequential-drum",
-          "name": "Sequential Drum",
           "year": "1980",
           "yearNumber": 1980
         },
@@ -4565,62 +3618,8 @@
           "yearNumber": 1980
         },
         {
-          "id": "music-sound/roland-jupiter-8",
-          "name": "Roland Jupiter-8",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/dcb-roland",
-          "name": "DCB (Roland)",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/simmons-sds-5",
-          "name": "Simmons SDS-5",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/oberheim-dmx",
-          "name": "Oberheim DMX",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/roland-tb-303",
-          "name": "Roland TB-303",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/roland-tr-606",
-          "name": "Roland TR-606",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/laser-harp",
-          "name": "Laser harp",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "music-sound/sintezator-polivoks",
-          "name": "Синтезатор «Поливокс»",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
           "id": "music-sound/sequential-prophet-600",
           "name": "Sequential Prophet-600",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "music-sound/linndrum",
-          "name": "LinnDrum",
           "year": "1982",
           "yearNumber": 1982
         },
@@ -4631,38 +3630,8 @@
           "yearNumber": 1983
         },
         {
-          "id": "music-sound/yamaha-dx7",
-          "name": "Yamaha DX7",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "music-sound/midi-1-0",
-          "name": "MIDI 1.0",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "music-sound/roland-tr-909",
-          "name": "Roland TR-909",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "music-sound/yamaha-bc1-breath-controller",
-          "name": "Yamaha BC1 Breath Controller",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
           "id": "music-sound/roland-juno-106",
           "name": "Roland Juno-106",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "music-sound/casio-cz-101",
-          "name": "Casio CZ-101",
           "year": "1984",
           "yearNumber": 1984
         },
@@ -4679,22 +3648,10 @@
           "yearNumber": 1984
         },
         {
-          "id": "music-sound/synthaxe",
-          "name": "SynthAxe",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
           "id": "music-sound/the-hands",
           "name": "The Hands",
           "year": "1984",
           "yearNumber": 1984
-        },
-        {
-          "id": "music-sound/e-mu-sp-12",
-          "name": "E-mu SP-12",
-          "year": "1985",
-          "yearNumber": 1985
         },
         {
           "id": "music-sound/roland-octapad",
@@ -4703,26 +3660,8 @@
           "yearNumber": 1985
         },
         {
-          "id": "music-sound/atari-st-midi-porty",
-          "name": "Atari ST (MIDI-порты)",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "music-sound/sequential-circuits-prophet-vs",
-          "name": "Sequential Circuits Prophet VS",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
           "id": "music-sound/drumkat",
           "name": "Drumkat",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "music-sound/roland-tr-505",
-          "name": "Roland TR-505",
           "year": "1986",
           "yearNumber": 1986
         },
@@ -4737,18 +3676,6 @@
           "name": "Music Mouse",
           "year": "1986",
           "yearNumber": 1986
-        },
-        {
-          "id": "music-sound/roland-d-50",
-          "name": "Roland D-50",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "music-sound/e-mu-sp-1200",
-          "name": "E-mu SP-1200",
-          "year": "1987",
-          "yearNumber": 1987
         },
         {
           "id": "music-sound/akai-ewi",
@@ -4769,46 +3696,10 @@
           "yearNumber": 1987
         },
         {
-          "id": "music-sound/casio-dg-20",
-          "name": "Casio DG-20",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
           "id": "music-sound/radio-baton",
           "name": "Radio Baton",
           "year": "1987",
           "yearNumber": 1987
-        },
-        {
-          "id": "music-sound/daxophone",
-          "name": "Daxophone",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "music-sound/korg-m1",
-          "name": "Korg M1",
-          "year": "1988",
-          "yearNumber": 1988
-        },
-        {
-          "id": "music-sound/akai-mpc60",
-          "name": "Akai MPC60",
-          "year": "1988",
-          "yearNumber": 1988
-        },
-        {
-          "id": "music-sound/whammy-digitech",
-          "name": "Whammy (DigiTech)",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "music-sound/nintendo-power-glove-muzyka",
-          "name": "Nintendo Power Glove (музыка)",
-          "year": "1989",
-          "yearNumber": 1989
         },
         {
           "id": "music-sound/sound-beam",
@@ -4817,32 +3708,14 @@
           "yearNumber": 1989
         },
         {
-          "id": "music-sound/korg-wavestation",
-          "name": "Korg Wavestation",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
           "id": "music-sound/yamaha-dtx",
           "name": "Yamaha DTX",
           "year": "1990-е",
           "yearNumber": 1990
         },
         {
-          "id": "music-sound/yamaha-qy10",
-          "name": "Yamaha QY10",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
           "id": "music-sound/vestax-pdx-2000",
           "name": "Vestax PDX-2000",
-          "year": "1990-е",
-          "yearNumber": 1990
-        },
-        {
-          "id": "music-sound/starr-labs-ztar",
-          "name": "Starr Labs Ztar",
           "year": "1990-е",
           "yearNumber": 1990
         },
@@ -4857,12 +3730,6 @@
           "name": "Buchla Thunder",
           "year": "1990",
           "yearNumber": 1990
-        },
-        {
-          "id": "music-sound/lady-s-glove",
-          "name": "Lady's Glove",
-          "year": "1991",
-          "yearNumber": 1991
         },
         {
           "id": "music-sound/hypercello",
@@ -4895,22 +3762,10 @@
           "yearNumber": 1994
         },
         {
-          "id": "music-sound/pioneer-cdj-500",
-          "name": "Pioneer CDJ-500",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
           "id": "music-sound/yamaha-miburi",
           "name": "Yamaha Miburi",
           "year": "1994",
           "yearNumber": 1994
-        },
-        {
-          "id": "music-sound/doepfer-a-100-eurorack",
-          "name": "Doepfer A-100 (Eurorack)",
-          "year": "1995",
-          "yearNumber": 1995
         },
         {
           "id": "music-sound/clavia-nord-lead",
@@ -4925,36 +3780,6 @@
           "yearNumber": 1996
         },
         {
-          "id": "music-sound/roland-mc-303",
-          "name": "Roland MC-303",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "music-sound/pioneer-djm-600",
-          "name": "Pioneer DJM-600",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "music-sound/akai-mpc2000",
-          "name": "Akai MPC2000",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "music-sound/roland-v-drums",
-          "name": "Roland V-Drums",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "music-sound/roland-mc-505",
-          "name": "Roland MC-505",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
           "id": "music-sound/digidesign-procontrol",
           "name": "Digidesign ProControl",
           "year": "1998",
@@ -4967,38 +3792,14 @@
           "yearNumber": 1998
         },
         {
-          "id": "music-sound/korg-kaoss-pad",
-          "name": "Korg Kaoss Pad",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
           "id": "music-sound/korg-electribe",
           "name": "Korg Electribe",
           "year": "1999",
           "yearNumber": 1999
         },
         {
-          "id": "music-sound/doepfer-r2m",
-          "name": "Doepfer R2M",
-          "year": "2000-е",
-          "yearNumber": 2000
-        },
-        {
-          "id": "music-sound/continuum-fingerboard",
-          "name": "Continuum Fingerboard",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
           "id": "music-sound/elektron-machinedrum",
           "name": "Elektron Machinedrum",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "music-sound/pioneer-cdj-1000",
-          "name": "Pioneer CDJ-1000",
           "year": "2001",
           "yearNumber": 2001
         },
@@ -5011,24 +3812,6 @@
         {
           "id": "music-sound/korg-microkorg",
           "name": "Korg microKORG",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "music-sound/moog-voyager",
-          "name": "Moog Voyager",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "music-sound/open-sound-control",
-          "name": "Open Sound Control",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "music-sound/rane-ttm-56",
-          "name": "Rane TTM 56",
           "year": "2002",
           "yearNumber": 2002
         },
@@ -5057,24 +3840,6 @@
           "yearNumber": 2004
         },
         {
-          "id": "music-sound/behringer-bcf2000",
-          "name": "Behringer BCF2000",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "music-sound/jazzmutant-lemur",
-          "name": "JazzMutant Lemur",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "music-sound/reactable",
-          "name": "Reactable",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
           "id": "music-sound/arduino-midi",
           "name": "Arduino (MIDI)",
           "year": "2005",
@@ -5087,18 +3852,6 @@
           "yearNumber": 2006
         },
         {
-          "id": "music-sound/monome",
-          "name": "Monome",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "music-sound/nintendo-wii-remote-muzyka",
-          "name": "Nintendo Wii Remote (музыка)",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
           "id": "music-sound/korg-kaossilator",
           "name": "Korg Kaossilator",
           "year": "2007",
@@ -5107,12 +3860,6 @@
         {
           "id": "music-sound/vestax-qfo",
           "name": "Vestax QFO",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "music-sound/tenori-on",
-          "name": "Tenori-on",
           "year": "2007",
           "yearNumber": 2007
         },
@@ -5131,12 +3878,6 @@
         {
           "id": "music-sound/nintendo-ds-korg-ds-10",
           "name": "Nintendo DS Korg DS-10",
-          "year": "2008",
-          "yearNumber": 2008
-        },
-        {
-          "id": "music-sound/beamz",
-          "name": "Beamz",
           "year": "2008",
           "yearNumber": 2008
         },
@@ -5183,30 +3924,6 @@
           "yearNumber": 2009
         },
         {
-          "id": "music-sound/novation-launchpad",
-          "name": "Novation Launchpad",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "music-sound/yamaha-tenori-on-orange",
-          "name": "Yamaha Tenori-on Orange",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "music-sound/otamatone",
-          "name": "Otamatone",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "music-sound/korg-monotron",
-          "name": "Korg Monotron",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
           "id": "music-sound/elektron-octatrack",
           "name": "Elektron Octatrack",
           "year": "2010",
@@ -5219,20 +3936,8 @@
           "yearNumber": 2010
         },
         {
-          "id": "music-sound/microsoft-kinect-muzyka",
-          "name": "Microsoft Kinect (музыка)",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
           "id": "music-sound/kaossilator-pro",
           "name": "Kaossilator Pro",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "music-sound/reactable-mobile",
-          "name": "Reactable mobile",
           "year": "2010",
           "yearNumber": 2010
         },
@@ -5261,12 +3966,6 @@
           "yearNumber": 2011
         },
         {
-          "id": "music-sound/lemur-app",
-          "name": "Lemur app",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
           "id": "music-sound/animoog",
           "name": "Animoog",
           "year": "2011",
@@ -5285,18 +3984,6 @@
           "yearNumber": 2012
         },
         {
-          "id": "music-sound/pioneer-ddj-sx",
-          "name": "Pioneer DDJ-SX",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "music-sound/makey-makey",
-          "name": "Makey Makey",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
           "id": "music-sound/figure-propellerhead",
           "name": "Figure (Propellerhead)",
           "year": "2012",
@@ -5311,12 +3998,6 @@
         {
           "id": "music-sound/keith-mcmillen-qunexus",
           "name": "Keith McMillen QuNexus",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "music-sound/roli-seaboard",
-          "name": "ROLI Seaboard",
           "year": "2013",
           "yearNumber": 2013
         },
@@ -5357,20 +4038,8 @@
           "yearNumber": 2014
         },
         {
-          "id": "music-sound/linnstrument",
-          "name": "Linnstrument",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
           "id": "music-sound/moog-theremini",
           "name": "Moog Theremini",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "music-sound/roland-tr-8",
-          "name": "Roland TR-8",
           "year": "2014",
           "yearNumber": 2014
         },
@@ -5405,12 +4074,6 @@
           "yearNumber": 2014
         },
         {
-          "id": "music-sound/yamaha-reface",
-          "name": "Yamaha Reface",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
           "id": "music-sound/teenage-engineering-pocket-operator",
           "name": "Teenage Engineering Pocket Operator",
           "year": "2015",
@@ -5435,20 +4098,8 @@
           "yearNumber": 2016
         },
         {
-          "id": "music-sound/roli-lightpad-block",
-          "name": "ROLI Lightpad Block",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
           "id": "music-sound/roland-aerophone",
           "name": "Roland Aerophone",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "music-sound/tecontrol-bbc2",
-          "name": "TEControl BBC2",
           "year": "2016",
           "yearNumber": 2016
         },
@@ -5457,36 +4108,6 @@
           "name": "Bela",
           "year": "2016",
           "yearNumber": 2016
-        },
-        {
-          "id": "music-sound/sensel-morph",
-          "name": "Sensel Morph",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "music-sound/haken-continuumini",
-          "name": "Haken ContinuuMini",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "music-sound/akai-mpc-live",
-          "name": "Akai MPC Live",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "music-sound/midi-polyphonic-expression-mpe",
-          "name": "MIDI Polyphonic Expression (MPE)",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "music-sound/arturia-microfreak",
-          "name": "Arturia MicroFreak",
-          "year": "2019",
-          "yearNumber": 2019
         },
         {
           "id": "music-sound/moog-matriarch",
@@ -5507,18 +4128,6 @@
           "yearNumber": 2019
         },
         {
-          "id": "music-sound/midi-2-0",
-          "name": "MIDI 2.0",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "music-sound/pioneer-cdj-3000",
-          "name": "Pioneer CDJ-3000",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
           "id": "music-sound/expressive-e-osmose",
           "name": "Expressive E Osmose",
           "year": "2022",
@@ -5533,38 +4142,8 @@
       ],
       "design-digital-art": [
         {
-          "id": "design-digital-art/svetovoy-pistolet-whirlwind",
-          "name": "Световой пистолет Whirlwind",
-          "year": "1952",
-          "yearNumber": 1952
-        },
-        {
-          "id": "design-digital-art/trekbol-datar",
-          "name": "Трекбол DATAR",
-          "year": "1952",
-          "yearNumber": 1952
-        },
-        {
-          "id": "design-digital-art/svetovoe-pero-sage",
-          "name": "Световое перо SAGE",
-          "year": "1955",
-          "yearNumber": 1955
-        },
-        {
-          "id": "design-digital-art/svetovoe-pero-sketchpad-tx-2",
-          "name": "Световое перо Sketchpad (TX-2)",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
           "id": "design-digital-art/dac-1-design-augmented-by-computer",
           "name": "DAC-1 (Design Augmented by Computer)",
-          "year": "1964",
-          "yearNumber": 1964
-        },
-        {
-          "id": "design-digital-art/ibm-2250-so-svetovym-perom",
-          "name": "IBM 2250 со световым пером",
           "year": "1964",
           "yearNumber": 1964
         },
@@ -5575,52 +4154,10 @@
           "yearNumber": 1964
         },
         {
-          "id": "design-digital-art/mysh-engelbarta-prototip",
-          "name": "Мышь Энгельбарта (прототип)",
-          "year": "1965",
-          "yearNumber": 1965
-        },
-        {
-          "id": "design-digital-art/trekbol-orbit-ball-kugelsteuerung",
-          "name": "Трекбол Orbit Ball (Kugelsteuerung)",
-          "year": "1966",
-          "yearNumber": 1966
-        },
-        {
-          "id": "design-digital-art/kolennyy-i-golovnoy-ukazateli-eksperimenty-sri",
-          "name": "Коленный и головной указатели (эксперименты SRI)",
-          "year": "1967",
-          "yearNumber": 1967
-        },
-        {
-          "id": "design-digital-art/nls-mysh-chorded-keyset-mother-of-all-demos",
-          "name": "NLS: мышь + chorded keyset («Mother of All Demos»)",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "design-digital-art/rollkugel-rks-100-86",
-          "name": "Rollkugel RKS 100-86",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
           "id": "design-digital-art/sword-of-damocles-hmd-treking",
           "name": "Sword of Damocles (HMD + трекинг)",
           "year": "1968",
           "yearNumber": 1968
-        },
-        {
-          "id": "design-digital-art/lds-1-line-drawing-system-1",
-          "name": "LDS-1 (Line Drawing System-1)",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
-          "id": "design-digital-art/sylvania-tablet",
-          "name": "Sylvania Tablet",
-          "year": "1969",
-          "yearNumber": 1969
         },
         {
           "id": "design-digital-art/grail-rand",
@@ -5629,220 +4166,10 @@
           "yearNumber": 1970
         },
         {
-          "id": "design-digital-art/elograph-rezistivnyy-sensor",
-          "name": "Elograph (резистивный сенсор)",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
-          "id": "design-digital-art/plato-iv-touch-panel",
-          "name": "PLATO IV Touch Panel",
-          "year": "1972",
-          "yearNumber": 1972
-        },
-        {
-          "id": "design-digital-art/tektronix-4010-kolesiki-perekrestiya",
-          "name": "Tektronix 4010: колёсики перекрестия",
-          "year": "1972",
-          "yearNumber": 1972
-        },
-        {
-          "id": "design-digital-art/mysh-xerox-alto",
-          "name": "Мышь Xerox Alto",
-          "year": "1973",
-          "yearNumber": 1973
-        },
-        {
-          "id": "design-digital-art/superpaint-planshet",
-          "name": "SuperPaint (планшет)",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
-          "id": "design-digital-art/nyit-paint-planshet",
-          "name": "NYIT Paint (планшет)",
-          "year": "1975",
-          "yearNumber": 1975
-        },
-        {
-          "id": "design-digital-art/summagraphics-id",
-          "name": "Summagraphics ID",
-          "year": "1975",
-          "yearNumber": 1975
-        },
-        {
-          "id": "design-digital-art/talos-digitizer",
-          "name": "Talos Digitizer",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
-          "id": "design-digital-art/sayre-glove",
-          "name": "Sayre Glove",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "design-digital-art/apple-graphics-tablet",
-          "name": "Apple Graphics Tablet",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "design-digital-art/calcomp-9000-digitizer",
-          "name": "Calcomp 9000 Digitizer",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "design-digital-art/fairlight-cmi-svetovoe-pero",
-          "name": "Fairlight CMI — световое перо",
-          "year": "1979",
-          "yearNumber": 1979
-        },
-        {
-          "id": "design-digital-art/koala-pad-prototip-koalapad",
-          "name": "Koala Pad (прототип) / KoalaPad",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
           "id": "design-digital-art/polhemus-3space",
           "name": "Polhemus 3SPACE",
           "year": "1980",
           "yearNumber": 1980
-        },
-        {
-          "id": "design-digital-art/quantel-paintbox",
-          "name": "Quantel Paintbox",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "design-digital-art/xerox-star-8010-mysh",
-          "name": "Xerox Star 8010 мышь",
-          "year": "1981",
-          "yearNumber": 1981
-        },
-        {
-          "id": "design-digital-art/cyberware-3d-scanner",
-          "name": "Cyberware 3D scanner",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "design-digital-art/logitech-p4",
-          "name": "Logitech P4",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "design-digital-art/mouse-systems-opticheskaya-mysh",
-          "name": "Mouse Systems оптическая мышь",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "design-digital-art/hewlett-packard-150-touchscreen",
-          "name": "Hewlett-Packard 150 Touchscreen",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "design-digital-art/microsoft-mouse",
-          "name": "Microsoft Mouse",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "design-digital-art/mysh-apple-lisa",
-          "name": "Мышь Apple Lisa",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "design-digital-art/macintosh-mouse-m0100",
-          "name": "Macintosh Mouse (M0100)",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "design-digital-art/wacom-osnovanie-besprovodnoe-pero",
-          "name": "Wacom (основание) / беспроводное перо",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "design-digital-art/16-knopochnyy-kursor-digitayzera-cad-puck",
-          "name": "16-кнопочный курсор дигитайзера (CAD puck)",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "design-digital-art/amiga-mouse-deluxe-paint",
-          "name": "Amiga Mouse / Deluxe Paint",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "design-digital-art/kurta-penmouse-is-series",
-          "name": "Kurta Penmouse / IS-series",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "design-digital-art/summasketch",
-          "name": "Summasketch",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "design-digital-art/mysh-atari-st",
-          "name": "Мышь Atari ST",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "design-digital-art/commodore-1351",
-          "name": "Commodore 1351",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "design-digital-art/pencept-penpad",
-          "name": "Pencept Penpad",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "design-digital-art/linus-write-top",
-          "name": "Linus Write-Top",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "design-digital-art/sun-3-opticheskaya-mysh",
-          "name": "Sun-3 оптическая мышь",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "design-digital-art/vpl-dataglove",
-          "name": "VPL DataGlove",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "design-digital-art/wacom-sd-series-sd-420",
-          "name": "Wacom SD-series (SD-420)",
-          "year": "1987",
-          "yearNumber": 1987
-        },
-        {
-          "id": "design-digital-art/mysh-acorn-archimedes-3-knopki",
-          "name": "Мышь Acorn Archimedes (3 кнопки)",
-          "year": "1987",
-          "yearNumber": 1987
         },
         {
           "id": "design-digital-art/logitech-trackman",
@@ -5851,154 +4178,16 @@
           "yearNumber": 1988
         },
         {
-          "id": "design-digital-art/gridpad",
-          "name": "GRiDPad",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
           "id": "design-digital-art/kensington-expert-mouse",
           "name": "Kensington Expert Mouse",
           "year": "1989",
           "yearNumber": 1989
         },
         {
-          "id": "design-digital-art/nintendo-power-glove",
-          "name": "Nintendo Power Glove",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "design-digital-art/wacom-ud-ultra-series",
-          "name": "Wacom UD (Ultra) Series",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "design-digital-art/calcomp-drawingboard",
-          "name": "CalComp DrawingBoard",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "design-digital-art/cyberglove",
-          "name": "CyberGlove",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "design-digital-art/spaceball-1003",
-          "name": "Spaceball 1003",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "design-digital-art/apple-powerbook-trekbol",
-          "name": "Apple PowerBook трекбол",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "design-digital-art/fractal-design-painter-pressure-pen",
-          "name": "Fractal Design Painter + pressure pen",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
           "id": "design-digital-art/go-penpoint-eo",
           "name": "GO PenPoint / EO",
           "year": "1991",
           "yearNumber": 1991
-        },
-        {
-          "id": "design-digital-art/ncr-3125",
-          "name": "NCR 3125",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "design-digital-art/smart-board",
-          "name": "SMART Board",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "design-digital-art/wacom-sd-510c-artpad-predshestvenniki",
-          "name": "Wacom SD-510C / ArtPad предшественники",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "design-digital-art/apple-newton-prototype-pen",
-          "name": "Apple Newton prototype pen",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "design-digital-art/ibm-thinkpad-700t",
-          "name": "IBM ThinkPad 700T",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "design-digital-art/logitech-magellan-spacemouse-classic",
-          "name": "Logitech Magellan / SpaceMouse Classic",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "design-digital-art/super-nes-mouse-mario-paint",
-          "name": "Super NES Mouse (Mario Paint)",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "design-digital-art/apple-messagepad-newton",
-          "name": "Apple MessagePad (Newton)",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "design-digital-art/eo-personal-communicator",
-          "name": "EO Personal Communicator",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "design-digital-art/sega-pico",
-          "name": "Sega Pico",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "design-digital-art/spaceball-2003",
-          "name": "Spaceball 2003",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "design-digital-art/phantom-haptic-interface",
-          "name": "PHANToM Haptic Interface",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "design-digital-art/synaptics-touchpad",
-          "name": "Synaptics TouchPad",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "design-digital-art/wacom-artpad",
-          "name": "Wacom ArtPad",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "design-digital-art/magellan-spacemouse",
-          "name": "Magellan SpaceMouse",
-          "year": "1995",
-          "yearNumber": 1995
         },
         {
           "id": "design-digital-art/microsoft-intellimouse-koleso-prokrutki-1996",
@@ -9606,18 +7795,6 @@
         }
       ],
       "interactive-art": [
-        {
-          "id": "interactive-art/panorama-robert-barker",
-          "name": "Панорама (Robert Barker)",
-          "year": "1787",
-          "yearNumber": 1787
-        },
-        {
-          "id": "interactive-art/diorama-dagera",
-          "name": "Диорама Дагера",
-          "year": "1822",
-          "yearNumber": 1822
-        },
         {
           "id": "interactive-art/stereoskop",
           "name": "Стереоскоп",
