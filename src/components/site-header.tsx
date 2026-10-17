@@ -23,7 +23,7 @@ export function SiteHeader() {
   return (
     <header className="top">
       {home ? (
-        <p className="kicker">Хронология устройств ввода</p>
+        <p className="kicker">BLABLALABS</p>
       ) : (
         <TransitionLink href="/" className="wordmark" viewTransitionName="site-title">
           Игровые контроллеры

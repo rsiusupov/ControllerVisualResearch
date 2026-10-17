@@ -5,7 +5,6 @@ export function Constellation({ categories }: { categories: CategoryInfo[] }) {
   return (
     <div className="constellation">
       <div className="sun" style={{ viewTransitionName: "site-title" }}>
-        <p className="kicker">Хронология устройств ввода</p>
         <h1>Игровые контроллеры</h1>
       </div>
       {categories.map((category, index) => (
@@ -17,7 +16,6 @@ export function Constellation({ categories }: { categories: CategoryInfo[] }) {
           viewTransitionName={`category-${category.slug}`}
         >
           <strong>{category.label}</strong>
-          <span>{category.count}</span>
         </TransitionLink>
       ))}
     </div>

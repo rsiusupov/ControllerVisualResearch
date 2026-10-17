@@ -2,10 +2,10 @@
 
 import { useSearchParams } from "next/navigation";
 import type { CategoryInfo } from "@/data/types";
-import { ControllerCard } from "@/src/components/controller-card";
+import { PhysicalTimeline } from "@/src/components/physical-timeline";
 import { YearRange } from "@/src/components/year-range";
 import type { StudyRecord } from "@/src/lib/study";
-import { overlaps, readBound } from "@/src/lib/years";
+import { decadeStart, overlaps, readBound } from "@/src/lib/years";
 
 export function CategoryTimeline({
   category,
@@ -27,10 +27,10 @@ export function CategoryTimeline({
   const visible = numeric
     .filter((record) => (low == null || high == null ? true : overlaps(record, low, high)))
     .sort((a, b) => (a.yearNumber ?? 0) - (b.yearNumber ?? 0) || a.name.localeCompare(b.name, "ru"));
+  const axisStart = min == null ? null : decadeStart(min);
 
-  let decade = "";
   return (
-    <main className="branch">
+    <main className="branch timeline-page">
       <header className="branch-head" style={{ viewTransitionName: `category-${category.slug}` }}>
         <p className="kicker">{category.count} контроллеров</p>
         <h1>{category.label}</h1>
@@ -40,34 +40,8 @@ export function CategoryTimeline({
         {visible.length} в диапазоне
         {undated.length ? ` · ${undated.length} без даты` : ""}
       </p>
-      <div className="timeline">
-        {visible.length ? (
-          visible.map((record) => {
-            const heading = record.decade !== decade;
-            decade = record.decade;
-            return (
-              <div key={record.id}>
-                {heading && record.decade ? <h2 className="decade">{record.decade}</h2> : null}
-                <ControllerCard record={record} />
-              </div>
-            );
-          })
-        ) : (
-          <p>В этом диапазоне нет контроллеров.</p>
-        )}
-      </div>
-      {undated.length ? (
-        <section className="undated" aria-label="Без даты">
-          <h2 className="decade">Без даты</h2>
-          <p className="quiet">Год не указан, поэтому эти контроллеры стоят вне числовой шкалы.</p>
-          {undated
-            .slice()
-            .sort((a, b) => a.name.localeCompare(b.name, "ru"))
-            .map((record) => (
-              <ControllerCard key={record.id} record={record} />
-            ))}
-        </section>
-      ) : null}
+      {visible.length ? null : <p className="timeline-empty">В этом диапазоне нет контроллеров.</p>}
+      <PhysicalTimeline dated={visible} undated={undated} axisStart={axisStart} axisEnd={high} />
       {bounded ? <YearRange min={min} max={max} records={records} /> : null}
     </main>
   );

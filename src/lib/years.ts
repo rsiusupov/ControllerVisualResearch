@@ -5,6 +5,17 @@ export function formatYear(year: number) {
   return String(year);
 }
 
+/** First year of the decade that contains `year`. BCE decades floor toward −∞, so −495 starts at −500. */
+export function decadeStart(year: number) {
+  return Math.floor(year / 10) * 10;
+}
+
+export function formatDecade(year: number) {
+  const start = decadeStart(year);
+  if (start < 0) return `${Math.abs(start)}-е до н.э.`;
+  return `${start}-е`;
+}
+
 export function clampYear(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
