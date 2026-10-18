@@ -3317,19 +3317,19 @@
     "bytesVerified": true,
     "note": "Listed photos move once from images/{year}_{name}/ to public/images/{category}/{slug}/{slug}-{yearToken}-{NN}.{ext}. A later run leaves files that are already there and checks sizes. If neither path exists, the photo is absent: discovery records images: [] and does not fail. A file added later is picked up from that same pattern with any extension. There is no image manifest.",
     "extensions": {
-      "jpg": 1034,
-      "png": 111,
-      "gif": 3
+      "jpg": 2554,
+      "png": 261,
+      "gif": 30
     },
-    "controllersWithLocalImages": 479,
-    "controllersWithoutLocalImages": 948,
+    "controllersWithLocalImages": 943,
+    "controllersWithoutLocalImages": 484,
     "missingLocalImageCounts": {
       "games": 32,
       "music-sound": 102,
-      "design-digital-art": 145,
-      "photo-film-video": 219,
-      "performance": 244,
-      "interactive-art": 206
+      "design-digital-art": 31,
+      "photo-film-video": 51,
+      "performance": 215,
+      "interactive-art": 53
     },
     "missingLocalImages": {
       "games": [
@@ -4172,50 +4172,14 @@
           "yearNumber": 1980
         },
         {
-          "id": "design-digital-art/logitech-trackman",
-          "name": "Logitech TrackMan",
-          "year": "1988",
-          "yearNumber": 1988
-        },
-        {
-          "id": "design-digital-art/kensington-expert-mouse",
-          "name": "Kensington Expert Mouse",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
           "id": "design-digital-art/go-penpoint-eo",
           "name": "GO PenPoint / EO",
           "year": "1991",
           "yearNumber": 1991
         },
         {
-          "id": "design-digital-art/microsoft-intellimouse-koleso-prokrutki-1996",
-          "name": "Microsoft IntelliMouse (колесо прокрутки 1996)",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "design-digital-art/wacom-artz-ii",
-          "name": "Wacom ArtZ II",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "design-digital-art/logitech-marble-mouse-trackman-marble",
-          "name": "Logitech Marble Mouse / TrackMan Marble",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
           "id": "design-digital-art/microscribe-3d-digitizer",
           "name": "MicroScribe 3D Digitizer",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "design-digital-art/palm-pilot-stilus",
-          "name": "Palm Pilot стилус",
           "year": "1996",
           "yearNumber": 1996
         },
@@ -4226,154 +4190,10 @@
           "yearNumber": 1998
         },
         {
-          "id": "design-digital-art/fingerworks-igesture-pad",
-          "name": "FingerWorks iGesture Pad",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "design-digital-art/wacom-4d-mouse",
-          "name": "Wacom 4D Mouse",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "design-digital-art/wacom-graphire",
-          "name": "Wacom Graphire",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "design-digital-art/wacom-intuos",
-          "name": "Wacom Intuos",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "design-digital-art/wacom-lens-cursor",
-          "name": "Wacom Lens Cursor",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "design-digital-art/microsoft-intellimouse-explorer-opticheskaya",
-          "name": "Microsoft IntelliMouse Explorer (оптическая)",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "design-digital-art/n64-mouse-mario-artist",
-          "name": "N64 Mouse (Mario Artist)",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-pl-300-lcd-planshet",
-          "name": "Wacom Cintiq / PL-300 (LCD-планшет)",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
           "id": "design-digital-art/anoto-digital-pen",
           "name": "Anoto Digital Pen",
           "year": "2000",
           "yearNumber": 2000
-        },
-        {
-          "id": "design-digital-art/3dconnexion-osnovanie",
-          "name": "3Dconnexion (основание)",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "design-digital-art/diamondtouch",
-          "name": "DiamondTouch",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "design-digital-art/force-dimension-omega-x",
-          "name": "Force Dimension omega.x",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-15x",
-          "name": "Wacom Cintiq 15X",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "design-digital-art/microsoft-tablet-pc",
-          "name": "Microsoft Tablet PC",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "design-digital-art/wacom-intuos2",
-          "name": "Wacom Intuos2",
-          "year": "2002",
-          "yearNumber": 2002
-        },
-        {
-          "id": "design-digital-art/3dconnexion-spacetraveler",
-          "name": "3Dconnexion SpaceTraveler",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "design-digital-art/faroarm",
-          "name": "FaroArm",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "design-digital-art/sensable-freeform",
-          "name": "SensAble FreeForm",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "design-digital-art/apple-mighty-mouse",
-          "name": "Apple Mighty Mouse",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "design-digital-art/sensable-phantom-omni",
-          "name": "SensAble PHANTOM Omni",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "design-digital-art/wacom-art-pen-vrashchenie",
-          "name": "Wacom Art Pen (вращение)",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "design-digital-art/wacom-intuos3",
-          "name": "Wacom Intuos3",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "design-digital-art/stilus-nintendo-ds",
-          "name": "Стилус Nintendo DS",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "design-digital-art/jeff-han-ftir-multi-touch",
-          "name": "Jeff Han FTIR Multi-Touch",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-21ux",
-          "name": "Wacom Cintiq 21UX",
-          "year": "2005",
-          "yearNumber": 2005
         },
         {
           "id": "design-digital-art/xp-pen-planshety-star-deco-displei-artist",
@@ -4382,136 +4202,10 @@
           "yearNumber": 2005
         },
         {
-          "id": "design-digital-art/3dconnexion-spacenavigator",
-          "name": "3Dconnexion SpaceNavigator",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "design-digital-art/novint-falcon",
-          "name": "Novint Falcon",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
           "id": "design-digital-art/perceptive-pixel",
           "name": "Perceptive Pixel",
           "year": "2006",
           "yearNumber": 2006
-        },
-        {
-          "id": "design-digital-art/spaceexplorer-spacepilot",
-          "name": "SpaceExplorer / SpacePilot",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "design-digital-art/apple-iphone-multitach",
-          "name": "Apple iPhone мультитач",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "design-digital-art/microsoft-surface-pixelsense",
-          "name": "Microsoft Surface (PixelSense)",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "design-digital-art/n-trig-duosense",
-          "name": "N-trig DuoSense",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "design-digital-art/reactable",
-          "name": "Reactable",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "design-digital-art/wacom-intuos3-inking-pen-airbrush",
-          "name": "Wacom Intuos3 Inking Pen / Airbrush",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "design-digital-art/livescribe-pulse",
-          "name": "Livescribe Pulse",
-          "year": "2008",
-          "yearNumber": 2008
-        },
-        {
-          "id": "design-digital-art/wacom-intuos4",
-          "name": "Wacom Intuos4",
-          "year": "2008",
-          "yearNumber": 2008
-        },
-        {
-          "id": "design-digital-art/apple-magic-mouse",
-          "name": "Apple Magic Mouse",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "design-digital-art/tangent-wave",
-          "name": "Tangent Wave",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "design-digital-art/wacom-bamboo",
-          "name": "Wacom Bamboo",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "design-digital-art/apple-magic-trackpad",
-          "name": "Apple Magic Trackpad",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/apple-ipad",
-          "name": "Apple iPad",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/microsoft-kinect",
-          "name": "Microsoft Kinect",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/playstation-move",
-          "name": "PlayStation Move",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-24hd",
-          "name": "Wacom Cintiq 24HD",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/wacom-intuos4-wireless",
-          "name": "Wacom Intuos4 Wireless",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/udraw-gametablet",
-          "name": "uDraw GameTablet",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "design-digital-art/3dconnexion-spacemouse-pro",
-          "name": "3Dconnexion SpaceMouse Pro",
-          "year": "2011",
-          "yearNumber": 2011
         },
         {
           "id": "design-digital-art/huion-pervye-planshety-napr-h420",
@@ -4520,106 +4214,10 @@
           "yearNumber": 2011
         },
         {
-          "id": "design-digital-art/samsung-galaxy-note-s-pen",
-          "name": "Samsung Galaxy Note S Pen",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "design-digital-art/wacom-inkling",
-          "name": "Wacom Inkling",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "design-digital-art/geomagic-touch-phantom-omni",
-          "name": "Geomagic Touch (Phantom Omni)",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "design-digital-art/leap-motion-controller",
-          "name": "Leap Motion Controller",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "design-digital-art/pogo-connect-adonit-jot",
-          "name": "Pogo Connect / Adonit Jot",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-22hd",
-          "name": "Wacom Cintiq 22HD",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "design-digital-art/wacom-intuos5",
-          "name": "Wacom Intuos5",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "design-digital-art/wii-u-gamepad-stilus",
-          "name": "Wii U GamePad (стилус)",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "design-digital-art/3dconnexion-spacemouse-wireless",
-          "name": "3Dconnexion SpaceMouse Wireless",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "design-digital-art/3doodler",
-          "name": "3Doodler",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "design-digital-art/fiftythree-pencil",
-          "name": "FiftyThree Pencil",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
           "id": "design-digital-art/microsoft-surface-pro-pero",
           "name": "Microsoft Surface Pro (перо)",
           "year": "2013",
           "yearNumber": 2013
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-13hd",
-          "name": "Wacom Cintiq 13HD",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-companion",
-          "name": "Wacom Cintiq Companion",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "design-digital-art/wacom-intuos-pro",
-          "name": "Wacom Intuos Pro",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "design-digital-art/hp-sprout",
-          "name": "HP Sprout",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "design-digital-art/microsoft-surface-pro-3-surface-pen-n-trig",
-          "name": "Microsoft Surface Pro 3 (Surface Pen, N-trig)",
-          "year": "2014",
-          "yearNumber": 2014
         },
         {
           "id": "design-digital-art/palette-palette-gear",
@@ -4628,80 +4226,8 @@
           "yearNumber": 2014
         },
         {
-          "id": "design-digital-art/3dconnexion-cadmouse",
-          "name": "3Dconnexion CadMouse",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "design-digital-art/apple-pencil-1-go-pokoleniya",
-          "name": "Apple Pencil (1-го поколения)",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "design-digital-art/htc-vive-kontrollery",
-          "name": "HTC Vive контроллеры",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "design-digital-art/microsoft-surface-book-pero",
-          "name": "Microsoft Surface Book (перо)",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "design-digital-art/microsoft-surface-hub",
-          "name": "Microsoft Surface Hub",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "design-digital-art/ipad-pro-12-9",
-          "name": "iPad Pro 12.9",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "design-digital-art/google-tilt-brush",
-          "name": "Google Tilt Brush",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
           "id": "design-digital-art/huion-kamvas-gt-seriya",
           "name": "Huion Kamvas (GT-серия)",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/lenovo-yoga-book-create-pad",
-          "name": "Lenovo Yoga Book (Create Pad)",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/macbook-pro-touch-bar",
-          "name": "MacBook Pro Touch Bar",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/microsoft-hololens",
-          "name": "Microsoft HoloLens",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/microsoft-surface-dial",
-          "name": "Microsoft Surface Dial",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/microsoft-surface-studio",
-          "name": "Microsoft Surface Studio",
           "year": "2016",
           "yearNumber": 2016
         },
@@ -4724,98 +4250,14 @@
           "yearNumber": 2016
         },
         {
-          "id": "design-digital-art/oculus-touch",
-          "name": "Oculus Touch",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-pro",
-          "name": "Wacom Cintiq Pro",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/wacom-expresskey-remote",
-          "name": "Wacom ExpressKey Remote",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/wacom-mobilestudio-pro",
-          "name": "Wacom MobileStudio Pro",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "design-digital-art/blackmagic-davinci-resolve-micro-panel",
-          "name": "Blackmagic DaVinci Resolve Micro Panel",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/elgato-stream-deck",
-          "name": "Elgato Stream Deck",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/logitech-craft-crown",
-          "name": "Logitech Craft (Crown)",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/logitech-mx-ergo",
-          "name": "Logitech MX Ergo",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
           "id": "design-digital-art/loupedeck",
           "name": "Loupedeck",
           "year": "2017",
           "yearNumber": 2017
         },
         {
-          "id": "design-digital-art/wacom-intuos-pro-paper-edition",
-          "name": "Wacom Intuos Pro Paper Edition",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/wacom-pro-pen-2",
-          "name": "Wacom Pro Pen 2",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/windows-mixed-reality-kontrollery",
-          "name": "Windows Mixed Reality контроллеры",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/remarkable",
-          "name": "reMarkable",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "design-digital-art/apple-pencil-2-go-pokoleniya",
-          "name": "Apple Pencil (2-го поколения)",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
           "id": "design-digital-art/gravity-sketch",
           "name": "Gravity Sketch",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "design-digital-art/logitech-crayon",
-          "name": "Logitech Crayon",
           "year": "2018",
           "yearNumber": 2018
         },
@@ -4838,80 +4280,14 @@
           "yearNumber": 2018
         },
         {
-          "id": "design-digital-art/ipad-pro-3-go-pokoleniya",
-          "name": "iPad Pro (3-го поколения)",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "design-digital-art/logitech-mx-master-3",
-          "name": "Logitech MX Master 3",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "design-digital-art/logitech-vr-ink",
-          "name": "Logitech VR Ink",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
           "id": "design-digital-art/loupedeck-ct",
           "name": "Loupedeck CT",
           "year": "2019",
           "yearNumber": 2019
         },
         {
-          "id": "design-digital-art/massless-pen",
-          "name": "Massless Pen",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "design-digital-art/valve-index-controllers",
-          "name": "Valve Index Controllers",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "design-digital-art/wacom-cintiq-16",
-          "name": "Wacom Cintiq 16",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "design-digital-art/wacom-one",
-          "name": "Wacom One",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "design-digital-art/3dconnexion-spacemouse-enterprise",
-          "name": "3Dconnexion SpaceMouse Enterprise",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "design-digital-art/blackmagic-davinci-resolve-speed-editor",
-          "name": "Blackmagic DaVinci Resolve Speed Editor",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
           "id": "design-digital-art/loupedeck-live",
           "name": "Loupedeck Live",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "design-digital-art/oculus-quest-2-kontrollery",
-          "name": "Oculus Quest 2 контроллеры",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "design-digital-art/playstation-move-v-dreams",
-          "name": "PlayStation Move в Dreams",
           "year": "2020",
           "yearNumber": 2020
         },
@@ -4934,12 +4310,6 @@
           "yearNumber": 2021
         },
         {
-          "id": "design-digital-art/samsung-s-pen-pro",
-          "name": "Samsung S Pen Pro",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
           "id": "design-digital-art/tourbox-elite",
           "name": "TourBox Elite",
           "year": "2021",
@@ -4952,162 +4322,18 @@
           "yearNumber": 2021
         },
         {
-          "id": "design-digital-art/asus-proart-dial-proart-studiobook",
-          "name": "ASUS ProArt Dial (ProArt Studiobook)",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "design-digital-art/meta-quest-pro-kontrollery-stilus-nakonechnik",
-          "name": "Meta Quest Pro контроллеры (стилус-наконечник)",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
           "id": "design-digital-art/microsoft-surface-studio-2-2022",
           "name": "Microsoft Surface Studio 2+",
           "year": "2022",
           "yearNumber": 2022
-        },
-        {
-          "id": "design-digital-art/wacom-pro-pen-3",
-          "name": "Wacom Pro Pen 3",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "design-digital-art/apple-pencil-usb-c",
-          "name": "Apple Pencil (USB-C)",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "design-digital-art/apple-vision-pro",
-          "name": "Apple Vision Pro",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "design-digital-art/apple-pencil-pro",
-          "name": "Apple Pencil Pro",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "design-digital-art/logitech-mx-creative-console",
-          "name": "Logitech MX Creative Console",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "design-digital-art/logitech-mx-ink",
-          "name": "Logitech MX Ink",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "design-digital-art/wacom-movink",
-          "name": "Wacom Movink",
-          "year": "2024",
-          "yearNumber": 2024
         }
       ],
       "photo-film-video": [
-        {
-          "id": "photo-film-video/zatvor-kolpachok-obektiva-lens-cap",
-          "name": "Затвор-колпачок объектива (lens cap)",
-          "year": "1839",
-          "yearNumber": 1839
-        },
-        {
-          "id": "photo-film-video/shtativ-derevyannyy",
-          "name": "Штатив деревянный",
-          "year": "1840",
-          "yearNumber": 1840
-        },
-        {
-          "id": "photo-film-video/fokusirovochnyy-mekh-bellows",
-          "name": "Фокусировочный мех (bellows)",
-          "year": "1850",
-          "yearNumber": 1850
-        },
-        {
-          "id": "photo-film-video/pnevmaticheskaya-grusha-spuska-zatvora",
-          "name": "Пневматическая груша спуска затвора",
-          "year": "1880",
-          "yearNumber": 1880
-        },
-        {
-          "id": "photo-film-video/thornton-pickard-roller-blind-shutter",
-          "name": "Thornton-Pickard roller-blind shutter",
-          "year": "1888",
-          "yearNumber": 1888
-        },
-        {
-          "id": "photo-film-video/kodak-no-1-shnur-vzvoda-i-knopka-spuska",
-          "name": "Kodak No.1 — шнур взвода и кнопка спуска",
-          "year": "1888",
-          "yearNumber": 1888
-        },
-        {
-          "id": "photo-film-video/rukoyatka-kinokamery-cinematographe",
-          "name": "Рукоятка кинокамеры Cinématographe",
-          "year": "1895",
-          "yearNumber": 1895
-        },
-        {
-          "id": "photo-film-video/trosik-spuska-cable-release",
-          "name": "Тросик спуска (cable release)",
-          "year": "1900",
-          "yearNumber": 1900
-        },
-        {
-          "id": "photo-film-video/rezistivnyy-dimmer",
-          "name": "Резистивный диммер",
-          "year": "1900",
-          "yearNumber": 1900
-        },
-        {
-          "id": "photo-film-video/pathe-professionnel-ruchnoy-krivoship",
-          "name": "Pathé Professionnel — ручной кривошип",
-          "year": "1905",
-          "yearNumber": 1905
-        },
-        {
-          "id": "photo-film-video/debrie-parvo-ruchnaya-kamera",
-          "name": "Debrie Parvo — ручная камера",
-          "year": "1908",
-          "yearNumber": 1908
-        },
         {
           "id": "photo-film-video/panoramnaya-golova-s-rukoyatkami",
           "name": "Панорамная голова с рукоятками",
           "year": "1910",
           "yearNumber": 1910
-        },
-        {
-          "id": "photo-film-video/bell-and-howell-2709-turel-obektivov",
-          "name": "Bell & Howell 2709 — турель объективов",
-          "year": "1912",
-          "yearNumber": 1912
-        },
-        {
-          "id": "photo-film-video/rotoscope",
-          "name": "Rotoscope",
-          "year": "1915",
-          "yearNumber": 1915
-        },
-        {
-          "id": "photo-film-video/operatorskiy-kran-neterpimost",
-          "name": "Операторский кран (Нетерпимость)",
-          "year": "1916",
-          "yearNumber": 1916
-        },
-        {
-          "id": "photo-film-video/matte-box",
-          "name": "Matte box",
-          "year": "1920",
-          "yearNumber": 1920
         },
         {
           "id": "photo-film-video/shesterenchataya-golova-geared-head",
@@ -5116,256 +4342,16 @@
           "yearNumber": 1920
         },
         {
-          "id": "photo-film-video/dolli-telezhka",
-          "name": "Долли (тележка)",
-          "year": "1920",
-          "yearNumber": 1920
-        },
-        {
-          "id": "photo-film-video/skleechnyy-press-splicer",
-          "name": "Склеечный пресс (splicer)",
-          "year": "1920",
-          "yearNumber": 1920
-        },
-        {
-          "id": "photo-film-video/moviola-upright",
-          "name": "Moviola (upright)",
-          "year": "1924",
-          "yearNumber": 1924
-        },
-        {
-          "id": "photo-film-video/bell-and-howell-eyemo-pruzhinnyy-zavod",
-          "name": "Bell & Howell Eyemo — пружинный завод",
-          "year": "1925",
-          "yearNumber": 1925
-        },
-        {
-          "id": "photo-film-video/leica-i-spuskovaya-knopka-i-golovka-vzvoda",
-          "name": "Leica I — спусковая кнопка и головка взвода",
-          "year": "1925",
-          "yearNumber": 1925
-        },
-        {
-          "id": "photo-film-video/universal-crane-broadway",
-          "name": "Universal crane (Broadway)",
-          "year": "1929",
-          "yearNumber": 1929
-        },
-        {
-          "id": "photo-film-video/mitchell-geared-head",
-          "name": "Mitchell geared head",
-          "year": "1930",
-          "yearNumber": 1930
-        },
-        {
-          "id": "photo-film-video/moviola-pedalnoe-upravlenie",
-          "name": "Moviola — педальное управление",
-          "year": "1930",
-          "yearNumber": 1930
-        },
-        {
-          "id": "photo-film-video/sinkhronizator-synchronizer",
-          "name": "Синхронизатор (synchronizer)",
-          "year": "1930",
-          "yearNumber": 1930
-        },
-        {
-          "id": "photo-film-video/optical-printer",
-          "name": "Optical printer",
-          "year": "1930",
-          "yearNumber": 1930
-        },
-        {
-          "id": "photo-film-video/mitchell-bnc",
-          "name": "Mitchell BNC",
-          "year": "1934",
-          "yearNumber": 1934
-        },
-        {
-          "id": "photo-film-video/arriflex-35-refleks-vidoiskatel-i-motor",
-          "name": "Arriflex 35 — рефлекс-видоискатель и мотор",
-          "year": "1937",
-          "yearNumber": 1937
-        },
-        {
-          "id": "photo-film-video/multiplane-camera",
-          "name": "Multiplane camera",
-          "year": "1937",
-          "yearNumber": 1937
-        },
-        {
-          "id": "photo-film-video/hasselblad-1600f-rukoyatka-i-spusk",
-          "name": "Hasselblad 1600F — рукоятка и спуск",
-          "year": "1948",
-          "yearNumber": 1948
-        },
-        {
-          "id": "photo-film-video/moskva-konvas-ruchnaya-kinokamera",
-          "name": "Moskva / «Конвас» — ручная кинокамера",
-          "year": "1950",
-          "yearNumber": 1950
-        },
-        {
-          "id": "photo-film-video/rank-cintel-telecine",
-          "name": "Rank Cintel telecine",
-          "year": "1950",
-          "yearNumber": 1950
-        },
-        {
-          "id": "photo-film-video/camera-control-unit-ccu",
-          "name": "Camera Control Unit (CCU)",
-          "year": "1950",
-          "yearNumber": 1950
-        },
-        {
-          "id": "photo-film-video/tally-light",
-          "name": "Tally light",
-          "year": "1950",
-          "yearNumber": 1950
-        },
-        {
-          "id": "photo-film-video/telestrator",
-          "name": "Telestrator",
-          "year": "1950",
-          "yearNumber": 1950
-        },
-        {
           "id": "photo-film-video/oxberry-animation-stand",
           "name": "Oxberry animation stand",
           "year": "1950",
           "yearNumber": 1950
         },
         {
-          "id": "photo-film-video/arriflex-16st",
-          "name": "Arriflex 16ST",
-          "year": "1952",
-          "yearNumber": 1952
-        },
-        {
-          "id": "photo-film-video/o-connor-fluid-head",
-          "name": "O'Connor fluid head",
-          "year": "1952",
-          "yearNumber": 1952
-        },
-        {
-          "id": "photo-film-video/steenbeck-flatbed",
-          "name": "Steenbeck flatbed",
-          "year": "1953",
-          "yearNumber": 1953
-        },
-        {
-          "id": "photo-film-video/videotape-controller-ampex-vr-1000",
-          "name": "Videotape controller (Ampex VR-1000)",
-          "year": "1956",
-          "yearNumber": 1956
-        },
-        {
-          "id": "photo-film-video/kem-flatbed",
-          "name": "KEM flatbed",
-          "year": "1957",
-          "yearNumber": 1957
-        },
-        {
-          "id": "photo-film-video/sachtler-fluid-head",
-          "name": "Sachtler fluid head",
-          "year": "1958",
-          "yearNumber": 1958
-        },
-        {
-          "id": "photo-film-video/nikon-f-spusk-i-rychag-vzvoda",
-          "name": "Nikon F — спуск и рычаг взвода",
-          "year": "1959",
-          "yearNumber": 1959
-        },
-        {
-          "id": "photo-film-video/nikon-f36-motornyy-privod",
-          "name": "Nikon F36 — моторный привод",
-          "year": "1959",
-          "yearNumber": 1959
-        },
-        {
-          "id": "photo-film-video/chapman-titan-crane",
-          "name": "Chapman Titan crane",
-          "year": "1960",
-          "yearNumber": 1960
-        },
-        {
-          "id": "photo-film-video/eclair-npr",
-          "name": "Éclair NPR",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
-          "id": "photo-film-video/ampex-vr-1000-editec",
-          "name": "Ampex VR-1000 Editec",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
-          "id": "photo-film-video/intercom",
-          "name": "Intercom",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "photo-film-video/follow-focus-mekhanicheskiy",
-          "name": "Follow focus (механический)",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "photo-film-video/louma-crane",
-          "name": "Louma crane",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "photo-film-video/wescam",
-          "name": "Wescam",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "photo-film-video/moviola-flatbed",
-          "name": "Moviola flatbed",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "photo-film-video/grass-valley-1400",
-          "name": "Grass Valley 1400",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
           "id": "photo-film-video/cmx-600",
           "name": "CMX 600",
           "year": "1971",
           "yearNumber": 1971
-        },
-        {
-          "id": "photo-film-video/panavision-panaflex",
-          "name": "Panavision Panaflex",
-          "year": "1972",
-          "yearNumber": 1972
-        },
-        {
-          "id": "photo-film-video/steadicam",
-          "name": "Steadicam",
-          "year": "1975",
-          "yearNumber": 1975
-        },
-        {
-          "id": "photo-film-video/canon-ae-1-elektronnyy-spusk",
-          "name": "Canon AE-1 — электронный спуск",
-          "year": "1976",
-          "yearNumber": 1976
-        },
-        {
-          "id": "photo-film-video/cmx-340",
-          "name": "CMX 340",
-          "year": "1976",
-          "yearNumber": 1976
         },
         {
           "id": "photo-film-video/dykstraflex",
@@ -5380,112 +4366,16 @@
           "yearNumber": 1978
         },
         {
-          "id": "photo-film-video/chapman-pee-wee",
-          "name": "Chapman Pee Wee",
-          "year": "1978",
-          "yearNumber": 1978
-        },
-        {
-          "id": "photo-film-video/arri-ff-1-follow-focus",
-          "name": "Arri FF-1 follow focus",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "photo-film-video/fujinon-zoom-demand-ruchka-zuma",
-          "name": "Fujinon zoom demand (ручка зума)",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "photo-film-video/vinten-vision",
-          "name": "Vinten Vision",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
           "id": "photo-film-video/j-l-fisher-model-10",
           "name": "J.L. Fisher Model 10",
           "year": "1980",
           "yearNumber": 1980
         },
         {
-          "id": "photo-film-video/grass-valley-300",
-          "name": "Grass Valley 300",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "photo-film-video/sony-betacam-bvw-1",
-          "name": "Sony Betacam BVW-1",
-          "year": "1982",
-          "yearNumber": 1982
-        },
-        {
-          "id": "photo-film-video/canon-lc-1-ik-pult",
-          "name": "Canon LC-1 ИК-пульт",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "photo-film-video/skycam",
-          "name": "Skycam",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
           "id": "photo-film-video/editdroid",
           "name": "EditDroid",
           "year": "1984",
           "yearNumber": 1984
-        },
-        {
-          "id": "photo-film-video/montage-picture-processor",
-          "name": "Montage Picture Processor",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "photo-film-video/da-vinci-classic",
-          "name": "Da Vinci Classic",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "photo-film-video/sony-handycam-ccd-m8",
-          "name": "Sony Handycam CCD-M8",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "photo-film-video/canon-focus-demand-tv-fokus",
-          "name": "Canon focus demand (ТВ-фокус)",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "photo-film-video/minolta-maxxum-7000",
-          "name": "Minolta Maxxum 7000",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "photo-film-video/sony-rm-450-jog-shuttle",
-          "name": "Sony RM-450 / jog-shuttle",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
-          "id": "photo-film-video/dmx512",
-          "name": "DMX512",
-          "year": "1986",
-          "yearNumber": 1986
-        },
-        {
-          "id": "photo-film-video/canon-ef-avtofokus-knopka-af",
-          "name": "Canon EF — автофокус (кнопка AF)",
-          "year": "1987",
-          "yearNumber": 1987
         },
         {
           "id": "photo-film-video/jimmy-jib",
@@ -5500,32 +4390,8 @@
           "yearNumber": 1989
         },
         {
-          "id": "photo-film-video/arri-arrihead",
-          "name": "Arri Arrihead",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/steadicam-jr",
-          "name": "Steadicam JR",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
           "id": "photo-film-video/ruchnoy-snorricam",
           "name": "Ручной SnorriCam",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/technocrane",
-          "name": "Technocrane",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/cablecam",
-          "name": "Cablecam",
           "year": "1990",
           "yearNumber": 1990
         },
@@ -5542,26 +4408,8 @@
           "yearNumber": 1990
         },
         {
-          "id": "photo-film-video/sony-bve-910-bve-9100",
-          "name": "Sony BVE-910 / BVE-9100",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
           "id": "photo-film-video/pandora-pogle",
           "name": "Pandora Pogle",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/panasonic-wj-mx50",
-          "name": "Panasonic WJ-MX50",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/newtek-video-toaster",
-          "name": "NewTek Video Toaster",
           "year": "1990",
           "yearNumber": 1990
         },
@@ -5572,52 +4420,10 @@
           "yearNumber": 1990
         },
         {
-          "id": "photo-film-video/sony-bvw-75",
-          "name": "Sony BVW-75",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/milo",
-          "name": "Milo",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "photo-film-video/etc-express",
-          "name": "ETC Express",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
           "id": "photo-film-video/preston-fiz-microforce-hu",
           "name": "Preston FIZ (Microforce/HU)",
           "year": "1992",
           "yearNumber": 1992
-        },
-        {
-          "id": "photo-film-video/canon-eos-eye-controlled-focus",
-          "name": "Canon EOS — Eye Controlled Focus",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "photo-film-video/glidecam",
-          "name": "Glidecam",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "photo-film-video/videonics-mx-1",
-          "name": "Videonics MX-1",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "photo-film-video/sony-vx1000",
-          "name": "Sony VX1000",
-          "year": "1995",
-          "yearNumber": 1995
         },
         {
           "id": "photo-film-video/avid-klaviatura-s-tsvetnoy-markirovkoy",
@@ -5626,74 +4432,14 @@
           "yearNumber": 1995
         },
         {
-          "id": "photo-film-video/libra-head-steadicam-remote",
-          "name": "Libra head (Steadicam ↔ remote)",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
-          "id": "photo-film-video/evs-lsm",
-          "name": "EVS LSM",
-          "year": "1996",
-          "yearNumber": 1996
-        },
-        {
           "id": "photo-film-video/russian-arm",
           "name": "Russian Arm",
           "year": "1997",
           "yearNumber": 1997
         },
         {
-          "id": "photo-film-video/da-vinci-2k",
-          "name": "Da Vinci 2K",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "photo-film-video/contour-shuttlepro",
-          "name": "Contour ShuttlePro",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "photo-film-video/grandma",
-          "name": "grandMA",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "photo-film-video/canon-eos-d30-tsifrovoy-spusk",
-          "name": "Canon EOS D30 — цифровой спуск",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "photo-film-video/cineflex",
-          "name": "Cineflex",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
           "id": "photo-film-video/arri-remote-head-wheels",
           "name": "Arri Remote Head (wheels)",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "photo-film-video/grass-valley-kalypso",
-          "name": "Grass Valley Kalypso",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "photo-film-video/sony-dvs-9000",
-          "name": "Sony DVS-9000",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "photo-film-video/grass-valley-ocp",
-          "name": "Grass Valley OCP",
           "year": "2000",
           "yearNumber": 2000
         },
@@ -5704,46 +4450,10 @@
           "yearNumber": 2001
         },
         {
-          "id": "photo-film-video/steadicam-merlin",
-          "name": "Steadicam Merlin",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "photo-film-video/filmlight-baselight",
-          "name": "FilmLight Baselight",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "photo-film-video/filmlight-blackboard",
-          "name": "FilmLight Blackboard",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
           "id": "photo-film-video/tangent-cp100",
           "name": "Tangent CP100",
           "year": "2003",
           "yearNumber": 2003
-        },
-        {
-          "id": "photo-film-video/spidercam",
-          "name": "Spidercam",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "photo-film-video/sony-brc-300-ptz",
-          "name": "Sony BRC-300 PTZ",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "photo-film-video/contour-shuttlexpress",
-          "name": "Contour ShuttleXpress",
-          "year": "2004",
-          "yearNumber": 2004
         },
         {
           "id": "photo-film-video/autodesk-lustre",
@@ -5764,64 +4474,16 @@
           "yearNumber": 2006
         },
         {
-          "id": "photo-film-video/grandma2",
-          "name": "grandMA2",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "photo-film-video/etc-eos",
-          "name": "ETC Eos",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "photo-film-video/red-one",
-          "name": "RED One",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
           "id": "photo-film-video/dragonframe",
           "name": "Dragonframe",
           "year": "2007",
           "yearNumber": 2007
         },
         {
-          "id": "photo-film-video/canon-eos-5d-mark-ii-video-v-dslr",
-          "name": "Canon EOS 5D Mark II — видео в DSLR",
-          "year": "2008",
-          "yearNumber": 2008
-        },
-        {
           "id": "photo-film-video/ross-acuity",
           "name": "Ross Acuity",
           "year": "2008",
           "yearNumber": 2008
-        },
-        {
-          "id": "photo-film-video/virtual-camera-avatar",
-          "name": "Virtual camera (Avatar)",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "photo-film-video/simulcam",
-          "name": "Simulcam",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "photo-film-video/arri-alexa-panel-menyu",
-          "name": "ARRI Alexa — панель меню",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "photo-film-video/gopro-hd-hero-dvukhknopochnyy-interfeys",
-          "name": "GoPro HD Hero — двухкнопочный интерфейс",
-          "year": "2010",
-          "yearNumber": 2010
         },
         {
           "id": "photo-film-video/arri-wcu-4",
@@ -5848,26 +4510,8 @@
           "yearNumber": 2010
         },
         {
-          "id": "photo-film-video/grass-valley-kayenne",
-          "name": "Grass Valley Kayenne",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
           "id": "photo-film-video/ross-carbonite",
           "name": "Ross Carbonite",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "photo-film-video/sony-rcp-1500",
-          "name": "Sony RCP-1500",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "photo-film-video/parrot-ar-drone",
-          "name": "Parrot AR.Drone",
           "year": "2010",
           "yearNumber": 2010
         },
@@ -5878,26 +4522,8 @@
           "yearNumber": 2010
         },
         {
-          "id": "photo-film-video/iphone-knopka-gromkosti-kak-spusk",
-          "name": "iPhone — кнопка громкости как спуск",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
           "id": "photo-film-video/tangent-element",
           "name": "Tangent Element",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "photo-film-video/davinci-resolve-advanced-panel",
-          "name": "DaVinci Resolve Advanced Panel",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "photo-film-video/blackmagic-atem-1-m-e",
-          "name": "Blackmagic ATEM 1 M/E",
           "year": "2011",
           "yearNumber": 2011
         },
@@ -5908,92 +4534,8 @@
           "yearNumber": 2012
         },
         {
-          "id": "photo-film-video/filmlight-blackboard-2",
-          "name": "FilmLight Blackboard 2",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "photo-film-video/atem-television-studio",
-          "name": "ATEM Television Studio",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "photo-film-video/bolt",
-          "name": "Bolt",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "photo-film-video/gopro-smart-remote",
-          "name": "GoPro Smart Remote",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/hasselblad-wi-fi-phocus-mobile",
-          "name": "Hasselblad Wi-Fi Phocus Mobile",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/freefly-movi-m10",
-          "name": "Freefly MōVI M10",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/shotover-f1",
-          "name": "Shotover F1",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/panasonic-aw-rp50",
-          "name": "Panasonic AW-RP50",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/dji-phantom",
-          "name": "DJI Phantom",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/dji-phantom-2-vision",
-          "name": "DJI Phantom 2 Vision",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/kuka-robot-gravity",
-          "name": "Kuka robot (Gravity)",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "photo-film-video/sony-camera-remote-api-imaging-edge",
-          "name": "Sony Camera Remote API / Imaging Edge",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
           "id": "photo-film-video/light-ranger-2-preston",
           "name": "Light Ranger 2 (Preston)",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "photo-film-video/movi-controller",
-          "name": "MōVI Controller",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "photo-film-video/dji-ronin",
-          "name": "DJI Ronin",
           "year": "2014",
           "yearNumber": 2014
         },
@@ -6004,76 +4546,10 @@
           "yearNumber": 2014
         },
         {
-          "id": "photo-film-video/sony-rm-ip10-ptz-kontroller",
-          "name": "Sony RM-IP10 PTZ-контроллер",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "photo-film-video/dji-inspire-1",
-          "name": "DJI Inspire 1",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "photo-film-video/smartphone-app-remote-canon-camera-connect",
-          "name": "Smartphone app remote (Canon Camera Connect)",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
           "id": "photo-film-video/cmotion-cpro",
           "name": "cmotion cPRO",
           "year": "2015",
           "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/dji-osmo",
-          "name": "DJI Osmo",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/zhiyun-crane",
-          "name": "Zhiyun Crane",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/zhiyun-smooth",
-          "name": "Zhiyun Smooth",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/filmlight-slate",
-          "name": "FilmLight Slate",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/sony-xvs",
-          "name": "Sony XVS",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/arri-skypanel",
-          "name": "ARRI SkyPanel",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "photo-film-video/dji-focus",
-          "name": "DJI Focus",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "photo-film-video/dji-osmo-mobile",
-          "name": "DJI Osmo Mobile",
-          "year": "2016",
-          "yearNumber": 2016
         },
         {
           "id": "photo-film-video/arri-srh-3",
@@ -6094,44 +4570,8 @@
           "yearNumber": 2016
         },
         {
-          "id": "photo-film-video/dji-mavic-pro",
-          "name": "DJI Mavic Pro",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "photo-film-video/dji-ronin-2",
-          "name": "DJI Ronin 2",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/dji-force-mobile",
-          "name": "DJI Force Mobile",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/dji-master-wheels",
-          "name": "DJI Master Wheels",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
           "id": "photo-film-video/arri-master-grip",
           "name": "Arri Master Grip",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/loupedeck",
-          "name": "Loupedeck",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/elgato-stream-deck",
-          "name": "Elgato Stream Deck",
           "year": "2017",
           "yearNumber": 2017
         },
@@ -6142,68 +4582,14 @@
           "yearNumber": 2017
         },
         {
-          "id": "photo-film-video/davinci-resolve-mini-panel",
-          "name": "DaVinci Resolve Mini Panel",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/davinci-resolve-micro-panel",
-          "name": "DaVinci Resolve Micro Panel",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/dji-spark",
-          "name": "DJI Spark",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "photo-film-video/blackmagic-pocket-cinema-camera-4k",
-          "name": "Blackmagic Pocket Cinema Camera 4K",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
           "id": "photo-film-video/tilta-nucleus-m",
           "name": "Tilta Nucleus-M",
           "year": "2018",
           "yearNumber": 2018
         },
         {
-          "id": "photo-film-video/dji-osmo-pocket",
-          "name": "DJI Osmo Pocket",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "photo-film-video/loupedeck-ct",
-          "name": "Loupedeck CT",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
           "id": "photo-film-video/tourbox",
           "name": "Tourbox",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "photo-film-video/atem-mini",
-          "name": "ATEM Mini",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "photo-film-video/skydio-2",
-          "name": "Skydio 2",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "photo-film-video/grandma3",
-          "name": "grandMA3",
           "year": "2019",
           "yearNumber": 2019
         },
@@ -6232,18 +4618,6 @@
           "yearNumber": 2020
         },
         {
-          "id": "photo-film-video/davinci-resolve-editor-keyboard",
-          "name": "DaVinci Resolve Editor Keyboard",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
-          "id": "photo-film-video/atem-mini-pro",
-          "name": "ATEM Mini Pro",
-          "year": "2020",
-          "yearNumber": 2020
-        },
-        {
           "id": "photo-film-video/roland-v-8hd",
           "name": "Roland V-8HD",
           "year": "2020",
@@ -6256,85 +4630,13 @@
           "yearNumber": 2020
         },
         {
-          "id": "photo-film-video/dji-lidar-focus-range-finder",
-          "name": "DJI LiDAR Focus Range Finder",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "photo-film-video/canon-eos-r3-eye-control-af",
-          "name": "Canon EOS R3 — Eye Control AF",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "photo-film-video/blackmagic-davinci-resolve-speed-editor",
-          "name": "Blackmagic DaVinci Resolve Speed Editor",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "photo-film-video/dji-fpv",
-          "name": "DJI FPV",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "photo-film-video/dji-motion-controller",
-          "name": "DJI Motion Controller",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "photo-film-video/arri-alexa-35-pult-camera-control-panel",
-          "name": "Arri Alexa 35 — пульт Camera Control Panel",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "photo-film-video/dji-avata",
-          "name": "DJI Avata",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "photo-film-video/final-cut-pro-dlya-ipad",
-          "name": "Final Cut Pro для iPad",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
           "id": "photo-film-video/tangent-arc",
           "name": "Tangent Arc",
           "year": "2023",
           "yearNumber": 2023
-        },
-        {
-          "id": "photo-film-video/iphone-16-camera-control",
-          "name": "iPhone 16 Camera Control",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "photo-film-video/logitech-mx-creative-console",
-          "name": "Logitech MX Creative Console",
-          "year": "2024",
-          "yearNumber": 2024
-        },
-        {
-          "id": "photo-film-video/davinci-resolve-micro-color-panel",
-          "name": "DaVinci Resolve Micro Color Panel",
-          "year": "2024",
-          "yearNumber": 2024
         }
       ],
       "performance": [
-        {
-          "id": "performance/deus-eks-mashina-mekhane",
-          "name": "Деус экс машина (механэ)",
-          "year": "ок. 500 до н.э.",
-          "yearNumber": -500
-        },
         {
           "id": "performance/ekkiklema",
           "name": "Эккиклема",
@@ -6354,70 +4656,16 @@
           "yearNumber": 80
         },
         {
-          "id": "performance/vayang-kulit-trostevye-tenevye-kukly",
-          "name": "Ваянг кулит — тростевые теневые куклы",
-          "year": "1000",
-          "yearNumber": 1000
-        },
-        {
-          "id": "performance/mung-roy-kukly-na-vode",
-          "name": "Мунг-рой (куклы на воде)",
-          "year": "1100",
-          "yearNumber": 1100
-        },
-        {
           "id": "performance/stsenicheskie-mashiny-brunelleski-ray",
           "name": "Сценические машины Брунеллески («Рай»)",
           "year": "1439",
           "yearNumber": 1439
         },
         {
-          "id": "performance/ruchnaya-penkovaya-kolosnikovaya-sistema-hemp",
-          "name": "Ручная пеньковая колосниковая система (hemp)",
-          "year": "1600",
-          "yearNumber": 1600
-        },
-        {
-          "id": "performance/marionetochnaya-vaga",
-          "name": "Марионеточная вага",
-          "year": "1600",
-          "yearNumber": 1600
-        },
-        {
-          "id": "performance/vayang-golek",
-          "name": "Ваянг голек",
-          "year": "1600",
-          "yearNumber": 1600
-        },
-        {
           "id": "performance/sistema-vagon-i-shest-chariot-and-pole",
           "name": "Система «вагон и шест» (chariot-and-pole)",
           "year": "1641",
           "yearNumber": 1641
-        },
-        {
-          "id": "performance/panch-i-dzhudi-perchatochnaya-kukla",
-          "name": "Панч и Джуди (перчаточная кукла)",
-          "year": "1662",
-          "yearNumber": 1662
-        },
-        {
-          "id": "performance/bunraku-trekhkuklovodnoe-upravlenie",
-          "name": "Бунраку — трёхкукловодное управление",
-          "year": "1734",
-          "yearNumber": 1734
-        },
-        {
-          "id": "performance/seri-lyuki-podemniki-kabuki",
-          "name": "Сери (люки-подъёмники кабуки)",
-          "year": "1753",
-          "yearNumber": 1753
-        },
-        {
-          "id": "performance/povorotnaya-stsena-kabuki-mavari-butay",
-          "name": "Поворотная сцена кабуки (мавари-бутай)",
-          "year": "1758",
-          "yearNumber": 1758
         },
         {
           "id": "performance/mashineriya-drottningkholmskogo-teatra",
@@ -6438,28 +4686,10 @@
           "yearNumber": 1800
         },
         {
-          "id": "performance/opera-dei-pupi",
-          "name": "Опера деи пупи",
-          "year": "1800",
-          "yearNumber": 1800
-        },
-        {
           "id": "performance/cheshskie-marionetki",
           "name": "Чешские марионетки",
           "year": "1800",
           "yearNumber": 1800
-        },
-        {
-          "id": "performance/gazovyy-stol-gas-table",
-          "name": "Газовый стол (gas table)",
-          "year": "1817",
-          "yearNumber": 1817
-        },
-        {
-          "id": "performance/laymlayt-drummondov-svet",
-          "name": "Лаймлайт (друммондов свет)",
-          "year": "1837",
-          "yearNumber": 1837
         },
         {
           "id": "performance/elektricheskoe-osveshchenie-teatra-savoy",
@@ -6468,46 +4698,16 @@
           "yearNumber": 1881
         },
         {
-          "id": "performance/khronofotografiya-mareya-kostyum-s-metkami",
-          "name": "Хронофотография Марея (костюм с метками)",
-          "year": "1883",
-          "yearNumber": 1883
-        },
-        {
-          "id": "performance/gidravlicheskaya-stsena-asphaleia-budapeshtskaya-opera",
-          "name": "Гидравлическая сцена Asphaleia (Будапештская опера)",
-          "year": "1884",
-          "yearNumber": 1884
-        },
-        {
           "id": "performance/j-r-clancy-kolosnikovoe-oborudovanie",
           "name": "J. R. Clancy колосниковое оборудование",
           "year": "1885",
           "yearNumber": 1885
         },
         {
-          "id": "performance/protivovesnaya-kolosnikovaya-sistema",
-          "name": "Противовесная колосниковая система",
-          "year": "1890",
-          "yearNumber": 1890
-        },
-        {
-          "id": "performance/loi-fuller-svet-i-kostyum-tantsa-serpantina",
-          "name": "Лои Фуллер — свет и костюм «Танца серпантина»",
-          "year": "1891",
-          "yearNumber": 1891
-        },
-        {
           "id": "performance/colour-organ-rimingtona",
           "name": "Colour organ Римингтона",
           "year": "1893",
           "yearNumber": 1893
-        },
-        {
-          "id": "performance/elektricheskaya-povorotnaya-stsena-lautenshlegera",
-          "name": "Электрическая поворотная сцена Лаутеншлегера",
-          "year": "1896",
-          "yearNumber": 1896
         },
         {
           "id": "performance/reostatnyy-dimmer-s-mekhanicheskim-interlokom",
@@ -6558,12 +4758,6 @@
           "yearNumber": 1917
         },
         {
-          "id": "performance/termenvoks",
-          "name": "Терменвокс",
-          "year": "1920",
-          "yearNumber": 1920
-        },
-        {
           "id": "performance/triadicheskiy-balet-kostyumy",
           "name": "«Триадический балет» — костюмы",
           "year": "1922",
@@ -6582,12 +4776,6 @@
           "yearNumber": 1923
         },
         {
-          "id": "performance/ruchnoy-pirotekhnicheskiy-pult-elektricheskogo-zapala",
-          "name": "Ручной пиротехнический пульт электрического запала",
-          "year": "1930",
-          "yearNumber": 1930
-        },
-        {
           "id": "performance/modulyator-sveta-i-prostranstva",
           "name": "Модулятор света и пространства",
           "year": "1930",
@@ -6598,12 +4786,6 @@
           "name": "Тростевая кукла театра Образцова",
           "year": "1931",
           "yearNumber": 1931
-        },
-        {
-          "id": "performance/gidravlicheskie-lifty-radio-city-music-hall",
-          "name": "Гидравлические лифты Radio City Music Hall",
-          "year": "1932",
-          "yearNumber": 1932
         },
         {
           "id": "performance/terpsiton",
@@ -6684,12 +4866,6 @@
           "yearNumber": 1958
         },
         {
-          "id": "performance/audio-animatronics-upravlenie-tonami-na-plenke",
-          "name": "Audio-Animatronics: управление тонами на плёнке",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
           "id": "performance/great-moments-with-mr-lincoln",
           "name": "Great Moments with Mr. Lincoln",
           "year": "1964",
@@ -6734,12 +4910,6 @@
         {
           "id": "performance/tv-bra-for-living-sculpture",
           "name": "TV Bra for Living Sculpture",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
-          "id": "performance/haunted-mansion-proektsii-na-byusty",
-          "name": "Haunted Mansion — проекции на бюсты",
           "year": "1969",
           "yearNumber": 1969
         },
@@ -6798,12 +4968,6 @@
           "yearNumber": 1980
         },
         {
-          "id": "performance/stelarc-tretya-ruka",
-          "name": "Stelarc «Третья рука»",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
           "id": "performance/displacements",
           "name": "«Displacements»",
           "year": "1980",
@@ -6836,12 +5000,6 @@
         {
           "id": "performance/d54",
           "name": "D54",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "performance/midi",
-          "name": "MIDI",
           "year": "1983",
           "yearNumber": 1983
         },
@@ -6990,12 +5148,6 @@
           "yearNumber": 1989
         },
         {
-          "id": "performance/power-glove-v-performanse",
-          "name": "Power Glove в перформансе",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
           "id": "performance/etc-obsession",
           "name": "ETC Obsession",
           "year": "1990",
@@ -7066,12 +5218,6 @@
           "name": "ILDA (стандарт лазерного сигнала)",
           "year": "1992",
           "yearNumber": 1992
-        },
-        {
-          "id": "performance/velikany-royal-de-luxe",
-          "name": "Великаны Royal de Luxe",
-          "year": "1993",
-          "yearNumber": 1993
         },
         {
           "id": "performance/t-reks-parka-yurskogo-perioda-valdo-model",
@@ -7166,12 +5312,6 @@
         {
           "id": "performance/medialon-manager",
           "name": "Medialon Manager",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "performance/fontany-belladzhio",
-          "name": "Фонтаны Белладжио",
           "year": "1998",
           "yearNumber": 1998
         },
@@ -7548,12 +5688,6 @@
           "yearNumber": 2010
         },
         {
-          "id": "performance/kinect-v-performanse",
-          "name": "Kinect в перформансе",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
           "id": "performance/pixmob",
           "name": "PixMob",
           "year": "2010",
@@ -7796,58 +5930,10 @@
       ],
       "interactive-art": [
         {
-          "id": "interactive-art/stereoskop",
-          "name": "Стереоскоп",
-          "year": "1838",
-          "yearNumber": 1838
-        },
-        {
-          "id": "interactive-art/termenvoks",
-          "name": "Терменвокс",
-          "year": "1920",
-          "yearNumber": 1920
-        },
-        {
-          "id": "interactive-art/link-trainer",
-          "name": "Link Trainer",
-          "year": "1929",
-          "yearNumber": 1929
-        },
-        {
           "id": "interactive-art/terpsiton",
           "name": "Терпситон",
           "year": "1932",
           "yearNumber": 1932
-        },
-        {
-          "id": "interactive-art/view-master",
-          "name": "View-Master",
-          "year": "1939",
-          "yearNumber": 1939
-        },
-        {
-          "id": "interactive-art/disneyland-dark-rides-peter-pan-s-flight",
-          "name": "Disneyland dark rides (Peter Pan's Flight)",
-          "year": "1955",
-          "yearNumber": 1955
-        },
-        {
-          "id": "interactive-art/livro-da-criacao-taktilnye-knigi",
-          "name": "Livro da Criação / тактильные книги",
-          "year": "1958",
-          "yearNumber": 1958
-        },
-        {
-          "id": "interactive-art/poeme-electronique-philips-pavilion",
-          "name": "Poème électronique / Philips Pavilion",
-          "year": "1958",
-          "yearNumber": 1958
-        },
-        {
-          "id": "interactive-art/happenings-18-happenings-in-6-parts",
-          "name": "Happenings — 18 Happenings in 6 Parts",
-          "year": "1959",
-          "yearNumber": 1959
         },
         {
           "id": "interactive-art/bichos",
@@ -7862,28 +5948,10 @@
           "yearNumber": 1960
         },
         {
-          "id": "interactive-art/svetovoe-pero-light-pen",
-          "name": "Световое перо (light pen)",
-          "year": "1960",
-          "yearNumber": 1960
-        },
-        {
           "id": "interactive-art/sensorama",
           "name": "Sensorama",
           "year": "1962",
           "yearNumber": 1962
-        },
-        {
-          "id": "interactive-art/participation-tv",
-          "name": "Participation TV",
-          "year": "1963",
-          "yearNumber": 1963
-        },
-        {
-          "id": "interactive-art/sketchpad-svetovoe-pero",
-          "name": "Sketchpad (световое перо)",
-          "year": "1963",
-          "yearNumber": 1963
         },
         {
           "id": "interactive-art/cut-piece",
@@ -7898,34 +5966,10 @@
           "yearNumber": 1964
         },
         {
-          "id": "interactive-art/infinity-mirror-room-phalli-s-field",
-          "name": "Infinity Mirror Room—Phalli's Field",
-          "year": "1965",
-          "yearNumber": 1965
-        },
-        {
-          "id": "interactive-art/magnet-tv",
-          "name": "Magnet TV",
-          "year": "1965",
-          "yearNumber": 1965
-        },
-        {
-          "id": "interactive-art/music-for-solo-performer",
-          "name": "Music for Solo Performer",
-          "year": "1965",
-          "yearNumber": 1965
-        },
-        {
           "id": "interactive-art/partitsipatornye-labirinty-grav",
           "name": "Партиципаторные лабиринты GRAV",
           "year": "1965",
           "yearNumber": 1965
-        },
-        {
-          "id": "interactive-art/9-evenings-theatre-and-engineering",
-          "name": "9 Evenings: Theatre and Engineering",
-          "year": "1966",
-          "yearNumber": 1966
         },
         {
           "id": "interactive-art/variations-v",
@@ -7940,38 +5984,8 @@
           "yearNumber": 1967
         },
         {
-          "id": "interactive-art/penetravel-tropicalia",
-          "name": "Penetrável / Tropicália",
-          "year": "1967",
-          "yearNumber": 1967
-        },
-        {
-          "id": "interactive-art/colloquy-of-mobiles",
-          "name": "Colloquy of Mobiles",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "interactive-art/cybernetic-serendipity-vystavka",
-          "name": "Cybernetic Serendipity (выставка)",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "interactive-art/mother-of-all-demos-mysh-akkordnaya-klaviatura",
-          "name": "Mother of All Demos (мышь, аккордная клавиатура)",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
           "id": "interactive-art/relational-objects",
           "name": "Relational Objects",
-          "year": "1968",
-          "yearNumber": 1968
-        },
-        {
-          "id": "interactive-art/sam-sound-activated-mobile",
-          "name": "SAM (Sound Activated Mobile)",
           "year": "1968",
           "yearNumber": 1968
         },
@@ -7982,88 +5996,16 @@
           "yearNumber": 1968
         },
         {
-          "id": "interactive-art/exploratorium",
-          "name": "Exploratorium",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
-          "id": "interactive-art/glowflow",
-          "name": "Glowflow",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
-          "id": "interactive-art/ontario-science-centre-interactive-exhibits",
-          "name": "Ontario Science Centre interactive exhibits",
-          "year": "1969",
-          "yearNumber": 1969
-        },
-        {
           "id": "interactive-art/wipe-cycle",
           "name": "Wipe Cycle",
           "year": "1969",
           "yearNumber": 1969
         },
         {
-          "id": "interactive-art/live-taped-video-corridor",
-          "name": "Live-Taped Video Corridor",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "interactive-art/metaplay",
-          "name": "Metaplay",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "interactive-art/senster",
-          "name": "Senster",
-          "year": "1970",
-          "yearNumber": 1970
-        },
-        {
-          "id": "interactive-art/psychic-space",
-          "name": "Psychic Space",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
-          "id": "interactive-art/tactile-dome-exploratorium",
-          "name": "Tactile Dome (Exploratorium)",
-          "year": "1971",
-          "yearNumber": 1971
-        },
-        {
-          "id": "interactive-art/present-continuous-past-s",
-          "name": "Present Continuous Past(s)",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
-          "id": "interactive-art/rhythm-0",
-          "name": "Rhythm 0",
-          "year": "1974",
-          "yearNumber": 1974
-        },
-        {
           "id": "interactive-art/videoplace",
           "name": "Videoplace",
           "year": "1975",
           "yearNumber": 1975
-        },
-        {
-          "id": "interactive-art/sayre-glove",
-          "name": "Sayre Glove",
-          "year": "1977",
-          "yearNumber": 1977
-        },
-        {
-          "id": "interactive-art/aspen-movie-map",
-          "name": "Aspen Movie Map",
-          "year": "1978",
-          "yearNumber": 1978
         },
         {
           "id": "interactive-art/hole-in-space",
@@ -8078,42 +6020,6 @@
           "yearNumber": 1980
         },
         {
-          "id": "interactive-art/stelarc-third-hand",
-          "name": "Stelarc — Third Hand",
-          "year": "1980",
-          "yearNumber": 1980
-        },
-        {
-          "id": "interactive-art/lorna",
-          "name": "Lorna",
-          "year": "1983",
-          "yearNumber": 1983
-        },
-        {
-          "id": "interactive-art/deep-contact",
-          "name": "Deep Contact",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "interactive-art/digital-glove-dataglove",
-          "name": "Digital Glove/DataGlove",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "interactive-art/the-hands",
-          "name": "The Hands",
-          "year": "1984",
-          "yearNumber": 1984
-        },
-        {
-          "id": "interactive-art/view-virtual-interface-environment-workstation",
-          "name": "VIEW (Virtual Interface Environment Workstation)",
-          "year": "1985",
-          "yearNumber": 1985
-        },
-        {
           "id": "interactive-art/points-of-view",
           "name": "Points of View",
           "year": "1986",
@@ -8126,44 +6032,8 @@
           "yearNumber": 1987
         },
         {
-          "id": "interactive-art/dialogue-in-the-dark",
-          "name": "Dialogue in the Dark",
-          "year": "1988",
-          "yearNumber": 1988
-        },
-        {
-          "id": "interactive-art/power-glove",
-          "name": "Power Glove",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "interactive-art/the-legible-city",
-          "name": "The Legible City",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
-          "id": "interactive-art/zkm",
-          "name": "ZKM",
-          "year": "1989",
-          "yearNumber": 1989
-        },
-        {
           "id": "interactive-art/interactive-plant-growing",
           "name": "Interactive Plant Growing",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "interactive-art/portrait-one",
-          "name": "Portrait One",
-          "year": "1990",
-          "yearNumber": 1990
-        },
-        {
-          "id": "interactive-art/very-nervous-system",
-          "name": "Very Nervous System",
           "year": "1990",
           "yearNumber": 1990
         },
@@ -8172,42 +6042,6 @@
           "name": "Mandala System",
           "year": "1991",
           "yearNumber": 1991
-        },
-        {
-          "id": "interactive-art/surprising-spiral",
-          "name": "Surprising Spiral",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "interactive-art/virtuality-dactyl-nightmare",
-          "name": "Virtuality «Dactyl Nightmare»",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "interactive-art/untitled-portrait-of-ross-in-l-a",
-          "name": "«Untitled» (Portrait of Ross in L.A.)",
-          "year": "1991",
-          "yearNumber": 1991
-        },
-        {
-          "id": "interactive-art/cave",
-          "name": "CAVE",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "interactive-art/marble-answering-machine",
-          "name": "Marble Answering Machine",
-          "year": "1992",
-          "yearNumber": 1992
-        },
-        {
-          "id": "interactive-art/music-insects",
-          "name": "Music Insects",
-          "year": "1992",
-          "yearNumber": 1992
         },
         {
           "id": "interactive-art/telematic-dreaming",
@@ -8228,44 +6062,8 @@
           "yearNumber": 1993
         },
         {
-          "id": "interactive-art/phantom-haptic-device",
-          "name": "PHANToM haptic device",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "interactive-art/placeholder",
-          "name": "Placeholder",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
-          "id": "interactive-art/virtuality-arkadnye-vr-mashiny",
-          "name": "Virtuality (аркадные VR-машины)",
-          "year": "1993",
-          "yearNumber": 1993
-        },
-        {
           "id": "interactive-art/a-volve",
           "name": "A-Volve",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "interactive-art/bar-code-hotel",
-          "name": "Bar Code Hotel",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "interactive-art/epizoo",
-          "name": "Epizoo",
-          "year": "1994",
-          "yearNumber": 1994
-        },
-        {
-          "id": "interactive-art/ornitorrinco-teleprisutstvie",
-          "name": "Ornitorrinco / телеприсутствие",
           "year": "1994",
           "yearNumber": 1994
         },
@@ -8276,40 +6074,10 @@
           "yearNumber": 1994
         },
         {
-          "id": "interactive-art/beyond-pages",
-          "name": "Beyond Pages",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "interactive-art/osmose",
-          "name": "Osmose",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
           "id": "interactive-art/place-a-user-s-manual",
           "name": "PLACE – a user's manual",
           "year": "1995",
           "yearNumber": 1995
-        },
-        {
-          "id": "interactive-art/ping-body",
-          "name": "Ping Body",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "interactive-art/telegarden",
-          "name": "Telegarden",
-          "year": "1995",
-          "yearNumber": 1995
-        },
-        {
-          "id": "interactive-art/brain-opera",
-          "name": "Brain Opera",
-          "year": "1996",
-          "yearNumber": 1996
         },
         {
           "id": "interactive-art/molecular-informatics",
@@ -8318,112 +6086,10 @@
           "yearNumber": 1996
         },
         {
-          "id": "interactive-art/ars-electronica-center",
-          "name": "Ars Electronica Center",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "interactive-art/genesis-telepresence-works",
-          "name": "Genesis / Telepresence works",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "interactive-art/icc-intercommunication-center",
-          "name": "ICC InterCommunication Center",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "interactive-art/re-positioning-fear",
-          "name": "Re:Positioning Fear",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "interactive-art/tangible-bits",
-          "name": "Tangible Bits",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "interactive-art/zkm-media-museum",
-          "name": "ZKM Media Museum",
-          "year": "1997",
-          "yearNumber": 1997
-        },
-        {
-          "id": "interactive-art/buzz-lightyear-astro-blasters",
-          "name": "Buzz Lightyear Astro Blasters",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "interactive-art/ephemere",
-          "name": "Ephémère",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "interactive-art/musicbottles",
-          "name": "musicBottles",
-          "year": "1998",
-          "yearNumber": 1998
-        },
-        {
-          "id": "interactive-art/ernesto-neto-prokhodimye-taktilnye-skulptury",
-          "name": "Ernesto Neto — проходимые/тактильные скульптуры",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "interactive-art/stelarc-exoskeleton",
-          "name": "Stelarc «Exoskeleton»",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "interactive-art/text-rain",
-          "name": "Text Rain",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
           "id": "interactive-art/vectorial-elevation",
           "name": "Vectorial Elevation",
           "year": "1999",
           "yearNumber": 1999
-        },
-        {
-          "id": "interactive-art/wooden-mirror",
-          "name": "Wooden Mirror",
-          "year": "1999",
-          "yearNumber": 1999
-        },
-        {
-          "id": "interactive-art/brainball",
-          "name": "Brainball",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "interactive-art/easel",
-          "name": "Easel",
-          "year": "2000",
-          "yearNumber": 2000
-        },
-        {
-          "id": "interactive-art/audio-walks",
-          "name": "Audio walks",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "interactive-art/blinkenlights",
-          "name": "Blinkenlights",
-          "year": "2001",
-          "yearNumber": 2001
         },
         {
           "id": "interactive-art/body-movies",
@@ -8438,54 +6104,6 @@
           "yearNumber": 2001
         },
         {
-          "id": "interactive-art/ganzfeld-seriya",
-          "name": "Ganzfeld (серия)",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "interactive-art/teamlab-osnovanie-studii",
-          "name": "teamLab (основание студии)",
-          "year": "2001",
-          "yearNumber": 2001
-        },
-        {
-          "id": "interactive-art/eyetoy",
-          "name": "EyeToy",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "interactive-art/weather-project",
-          "name": "Weather Project",
-          "year": "2003",
-          "yearNumber": 2003
-        },
-        {
-          "id": "interactive-art/eyeborg-antenna",
-          "name": "Eyeborg antenna",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "interactive-art/fog-colour-rooms",
-          "name": "Fog/colour rooms",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "interactive-art/tmema-manual-input-sessions",
-          "name": "Tmema «Manual Input Sessions»",
-          "year": "2004",
-          "yearNumber": 2004
-        },
-        {
-          "id": "interactive-art/electroplankton",
-          "name": "Electroplankton",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
           "id": "interactive-art/interactive-floor-projection-gesturetek",
           "name": "Interactive floor projection (GestureTek)",
           "year": "2005",
@@ -8498,76 +6116,10 @@
           "yearNumber": 2005
         },
         {
-          "id": "interactive-art/messa-di-voce",
-          "name": "Messa di Voce",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "interactive-art/under-scan",
-          "name": "Under Scan",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "interactive-art/reactable",
-          "name": "reacTable",
-          "year": "2005",
-          "yearNumber": 2005
-        },
-        {
-          "id": "interactive-art/cloud-gate",
-          "name": "Cloud Gate",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
           "id": "interactive-art/microsoft-surface-multitach-jeff-han",
           "name": "Microsoft Surface / мультитач Jeff Han",
           "year": "2006",
           "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/nintendo-wii-remote-v-installyatsiyakh",
-          "name": "Nintendo Wii Remote в инсталляциях",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/open-burble",
-          "name": "Open Burble",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/pulse-room",
-          "name": "Pulse Room",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/test-site",
-          "name": "Test Site",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/the-hug-shirt",
-          "name": "The Hug Shirt",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/volume",
-          "name": "Volume",
-          "year": "2006",
-          "yearNumber": 2006
-        },
-        {
-          "id": "interactive-art/blind-light",
-          "name": "Blind Light",
-          "year": "2007",
-          "yearNumber": 2007
         },
         {
           "id": "interactive-art/eyewriter",
@@ -8576,38 +6128,8 @@
           "yearNumber": 2007
         },
         {
-          "id": "interactive-art/light-graffiti-laser-tag",
-          "name": "Light Graffiti/«Laser Tag»",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "interactive-art/microphones",
-          "name": "Microphones",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "interactive-art/opto-isolator",
-          "name": "Opto-Isolator",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "interactive-art/real-escape-game",
-          "name": "Real Escape Game",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
           "id": "interactive-art/rider-spoke",
           "name": "Rider Spoke",
-          "year": "2007",
-          "yearNumber": 2007
-        },
-        {
-          "id": "interactive-art/tenori-on",
-          "name": "Tenori-on",
           "year": "2007",
           "yearNumber": 2007
         },
@@ -8624,28 +6146,10 @@
           "yearNumber": 2008
         },
         {
-          "id": "interactive-art/pulse-park",
-          "name": "Pulse Park",
-          "year": "2008",
-          "yearNumber": 2008
-        },
-        {
           "id": "interactive-art/toy-story-midway-mania",
           "name": "Toy Story Midway Mania!",
           "year": "2008",
           "yearNumber": 2008
-        },
-        {
-          "id": "interactive-art/deep-space-8k",
-          "name": "Deep Space 8K",
-          "year": "2009",
-          "yearNumber": 2009
-        },
-        {
-          "id": "interactive-art/double-taker-snout",
-          "name": "Double-Taker (Snout)",
-          "year": "2009",
-          "yearNumber": 2009
         },
         {
           "id": "interactive-art/emotiv-epoc",
@@ -8654,74 +6158,14 @@
           "yearNumber": 2009
         },
         {
-          "id": "interactive-art/aaron-koblin-the-johnny-cash-project",
-          "name": "Aaron Koblin «The Johnny Cash Project»",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "interactive-art/kinect-installyatsii",
-          "name": "Kinect-инсталляции",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "interactive-art/pulse-index",
-          "name": "Pulse Index",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
-          "id": "interactive-art/siftables-sifteo",
-          "name": "Siftables / Sifteo",
-          "year": "2010",
-          "yearNumber": 2010
-        },
-        {
           "id": "interactive-art/the-artist-is-present",
           "name": "The Artist Is Present",
           "year": "2010",
           "yearNumber": 2010
         },
         {
-          "id": "interactive-art/21-balancoires",
-          "name": "21 Balançoires",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "interactive-art/parapark",
-          "name": "Parapark",
-          "year": "2011",
-          "yearNumber": 2011
-        },
-        {
-          "id": "interactive-art/hunger-in-los-angeles",
-          "name": "Hunger in Los Angeles",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "interactive-art/rain-room",
-          "name": "Rain Room",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
           "id": "interactive-art/sublimate-relief",
           "name": "Sublimate / Relief",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "interactive-art/the-treachery-of-sanctuary",
-          "name": "The Treachery of Sanctuary",
-          "year": "2012",
-          "yearNumber": 2012
-        },
-        {
-          "id": "interactive-art/these-associations",
-          "name": "These Associations",
           "year": "2012",
           "yearNumber": 2012
         },
@@ -8750,56 +6194,8 @@
           "yearNumber": 2013
         },
         {
-          "id": "interactive-art/oculus-rift-dk1",
-          "name": "Oculus Rift DK1",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "interactive-art/seismic-sense",
-          "name": "Seismic sense",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "interactive-art/the-drowned-man",
-          "name": "The Drowned Man",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "interactive-art/ultrahaptics",
-          "name": "Ultrahaptics",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
-          "id": "interactive-art/inform",
-          "name": "inFORM",
-          "year": "2013",
-          "yearNumber": 2013
-        },
-        {
           "id": "interactive-art/cooper-hewitt-pen",
           "name": "Cooper Hewitt Pen",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "interactive-art/harry-potter-wands-diagon-alley-interactive-wands",
-          "name": "Harry Potter wands (Diagon Alley interactive wands)",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "interactive-art/hiroshi-ishii-transform",
-          "name": "Hiroshi Ishii TRANSFORM",
-          "year": "2014",
-          "yearNumber": 2014
-        },
-        {
-          "id": "interactive-art/riverbed",
-          "name": "Riverbed",
           "year": "2014",
           "yearNumber": 2014
         },
@@ -8816,50 +6212,8 @@
           "yearNumber": 2015
         },
         {
-          "id": "interactive-art/pompom-mirror",
-          "name": "PomPom Mirror",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "interactive-art/project-soli",
-          "name": "Project Soli",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "interactive-art/zero-latency",
-          "name": "Zero Latency",
-          "year": "2015",
-          "yearNumber": 2015
-        },
-        {
-          "id": "interactive-art/floating-in-the-falling-universe-of-flowers",
-          "name": "Floating in the Falling Universe of Flowers",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/htc-vive",
-          "name": "HTC Vive",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/house-of-eternal-return",
-          "name": "House of Eternal Return",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
           "id": "interactive-art/mi-mu-gloves",
           "name": "MI.MU Gloves",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/microsoft-hololens",
-          "name": "Microsoft HoloLens",
           "year": "2016",
           "yearNumber": 2016
         },
@@ -8868,66 +6222,6 @@
           "name": "Notes on Blindness VR",
           "year": "2016",
           "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/pokemon-go-location-based",
-          "name": "Pokémon Go (location-based)",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/project-jacquard",
-          "name": "Project Jacquard",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/the-void",
-          "name": "The VOID",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/then-she-fell",
-          "name": "Then She Fell",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/tilt-brush",
-          "name": "Tilt Brush",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/wellcome-science-museum-wonderlab",
-          "name": "Wellcome / Science Museum «Wonderlab»",
-          "year": "2016",
-          "yearNumber": 2016
-        },
-        {
-          "id": "interactive-art/artechouse",
-          "name": "Artechouse",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "interactive-art/carne-y-arena",
-          "name": "Carne y Arena",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "interactive-art/chalkroom",
-          "name": "Chalkroom",
-          "year": "2017",
-          "yearNumber": 2017
-        },
-        {
-          "id": "interactive-art/dear-angelica",
-          "name": "Dear Angelica",
-          "year": "2017",
-          "yearNumber": 2017
         },
         {
           "id": "interactive-art/sandbox-vr",
@@ -8942,26 +6236,8 @@
           "yearNumber": 2018
         },
         {
-          "id": "interactive-art/dreamscape-immersive",
-          "name": "Dreamscape Immersive",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "interactive-art/hyper-reality-star-wars-secrets-of-the-empire",
-          "name": "Hyper-reality «Star Wars: Secrets of the Empire»",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
           "id": "interactive-art/magic-leap-one",
           "name": "Magic Leap One",
-          "year": "2018",
-          "yearNumber": 2018
-        },
-        {
-          "id": "interactive-art/teamlab-borderless",
-          "name": "teamLab Borderless",
           "year": "2018",
           "yearNumber": 2018
         },
@@ -8970,66 +6246,6 @@
           "name": "teamLab Planets",
           "year": "2018",
           "yearNumber": 2018
-        },
-        {
-          "id": "interactive-art/immersive-van-gogh",
-          "name": "Immersive Van Gogh",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "interactive-art/millennium-falcon-smugglers-run",
-          "name": "Millennium Falcon: Smugglers Run",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "interactive-art/oculus-quest-hand-tracking",
-          "name": "Oculus Quest hand tracking",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "interactive-art/valve-index-controllers",
-          "name": "Valve Index Controllers",
-          "year": "2019",
-          "yearNumber": 2019
-        },
-        {
-          "id": "interactive-art/omega-mart",
-          "name": "Omega Mart",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "interactive-art/super-nintendo-world-power-up-band",
-          "name": "Super Nintendo World Power Up Band",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "interactive-art/superblue-miami",
-          "name": "Superblue Miami",
-          "year": "2021",
-          "yearNumber": 2021
-        },
-        {
-          "id": "interactive-art/meow-wolf-convergence-station",
-          "name": "Meow Wolf Convergence Station",
-          "year": "2022",
-          "yearNumber": 2022
-        },
-        {
-          "id": "interactive-art/sphere-las-vegas",
-          "name": "Sphere (Las Vegas)",
-          "year": "2023",
-          "yearNumber": 2023
-        },
-        {
-          "id": "interactive-art/apple-vision-pro",
-          "name": "Apple Vision Pro",
-          "year": "2024",
-          "yearNumber": 2024
         }
       ]
     },

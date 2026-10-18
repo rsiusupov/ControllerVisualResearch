@@ -15,6 +15,7 @@ import hashlib
 import json
 import re
 import ssl
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -122,9 +123,25 @@ def sniff_ext(data: bytes, content_type: str) -> str:
     }.get(kind, "")
 
 
+_pace_lock = threading.Lock()
+_pace_at = 0.0
+
+
+def pace() -> None:
+    """Keep Wikimedia requests under a few per second across all workers."""
+    global _pace_at
+    with _pace_lock:
+        now = time.monotonic()
+        wait = _pace_at - now
+        _pace_at = max(now, _pace_at) + 0.35
+    if wait > 0:
+        time.sleep(wait)
+
+
 def fetch(url: str, accept: str) -> tuple[bytes, str]:
     last_error = None
     for attempt in range(6):
+        pace()
         try:
             request = Request(url, headers={"User-Agent": UA, "Accept": accept})
             with urlopen(request, timeout=60) as response:
