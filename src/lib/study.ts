@@ -1,4 +1,5 @@
 import type { Controller, Tag } from "@/data/types";
+import { withBasePath } from "@/src/lib/base-path";
 
 export type StudyRecord = {
   id: string;
@@ -62,7 +63,9 @@ export function toStudy(record: Controller): StudyRecord {
     platform: text(record.platform, legacy?.platform),
     description: text(record.description, legacy?.form),
     significance: text(record.significance, legacy?.innovation),
-    images: Array.isArray(record.images) ? record.images.filter((src) => src.trim()) : [],
+    images: Array.isArray(record.images)
+      ? record.images.map((src) => src.trim()).filter(Boolean).map(withBasePath)
+      : [],
     sourceUrls: urls(record.sourceUrls, legacy?.sources),
     imageUrls: urls(record.imageUrls, legacy?.imageSources),
   };
