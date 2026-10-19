@@ -9,9 +9,10 @@ type Props = ComponentProps<"input"> & {
   id: string;
   hiddenLabel?: boolean;
   icon?: ReactNode;
+  suffix?: ReactNode;
 };
 
-export function TextField({ label, id, hiddenLabel, icon, ...props }: Props) {
+export function TextField({ label, id, hiddenLabel, icon, suffix, ...props }: Props) {
   return (
     <div className="field field-control">
       <Label htmlFor={id} className={hiddenLabel ? "sr-only" : undefined}>
@@ -20,6 +21,7 @@ export function TextField({ label, id, hiddenLabel, icon, ...props }: Props) {
       <InputRoot>
         {icon ? <InputPrefix>{icon}</InputPrefix> : null}
         <InputField id={id} {...props} />
+        {suffix}
       </InputRoot>
     </div>
   );

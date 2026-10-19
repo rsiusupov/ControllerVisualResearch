@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, type FocusEvent, type FormEvent, type KeyboardEvent, type MouseEvent, type PointerEvent } from "react";
 import { normalizePath, notifyRoute, transitionPush } from "@/src/lib/navigate";
+import { InputSuffixButton } from "@/components/ui/input/input";
 import { Button } from "@/src/ui/button";
 import { Icon } from "@/src/ui/icon";
 import { TextField } from "@/src/ui/text-field";
@@ -34,8 +35,14 @@ export function SiteHeader() {
   }, [open]);
 
   function collapse(restoreFocus = false) {
+    if (home) return;
     if (restoreFocus) restoreToggleFocus.current = true;
     setOpen(false);
+  }
+
+  function clearQuery() {
+    setQuery("");
+    document.getElementById("site-q")?.focus({ preventScroll: true });
   }
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -82,56 +89,71 @@ export function SiteHeader() {
     collapse();
   }
 
+  const form = (
+    <form
+      className="search-form"
+      style={{ viewTransitionName: "site-search" }}
+      action="/search/"
+      onSubmit={onSubmit}
+      onKeyDown={onFormKeyDown}
+      onPointerDown={onFormPointerDown}
+      onBlur={onFormBlur}
+      onClick={onFormClick}
+    >
+      <TextField
+        id="site-q"
+        name="q"
+        label="Поиск"
+        hiddenLabel
+        icon={<Icon name="search" />}
+        value={query}
+        placeholder="Поиск по каталогу"
+        onChange={(event) => setQuery(event.target.value)}
+        suffix={
+          query ? (
+            <InputSuffixButton
+              aria-label="Очистить"
+              onPointerDown={(event) => event.preventDefault()}
+              onClick={clearQuery}
+            >
+              <Icon name="close" />
+            </InputSuffixButton>
+          ) : null
+        }
+      />
+      <Button type="submit" variant="primary">
+        Найти
+      </Button>
+    </form>
+  );
+
+  const toggle = (
+    <Button
+      ref={toggleRef}
+      type="button"
+      variant="ghost"
+      iconOnly
+      tooltip={false}
+      className="search-toggle"
+      style={{ viewTransitionName: "site-search" }}
+      aria-label="Поиск"
+      aria-expanded={false}
+      onClick={() => setOpen(true)}
+    >
+      <Icon name="search" />
+    </Button>
+  );
+
+  if (home) {
+    return <div className="home-search">{form}</div>;
+  }
+
   return (
     <header className={open ? "top" : "top is-search-collapsed"}>
-      {home ? (
-        <p className="kicker">BLABLALABS</p>
-      ) : (
-        <TransitionLink href="/" className="wordmark">
-          BLA BLA LABS
-        </TransitionLink>
-      )}
-      {open ? (
-        <form
-          className="search-form"
-          style={{ viewTransitionName: "site-search" }}
-          action="/search/"
-          onSubmit={onSubmit}
-          onKeyDown={onFormKeyDown}
-          onPointerDown={onFormPointerDown}
-          onBlur={onFormBlur}
-          onClick={onFormClick}
-        >
-          <TextField
-            id="site-q"
-            name="q"
-            label="Поиск"
-            hiddenLabel
-            icon={<Icon name="search" />}
-            value={query}
-            placeholder="Поиск по каталогу"
-            onChange={(event) => setQuery(event.target.value)}
-          />
-          <Button type="submit" variant="primary">
-            Найти
-          </Button>
-        </form>
-      ) : (
-        <Button
-          ref={toggleRef}
-          type="button"
-          variant="ghost"
-          iconOnly
-          tooltip={false}
-          className="search-toggle"
-          style={{ viewTransitionName: "site-search" }}
-          aria-label="Поиск"
-          aria-expanded={false}
-          onClick={() => setOpen(true)}
-        >
-          <Icon name="search" />
-        </Button>
-      )}
+      <TransitionLink href="/" className="wordmark">
+        BLA BLA LABS
+      </TransitionLink>
+      {open ? form : toggle}
     </header>
   );
 }

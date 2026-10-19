@@ -61,7 +61,7 @@ const CATEGORIES = [
   {
     sheet: "design",
     slug: "design-digital-art",
-    label: "Проектирование и дизайн / digital art",
+    label: "Проектирование",
     description: "Создание и редактирование визуальных объектов.",
   },
   {
@@ -73,13 +73,13 @@ const CATEGORIES = [
   {
     sheet: "performance",
     slug: "performance",
-    label: "Перформанс и сценические искусства",
+    label: "Сцена",
     description: "Управление физическим и художественным исполнением.",
   },
   {
     sheet: "interactive_art",
     slug: "interactive-art",
-    label: "Интерактивное искусство и иммерсивные произведения",
+    label: "Иммерсивное искусство",
     description: "Взаимодействие с произведением, а не только его создание.",
   },
 ];

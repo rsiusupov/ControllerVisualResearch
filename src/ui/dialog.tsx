@@ -21,6 +21,7 @@ export function Dialog({
   restoreFocus: HTMLElement | null;
   children: ReactNode;
 }) {
+  const frameRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const onCloseRef = useRef(onClose);
   const restoreRef = useRef<HTMLElement | null>(null);
@@ -31,13 +32,14 @@ export function Dialog({
   useEffect(() => {
     if (!open) return;
     const back = restoreRef.current;
+    const frame = frameRef.current;
     const panel = panelRef.current;
     backdropReady.current = false;
     panel?.focus({ preventScroll: true });
 
     const focusable = () =>
-      panel
-        ? Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(
+      frame
+        ? Array.from(frame.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(
             (node) => !node.hasAttribute("disabled"),
           )
         : [];
@@ -49,23 +51,28 @@ export function Dialog({
         onCloseRef.current();
         return;
       }
-      if (event.key !== "Tab" || !panel) return;
+      if (event.key !== "Tab" || !frame) return;
       const nodes = focusable();
       if (!nodes.length) {
         event.preventDefault();
-        panel.focus({ preventScroll: true });
+        panel?.focus({ preventScroll: true });
         return;
       }
       const first = nodes[0];
       const last = nodes[nodes.length - 1];
       const current = document.activeElement;
-      const inside = current instanceof Node && panel.contains(current);
+      const inside = current instanceof Node && frame.contains(current);
+      if (!inside || current === panel) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+        return;
+      }
       if (event.shiftKey) {
-        if (current === first || current === panel || !inside) {
+        if (current === first) {
           event.preventDefault();
           last.focus();
         }
-      } else if (current === last || !inside) {
+      } else if (current === last) {
         event.preventDefault();
         first.focus();
       }
@@ -98,28 +105,29 @@ export function Dialog({
           onCloseRef.current();
         }}
       />
-      <div
-        ref={panelRef}
-        className="record-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={labelledBy}
-        tabIndex={-1}
-      >
-        <div className="record-dialog-bar">
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            iconOnly
-            tooltip={false}
-            aria-label="Закрыть"
-            onClick={() => onCloseRef.current()}
-          >
-            <Icon name="close" />
-          </Button>
+      <div ref={frameRef} className="record-dialog-frame">
+        <div
+          ref={panelRef}
+          className="record-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={labelledBy}
+          tabIndex={-1}
+        >
+          <div className="record-dialog-body">{children}</div>
         </div>
-        <div className="record-dialog-body">{children}</div>
+        <Button
+          type="button"
+          className="record-dialog-close"
+          variant="outline"
+          size="sm"
+          iconOnly
+          tooltip={false}
+          aria-label="Закрыть"
+          onClick={() => onCloseRef.current()}
+        >
+          <Icon name="close" />
+        </Button>
       </div>
     </div>,
     document.body,

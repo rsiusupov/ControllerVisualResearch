@@ -51,11 +51,6 @@ export function SearchStudy({ records, options }: { records: StudyRecord[]; opti
 
   return (
     <main className="search-page">
-      <header className="branch-head">
-        <p className="kicker">Весь каталог</p>
-        <h1>Поиск</h1>
-        <p className="lede">Свободный текст и фильтры складываются. Опечатки в запросе тоже ищутся.</p>
-      </header>
       <TextField
         id="search-q"
         label="Текст"

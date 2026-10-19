@@ -120,12 +120,18 @@ function clusterSize(imageCount: number) {
   return { width, height };
 }
 
-const FAN = Math.PI / 4;
-const STEM = 56;
-const AXIS_GAP = 48;
-const SCENE_SLACK = 100;
+const FAN = Math.PI / 7;
+const NAME_RADIUS = 92;
+const BAND = 250;
+const SCENE_SLACK = 72;
 
-/** One controller leaves at 90°. Several fan from 45° left of the perpendicular to 45° right. */
+function cardsOverlap(a: Draft, b: Draft, gap: number) {
+  return (
+    Math.abs(a.x - b.x) < (a.w + b.w) / 2 + gap && Math.abs(a.y - b.y) < (a.h + b.h) / 2 + gap
+  );
+}
+
+/** A lone card sits straight out. Several share a shallow fan, still clearly above or below the axis. */
 function fanAngles(count: number) {
   if (count <= 1) return [0];
   const angles: number[] = [];
@@ -135,63 +141,18 @@ function fanAngles(count: number) {
   return angles;
 }
 
-function outwardSpots(sizes: { w: number; h: number }[]) {
-  const cols = Math.min(3, sizes.length);
-  const spots: { x: number; y: number }[] = [];
-  let rowStart = NAME_H / 2 + GAP;
-  for (let start = 0; start < sizes.length; start += cols) {
-    const row = sizes.slice(start, start + cols);
-    const rowW = row.reduce((sum, size) => sum + size.w, 0) + GAP * (row.length - 1);
-    const rowH = Math.max(...row.map((size) => size.h));
-    let left = -rowW / 2;
-    for (const size of row) {
-      spots.push({ x: left + size.w / 2, y: rowStart + size.h / 2 });
-      left += size.w + GAP;
-    }
-    rowStart += rowH + GAP;
-  }
-  return spots;
-}
-
-function radiusFloor(count: number) {
-  let radius = STEM + NAME_H / 2;
-  for (const angle of fanAngles(count)) {
-    const sine = Math.abs(Math.sin(angle));
-    const cosine = Math.max(0.2, Math.abs(Math.cos(angle)));
-    const reach = (NAME_W / 2) * sine + (NAME_H / 2) * cosine;
-    radius = Math.max(radius, reach + STEM, (AXIS_GAP + NAME_H / 2) / cosine);
-  }
-  return radius;
-}
-
-function cardsOverlap(a: Draft, b: Draft, gap: number) {
-  return (
-    Math.abs(a.x - b.x) < (a.w + b.w) / 2 + gap && Math.abs(a.y - b.y) < (a.h + b.h) / 2 + gap
-  );
-}
-
-function hasOverlap(cards: Draft[], gap: number) {
-  for (let i = 0; i < cards.length; i += 1) {
-    for (let j = i + 1; j < cards.length; j += 1) {
-      if (cardsOverlap(cards[i], cards[j], gap)) return true;
-    }
-  }
-  return false;
-}
-
-function buildYear(
-  members: StudyRecord[],
-  side: "above" | "below",
-  yearIndex: number,
-  radius: number,
-) {
+function placeMembers(members: StudyRecord[], side: "above" | "below", yearIndex: number) {
   const outward = side === "below" ? 1 : -1;
   const angles = fanAngles(members.length);
   const drafts: Draft[] = [];
   members.forEach((record, index) => {
     const angle = angles[index] ?? 0;
-    const x = radius * Math.sin(angle);
-    const y = outward * radius * Math.cos(angle);
+    const nx = Math.sin(angle);
+    const ny = outward * Math.cos(angle);
+    const tx = Math.cos(angle);
+    const ty = -outward * Math.sin(angle);
+    const x = nx * NAME_RADIUS;
+    const y = ny * NAME_RADIUS;
     drafts.push({
       id: `${record.id}:name`,
       kind: "name",
@@ -207,46 +168,64 @@ function buildYear(
       meta: record.manufacturer,
       src: "",
     });
-    const sizes = record.images.map(() => ({ w: IMG_W, h: IMG_H }));
-    const spots = outwardSpots(sizes);
-    record.images.forEach((src, imageIndex) => {
-      const spot = spots[imageIndex] ?? { x: 0, y: NAME_H / 2 + GAP + IMG_H / 2 };
-      const size = sizes[imageIndex] ?? { w: IMG_W, h: IMG_H };
+    const images = record.images;
+    const totalW = images.length * IMG_W + Math.max(0, images.length - 1) * GAP;
+    let cursor = -totalW / 2;
+    const along = NAME_H / 2 + GAP + IMG_H / 2;
+    images.forEach((src, imageIndex) => {
+      const tangent = cursor + IMG_W / 2;
       drafts.push({
         id: `${record.id}:image:${imageIndex}`,
         kind: "image",
         year: record.yearNumber,
         yearIndex,
         recordId: record.id,
-        x: x + spot.x,
-        y: y + outward * spot.y,
-        w: size.w,
-        h: size.h,
+        x: x + nx * along + tx * tangent,
+        y: y + ny * along + ty * tangent,
+        w: IMG_W,
+        h: IMG_H,
         name: record.name,
         yearLabel: "",
         meta: "",
         src,
       });
+      cursor += IMG_W + GAP;
     });
   });
+  separateAlong(drafts);
+  clampToBand(drafts);
+  separateAlong(drafts);
   return drafts;
 }
 
-function placeYear(members: StudyRecord[], side: "above" | "below", yearIndex: number) {
+function separateAlong(cards: Draft[]) {
   const gap = 10;
-  let low = radiusFloor(members.length);
-  let high = low;
-  while (hasOverlap(buildYear(members, side, yearIndex, high), gap) && high < 6400) {
-    high = Math.max(high + 48, high * 1.45);
-  }
-  if (!hasOverlap(buildYear(members, side, yearIndex, high), gap)) {
-    for (let step = 0; step < 16; step += 1) {
-      const mid = (low + high) / 2;
-      if (hasOverlap(buildYear(members, side, yearIndex, mid), gap)) low = mid;
-      else high = mid;
+  for (let pass = 0; pass < 48; pass += 1) {
+    let moved = false;
+    for (let i = 0; i < cards.length; i += 1) {
+      const a = cards[i];
+      for (let j = i + 1; j < cards.length; j += 1) {
+        const b = cards[j];
+        if (!cardsOverlap(a, b, gap)) continue;
+        const dx = b.x - a.x;
+        const sign = dx < 0 ? -1 : dx > 0 ? 1 : i < j ? 1 : -1;
+        const push = ((a.w + b.w) / 2 + gap - Math.abs(dx)) / 2;
+        a.x -= sign * push;
+        b.x += sign * push;
+        moved = true;
+      }
     }
+    if (!moved) break;
   }
-  return buildYear(members, side, yearIndex, high);
+}
+
+function clampToBand(cards: Draft[]) {
+  for (const card of cards) {
+    const edge = Math.abs(card.y) + card.h / 2;
+    if (edge <= BAND) continue;
+    const sign = card.y < 0 ? -1 : 1;
+    card.y = sign * (BAND - card.h / 2);
+  }
 }
 
 function separate(cards: Draft[]) {
@@ -423,7 +402,13 @@ export function layoutDated(
   for (const year of yearNumbers) {
     const members = (groups.get(year) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name, "ru"));
     const side: "above" | "below" = placed.length % 2 === 0 ? "below" : "above";
-    const drafts = placeYear(members, side, placed.length);
+    const below: StudyRecord[] = [];
+    const above: StudyRecord[] = [];
+    members.forEach((record, index) => (index % 2 === 0 ? below : above).push(record));
+    const drafts = [
+      ...placeMembers(below, "below", placed.length),
+      ...placeMembers(above, "above", placed.length),
+    ];
     const box = extent(drafts);
     let x = axisOrigin + (year - axisStart) * scale;
     x = Math.max(x, axisOrigin + GAP - box.minX);

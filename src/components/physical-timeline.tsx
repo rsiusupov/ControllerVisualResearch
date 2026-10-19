@@ -23,6 +23,31 @@ const CLICK_SLOP = 6;
 const ZOOM_MIN = 0.5;
 const ZOOM_MAX = 2.5;
 const ZOOM_STEP = 1.25;
+/** Matches the photo `.image-pop` animation in globals.css. */
+const APPEAR_MS = 800;
+const APPEAR_EASE = [0.23, 1, 0.32, 1] as const;
+
+function appearEase(amount: number, x1: number, y1: number, x2: number, y2: number) {
+  if (amount <= 0) return 0;
+  if (amount >= 1) return 1;
+  const ax = 1 - 3 * x2 + 3 * x1;
+  const bx = 3 * x2 - 6 * x1;
+  const cx = 3 * x1;
+  const ay = 1 - 3 * y2 + 3 * y1;
+  const by = 3 * y2 - 6 * y1;
+  const cy = 3 * y1;
+  const sample = (u: number, a: number, b: number, c: number) => ((a * u + b) * u + c) * u;
+  const slope = (u: number, a: number, b: number, c: number) => (3 * a * u + 2 * b) * u + c;
+  let u = amount;
+  for (let step = 0; step < 8; step += 1) {
+    const x = sample(u, ax, bx, cx) - amount;
+    const dx = slope(u, ax, bx, cx);
+    if (Math.abs(x) < 1e-5) break;
+    if (Math.abs(dx) < 1e-6) break;
+    u = Math.min(1, Math.max(0, u - x / dx));
+  }
+  return sample(u, ay, by, cy);
+}
 
 type Runtime = {
   bodies: Body[];
@@ -47,6 +72,19 @@ function controllerId(card: SceneCard) {
   const marker = card.kind === "image" ? ":image:" : ":name";
   const index = card.id.lastIndexOf(marker);
   return index === -1 ? card.id : card.id.slice(0, index);
+}
+
+/** Origin on the photo edge that faces its name card, so scale grows out of the title. */
+function imageAppearOrigin(card: SceneCard, cards: SceneCard[]) {
+  const name = cards[card.nameIndex];
+  if (!name || name.kind !== "name") return "center";
+  const dx = name.x - card.x;
+  const dy = name.y - card.y;
+  const reach = Math.max(Math.abs(dx), Math.abs(dy));
+  if (reach < 1) return "center";
+  const ox = Math.min(100, Math.max(0, 50 + (dx / reach) * 50));
+  const oy = Math.min(100, Math.max(0, 50 + (dy / reach) * 50));
+  return `${Math.round(ox)}% ${Math.round(oy)}%`;
 }
 
 type TimelineOrigin = {
@@ -124,6 +162,10 @@ function Playfield({
   const wiresRef = useRef<SVGPathElement>(null);
   const nodesRef = useRef<(HTMLElement | null)[]>([]);
   const simRef = useRef<Runtime | null>(null);
+  const appearOriginRef = useRef(new Map<string, string>());
+  const appearedRef = useRef(new Set<string>());
+  const wireStartRef = useRef(new Map<string, number>());
+  const paintRef = useRef<() => void>(() => {});
   const fittedRef = useRef<Map<string, { w: number; h: number }>>(new Map());
   const adoptRef = useRef<(index: number, naturalWidth: number, naturalHeight: number) => void>(() => {});
   const crowdedStart = scene.years.some((year) => Math.abs(year.x - scene.axisStartX) < 56);
@@ -174,10 +216,26 @@ function Playfield({
       travel: 0,
     };
     simRef.current = runtime;
+    let wireFrame = 0;
+
+    const wireReveal = (id: string, now: number) => {
+      const start = wireStartRef.current.get(id);
+      if (start == null) return { progress: 0, live: false };
+      if (start < 0) return { progress: 1, live: false };
+      const elapsed = (now - start) / APPEAR_MS;
+      if (elapsed >= 1) {
+        wireStartRef.current.set(id, -1);
+        return { progress: 1, live: false };
+      }
+      return { progress: appearEase(Math.max(0, elapsed), ...APPEAR_EASE), live: true };
+    };
 
     const paint = () => {
+      if (simRef.current !== runtime) return;
       const nodes = nodesRef.current;
+      const now = performance.now();
       let path = "";
+      let growing = false;
       for (let index = 0; index < bodies.length; index += 1) {
         const body = bodies[index];
         const node = nodes[index];
@@ -191,14 +249,26 @@ function Playfield({
           const year = scene.years[card.yearIndex];
           if (!year) continue;
           path += `M${year.x} ${year.y}L${body.x} ${body.y}`;
-        } else {
-          const name = bodies[card.nameIndex];
-          if (!name) continue;
-          path += `M${name.x} ${name.y}L${body.x} ${body.y}`;
+          continue;
         }
+        const name = bodies[card.nameIndex];
+        if (!name) continue;
+        const reveal = wireReveal(card.id, now);
+        if (reveal.live) growing = true;
+        if (reveal.progress <= 0) continue;
+        const x = name.x + (body.x - name.x) * reveal.progress;
+        const y = name.y + (body.y - name.y) * reveal.progress;
+        path += `M${name.x} ${name.y}L${x} ${y}`;
       }
       wires.setAttribute("d", path);
+      if (growing && !wireFrame) {
+        wireFrame = window.requestAnimationFrame(() => {
+          wireFrame = 0;
+          paint();
+        });
+      }
     };
+    paintRef.current = paint;
 
     const kick = () => {
       if (runtime.frame) return;
@@ -501,9 +571,110 @@ function Playfield({
       window.removeEventListener("pointerup", onUp);
       runtime.cancel?.();
       if (runtime.frame) cancelAnimationFrame(runtime.frame);
+      if (wireFrame) window.cancelAnimationFrame(wireFrame);
       simRef.current = null;
+      paintRef.current = () => {};
     };
   }, [axis, scene]);
+
+  useLayoutEffect(() => {
+    // Scale lives on `.image-pop`. Paint rewrites the article translate every frame.
+    // Photos stay scaled down until their name card crosses the timeline scroller.
+    // A transform sits between that scroller and the cards, so IntersectionObserver
+    // never reports them; the scroller's box is checked directly instead.
+    const scroll = scrollRef.current;
+    const nodes = nodesRef.current;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const pending = new Map<number, { id: string; pop: HTMLElement }[]>();
+
+    const settle = (pop: HTMLElement) => {
+      if (pop.dataset.appear === "run") return;
+      pop.dataset.appear = "done";
+    };
+
+    for (let index = 0; index < scene.cards.length; index += 1) {
+      const card = scene.cards[index];
+      if (card?.kind !== "image") continue;
+      const pop = nodes[index]?.querySelector(":scope > .image-pop");
+      if (!(pop instanceof HTMLElement)) continue;
+      if (reduce || appearedRef.current.has(card.id)) {
+        appearedRef.current.add(card.id);
+        if (!wireStartRef.current.has(card.id)) wireStartRef.current.set(card.id, 0);
+        settle(pop);
+        continue;
+      }
+      const list = pending.get(card.nameIndex) ?? [];
+      list.push({ id: card.id, pop });
+      pending.set(card.nameIndex, list);
+    }
+
+    if (reduce || pending.size === 0 || !scroll) {
+      paintRef.current();
+      return;
+    }
+
+    const start = (nameIndex: number) => {
+      const photos = pending.get(nameIndex);
+      if (!photos) return false;
+      const now = performance.now();
+      let began = false;
+      for (const photo of photos) {
+        if (appearedRef.current.has(photo.id) || photo.pop.dataset.appear === "run" || photo.pop.dataset.appear === "done") {
+          continue;
+        }
+        appearedRef.current.add(photo.id);
+        if (!wireStartRef.current.has(photo.id)) wireStartRef.current.set(photo.id, now);
+        photo.pop.dataset.appear = "run";
+        began = true;
+      }
+      return began;
+    };
+
+    const reveal = () => {
+      if (pending.size === 0) return;
+      const box = scroll.getBoundingClientRect();
+      if (box.width < 1 || box.height < 1) return;
+      let began = false;
+      for (const nameIndex of [...pending.keys()]) {
+        const nameNode = nodes[nameIndex];
+        if (!nameNode) continue;
+        const rect = nameNode.getBoundingClientRect();
+        if (rect.width < 1 || rect.height < 1) continue;
+        const seen =
+          rect.bottom > box.top &&
+          rect.top < box.bottom &&
+          rect.right > box.left &&
+          rect.left < box.right;
+        if (!seen) continue;
+        if (start(nameIndex)) began = true;
+        pending.delete(nameIndex);
+      }
+      if (began) paintRef.current();
+    };
+
+    reveal();
+    paintRef.current();
+    scroll.addEventListener("scroll", reveal, { passive: true });
+    const stack = scroll.closest(".timeline-stack");
+    if (stack && stack !== scroll) stack.addEventListener("scroll", reveal, { passive: true });
+    const resize = new ResizeObserver(reveal);
+    resize.observe(scroll);
+    let frames = 0;
+    let raf = 0;
+    const follow = () => {
+      reveal();
+      frames += 1;
+      if (pending.size > 0 && frames < 48) raf = window.requestAnimationFrame(follow);
+    };
+    raf = window.requestAnimationFrame(follow);
+
+    return () => {
+      scroll.removeEventListener("scroll", reveal);
+      if (stack && stack !== scroll) stack.removeEventListener("scroll", reveal);
+      resize.disconnect();
+      if (raf) window.cancelAnimationFrame(raf);
+    };
+  }, [scene]);
 
   useLayoutEffect(() => {
     const node = originRef.current;
@@ -608,6 +779,14 @@ function Playfield({
     frame.addEventListener("wheel", onWheel, { passive: false });
     return () => frame.removeEventListener("wheel", onWheel);
   }, []);
+
+  const appearOrigin = (card: SceneCard) => {
+    const known = appearOriginRef.current.get(card.id);
+    if (known) return known;
+    const next = imageAppearOrigin(card, scene.cards);
+    appearOriginRef.current.set(card.id, next);
+    return next;
+  };
 
   const zoomBy = (factor: number) => {
     const scroll = scrollRef.current;
@@ -715,20 +894,22 @@ function Playfield({
                 {card.meta ? <p className="quiet">{card.meta}</p> : null}
               </Panel>
             ) : (
-              <Panel className="image-face p-0 gap-0">
-                <img
-                  src={card.src}
-                  alt={card.name}
-                  draggable={false}
-                  onLoad={(event) => {
-                    const img = event.currentTarget;
-                    adoptRef.current(index, img.naturalWidth, img.naturalHeight);
-                  }}
-                  onError={(event) => {
-                    event.currentTarget.dataset.broken = "";
-                  }}
-                />
-              </Panel>
+              <div className="image-pop" style={{ transformOrigin: appearOrigin(card) }}>
+                <Panel className="image-face bg-transparent p-0 gap-0 shadow-none ring-0">
+                  <img
+                    src={card.src}
+                    alt={card.name}
+                    draggable={false}
+                    onLoad={(event) => {
+                      const img = event.currentTarget;
+                      adoptRef.current(index, img.naturalWidth, img.naturalHeight);
+                    }}
+                    onError={(event) => {
+                      event.currentTarget.dataset.broken = "";
+                    }}
+                  />
+                </Panel>
+              </div>
             )}
           </article>
         ))}

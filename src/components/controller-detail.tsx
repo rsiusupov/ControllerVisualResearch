@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { Tag } from "@/data/types";
 import type { StudyRecord } from "@/src/lib/study";
 
@@ -62,35 +62,75 @@ function SourceFact({ urls }: { urls: string[] }) {
   );
 }
 
-function imageLayout(count: number) {
-  if (count <= 1) return "single";
-  if (count === 2) return "pair";
-  if (count === 3) return "mosaic";
-  return "grid";
-}
-
 function LocalImages({ images }: { images: string[] }) {
+  const trackRef = useRef<HTMLDivElement>(null);
   const [failed, setFailed] = useState<ReadonlySet<string>>(new Set());
+  const [active, setActive] = useState(0);
   const live = images.filter((src) => src && !failed.has(src));
   if (!live.length) return null;
+  const index = Math.min(active, live.length - 1);
+
+  const fail = (src: string) =>
+    setFailed((current) => {
+      if (current.has(src)) return current;
+      const next = new Set(current);
+      next.add(src);
+      return next;
+    });
+
+  const show = (next: number) => {
+    const track = trackRef.current;
+    setActive(next);
+    const slide = track?.children.item(next);
+    if (!track || !(slide instanceof HTMLElement)) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    track.scrollTo({ left: slide.offsetLeft, behavior: reduce ? "auto" : "smooth" });
+  };
+
   return (
-    <div className="record-images" data-layout={imageLayout(live.length)} data-n={live.length}>
-      {live.map((src) => (
-        <img
-          key={src}
-          src={src}
-          alt=""
-          draggable={false}
-          onError={() =>
-            setFailed((current) => {
-              if (current.has(src)) return current;
-              const next = new Set(current);
-              next.add(src);
-              return next;
-            })
+    <div className="record-gallery">
+      <div
+        className="record-gallery-track"
+        ref={trackRef}
+        onScroll={(event) => {
+          const track = event.currentTarget;
+          const left = track.scrollLeft;
+          let next = 0;
+          let best = Number.POSITIVE_INFINITY;
+          for (let i = 0; i < track.children.length; i++) {
+            const slide = track.children.item(i);
+            if (!(slide instanceof HTMLElement)) continue;
+            const distance = Math.abs(slide.offsetLeft - left);
+            if (distance < best) {
+              best = distance;
+              next = i;
+            }
           }
-        />
-      ))}
+          setActive((current) => (current === next ? current : next));
+        }}
+      >
+        {live.map((src) => (
+          <div key={src} className="record-gallery-slide">
+            <img src={src} alt="" draggable={false} onError={() => fail(src)} />
+          </div>
+        ))}
+      </div>
+      {live.length > 1 ? (
+        <div className="record-gallery-thumbs">
+          {live.map((src, thumb) => (
+            <button
+              key={src}
+              type="button"
+              className="record-gallery-thumb"
+              aria-current={thumb === index}
+              aria-label={`Снимок ${thumb + 1}`}
+              onClick={() => show(thumb)}
+            >
+              <img src={src} alt="" draggable={false} onError={() => fail(src)} />
+            </button>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -106,7 +146,6 @@ export function ControllerDetail({ record, titleId }: { record: StudyRecord; tit
       <LocalImages images={record.images} />
       <header className="record-heading">
         <div className="record-field">
-          <p className="block-title">Название</p>
           <h2 id={titleId}>{record.name}</h2>
         </div>
         {manufacturer ? (
