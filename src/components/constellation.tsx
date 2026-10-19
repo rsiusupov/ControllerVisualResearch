@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import type { CategoryInfo } from "@/data/types";
+import { withBasePath } from "@/src/lib/base-path";
 import { transitionPush } from "@/src/lib/navigate";
 import styles from "./constellation.module.css";
 
@@ -311,7 +312,7 @@ function createSprites(urls: string[], count: number, aspect: number, token: { c
     image.onerror = () => {
       for (const sprite of group) sprite.ready = true;
     };
-    image.src = src;
+    image.src = withBasePath(src);
   }
 
   return sprites;
@@ -823,7 +824,7 @@ export function Constellation({
           >
             <a
               className="planet-label"
-              href={href}
+              href={withBasePath(href)}
               draggable={false}
               onClick={(event) => {
                 if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;

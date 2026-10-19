@@ -8,7 +8,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/InterDisplay-Regular.woff2") format("woff2");
+  src: url("../public/fonts/InterDisplay-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -16,7 +16,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("/fonts/InterDisplay-Medium.woff2") format("woff2");
+  src: url("../public/fonts/InterDisplay-Medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -24,7 +24,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/InterDisplay-SemiBold.woff2") format("woff2");
+  src: url("../public/fonts/InterDisplay-SemiBold.woff2") format("woff2");
 }
 
 :root {

@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, type FocusEvent, type FormEvent, type KeyboardEvent, type MouseEvent, type PointerEvent } from "react";
+import { withBasePath } from "@/src/lib/base-path";
 import { normalizePath, notifyRoute, transitionPush } from "@/src/lib/navigate";
 import { InputSuffixButton } from "@/components/ui/input/input";
 import { Button } from "@/src/ui/button";
@@ -93,7 +94,7 @@ export function SiteHeader() {
     <form
       className="search-form"
       style={{ viewTransitionName: "site-search" }}
-      action="/search/"
+      action={withBasePath("/search/")}
       onSubmit={onSubmit}
       onKeyDown={onFormKeyDown}
       onPointerDown={onFormPointerDown}

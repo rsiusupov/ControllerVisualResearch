@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "@/src/lib/base-path";
 
 export function Frames({ images, name }: { images: string[]; name: string }) {
   const [failed, setFailed] = useState<string[]>([]);
@@ -22,7 +23,7 @@ export function Frames({ images, name }: { images: string[]; name: string }) {
         {shown.map((src) => (
           <span className="shot" key={src}>
             <img
-              src={src}
+              src={withBasePath(src)}
               alt=""
               onError={() => setFailed((current) => (current.includes(src) ? current : [...current, src]))}
             />
@@ -34,7 +35,7 @@ export function Frames({ images, name }: { images: string[]; name: string }) {
           {rest.map((src) => (
             <img
               key={src}
-              src={src}
+              src={withBasePath(src)}
               alt=""
               onError={() => setFailed((current) => (current.includes(src) ? current : [...current, src]))}
             />

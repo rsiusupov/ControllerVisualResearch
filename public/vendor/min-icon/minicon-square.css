@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Min Icon VF";
-  src: url("/fonts/min-icon/MinIcon-SquareSemiBold.otf") format("opentype");
+  src: url("../../fonts/min-icon/MinIcon-SquareSemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: block;

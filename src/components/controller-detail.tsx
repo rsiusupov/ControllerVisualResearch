@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { Tag } from "@/data/types";
+import { withBasePath } from "@/src/lib/base-path";
 import type { StudyRecord } from "@/src/lib/study";
 
 function tags(list: Tag[]) {
@@ -111,7 +112,7 @@ function LocalImages({ images }: { images: string[] }) {
       >
         {live.map((src) => (
           <div key={src} className="record-gallery-slide">
-            <img src={src} alt="" draggable={false} onError={() => fail(src)} />
+            <img src={withBasePath(src)} alt="" draggable={false} onError={() => fail(src)} />
           </div>
         ))}
       </div>
@@ -126,7 +127,7 @@ function LocalImages({ images }: { images: string[] }) {
               aria-label={`Снимок ${thumb + 1}`}
               onClick={() => show(thumb)}
             >
-              <img src={src} alt="" draggable={false} onError={() => fail(src)} />
+              <img src={withBasePath(src)} alt="" draggable={false} onError={() => fail(src)} />
             </button>
           ))}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { withBasePath } from "@/src/lib/base-path";
 import type { StudyRecord } from "@/src/lib/study";
 import { createHash, stepBodies, type Body } from "@/src/lib/physics";
 import {
@@ -897,7 +898,7 @@ function Playfield({
               <div className="image-pop" style={{ transformOrigin: appearOrigin(card) }}>
                 <Panel className="image-face bg-transparent p-0 gap-0 shadow-none ring-0">
                   <img
-                    src={card.src}
+                    src={withBasePath(card.src)}
                     alt={card.name}
                     draggable={false}
                     onLoad={(event) => {

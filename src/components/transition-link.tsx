@@ -2,6 +2,7 @@
 
 import type { CSSProperties, ReactNode } from "react";
 import { useRouter } from "next/navigation";
+import { withBasePath } from "@/src/lib/base-path";
 import { transitionPush } from "@/src/lib/navigate";
 
 export function TransitionLink({
@@ -20,7 +21,7 @@ export function TransitionLink({
   const router = useRouter();
   return (
     <a
-      href={href}
+      href={withBasePath(href)}
       className={className}
       style={{ ...style, viewTransitionName }}
       onClick={(event) => {
